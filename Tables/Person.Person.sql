@@ -6,12 +6,12 @@
   [FirstName] [dbo].[Name] NOT NULL,
   [MiddleName] [dbo].[Name] NULL,
   [LastName] [dbo].[Name] NOT NULL,
-  [Suffix] [nvarchar](10) NULL,
   [EmailPromotion] [int] NOT NULL CONSTRAINT [DF_Person_EmailPromotion] DEFAULT (0),
   [AdditionalContactInfo] [xml] (CONTENT Person.AdditionalContactInfoSchemaCollection) NULL,
   [Demographics] [xml] (CONTENT Person.IndividualSurveySchemaCollection) NULL,
   [rowguid] [uniqueidentifier] NOT NULL CONSTRAINT [DF_Person_rowguid] DEFAULT (newid()) ROWGUIDCOL,
   [ModifiedDate] [datetime] NOT NULL CONSTRAINT [DF_Person_ModifiedDate] DEFAULT (getdate()),
+  [PetID] [int] NULL,
   CONSTRAINT [PK_Person_BusinessEntityID] PRIMARY KEY CLUSTERED ([BusinessEntityID]),
   CONSTRAINT [CK_Person_EmailPromotion] CHECK ([EmailPromotion]>=(0) AND [EmailPromotion]<=(2)),
   CONSTRAINT [CK_Person_PersonType] CHECK ([PersonType] IS NULL OR (upper([PersonType])='GC' OR upper([PersonType])='SP' OR upper([PersonType])='EM' OR upper([PersonType])='IN' OR upper([PersonType])='VC' OR upper([PersonType])='SC'))
@@ -113,6 +113,10 @@ GO
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Foreign key constraint referencing BusinessEntity.BusinessEntityID.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'CONSTRAINT', N'FK_Person_BusinessEntity_BusinessEntityID'
 GO
 
+ALTER TABLE [Person].[Person]
+  ADD CONSTRAINT [FK_Person_Pet_PetID] FOREIGN KEY ([PetID]) REFERENCES [Person].[Pet] ([PetID])
+GO
+
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Primary XML index.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'INDEX', N'PXML_Person_Demographics'
 GO
 
@@ -153,9 +157,6 @@ EXEC sys.sp_addextendedproperty N'MS_Description', N'Middle name or middle initi
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Last name of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'LastName'
-GO
-
-EXEC sys.sp_addextendedproperty N'MS_Description', N'Surname suffix. For example, Sr. or Jr.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'Suffix'
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'0 = Contact does not wish to receive e-mail promotions, 1 = Contact does wish to receive e-mail promotions from AdventureWorks, 2 = Contact does wish to receive e-mail promotions from AdventureWorks and selected partners. ', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'EmailPromotion'

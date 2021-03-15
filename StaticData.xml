@@ -22,6 +22,7 @@
     <StaticDataLink>Person.Password</StaticDataLink>
     <StaticDataLink>Person.Person</StaticDataLink>
     <StaticDataLink>Person.PersonPhone</StaticDataLink>
+    <StaticDataLink>Person.Pet</StaticDataLink>
     <StaticDataLink>Person.PhoneNumberType</StaticDataLink>
     <StaticDataLink>Person.StateProvince</StaticDataLink>
     <StaticDataLink>Production.BillOfMaterials</StaticDataLink>
