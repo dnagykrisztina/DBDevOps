@@ -2,9 +2,7 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd" changeLogId="63b1a4ed-f54f-48e6-ad1f-8be812595f1f">
 	<changeSet author="testUser" id="addTireType">
 		<addColumn tableName="Car_Details">
-		    <columns>
-			    <column name="tireType" type="varchar(25)"/>
-			</columns>
+			<column name="tireType" type="varchar(25)"/>
 		</addColumn>
 	</changeSet>
 </databaseChangeLog>
