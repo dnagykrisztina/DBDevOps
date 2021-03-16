@@ -1,6 +1,5 @@
 ﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
 GO
-
 CREATE VIEW [HumanResources].[vJobCandidate] 
 AS 
 SELECT 

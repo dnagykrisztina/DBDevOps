@@ -2,7 +2,6 @@
   [BusinessEntityID] [int] NOT NULL,
   [PersonType] [nchar](2) NOT NULL,
   [NameStyle] [dbo].[NameStyle] NOT NULL CONSTRAINT [DF_Person_NameStyle] DEFAULT (0),
-  [Title] [nvarchar](8) NULL,
   [FirstName] [dbo].[Name] NOT NULL,
   [MiddleName] [dbo].[Name] NULL,
   [LastName] [dbo].[Name] NOT NULL,
@@ -145,9 +144,6 @@ EXEC sys.sp_addextendedproperty N'MS_Description', N'Primary type of person: SC 
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'0 = The data in FirstName and LastName are stored in western style (first name, last name) order.  1 = Eastern style (last name, first name) order.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'NameStyle'
-GO
-
-EXEC sys.sp_addextendedproperty N'MS_Description', N'A courtesy title. For example, Mr. or Ms.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'Title'
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'First name of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'FirstName'

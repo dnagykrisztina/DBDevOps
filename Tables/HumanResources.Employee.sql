@@ -2,8 +2,6 @@
   [BusinessEntityID] [int] NOT NULL,
   [NationalIDNumber] [nvarchar](15) NOT NULL,
   [LoginID] [nvarchar](256) NOT NULL,
-  [OrganizationNode] [hierarchyid] NULL,
-  [OrganizationLevel] AS ([OrganizationNode].[GetLevel]()),
   [JobTitle] [nvarchar](50) NOT NULL,
   [BirthDate] [date] NOT NULL,
   [MaritalStatus] [nchar](1) NOT NULL,
@@ -38,16 +36,6 @@ GO
 
 CREATE UNIQUE INDEX [AK_Employee_rowguid]
   ON [HumanResources].[Employee] ([rowguid])
-  ON [PRIMARY]
-GO
-
-CREATE INDEX [IX_Employee_OrganizationLevel_OrganizationNode]
-  ON [HumanResources].[Employee] ([OrganizationLevel], [OrganizationNode])
-  ON [PRIMARY]
-GO
-
-CREATE INDEX [IX_Employee_OrganizationNode]
-  ON [HumanResources].[Employee] ([OrganizationNode])
   ON [PRIMARY]
 GO
 
@@ -101,12 +89,6 @@ GO
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Network login.', 'SCHEMA', N'HumanResources', 'TABLE', N'Employee', 'COLUMN', N'LoginID'
 GO
 
-EXEC sys.sp_addextendedproperty N'MS_Description', N'Where the employee is located in corporate hierarchy.', 'SCHEMA', N'HumanResources', 'TABLE', N'Employee', 'COLUMN', N'OrganizationNode'
-GO
-
-EXEC sys.sp_addextendedproperty N'MS_Description', N'The depth of the employee in the corporate hierarchy.', 'SCHEMA', N'HumanResources', 'TABLE', N'Employee', 'COLUMN', N'OrganizationLevel'
-GO
-
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Work title such as Buyer or Sales Representative.', 'SCHEMA', N'HumanResources', 'TABLE', N'Employee', 'COLUMN', N'JobTitle'
 GO
 
@@ -147,12 +129,6 @@ EXEC sys.sp_addextendedproperty N'MS_Description', N'Unique nonclustered index.'
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Unique nonclustered index. Used to support replication samples.', 'SCHEMA', N'HumanResources', 'TABLE', N'Employee', 'INDEX', N'AK_Employee_rowguid'
-GO
-
-EXEC sys.sp_addextendedproperty N'MS_Description', N'Unique nonclustered index.', 'SCHEMA', N'HumanResources', 'TABLE', N'Employee', 'INDEX', N'IX_Employee_OrganizationLevel_OrganizationNode'
-GO
-
-EXEC sys.sp_addextendedproperty N'MS_Description', N'Unique nonclustered index.', 'SCHEMA', N'HumanResources', 'TABLE', N'Employee', 'INDEX', N'IX_Employee_OrganizationNode'
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Clustered index created by a primary key constraint.', 'SCHEMA', N'HumanResources', 'TABLE', N'Employee', 'INDEX', N'PK_Employee_BusinessEntityID'
