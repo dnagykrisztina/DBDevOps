@@ -6,7 +6,6 @@
   [FirstName] [dbo].[Name] NOT NULL,
   [MiddleName] [dbo].[Name] NULL,
   [LastName] [dbo].[Name] NOT NULL,
-  [Suffix] [nvarchar](10) NULL,
   [EmailPromotion] [int] NOT NULL CONSTRAINT [DF_Person_EmailPromotion] DEFAULT (0),
   [AdditionalContactInfo] [xml] (CONTENT Person.AdditionalContactInfoSchemaCollection) NULL,
   [Demographics] [xml] (CONTENT Person.IndividualSurveySchemaCollection) NULL,
@@ -153,9 +152,6 @@ EXEC sys.sp_addextendedproperty N'MS_Description', N'Middle name or middle initi
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Last name of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'LastName'
-GO
-
-EXEC sys.sp_addextendedproperty N'MS_Description', N'Surname suffix. For example, Sr. or Jr.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'Suffix'
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'0 = Contact does not wish to receive e-mail promotions, 1 = Contact does wish to receive e-mail promotions from AdventureWorks, 2 = Contact does wish to receive e-mail promotions from AdventureWorks and selected partners. ', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'EmailPromotion'
