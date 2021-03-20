@@ -1,0 +1,5 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+
+CREATE VIEW [tSQLt].[Private_SysTypes] AS SELECT * FROM sys.types AS T;
+GO
