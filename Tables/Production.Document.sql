@@ -114,10 +114,3 @@ GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Default constraint value of NEWID()', 'SCHEMA', N'Production', 'TABLE', N'Document', 'CONSTRAINT', N'DF_Document_rowguid'
 GO
-
-CREATE FULLTEXT INDEX
-  ON [Production].[Document]([DocumentSummary] LANGUAGE 1033, [Document] TYPE COLUMN [FileExtension] LANGUAGE 1033)
-  KEY INDEX [PK_Document_DocumentNode]
-  ON [AW2016FullTextCatalog]
-  WITH CHANGE_TRACKING AUTO, STOPLIST SYSTEM
-GO

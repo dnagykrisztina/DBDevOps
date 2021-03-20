@@ -70,10 +70,3 @@ GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Default constraint value of GETDATE()', 'SCHEMA', N'Production', 'TABLE', N'ProductReview', 'CONSTRAINT', N'DF_ProductReview_ReviewDate'
 GO
-
-CREATE FULLTEXT INDEX
-  ON [Production].[ProductReview]([Comments] LANGUAGE 1033)
-  KEY INDEX [PK_ProductReview_ProductReviewID]
-  ON [AW2016FullTextCatalog]
-  WITH CHANGE_TRACKING AUTO, STOPLIST SYSTEM
-GO
