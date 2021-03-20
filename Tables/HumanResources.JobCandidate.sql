@@ -47,10 +47,3 @@ GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Default constraint value of GETDATE()', 'SCHEMA', N'HumanResources', 'TABLE', N'JobCandidate', 'CONSTRAINT', N'DF_JobCandidate_ModifiedDate'
 GO
-
-CREATE FULLTEXT INDEX
-  ON [HumanResources].[JobCandidate]([Resume] LANGUAGE 1033)
-  KEY INDEX [PK_JobCandidate_JobCandidateID]
-  ON [AW2016FullTextCatalog]
-  WITH CHANGE_TRACKING AUTO, STOPLIST SYSTEM
-GO
