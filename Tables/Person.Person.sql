@@ -11,6 +11,7 @@
   [Demographics] [xml] (CONTENT Person.IndividualSurveySchemaCollection) NULL,
   [rowguid] [uniqueidentifier] NOT NULL CONSTRAINT [DF_Person_rowguid] DEFAULT (newid()) ROWGUIDCOL,
   [ModifiedDate] [datetime] NOT NULL CONSTRAINT [DF_Person_ModifiedDate] DEFAULT (getdate()),
+  [PetID] [int] NULL,
   CONSTRAINT [PK_Person_BusinessEntityID] PRIMARY KEY CLUSTERED ([BusinessEntityID]),
   CONSTRAINT [CK_Person_EmailPromotion] CHECK ([EmailPromotion]>=(0) AND [EmailPromotion]<=(2)),
   CONSTRAINT [CK_Person_PersonType] CHECK ([PersonType] IS NULL OR (upper([PersonType])='GC' OR upper([PersonType])='SP' OR upper([PersonType])='EM' OR upper([PersonType])='IN' OR upper([PersonType])='VC' OR upper([PersonType])='SC'))
@@ -110,6 +111,13 @@ ALTER TABLE [Person].[Person]
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Foreign key constraint referencing BusinessEntity.BusinessEntityID.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'CONSTRAINT', N'FK_Person_BusinessEntity_BusinessEntityID'
+GO
+
+ALTER TABLE [Person].[Person]
+  ADD CONSTRAINT [FK_Person_Pet_PetID] FOREIGN KEY ([PetID]) REFERENCES [Person].[Pet] ([PetID])
+GO
+
+EXEC sys.sp_addextendedproperty N'MS_Description', N'Connection between the Owner and Pet', 'SCHEMA', N'Person', 'TABLE', N'Person', 'CONSTRAINT', N'FK_Person_Pet_PetID'
 GO
 
 EXEC sys.sp_addextendedproperty N'MS_Description', N'Primary XML index.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'INDEX', N'PXML_Person_Demographics'
