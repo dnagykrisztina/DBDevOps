@@ -12,7 +12,8 @@ CREATE TABLE [Person].[Person]
 [AdditionalContactInfo] [xml] (CONTENT [Person].[AdditionalContactInfoSchemaCollection]) NULL,
 [Demographics] [xml] (CONTENT [Person].[IndividualSurveySchemaCollection]) NULL,
 [rowguid] [uniqueidentifier] NOT NULL ROWGUIDCOL CONSTRAINT [DF_Person_rowguid] DEFAULT (newid()),
-[ModifiedDate] [datetime] NOT NULL CONSTRAINT [DF_Person_ModifiedDate] DEFAULT (getdate())
+[ModifiedDate] [datetime] NOT NULL CONSTRAINT [DF_Person_ModifiedDate] DEFAULT (getdate()),
+[PetID] [int] NULL
 ) ON [PRIMARY]
 GO
 SET QUOTED_IDENTIFIER ON
@@ -87,6 +88,8 @@ USING XML INDEX [PXML_Person_Demographics]
 FOR VALUE
 GO
 ALTER TABLE [Person].[Person] ADD CONSTRAINT [FK_Person_BusinessEntity_BusinessEntityID] FOREIGN KEY ([BusinessEntityID]) REFERENCES [Person].[BusinessEntity] ([BusinessEntityID])
+GO
+ALTER TABLE [Person].[Person] ADD CONSTRAINT [FK_Person_PetID] FOREIGN KEY ([PetID]) REFERENCES [Person].[Pet] ([PetID])
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Human beings involved with AdventureWorks: employees, customer contacts, and vendor contacts.', 'SCHEMA', N'Person', 'TABLE', N'Person', NULL, NULL
 GO
