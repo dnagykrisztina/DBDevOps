@@ -16,6 +16,7 @@ CREATE TABLE [Person].[Person] (
 		[Demographics]              [xml](CONTENT [Person].[IndividualSurveySchemaCollection]) NULL,
 		[rowguid]                   [uniqueidentifier] NOT NULL ROWGUIDCOL,
 		[ModifiedDate]              [datetime] NOT NULL,
+		[PetID]                     [int] NULL,
 		CONSTRAINT [PK_Person_BusinessEntityID]
 		PRIMARY KEY
 		CLUSTERED
@@ -86,6 +87,14 @@ ALTER TABLE [Person].[Person]
 
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Foreign key constraint referencing BusinessEntity.BusinessEntityID.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'CONSTRAINT', N'FK_Person_BusinessEntity_BusinessEntityID'
+GO
+ALTER TABLE [Person].[Person]
+	WITH CHECK
+	ADD CONSTRAINT [FK_Person_Pet]
+	FOREIGN KEY ([PetID]) REFERENCES [Person].[Pet] ([PetID])
+ALTER TABLE [Person].[Person]
+	CHECK CONSTRAINT [FK_Person_Pet]
+
 GO
 CREATE NONCLUSTERED INDEX [IX_Person_LastName_FirstName_MiddleName]
 	ON [Person].[Person] ([LastName], [FirstName], [MiddleName])
