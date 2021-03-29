@@ -10,7 +10,6 @@ CREATE TABLE [Person].[Person] (
 		[FirstName]                 [dbo].[Name] NOT NULL,
 		[MiddleName]                [dbo].[Name] NULL,
 		[LastName]                  [dbo].[Name] NOT NULL,
-		[Suffix]                    [nvarchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[EmailPromotion]            [int] NOT NULL,
 		[AdditionalContactInfo]     [xml](CONTENT [Person].[AdditionalContactInfoSchemaCollection]) NULL,
 		[Demographics]              [xml](CONTENT [Person].[IndividualSurveySchemaCollection]) NULL,
@@ -121,8 +120,6 @@ GO
 EXEC sp_addextendedproperty N'MS_Description', N'Middle name or middle initial of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'MiddleName'
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Last name of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'LastName'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Surname suffix. For example, Sr. or Jr.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'Suffix'
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'0 = Contact does not wish to receive e-mail promotions, 1 = Contact does wish to receive e-mail promotions from AdventureWorks, 2 = Contact does wish to receive e-mail promotions from AdventureWorks and selected partners. ', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'EmailPromotion'
 GO
