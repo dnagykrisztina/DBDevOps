@@ -1,0 +1,1 @@
+GRANT DELETE ON xdb.xdb$tsetmap TO "SYSTEM";

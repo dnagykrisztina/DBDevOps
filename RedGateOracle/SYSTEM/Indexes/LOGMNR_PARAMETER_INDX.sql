@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_parameter_indx ON "SYSTEM".logmnr_parameter$(session#,"NAME");

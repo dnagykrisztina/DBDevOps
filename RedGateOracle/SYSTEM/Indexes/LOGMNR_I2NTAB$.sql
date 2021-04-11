@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i2ntab$ ON "SYSTEM".logmnr_ntab$(logmnr_uid,ntab#);

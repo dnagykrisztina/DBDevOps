@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_log$_first_change# ON "SYSTEM".logmnr_log$(first_change#);

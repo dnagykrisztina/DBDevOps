@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logstdby$skip_idx1 ON "SYSTEM".logstdby$skip(use_like,"SCHEMA","NAME");

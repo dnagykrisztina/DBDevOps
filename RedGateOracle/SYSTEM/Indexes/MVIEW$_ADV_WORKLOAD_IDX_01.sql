@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".mview$_adv_workload_idx_01 ON "SYSTEM".mview$_adv_workload(collectionid#,queryid#);

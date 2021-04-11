@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1lobfrag$ ON "SYSTEM".logmnr_lobfrag$(logmnr_uid,fragobj#);

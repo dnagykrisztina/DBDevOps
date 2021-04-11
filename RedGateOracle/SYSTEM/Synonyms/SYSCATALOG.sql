@@ -1,0 +1,1 @@
+CREATE OR REPLACE NONEDITIONABLE SYNONYM "SYSTEM".syscatalog FOR sys.syscatalog;

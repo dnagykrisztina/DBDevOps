@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1tabcompart$ ON "SYSTEM".logmnr_tabcompart$(logmnr_uid,obj#);

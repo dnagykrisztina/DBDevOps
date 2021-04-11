@@ -1,0 +1,1 @@
+GRANT EXECUTE ON sys.logmnr_gtlo3 TO "SYSTEM";

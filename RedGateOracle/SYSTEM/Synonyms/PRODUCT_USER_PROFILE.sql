@@ -1,0 +1,1 @@
+CREATE OR REPLACE NONEDITIONABLE SYNONYM "SYSTEM".product_user_profile FOR "SYSTEM".sqlplus_product_profile;

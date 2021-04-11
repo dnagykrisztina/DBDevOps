@@ -1,0 +1,1 @@
+GRANT EXECUTE ON sys.dbms_rule_eximp TO "SYSTEM" WITH GRANT OPTION;

@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnrc_i2gtlo ON "SYSTEM".logmnrc_gtlo(logmnr_uid,baseobj#,baseobjv#);

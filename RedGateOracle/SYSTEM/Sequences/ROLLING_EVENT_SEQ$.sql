@@ -1,0 +1,1 @@
+CREATE SEQUENCE "SYSTEM".rolling_event_seq$ NOCACHE ORDER;

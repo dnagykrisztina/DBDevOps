@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1type$ ON "SYSTEM".logmnr_type$(logmnr_uid,toid,version#);

@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1dictionary$ ON "SYSTEM".logmnr_dictionary$(logmnr_uid);

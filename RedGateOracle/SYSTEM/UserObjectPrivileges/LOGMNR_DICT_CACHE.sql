@@ -1,0 +1,1 @@
+GRANT EXECUTE ON sys.logmnr_dict_cache TO "SYSTEM";

@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_log$_flags ON "SYSTEM".logmnr_log$(flags);

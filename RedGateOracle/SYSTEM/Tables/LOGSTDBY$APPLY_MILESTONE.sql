@@ -1,0 +1,21 @@
+CREATE TABLE "SYSTEM".logstdby$apply_milestone (
+  session_id NUMBER NOT NULL,
+  commit_scn NUMBER NOT NULL,
+  commit_time DATE,
+  synch_scn NUMBER NOT NULL,
+  epoch NUMBER NOT NULL,
+  processed_scn NUMBER NOT NULL,
+  processed_time DATE,
+  fetchlwm_scn NUMBER DEFAULT (0) NOT NULL,
+  spare1 NUMBER,
+  spare2 NUMBER,
+  spare3 VARCHAR2(2000 BYTE),
+  flags NUMBER,
+  lwm_upd_time DATE,
+  spare4 NUMBER,
+  spare5 NUMBER,
+  spare6 NUMBER,
+  spare7 DATE,
+  pto_recovery_scn NUMBER,
+  pto_recovery_incarnation NUMBER
+);

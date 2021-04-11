@@ -1,0 +1,1 @@
+GRANT EXECUTE ON sys.sys_group TO "SYSTEM";

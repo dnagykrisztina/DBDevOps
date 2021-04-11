@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logstdby$events_ind_scn ON "SYSTEM".logstdby$events(commit_scn);

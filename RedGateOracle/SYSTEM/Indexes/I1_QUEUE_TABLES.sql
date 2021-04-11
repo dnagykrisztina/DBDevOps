@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".i1_queue_tables ON "SYSTEM".aq$_queue_tables("OBJNO","SCHEMA",flags);

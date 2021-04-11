@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i2tab$ ON "SYSTEM".logmnr_tab$(logmnr_uid,bobj#);

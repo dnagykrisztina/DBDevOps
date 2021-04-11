@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1opqtype$ ON "SYSTEM".logmnr_opqtype$(logmnr_uid,obj#,intcol#);

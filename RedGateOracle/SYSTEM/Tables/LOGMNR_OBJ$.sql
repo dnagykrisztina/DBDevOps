@@ -1,0 +1,20 @@
+CREATE TABLE "SYSTEM".logmnr_obj$ (
+  objv# NUMBER(22),
+  owner# NUMBER(22),
+  "NAME" VARCHAR2(384 BYTE),
+  "NAMESPACE" NUMBER(22),
+  subname VARCHAR2(384 BYTE),
+  type# NUMBER(22),
+  oid$ RAW(16),
+  remoteowner VARCHAR2(384 BYTE),
+  linkname VARCHAR2(384 BYTE),
+  flags NUMBER(22),
+  spare3 NUMBER(22),
+  stime DATE,
+  obj# NUMBER(22) NOT NULL,
+  logmnr_uid NUMBER(22),
+  logmnr_flags NUMBER(22),
+  start_scnbas NUMBER,
+  start_scnwrp NUMBER,
+  CONSTRAINT logmnr_obj$_pk PRIMARY KEY (logmnr_uid,obj#) DISABLE NOVALIDATE
+);

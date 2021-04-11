@@ -1,0 +1,6 @@
+CREATE TABLE "SYSTEM"."HELP" (
+  topic VARCHAR2(50 BYTE) NOT NULL,
+  seq NUMBER NOT NULL,
+  info VARCHAR2(80 BYTE),
+  CONSTRAINT help_topic_seq PRIMARY KEY (topic,seq)
+);

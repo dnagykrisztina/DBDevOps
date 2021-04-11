@@ -1,0 +1,1 @@
+CREATE SEQUENCE "SYSTEM".logmnr_evolve_seq$ NOCACHE ORDER;

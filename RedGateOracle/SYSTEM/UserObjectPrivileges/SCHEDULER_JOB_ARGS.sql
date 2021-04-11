@@ -1,0 +1,1 @@
+GRANT SELECT ON "SYSTEM".scheduler_job_args TO select_catalog_role;

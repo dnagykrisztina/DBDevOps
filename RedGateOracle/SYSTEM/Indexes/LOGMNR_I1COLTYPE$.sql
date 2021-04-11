@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1coltype$ ON "SYSTEM".logmnr_coltype$(logmnr_uid,obj#,intcol#);

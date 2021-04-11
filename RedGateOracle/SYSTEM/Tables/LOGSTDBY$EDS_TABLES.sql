@@ -1,0 +1,21 @@
+CREATE TABLE "SYSTEM".logstdby$eds_tables (
+  "OWNER" VARCHAR2(128 BYTE) NOT NULL,
+  table_name VARCHAR2(128 BYTE) NOT NULL,
+  shadow_table_name VARCHAR2(128 BYTE),
+  base_trigger_name VARCHAR2(128 BYTE),
+  shadow_trigger_name VARCHAR2(128 BYTE),
+  dblink VARCHAR2(255 BYTE),
+  flags NUMBER,
+  "STATE" VARCHAR2(255 BYTE),
+  objv NUMBER,
+  obj# NUMBER,
+  sobj# NUMBER,
+  ctime TIMESTAMP,
+  spare1 NUMBER,
+  spare2 VARCHAR2(255 BYTE),
+  spare3 NUMBER,
+  mview_name VARCHAR2(128 BYTE),
+  mview_log_name VARCHAR2(128 BYTE),
+  mview_trigger_name VARCHAR2(128 BYTE),
+  CONSTRAINT logstdby$eds_tables_pkey PRIMARY KEY ("OWNER",table_name)
+);

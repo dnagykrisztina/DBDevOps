@@ -1,0 +1,20 @@
+CREATE TABLE "SYSTEM".logmnr_seed$ (
+  seed_version NUMBER(22),
+  gather_version NUMBER(22),
+  schemaname VARCHAR2(384 BYTE),
+  obj# NUMBER,
+  objv# NUMBER(22),
+  table_name VARCHAR2(384 BYTE),
+  col_name VARCHAR2(384 BYTE),
+  col# NUMBER,
+  intcol# NUMBER,
+  segcol# NUMBER,
+  type# NUMBER,
+  "LENGTH" NUMBER,
+  precision# NUMBER,
+  "SCALE" NUMBER,
+  null$ NUMBER NOT NULL,
+  logmnr_uid NUMBER(22),
+  logmnr_flags NUMBER(22),
+  CONSTRAINT logmnr_seed$_pk PRIMARY KEY (logmnr_uid,obj#,intcol#) DISABLE NOVALIDATE
+);

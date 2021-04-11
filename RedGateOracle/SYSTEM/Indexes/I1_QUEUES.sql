@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".i1_queues ON "SYSTEM".aq$_queues("NAME",eventid,table_objno);

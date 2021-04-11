@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1lob$ ON "SYSTEM".logmnr_lob$(logmnr_uid,obj#,intcol#);

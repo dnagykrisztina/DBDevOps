@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1attribute$ ON "SYSTEM".logmnr_attribute$(logmnr_uid,toid,version#,attribute#);

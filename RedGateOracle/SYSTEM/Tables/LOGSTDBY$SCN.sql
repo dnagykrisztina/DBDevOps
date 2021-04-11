@@ -1,0 +1,10 @@
+CREATE TABLE "SYSTEM".logstdby$scn (
+  obj# NUMBER,
+  objname VARCHAR2(4000 BYTE),
+  "SCHEMA" VARCHAR2(128 BYTE),
+  "TYPE" VARCHAR2(20 BYTE),
+  "SCN" NUMBER,
+  spare1 NUMBER,
+  spare2 NUMBER,
+  spare3 VARCHAR2(2000 BYTE)
+);

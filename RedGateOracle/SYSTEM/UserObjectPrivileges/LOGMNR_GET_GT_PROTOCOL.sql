@@ -1,0 +1,1 @@
+GRANT EXECUTE ON sys.logmnr_get_gt_protocol TO "SYSTEM";

@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".redo_db_idx ON "SYSTEM".redo_db(dbid,thread#,resetlogs_scn,resetlogs_time);

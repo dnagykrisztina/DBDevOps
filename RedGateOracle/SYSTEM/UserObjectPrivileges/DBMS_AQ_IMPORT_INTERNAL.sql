@@ -1,0 +1,1 @@
+GRANT EXECUTE ON sys.dbms_aq_import_internal TO "SYSTEM" WITH GRANT OPTION;

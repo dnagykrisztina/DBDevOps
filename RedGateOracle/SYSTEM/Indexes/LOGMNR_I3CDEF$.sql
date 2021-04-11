@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i3cdef$ ON "SYSTEM".logmnr_cdef$(logmnr_uid,obj#);

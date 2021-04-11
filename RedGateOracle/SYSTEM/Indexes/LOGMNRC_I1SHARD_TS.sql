@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnrc_i1shard_ts ON "SYSTEM".logmnrc_shard_ts(logmnr_uid,drop_scn);

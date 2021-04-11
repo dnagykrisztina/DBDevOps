@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX "SYSTEM".ol$hnt_num ON "SYSTEM".ol$hints(ol_name,hint#);

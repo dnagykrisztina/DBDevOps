@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logstdby$skip_ind ON "SYSTEM".logstdby$skip_support("NAME","ACTION");

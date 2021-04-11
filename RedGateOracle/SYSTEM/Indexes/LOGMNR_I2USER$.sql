@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i2user$ ON "SYSTEM".logmnr_user$(logmnr_uid,"NAME");

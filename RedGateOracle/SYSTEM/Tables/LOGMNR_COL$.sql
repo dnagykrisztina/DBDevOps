@@ -1,0 +1,23 @@
+CREATE TABLE "SYSTEM".logmnr_col$ (
+  col# NUMBER(22),
+  segcol# NUMBER(22),
+  "NAME" VARCHAR2(384 BYTE),
+  type# NUMBER(22),
+  "LENGTH" NUMBER(22),
+  precision# NUMBER(22),
+  "SCALE" NUMBER(22),
+  null$ NUMBER(22),
+  intcol# NUMBER(22),
+  property NUMBER(22),
+  charsetid NUMBER(22),
+  charsetform NUMBER(22),
+  spare1 NUMBER(22),
+  spare2 NUMBER(22),
+  obj# NUMBER(22) NOT NULL,
+  logmnr_uid NUMBER(22),
+  logmnr_flags NUMBER(22),
+  collid NUMBER,
+  collintcol# NUMBER,
+  acdrrescol# NUMBER,
+  CONSTRAINT logmnr_col$_pk PRIMARY KEY (logmnr_uid,obj#,intcol#) DISABLE NOVALIDATE
+);

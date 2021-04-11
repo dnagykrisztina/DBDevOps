@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnrc_i1congg ON "SYSTEM".logmnrc_con_gg(logmnr_uid,baseobj#,baseobjv#,commit_scn);

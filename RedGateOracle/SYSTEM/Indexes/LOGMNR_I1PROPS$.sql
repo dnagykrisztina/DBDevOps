@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1props$ ON "SYSTEM".logmnr_props$(logmnr_uid,"NAME");

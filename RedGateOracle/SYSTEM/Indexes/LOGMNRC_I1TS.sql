@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnrc_i1ts ON "SYSTEM".logmnrc_ts(logmnr_uid,drop_scn);

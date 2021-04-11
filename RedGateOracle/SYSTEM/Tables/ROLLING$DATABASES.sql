@@ -1,0 +1,21 @@
+CREATE TABLE "SYSTEM".rolling$databases (
+  rdbid NUMBER,
+  "ATTRIBUTES" NUMBER,
+  attributes2 NUMBER,
+  dbun VARCHAR2(128 BYTE),
+  dbid NUMBER,
+  prod_rscn NUMBER,
+  prod_rid NUMBER,
+  prod_scn NUMBER,
+  cons_rscn NUMBER,
+  cons_rid NUMBER,
+  cons_scn NUMBER,
+  engine_status NUMBER,
+  "VERSION" VARCHAR2(128 BYTE),
+  redo_source NUMBER,
+  update_time TIMESTAMP,
+  revision NUMBER,
+  spare1 NUMBER,
+  spare2 NUMBER,
+  spare3 VARCHAR2(128 BYTE)
+);

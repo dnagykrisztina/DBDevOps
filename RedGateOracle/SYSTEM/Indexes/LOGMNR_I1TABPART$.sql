@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1tabpart$ ON "SYSTEM".logmnr_tabpart$(logmnr_uid,obj#,bo#);

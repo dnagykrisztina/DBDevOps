@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnrc_i2gtcs ON "SYSTEM".logmnrc_gtcs(logmnr_uid,obj#,objv#,segcol#,intcol#);

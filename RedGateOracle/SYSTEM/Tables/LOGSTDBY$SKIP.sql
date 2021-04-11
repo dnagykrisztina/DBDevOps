@@ -1,0 +1,13 @@
+CREATE TABLE "SYSTEM".logstdby$skip (
+  "ERROR" NUMBER,
+  statement_opt VARCHAR2(128 BYTE),
+  "SCHEMA" VARCHAR2(128 BYTE),
+  "NAME" VARCHAR2(261 BYTE),
+  use_like NUMBER,
+  esc VARCHAR2(1 BYTE),
+  proc VARCHAR2(392 BYTE),
+  "ACTIVE" NUMBER,
+  spare1 NUMBER,
+  spare2 NUMBER,
+  spare3 VARCHAR2(2000 BYTE)
+);

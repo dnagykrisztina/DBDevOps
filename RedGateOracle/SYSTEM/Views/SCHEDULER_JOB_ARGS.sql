@@ -1,0 +1,2 @@
+CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "SYSTEM".scheduler_job_args ("OWNER",job_name,argument_name,argument_position,argument_type,"VALUE",anydata_value,out_argument) AS
+SELECT "OWNER","JOB_NAME","ARGUMENT_NAME","ARGUMENT_POSITION","ARGUMENT_TYPE","VALUE","ANYDATA_VALUE","OUT_ARGUMENT" FROM sys.all_scheduler_job_args;

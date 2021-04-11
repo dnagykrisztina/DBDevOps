@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i1shard_ts ON "SYSTEM".logmnr_shard_ts(logmnr_uid,tablespace_name);

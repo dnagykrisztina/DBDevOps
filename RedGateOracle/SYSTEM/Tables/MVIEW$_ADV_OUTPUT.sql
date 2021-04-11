@@ -1,0 +1,25 @@
+CREATE TABLE "SYSTEM".mview$_adv_output (
+  runid# NUMBER NOT NULL,
+  output_type NUMBER NOT NULL,
+  rank# NUMBER NOT NULL,
+  action_type VARCHAR2(6 BYTE),
+  summary_owner VARCHAR2(128 BYTE),
+  summary_name VARCHAR2(128 BYTE),
+  group_by_columns VARCHAR2(2000 BYTE),
+  where_clause VARCHAR2(2000 BYTE),
+  from_clause VARCHAR2(2000 BYTE),
+  measures_list VARCHAR2(2000 BYTE),
+  fact_tables VARCHAR2(1000 BYTE),
+  grouping_levels VARCHAR2(2000 BYTE),
+  querylen NUMBER,
+  query_text LONG,
+  storage_in_bytes NUMBER,
+  pct_performance_gain NUMBER,
+  frequency NUMBER,
+  cumulative_benefit NUMBER,
+  benefit_to_cost_ratio NUMBER NOT NULL,
+  validated NUMBER,
+  CONSTRAINT mview$_adv_output_pk PRIMARY KEY (runid#,rank#),
+  CONSTRAINT mview$_adv_output_fk FOREIGN KEY (runid#) REFERENCES "SYSTEM".mview$_adv_log (runid#)
+);
+COMMENT ON TABLE "SYSTEM".mview$_adv_output IS 'Output table for summary recommendations and evaluations';

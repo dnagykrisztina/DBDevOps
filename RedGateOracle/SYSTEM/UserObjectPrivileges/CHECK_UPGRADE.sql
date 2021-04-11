@@ -1,0 +1,1 @@
+GRANT EXECUTE ON sys.check_upgrade TO "SYSTEM";

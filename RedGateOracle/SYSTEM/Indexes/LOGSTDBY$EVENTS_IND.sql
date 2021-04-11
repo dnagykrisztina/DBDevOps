@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logstdby$events_ind ON "SYSTEM".logstdby$events(event_time);

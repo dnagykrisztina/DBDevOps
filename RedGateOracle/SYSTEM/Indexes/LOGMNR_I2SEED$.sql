@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i2seed$ ON "SYSTEM".logmnr_seed$(logmnr_uid,schemaname,table_name,col_name,obj#,intcol#);

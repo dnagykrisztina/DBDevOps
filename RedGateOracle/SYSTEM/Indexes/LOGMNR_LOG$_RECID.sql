@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_log$_recid ON "SYSTEM".logmnr_log$(recid);

@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnrggc_i3gtlo ON "SYSTEM".logmnrggc_gtlo(logmnr_uid,drop_scn);

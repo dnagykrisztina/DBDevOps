@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnrp_ctas_part_map_i ON "SYSTEM".logmnrp_ctas_part_map(logmnr_uid,baseobj#,baseobjv#,part#);

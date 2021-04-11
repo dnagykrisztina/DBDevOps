@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logstdby$events_ind_xid ON "SYSTEM".logstdby$events(xidusn,xidslt,xidsqn);

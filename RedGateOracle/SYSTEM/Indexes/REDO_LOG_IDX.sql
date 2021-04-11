@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".redo_log_idx ON "SYSTEM".redo_log(dbid,thread#,resetlogs_scn,resetlogs_time);

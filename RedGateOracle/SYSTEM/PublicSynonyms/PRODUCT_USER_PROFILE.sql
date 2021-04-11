@@ -1,0 +1,1 @@
+CREATE OR REPLACE PUBLIC SYNONYM product_user_profile FOR "SYSTEM".product_privs;

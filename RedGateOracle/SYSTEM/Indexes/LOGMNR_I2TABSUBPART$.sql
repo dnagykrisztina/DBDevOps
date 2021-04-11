@@ -1,0 +1,1 @@
+CREATE INDEX "SYSTEM".logmnr_i2tabsubpart$ ON "SYSTEM".logmnr_tabsubpart$(logmnr_uid,pobj#);
