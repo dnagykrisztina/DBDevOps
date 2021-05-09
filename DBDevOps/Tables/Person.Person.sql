@@ -10,12 +10,12 @@ CREATE TABLE [Person].[Person] (
 		[FirstName]                 [dbo].[Name] NOT NULL,
 		[MiddleName]                [dbo].[Name] NULL,
 		[LastName]                  [dbo].[Name] NOT NULL,
+		[Suffix]                    [nvarchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[EmailPromotion]            [int] NOT NULL,
 		[AdditionalContactInfo]     [xml](CONTENT [Person].[AdditionalContactInfoSchemaCollection]) NULL,
 		[Demographics]              [xml](CONTENT [Person].[IndividualSurveySchemaCollection]) NULL,
 		[rowguid]                   [uniqueidentifier] NOT NULL ROWGUIDCOL,
 		[ModifiedDate]              [datetime] NOT NULL,
-		[PetID]                     [int] NULL,
 		CONSTRAINT [PK_Person_BusinessEntityID]
 		PRIMARY KEY
 		CLUSTERED
@@ -87,14 +87,6 @@ ALTER TABLE [Person].[Person]
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Foreign key constraint referencing BusinessEntity.BusinessEntityID.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'CONSTRAINT', N'FK_Person_BusinessEntity_BusinessEntityID'
 GO
-ALTER TABLE [Person].[Person]
-	WITH CHECK
-	ADD CONSTRAINT [FK_Person_Pet]
-	FOREIGN KEY ([PetID]) REFERENCES [Person].[Pet] ([PetID])
-ALTER TABLE [Person].[Person]
-	CHECK CONSTRAINT [FK_Person_Pet]
-
-GO
 CREATE NONCLUSTERED INDEX [IX_Person_LastName_FirstName_MiddleName]
 	ON [Person].[Person] ([LastName], [FirstName], [MiddleName])
 	ON [PRIMARY]
@@ -120,6 +112,8 @@ GO
 EXEC sp_addextendedproperty N'MS_Description', N'Middle name or middle initial of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'MiddleName'
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Last name of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'LastName'
+GO
+EXEC sp_addextendedproperty N'MS_Description', N'Surname suffix. For example, Sr. or Jr.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'Suffix'
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'0 = Contact does not wish to receive e-mail promotions, 1 = Contact does wish to receive e-mail promotions from AdventureWorks, 2 = Contact does wish to receive e-mail promotions from AdventureWorks and selected partners. ', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'EmailPromotion'
 GO
