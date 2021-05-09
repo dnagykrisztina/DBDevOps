@@ -34,5 +34,3 @@ FROM [HumanResources].[JobCandidate] jc
 CROSS APPLY jc.[Resume].nodes(N'declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/Resume"; 
     /Resume/Education') AS [Education](ref);
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Displays the content from each education related element in the xml column Resume in the HumanResources.JobCandidate table. The content has been localized into French, Simplified Chinese and Thai. Some data may not display correctly unless supplemental language support is installed.', 'SCHEMA', N'HumanResources', 'VIEW', N'vJobCandidateEducation', NULL, NULL
-GO

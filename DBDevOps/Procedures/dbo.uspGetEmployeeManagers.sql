@@ -1,7 +1,6 @@
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE PROCEDURE [dbo].[uspGetEmployeeManagers]
     @BusinessEntityID [int]
 AS
@@ -35,8 +34,4 @@ BEGIN
     ORDER BY [RecursionLevel], [EMP_cte].[OrganizationNode].ToString()
     OPTION (MAXRECURSION 25) 
 END;
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Stored procedure using a recursive query to return the direct and indirect managers of the specified employee.', 'SCHEMA', N'dbo', 'PROCEDURE', N'uspGetEmployeeManagers', NULL, NULL
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Input parameter for the stored procedure uspGetEmployeeManagers. Enter a valid BusinessEntityID from the HumanResources.Employee table.', 'SCHEMA', N'dbo', 'PROCEDURE', N'uspGetEmployeeManagers', 'PARAMETER', N'@BusinessEntityID'
 GO

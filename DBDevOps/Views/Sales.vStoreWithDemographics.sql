@@ -28,5 +28,3 @@ SELECT
         (/StoreSurvey/NumberEmployees)[1]', 'integer') AS [NumberEmployees] 
 FROM [Sales].[Store] s;
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Stores (including demographics) that sell Adventure Works Cycles products to consumers.', 'SCHEMA', N'Sales', 'VIEW', N'vStoreWithDemographics', NULL, NULL
-GO

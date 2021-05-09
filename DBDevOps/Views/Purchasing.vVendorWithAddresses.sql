@@ -25,5 +25,3 @@ FROM [Purchasing].[Vendor] v
     INNER JOIN [Person].[AddressType] at 
     ON at.[AddressTypeID] = bea.[AddressTypeID];
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Vendor (company) names and addresses .', 'SCHEMA', N'Purchasing', 'VIEW', N'vVendorWithAddresses', NULL, NULL
-GO

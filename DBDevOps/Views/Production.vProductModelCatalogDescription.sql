@@ -64,5 +64,3 @@ SELECT
 FROM [Production].[ProductModel] 
 WHERE [CatalogDescription] IS NOT NULL;
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Displays the content from each element in the xml column CatalogDescription for each product in the Production.ProductModel table that has catalog data.', 'SCHEMA', N'Production', 'VIEW', N'vProductModelCatalogDescription', NULL, NULL
-GO

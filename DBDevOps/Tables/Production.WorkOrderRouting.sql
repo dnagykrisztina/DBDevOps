@@ -22,17 +22,11 @@ CREATE TABLE [Production].[WorkOrderRouting] (
 	ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Clustered index created by a primary key constraint.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'INDEX', N'PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Primary key (clustered) constraint', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'CONSTRAINT', N'PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence'
-GO
 ALTER TABLE [Production].[WorkOrderRouting]
 	ADD
 	CONSTRAINT [CK_WorkOrderRouting_ScheduledEndDate]
 	CHECK
 	([ScheduledEndDate]>=[ScheduledStartDate])
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Check constraint [ScheduledEndDate] >= [ScheduledStartDate]', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'CONSTRAINT', N'CK_WorkOrderRouting_ScheduledEndDate'
 GO
 ALTER TABLE [Production].[WorkOrderRouting]
 CHECK CONSTRAINT [CK_WorkOrderRouting_ScheduledEndDate]
@@ -43,8 +37,6 @@ ALTER TABLE [Production].[WorkOrderRouting]
 	CHECK
 	([ActualEndDate]>=[ActualStartDate] OR [ActualEndDate] IS NULL OR [ActualStartDate] IS NULL)
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Check constraint [ActualEndDate] >= [ActualStartDate] OR [ActualEndDate] IS NULL OR [ActualStartDate] IS NULL', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'CONSTRAINT', N'CK_WorkOrderRouting_ActualEndDate'
-GO
 ALTER TABLE [Production].[WorkOrderRouting]
 CHECK CONSTRAINT [CK_WorkOrderRouting_ActualEndDate]
 GO
@@ -53,8 +45,6 @@ ALTER TABLE [Production].[WorkOrderRouting]
 	CONSTRAINT [CK_WorkOrderRouting_ActualResourceHrs]
 	CHECK
 	([ActualResourceHrs]>=(0.0000))
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Check constraint [ActualResourceHrs] >= (0.0000)', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'CONSTRAINT', N'CK_WorkOrderRouting_ActualResourceHrs'
 GO
 ALTER TABLE [Production].[WorkOrderRouting]
 CHECK CONSTRAINT [CK_WorkOrderRouting_ActualResourceHrs]
@@ -65,8 +55,6 @@ ALTER TABLE [Production].[WorkOrderRouting]
 	CHECK
 	([PlannedCost]>(0.00))
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Check constraint [PlannedCost] > (0.00)', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'CONSTRAINT', N'CK_WorkOrderRouting_PlannedCost'
-GO
 ALTER TABLE [Production].[WorkOrderRouting]
 CHECK CONSTRAINT [CK_WorkOrderRouting_PlannedCost]
 GO
@@ -76,8 +64,6 @@ ALTER TABLE [Production].[WorkOrderRouting]
 	CHECK
 	([ActualCost]>(0.00))
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Check constraint [ActualCost] > (0.00)', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'CONSTRAINT', N'CK_WorkOrderRouting_ActualCost'
-GO
 ALTER TABLE [Production].[WorkOrderRouting]
 CHECK CONSTRAINT [CK_WorkOrderRouting_ActualCost]
 GO
@@ -85,8 +71,6 @@ ALTER TABLE [Production].[WorkOrderRouting]
 	ADD
 	CONSTRAINT [DF_WorkOrderRouting_ModifiedDate]
 	DEFAULT (getdate()) FOR [ModifiedDate]
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Default constraint value of GETDATE()', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'CONSTRAINT', N'DF_WorkOrderRouting_ModifiedDate'
 GO
 ALTER TABLE [Production].[WorkOrderRouting]
 	WITH CHECK
@@ -96,8 +80,6 @@ ALTER TABLE [Production].[WorkOrderRouting]
 	CHECK CONSTRAINT [FK_WorkOrderRouting_Location_LocationID]
 
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Foreign key constraint referencing Location.LocationID.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'CONSTRAINT', N'FK_WorkOrderRouting_Location_LocationID'
-GO
 ALTER TABLE [Production].[WorkOrderRouting]
 	WITH CHECK
 	ADD CONSTRAINT [FK_WorkOrderRouting_WorkOrder_WorkOrderID]
@@ -106,39 +88,9 @@ ALTER TABLE [Production].[WorkOrderRouting]
 	CHECK CONSTRAINT [FK_WorkOrderRouting_WorkOrder_WorkOrderID]
 
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Foreign key constraint referencing WorkOrder.WorkOrderID.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'CONSTRAINT', N'FK_WorkOrderRouting_WorkOrder_WorkOrderID'
-GO
 CREATE NONCLUSTERED INDEX [IX_WorkOrderRouting_ProductID]
 	ON [Production].[WorkOrderRouting] ([ProductID])
 	ON [PRIMARY]
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Nonclustered index.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'INDEX', N'IX_WorkOrderRouting_ProductID'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Work order details.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', NULL, NULL
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Primary key. Foreign key to WorkOrder.WorkOrderID.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'WorkOrderID'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Primary key. Foreign key to Product.ProductID.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'ProductID'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Primary key. Indicates the manufacturing process sequence.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'OperationSequence'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Manufacturing location where the part is processed. Foreign key to Location.LocationID.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'LocationID'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Planned manufacturing start date.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'ScheduledStartDate'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Planned manufacturing end date.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'ScheduledEndDate'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Actual start date.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'ActualStartDate'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Actual end date.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'ActualEndDate'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Number of manufacturing hours used.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'ActualResourceHrs'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Estimated manufacturing cost.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'PlannedCost'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Actual manufacturing cost.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'ActualCost'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Date and time the record was last updated.', 'SCHEMA', N'Production', 'TABLE', N'WorkOrderRouting', 'COLUMN', N'ModifiedDate'
 GO
 ALTER TABLE [Production].[WorkOrderRouting] SET (LOCK_ESCALATION = TABLE)
 GO

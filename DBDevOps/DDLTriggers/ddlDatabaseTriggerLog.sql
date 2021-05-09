@@ -1,7 +1,6 @@
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TRIGGER [ddlDatabaseTriggerLog] ON DATABASE 
 FOR DDL_DATABASE_LEVEL_EVENTS AS 
 BEGIN
@@ -46,8 +45,6 @@ BEGIN
         @data
         );
 END;
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Database trigger to audit all of the DDL changes made to the AdventureWorks 2016 database.', 'TRIGGER', N'ddlDatabaseTriggerLog', NULL, NULL, NULL, NULL
 GO
 DISABLE TRIGGER [ddlDatabaseTriggerLog]
 	ON DATABASE

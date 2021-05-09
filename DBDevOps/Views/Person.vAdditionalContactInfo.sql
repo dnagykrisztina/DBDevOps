@@ -50,5 +50,3 @@ OUTER APPLY [AdditionalContactInfo].nodes(
     /ci:AdditionalContactInfo') AS ContactInfo(ref) 
 WHERE [AdditionalContactInfo] IS NOT NULL;
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Displays the contact name and content from each element in the xml column AdditionalContactInfo for that person.', 'SCHEMA', N'Person', 'VIEW', N'vAdditionalContactInfo', NULL, NULL
-GO

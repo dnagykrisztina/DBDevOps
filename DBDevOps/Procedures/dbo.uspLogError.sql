@@ -1,7 +1,6 @@
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
-
 -- uspLogError logs error information in the ErrorLog table about the 
 -- error that caused execution to jump to the CATCH block of a 
 -- TRY...CATCH construct. This should be executed from within the scope 
@@ -62,8 +61,4 @@ BEGIN
         RETURN -1;
     END CATCH
 END;
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Logs error information in the ErrorLog table about the error that caused execution to jump to the CATCH block of a TRY...CATCH construct. Should be executed from within the scope of a CATCH block otherwise it will return without inserting error information.', 'SCHEMA', N'dbo', 'PROCEDURE', N'uspLogError', NULL, NULL
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Output parameter for the stored procedure uspLogError. Contains the ErrorLogID value corresponding to the row inserted by uspLogError in the ErrorLog table.', 'SCHEMA', N'dbo', 'PROCEDURE', N'uspLogError', 'PARAMETER', N'@ErrorLogID'
 GO

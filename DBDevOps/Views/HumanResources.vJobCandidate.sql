@@ -38,5 +38,3 @@ FROM [HumanResources].[JobCandidate] jc
 CROSS APPLY jc.[Resume].nodes(N'declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/Resume"; 
     /Resume') AS Resume(ref);
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Job candidate names and resumes.', 'SCHEMA', N'HumanResources', 'VIEW', N'vJobCandidate', NULL, NULL
-GO

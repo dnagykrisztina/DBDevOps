@@ -36,5 +36,3 @@ PIVOT
     IN ([2002], [2003], [2004])
 ) AS pvt;
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Uses PIVOT to return aggregated sales information for each sales representative.', 'SCHEMA', N'Sales', 'VIEW', N'vSalesPersonSalesByFiscalYears', NULL, NULL
-GO

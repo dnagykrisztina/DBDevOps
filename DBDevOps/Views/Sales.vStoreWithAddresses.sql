@@ -25,5 +25,3 @@ FROM [Sales].[Store] s
     INNER JOIN [Person].[AddressType] at 
     ON at.[AddressTypeID] = bea.[AddressTypeID];
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Stores (including store addresses) that sell Adventure Works Cycles products to consumers.', 'SCHEMA', N'Sales', 'VIEW', N'vStoreWithAddresses', NULL, NULL
-GO
