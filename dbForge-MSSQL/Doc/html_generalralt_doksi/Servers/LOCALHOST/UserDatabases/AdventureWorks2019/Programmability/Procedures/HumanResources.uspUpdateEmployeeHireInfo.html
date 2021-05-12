@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>HumanResources.uspUpdateEmployeeHireInfo</title>
+<script src="../../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../../styles/bootstrap/Default.css" type="text/css">
+<link rel="stylesheet" href="../../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-8">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\LOCALHOST.html" data-mapping-enabled="true">LOCALHOST</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\UserDatabases.html" data-mapping-enabled="true">User databases</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\AdventureWorks2019.html" data-mapping-enabled="true">AdventureWorks2019</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Programmability.html" data-mapping-enabled="true">Programmability</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\Procedures.html" data-mapping-enabled="true">Stored Procedures</a></li>
+            <li class="active">HumanResources.uspUpdateEmployeeHireInfo</li>
+          </ol>
+        </div>
+        <div class="align-right col-xs-4">DBDevOps</div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../../images/procedure.svg" title="HumanResources.uspUpdateEmployeeHireInfo" />
+            <h1 class="inline-middle">HumanResources.uspUpdateEmployeeHireInfo</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span>Updates the Employee table and inserts a new row in the EmployeePayHistory table with the values specified in the input parameters.</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>ANSI Nulls ON</td>
+                  <td><p class="value-true">True</p></td>
+                </tr>
+                <tr>
+                  <td>Quoted Identifier ON</td>
+                  <td><p class="value-true">True</p></td>
+                </tr>
+                <tr>
+                  <td>Encrypted</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Execute As</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Assembly</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Parameters" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Parameters</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td>@BusinessEntityID</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>
+                    <span>Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter a valid BusinessEntityID from the Employee table.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>@JobTitle</td>
+                  <td>nvarchar</td>
+                  <td>50</td>
+                  <td>
+                    <span>Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter a title for the employee.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>@HireDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>
+                    <span>Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter a hire date for the employee.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>@RateChangeDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>
+                    <span>Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter the date the rate changed for the employee.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>@Rate</td>
+                  <td>money</td>
+                  <td>8</td>
+                  <td>
+                    <span>Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter the new rate for the employee.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>@PayFrequency</td>
+                  <td>tinyint</td>
+                  <td>1</td>
+                  <td>
+                    <span>Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter the pay frequency for the employee.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>@CurrentFlag</td>
+                  <td>Flag</td>
+                  <td>1</td>
+                  <td>
+                    <span>Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter the current flag for the employee.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="sqlscript panel-default">
+              <font color="#0000ff">SET</font>&nbsp;<font color="#0000ff">QUOTED_IDENTIFIER</font><font color="#808080">,</font>&nbsp;<font color="#0000ff">ANSI_NULLS</font>&nbsp;<font color="#0000ff">ON</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">CREATE</font>&nbsp;<font color="#808080">OR</font>&nbsp;<font color="#0000ff">ALTER</font>&nbsp;<font color="#0000ff">PROCEDURE</font>&nbsp;<font color="#000000">HumanResources</font><font color="#808080">.</font><font color="#000000">uspUpdateEmployeeHireInfo</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008080">@BusinessEntityID</font>&nbsp;<font color="#000000">[int]</font><font color="#808080">,</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008080">@JobTitle</font>&nbsp;<font color="#000000">[nvarchar]</font><font color="#808080">(</font><font color="#000000">50</font><font color="#808080">)</font><font color="#808080">,</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008080">@HireDate</font>&nbsp;<font color="#000000">[datetime]</font><font color="#808080">,</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008080">@RateChangeDate</font>&nbsp;<font color="#000000">[datetime]</font><font color="#808080">,</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008080">@Rate</font>&nbsp;<font color="#000000">[money]</font><font color="#808080">,</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008080">@PayFrequency</font>&nbsp;<font color="#000000">[tinyint]</font><font color="#808080">,</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008080">@CurrentFlag</font>&nbsp;<font color="#000000">[dbo]</font><font color="#808080">.</font><font color="#000000">[Flag]</font>&nbsp;<br><font color="#0000ff">WITH</font>&nbsp;<font color="#0000ff">EXECUTE</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#0000ff">CALLER</font><br><font color="#0000ff">AS</font><br><font color="#0000ff">BEGIN</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SET</font>&nbsp;<font color="#0000ff">NOCOUNT</font>&nbsp;<font color="#0000ff">ON</font><font color="#808080">;</font><br><font color="#000000"></font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font>&nbsp;<font color="#0000ff">TRY</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font>&nbsp;<font color="#0000ff">TRANSACTION</font><font color="#808080">;</font><br><font color="#000000"></font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">UPDATE</font>&nbsp;<font color="#000000">[HumanResources]</font><font color="#808080">.</font><font color="#000000">[Employee]</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SET</font>&nbsp;<font color="#000000">[JobTitle]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@JobTitle</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[HireDate]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@HireDate</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[CurrentFlag]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@CurrentFlag</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">WHERE</font>&nbsp;<font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@BusinessEntityID</font><font color="#808080">;</font><br><font color="#000000"></font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">INSERT</font>&nbsp;<font color="#0000ff">INTO</font>&nbsp;<font color="#000000">[HumanResources]</font><font color="#808080">.</font><font color="#000000">[EmployeePayHistory]</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">(</font><font color="#000000">[BusinessEntityID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[RateChangeDate]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[Rate]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[PayFrequency]</font><font color="#808080">)</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">VALUES</font>&nbsp;<font color="#808080">(</font><font color="#008080">@BusinessEntityID</font><font color="#808080">,</font>&nbsp;<font color="#008080">@RateChangeDate</font><font color="#808080">,</font>&nbsp;<font color="#008080">@Rate</font><font color="#808080">,</font>&nbsp;<font color="#008080">@PayFrequency</font><font color="#808080">)</font><font color="#808080">;</font><br><font color="#000000"></font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">COMMIT</font>&nbsp;<font color="#0000ff">TRANSACTION</font><font color="#808080">;</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font>&nbsp;<font color="#0000ff">TRY</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font>&nbsp;<font color="#0000ff">CATCH</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">-- Rollback any active or uncommittable transactions before</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">-- inserting information in the ErrorLog</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#ff00ff">@@TRANCOUNT</font>&nbsp;<font color="#808080">></font>&nbsp;<font color="#000000">0</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ROLLBACK</font>&nbsp;<font color="#0000ff">TRANSACTION</font><font color="#808080">;</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font><br><font color="#000000"></font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">EXECUTE</font>&nbsp;<font color="#000000">[dbo]</font><font color="#808080">.</font><font color="#000000">[uspLogError]</font><font color="#808080">;</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font>&nbsp;<font color="#0000ff">CATCH</font><font color="#808080">;</font><br><font color="#0000ff">END</font><font color="#808080">;</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Updates the Employee table and inserts a new row in the EmployeePayHistory table with the values specified in the input parameters.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'HumanResources'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PROCEDURE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'uspUpdateEmployeeHireInfo'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter a valid BusinessEntityID from the Employee table.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'HumanResources'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PROCEDURE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'uspUpdateEmployeeHireInfo'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PARAMETER'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'@BusinessEntityID'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter a title for the employee.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'HumanResources'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PROCEDURE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'uspUpdateEmployeeHireInfo'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PARAMETER'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'@JobTitle'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter a hire date for the employee.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'HumanResources'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PROCEDURE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'uspUpdateEmployeeHireInfo'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PARAMETER'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'@HireDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter the date the rate changed for the employee.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'HumanResources'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PROCEDURE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'uspUpdateEmployeeHireInfo'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PARAMETER'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'@RateChangeDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter the new rate for the employee.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'HumanResources'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PROCEDURE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'uspUpdateEmployeeHireInfo'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PARAMETER'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'@Rate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter the pay frequency for the employee.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'HumanResources'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PROCEDURE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'uspUpdateEmployeeHireInfo'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PARAMETER'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'@PayFrequency'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Input parameter for the stored procedure uspUpdateEmployeeHireInfo. Enter the current flag for the employee.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'HumanResources'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PROCEDURE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'uspUpdateEmployeeHireInfo'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PARAMETER'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'@CurrentFlag'</font><br><font color="#0000ff">GO</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+          <span class="badge inline-middle">5</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Security\Schemas\HumanResources.html" data-mapping-enabled="true"><span>HumanResources</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Types\UserDefinedDataTypes\dbo.Flag.html" data-mapping-enabled="true"><span>dbo.Flag</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\HumanResources.Employee.html" data-mapping-enabled="true"><span>HumanResources.Employee</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\HumanResources.EmployeePayHistory.html" data-mapping-enabled="true"><span>HumanResources.EmployeePayHistory</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\dbo.uspLogError.html" data-mapping-enabled="true"><span>dbo.uspLogError</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span class="text-muted">No items found</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;Nagy Krisztina Dalma</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;2021. 03. 15</div>
+  </div>
+</body>
+</html>

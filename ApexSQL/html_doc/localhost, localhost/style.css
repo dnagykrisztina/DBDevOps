@@ -1,0 +1,543 @@
+/*
+ *  Last Modification Date: 01.16.2006
+ */
+::selection {color:#ffffff;background:#3399ff;}
+ A
+ {
+    COLOR: #003366;
+ }
+ A:Visited
+ {
+    COLOR: #4d82b8;
+ }
+ A:hover {
+   color: #4fabff;
+ }
+ 
+FRAMESET
+{
+border:0;
+}
+
+ img.vmiddle
+ {
+    vertical-align:middle;
+ }
+ 
+ span {
+	outline:none;
+ }
+ 
+ hr {
+	display:none;
+ }
+ 
+ #pagebody {
+	position:relative;
+	z-index:2;
+ }
+ 
+ #pagebody p a {
+	text-decoration:none;
+	display:inline-block;
+	margin-top:30px;
+	font-weight:bold;
+	font-size:12px;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	-ms-transition: color 0.3s;
+	transition: color 0.3s;
+ }
+ 
+ pre {
+	display:block;
+	width:95%;
+	/* Fix for SQL code wrap */
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ }
+
+ body
+ {
+  margin:  0px 0px 20px 0px;
+  font-family:Verdana,Arial,Helvetica;
+  font-size: 70%;
+ }
+
+ body.toc
+ {
+    margin:  0px 0px 0px 0px;
+    font-family:"Segoe UI";
+ }
+ 
+ body.toc div#pagetop {
+	padding-bottom:20px;
+	margin-bottom:10px;
+ }
+
+ div.apexdoc-total-counter
+ {
+    margin:  5px 15px 5px 15px;
+    padding:  5px 15px 5px 15px;
+ }
+
+ div#pagebody
+ {
+
+   width: 100%;
+ }
+
+ div#pagetop
+ {
+  position: relative;
+  left: 0px;
+  padding: 0px 0px 0px 0px;
+  border-bottom: 1px solid #D5D5D3;
+  /*background-color: #4d82b8;*/
+  background-color:#F7F7FF;
+  width:100%;
+ }
+ 
+  div#pagetop hr {
+    display:none;
+  }
+
+ table 
+ { 
+	border-collapse:collapse;
+    caption-side: top;
+    width: 95%;
+    margin:  0px 15px 40px 20px;
+    font-size: 100%;
+ }
+
+ table.ddl
+ { 
+    caption-side: top;
+    border-width: 0px;
+    text-align: left;
+    width: 95%;
+    font-size: 100%;
+	word-wrap: break-word;
+ }
+ 
+ td.ddl
+ {
+  text-align: left;
+  background-color: #F7F7FF;
+  border-bottom: 1px solid #D5D5D3;
+  border-left-color: 1px solid #D5D5D3;
+  word-wrap: break-word;
+ }
+
+ table.property-table 
+ { 
+    caption-side: top;
+    width: auto;
+    margin:  0px 15px 0px 20px;
+    font-size: 100%;
+ }
+
+ .apexdoc-table-caption td
+ {
+  /*background-color: #4d82b8;*/
+  background-color: #4d82b8;
+  border:none;
+  border-bottom: 1px solid #0b67cd;
+  padding: 5px 5px 5px 5px;
+  font-size:18px;
+  font-family:"Segoe UI";
+  text-align: left;
+  color:#FFFFFF;
+ }
+
+ table td
+ {
+  background-color: #F7F7FF;
+  border: 1px solid #D5D5D3;
+  padding: 5px 5px 5px 5px;
+  /*border-left-color: 1px solid #D5D5D3;*/
+  font-family:"Segoe UI";
+  font-size:13px;
+ }
+
+  table td a {
+	display:inline-block;
+	/*padding: 3px 5px 3px 2px;*/
+	text-decoration:none;
+  }
+  
+table td img {
+	display:block;
+	margin:auto;
+}
+ 
+ p
+ {
+    margin:  0px 15px 0px 20px;
+ }
+
+
+/*
+ * main header of page. "List of procedures"
+ */
+ .apexdoc-header
+ {
+  margin:  5px 0px 5px 10px;    
+  color: #4d82b8;
+  padding-top:15px;
+  padding-bottom:15px;
+  font-size: 100%;
+  font-weight: 100;
+  font-family:"Segoe UI";
+  font-size:28px;
+ }
+ .apexdoc-header-bottom
+ {
+  margin:  0px 0px 5px 0px;
+  text-align: left;
+  padding-left: 15px;
+  color: #003366;
+ }
+ 
+ #pagebody ul li {
+	display:block;
+ }
+ 
+  #pagebody ul li a {
+	display:inline-block;
+	text-decoration:none;
+	font-size:12px;
+ }
+
+/*
+ * secondary headers of page. "Index on table" or "triggers on table"
+ */
+ .apexdoc-secondary-header
+ {
+    font-weight: bold;
+    margin: 15px 0px 10px 0px;
+    padding: 0px 5px 0px 10px;
+ }
+
+ H2.apexdoc-secondary-header
+ {
+	background-color:#F7F7FF;
+    font-size:16px;
+    font-weight: normal;
+	border-top:solid 1px #D5D5D3;
+	border-bottom:solid 1px #D5D5D3;
+	width:95%;
+    margin: 15px 0px 10px 20px;
+    padding: 5px 0px 5px 0px;
+	color:#003366;
+	font-family:"Segoe UI";
+ }
+
+.apexdoc-secondary-header-hr
+ {
+ 	visibility:hidden;
+ }
+
+/*
+ * total items count. Under each table.
+ */
+ .apexdoc-total-counter
+ {
+
+ }
+
+ .apexdoc-sql
+ {
+
+ }
+
+ td.apexdoc-numeric
+ {
+   text-align: right;
+   font-weight: bold;
+   padding: 0px 10px 0px 10px;
+ }
+
+ td.centered
+ {
+   text-align: center;
+   padding: 0px 10px 0px 10px;
+ }
+
+ td.left
+ {
+   text-align: left;
+   padding: 0px 10px 0px 10px;
+ }
+
+ td.grayed
+ {
+   background-color: #f6f6f6;
+ }
+
+ .apexdoc-numeric
+ {
+   font-weight: bold;
+ }
+
+UL.Shown
+{
+   DISPLAY: block;
+   height:auto;
+   opacity:1;
+   -webkit-transition: height 0.8s ease-in;
+   -moz-transition: height 0.8s ease-in;
+   -o-transition: height 0.8s ease-in;
+   -ms-transition: height 0.8s ease-in;
+   transition: height 0.8s ease-in;
+}
+
+UL.Hidden
+{
+   DISPLAY: none;
+   height:0px;
+   opacity:0;
+   -webkit-transition: height 0.8s ease-in;
+   -moz-transition: height 0.8s ease-in;
+   -o-transition: height 0.8s ease-in;
+   -ms-transition: height 0.8s ease-in;
+   transition: height 0.8s ease-in;
+}
+
+div#SeealsoSection a {
+	text-decoration:none;
+	padding:2px;
+	font-size:11px;
+	margin:2px 0 2px 0;
+	display:inline-block;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	-ms-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+div#SeealsoSection a:hover {
+	text-decoration:none;
+	padding:2px;
+	font-size:11px;
+	margin:2px 0 2px 0;
+	display:inline-block;
+	-webkit-transition: color 0.3s ease-in;
+	-moz-transition: color 0.3s ease-in;
+	-o-transition: color 0.3s ease-in;
+	-ms-transition: color 0.3s ease-in;
+	transition: color 0.3s ease-in;
+}
+
+/* Warnings */
+ .apexdoc-warning
+{
+	margin:0.5em;
+	padding: 0.5em;
+	background-color: #FEEFB3;
+	border: 1px solid #B38F00;
+}
+
+.toggle, .toggleAll, .colExpToc
+{
+	cursor: pointer;
+}
+
+body.toc
+{
+	margin-bottom: 30px;
+}
+
+div.help-meni-normal
+{
+	height:55px;
+	/* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0.3s;
+    /* Standard syntax */
+    transition-property: height;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+    transition-delay: 0.3s;
+}
+
+div.help-meni-expanded
+{
+	height:65px;
+	/* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: linear;
+    /*-webkit-transition-delay: 2s;*/
+    /* Standard syntax */
+    transition-property: height;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+    /*transition-delay: 2s;*/
+}
+
+div#help-meni
+{
+	display:block;
+	width:100%;
+	margin:-10px 0 10px 0;
+}
+
+div#help-meni ul#help-meni-items li
+{
+	display:block;
+	float:left;
+	padding:8px 5px 5px 5px;
+	font-size:13px;
+}
+
+div#help-meni ul#help-meni-items li a
+{
+	text-decoration:none;
+	color:#4d82b8;
+}
+
+div#help-meni ul#help-meni-items li a:hover
+{
+	color:#4d82b8;
+	cursor:default;
+}
+
+.search-field-hidden
+{
+	/*display:none;*/
+	opacity:0;
+	/* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: linear;
+    /*-webkit-transition-delay: 0.5s;*/
+    /* Standard syntax */
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    /*transition-delay: 0.5s;*/
+}
+
+.search-field-shown
+{
+	/*display:block;*/
+	opacity:1;
+	/* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0.5s;
+    /* Standard syntax */
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 0.5s;
+}
+
+#searchField
+{
+	border:solid 1px #4d82b8;
+	width:200px;
+	margin:5px 0 0 20px;
+	padding:2px;
+	color:#003366;
+	font-size:11px;
+	outline:none;
+	position:relative;
+	z-index:1;
+}
+
+div.result-hidden
+{
+	display:none;
+	visibility:hidden;
+	height:1px;
+	/* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 3s;
+    -webkit-transition-timing-function: linear;
+    /*-webkit-transition-delay: 0.5s;*/
+    /* Standard syntax */
+    transition-property: height;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    /*transition-delay: 0.5s;*/
+}
+
+div.result-shown
+{
+	display:block;
+	visibility:visible;
+	height:auto;
+	/* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 3s;
+    -webkit-transition-timing-function: linear;
+    /*-webkit-transition-delay: 0.5s;*/
+    /* Standard syntax */
+    transition-property: height;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    /*transition-delay: 0.5s;*/
+}
+
+div#search-result
+{
+	border:solid 1px #999999;
+	width:198px;
+	background-color:#FFFFFF;
+	margin:0 0 0 20px;
+	position:relative;
+	z-index:20;
+}
+
+div#search-result span
+{
+	color:#999999;
+	text-decoration:italic;
+	padding:5px 0 5px 10px;
+	display:block;
+	margin:auto;
+}
+
+div#search-result ul
+{
+	display:block;
+	margin:5px 0 5px 10px;
+}
+
+div#search-result ul li
+{
+	display:block;
+	overflow:hidden;
+}
+
+div#search-result ul li a
+{
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.clearfix
+{
+	clear:both;
+}
+
+ .inner-colapsible-section
+ {
+	margin-left: 20px;/*or whatever indentation size you want*/
+ }
+ 
+ .inner-colapsible-section2
+ {
+	margin-left: 25px;/*or whatever indentation size you want*/
+ }

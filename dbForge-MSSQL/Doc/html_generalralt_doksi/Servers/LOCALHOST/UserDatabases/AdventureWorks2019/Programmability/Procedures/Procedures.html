@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Stored Procedures</title>
+<script src="../../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../../styles/bootstrap/Default.css" type="text/css">
+<link rel="stylesheet" href="../../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-8">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\LOCALHOST.html" data-mapping-enabled="true">LOCALHOST</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\UserDatabases.html" data-mapping-enabled="true">User databases</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\AdventureWorks2019.html" data-mapping-enabled="true">AdventureWorks2019</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Programmability.html" data-mapping-enabled="true">Programmability</a></li>
+            <li class="active">Stored Procedures</li>
+          </ol>
+        </div>
+        <div class="align-right col-xs-4">DBDevOps</div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../../images/folder.svg" title="Stored Procedures" />
+            <h1 class="inline-middle">Stored Procedures</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+
+
+      <div id="Procedures" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Objects</h2>
+          <span class="badge inline-middle">10</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th class="column-description-60">Description</th>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\dbo.uspGetBillOfMaterials.html" data-mapping-enabled="true"><span>dbo.uspGetBillOfMaterials</span></a></td>
+                  <td>
+                    <span>Stored procedure using a recursive query to return a multi-level bill of material for the specified ProductID.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\dbo.uspGetEmployeeManagers.html" data-mapping-enabled="true"><span>dbo.uspGetEmployeeManagers</span></a></td>
+                  <td>
+                    <span>Stored procedure using a recursive query to return the direct and indirect managers of the specified employee.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\dbo.uspGetManagerEmployees.html" data-mapping-enabled="true"><span>dbo.uspGetManagerEmployees</span></a></td>
+                  <td>
+                    <span>Stored procedure using a recursive query to return the direct and indirect employees of the specified manager.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\dbo.uspGetWhereUsedProductID.html" data-mapping-enabled="true"><span>dbo.uspGetWhereUsedProductID</span></a></td>
+                  <td>
+                    <span>Stored procedure using a recursive query to return all components or assemblies that directly or indirectly use the specified ProductID.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\dbo.uspLogError.html" data-mapping-enabled="true"><span>dbo.uspLogError</span></a></td>
+                  <td>
+                    <span>Logs error information in the ErrorLog table about the error that caused execution to jump to the CATCH block of a TRY...CATCH construct. Should be executed from within the scope of a CATCH block otherwise it will return without inserting error information.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\dbo.uspPrintError.html" data-mapping-enabled="true"><span>dbo.uspPrintError</span></a></td>
+                  <td>
+                    <span>Prints error information about the error that caused execution to jump to the CATCH block of a TRY...CATCH construct. Should be executed from within the scope of a CATCH block otherwise it will return without printing any error information.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\dbo.uspSearchCandidateResumes.html" data-mapping-enabled="true"><span>dbo.uspSearchCandidateResumes</span></a></td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\HumanResources.uspUpdateEmployeeHireInfo.html" data-mapping-enabled="true"><span>HumanResources.uspUpdateEmployeeHireInfo</span></a></td>
+                  <td>
+                    <span>Updates the Employee table and inserts a new row in the EmployeePayHistory table with the values specified in the input parameters.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\HumanResources.uspUpdateEmployeeLogin.html" data-mapping-enabled="true"><span>HumanResources.uspUpdateEmployeeLogin</span></a></td>
+                  <td>
+                    <span>Updates the Employee table with the values specified in the input parameters for the given BusinessEntityID.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Procedures\HumanResources.uspUpdateEmployeePersonalInfo.html" data-mapping-enabled="true"><span>HumanResources.uspUpdateEmployeePersonalInfo</span></a></td>
+                  <td>
+                    <span>Updates the Employee table with the values specified in the input parameters for the given EmployeeID.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;Nagy Krisztina Dalma</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;2021. 03. 15</div>
+  </div>
+</body>
+</html>

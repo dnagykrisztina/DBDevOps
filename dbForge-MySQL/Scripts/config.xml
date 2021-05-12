@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Collation>utf8mb4_0900_ai_ci</Collation>
+  <ServerVersion>8.0.23</ServerVersion>
+  <Entity>Cars</Entity>
+  <ServerType>MySql</ServerType>
+  <SupportsConnectEngine>False</SupportsConnectEngine>
+</Configuration>

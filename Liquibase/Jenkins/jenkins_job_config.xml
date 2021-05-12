@@ -1,0 +1,51 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.33.1">
+      <projectUrl>https://github.com/dnagykrisztina/DBDevOps/</projectUrl>
+      <displayName>DBDevOps</displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.6.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/dnagykrisztina/DBDevOps.git</url>
+        <credentialsId>github-login</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/liquibase</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="empty-list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.SCMTrigger>
+      <spec>H/5 * * * *</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jenkinsci.plugins.liquibase.builder.RawCliBuilder plugin="liquibase-runner@1.4.10">
+      <installationName>Liquibase 4.3.1</installationName>
+      <url>jdbc:mysql://172.17.0.2:3306/Cars?autoReconnect=true</url>
+      <resourceDirectories></resourceDirectories>
+      <credentialsId>mysql-credentials</credentialsId>
+      <commandArguments>--changeLogFile=${WORKSPACE}/dbchangelog.xml update</commandArguments>
+    </org.jenkinsci.plugins.liquibase.builder.RawCliBuilder>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

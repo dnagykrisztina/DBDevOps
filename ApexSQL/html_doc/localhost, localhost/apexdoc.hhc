@@ -1,0 +1,2874 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD>
+<BODY>
+<UL>
+  <LI><OBJECT type="text/sitemap">
+<param name="Name" value="AdventureWorks2016">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/db_object_index.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Objects by type">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/db_object_index_type_Objects by type.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Datatypes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/datatypes.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AccountNumber">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Datatypes/257.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Flag">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Datatypes/258.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Datatypes/260.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="NameStyle">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Datatypes/259.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="OrderNumber">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Datatypes/261.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Phone">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Datatypes/262.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="DDL triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/DDLTriggers.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ApexSQL_SourceControl_DDLTrigger">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/DDLTriggers/1303675692.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ddlDatabaseTriggerLog">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/DDLTriggers/581577110.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Fulltext catalogs">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/FullTextCatalogs.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AW2016FullTextCatalog">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/FulltextCatalogs/5.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Functions">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/functions.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ApexSQL_SourceControl_FrameworkVersion">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/1287675635.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetAccountingEndDate">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/407672500.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetAccountingStartDate">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/391672443.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetContactInformation">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/423672557.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetDocumentStatusText">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/503672842.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetProductDealerPrice">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/439672614.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetProductListPrice">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/455672671.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetProductStandardCost">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/471672728.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetPurchaseOrderStatusText">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/519672899.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetSalesOrderStatusText">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/535672956.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnGetStock">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/487672785.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ufnLeadingZeros">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Functions/677577452.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Procedures">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/procedures.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="uspGetBillOfMaterials">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/551673013.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="uspGetEmployeeManagers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/567673070.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="uspGetManagerEmployees">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/583673127.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="uspGetWhereUsedProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/599673184.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="uspLogError">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/661577395.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="uspPrintError">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/645577338.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="uspSearchCandidateResumes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/663673412.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.uspUpdateEmployeeHireInfo">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/615673241.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.uspUpdateEmployeeLogin">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/631673298.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.uspUpdateEmployeePersonalInfo">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Procedures/647673355.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Roles">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/roles.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_accessadmin">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/16385.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_backupoperator">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/16389.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_datareader">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/16390.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_datawriter">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/16391.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_ddladmin">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/16387.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_denydatareader">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/16392.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_denydatawriter">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/16393.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_owner">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/16384.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_securityadmin">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/16386.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="public">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Roles/0.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Schemas">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Schemas.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_accessadmin">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\16385.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_backupoperator">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\16389.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_datareader">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\16390.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_datawriter">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\16391.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_ddladmin">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\16387.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_denydatareader">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\16392.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_denydatawriter">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\16393.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_owner">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\16384.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="db_securityadmin">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\16386.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="dbo">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\1.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="guest">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\2.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\5.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="INFORMATION_SCHEMA">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\3.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\6.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\7.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\8.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\9.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="sys">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Schemas\4.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Tables">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/tables.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AWBuildVersion">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\789577851.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_789577851.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="PK_AWBuildVersion_SystemInformationID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/789577851_PK_AWBuildVersion_SystemInformationID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="DatabaseLog">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\565577053.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_565577053.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="PK_DatabaseLog_DatabaseLogID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/565577053_PK_DatabaseLog_DatabaseLogID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ErrorLog">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\597577167.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_597577167.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="PK_ErrorLog_ErrorLogID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/597577167_PK_ErrorLog_ErrorLogID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.Department">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1365579903.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1365579903.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.PK_Department_DepartmentID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1365579903_PK_Department_DepartmentID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.AK_Department_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1365579903_AK_Department_Name.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.Employee">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1557580587.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/triggers_1557580587.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.dEmployee">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2059154381.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1557580587.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.PK_Employee_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1557580587_PK_Employee_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.IX_Employee_OrganizationNode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1557580587_IX_Employee_OrganizationNode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.IX_Employee_OrganizationLevel_OrganizationNode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1557580587_IX_Employee_OrganizationLevel_OrganizationNode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.AK_Employee_LoginID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1557580587_AK_Employee_LoginID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.AK_Employee_NationalIDNumber">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1557580587_AK_Employee_NationalIDNumber.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.AK_Employee_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1557580587_AK_Employee_rowguid.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1557580587.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.FK_Employee_Person_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1557580587_FK_Employee_Person_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.EmployeeDepartmentHistory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1765581328.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1765581328.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.PK_EmployeeDepartmentHistory_BusinessEntityID_StartDate_DepartmentID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1765581328_PK_EmployeeDepartmentHistory_BusinessEntityID_StartDate_DepartmentID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.IX_EmployeeDepartmentHistory_DepartmentID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1765581328_IX_EmployeeDepartmentHistory_DepartmentID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.IX_EmployeeDepartmentHistory_ShiftID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1765581328_IX_EmployeeDepartmentHistory_ShiftID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1765581328.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.FK_EmployeeDepartmentHistory_Department_DepartmentID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1765581328_FK_EmployeeDepartmentHistory_Department_DepartmentID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.FK_EmployeeDepartmentHistory_Employee_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1765581328_FK_EmployeeDepartmentHistory_Employee_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.FK_EmployeeDepartmentHistory_Shift_ShiftID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1765581328_FK_EmployeeDepartmentHistory_Shift_ShiftID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.EmployeePayHistory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1813581499.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1813581499.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.PK_EmployeePayHistory_BusinessEntityID_RateChangeDate">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1813581499_PK_EmployeePayHistory_BusinessEntityID_RateChangeDate.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1813581499.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.FK_EmployeePayHistory_Employee_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1813581499_FK_EmployeePayHistory_Employee_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.JobCandidate">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1909581841.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1909581841.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.PK_JobCandidate_JobCandidateID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1909581841_PK_JobCandidate_JobCandidateID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.IX_JobCandidate_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1909581841_IX_JobCandidate_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.FULLTEXT_INDEX_JobCandidate">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1909581841_FULLTEXT_INDEX_JobCandidate.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1909581841.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.FK_JobCandidate_Employee_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1909581841_FK_JobCandidate_Employee_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.Shift">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\366624349.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_366624349.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.PK_Shift_ShiftID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/366624349_PK_Shift_ShiftID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.AK_Shift_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/366624349_AK_Shift_Name.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.AK_Shift_StartTime_EndTime">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/366624349_AK_Shift_StartTime_EndTime.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.Address">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\693577509.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_693577509.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_Address_AddressID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/693577509_PK_Address_AddressID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_Address_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/693577509_AK_Address_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/693577509_IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_Address_StateProvinceID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/693577509_IX_Address_StateProvinceID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_693577509.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_Address_StateProvince_StateProvinceID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_693577509_FK_Address_StateProvince_StateProvinceID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AddressType">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\741577680.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_741577680.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_AddressType_AddressTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/741577680_PK_AddressType_AddressTypeID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_AddressType_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/741577680_AK_AddressType_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_AddressType_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/741577680_AK_AddressType_Name.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.BusinessEntity">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\949578421.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_949578421.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_BusinessEntity_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/949578421_PK_BusinessEntity_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_BusinessEntity_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/949578421_AK_BusinessEntity_rowguid.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.BusinessEntityAddress">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\997578592.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_997578592.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_BusinessEntityAddress_BusinessEntityID_AddressID_AddressTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/997578592_PK_BusinessEntityAddress_BusinessEntityID_AddressID_AddressTypeID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_BusinessEntityAddress_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/997578592_AK_BusinessEntityAddress_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_BusinessEntityAddress_AddressID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/997578592_IX_BusinessEntityAddress_AddressID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_BusinessEntityAddress_AddressTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/997578592_IX_BusinessEntityAddress_AddressTypeID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_997578592.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_BusinessEntityAddress_Address_AddressID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_997578592_FK_BusinessEntityAddress_Address_AddressID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_BusinessEntityAddress_AddressType_AddressTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_997578592_FK_BusinessEntityAddress_AddressType_AddressTypeID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_BusinessEntityAddress_BusinessEntity_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_997578592_FK_BusinessEntityAddress_BusinessEntity_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.BusinessEntityContact">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1045578763.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1045578763.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_BusinessEntityContact_BusinessEntityID_PersonID_ContactTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1045578763_PK_BusinessEntityContact_BusinessEntityID_PersonID_ContactTypeID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_BusinessEntityContact_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1045578763_AK_BusinessEntityContact_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_BusinessEntityContact_PersonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1045578763_IX_BusinessEntityContact_PersonID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_BusinessEntityContact_ContactTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1045578763_IX_BusinessEntityContact_ContactTypeID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1045578763.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_BusinessEntityContact_Person_PersonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1045578763_FK_BusinessEntityContact_Person_PersonID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_BusinessEntityContact_ContactType_ContactTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1045578763_FK_BusinessEntityContact_ContactType_ContactTypeID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_BusinessEntityContact_BusinessEntity_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1045578763_FK_BusinessEntityContact_BusinessEntity_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.ContactType">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1093578934.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1093578934.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_ContactType_ContactTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1093578934_PK_ContactType_ContactTypeID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_ContactType_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1093578934_AK_ContactType_Name.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.CountryRegion">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1157579162.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1157579162.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_CountryRegion_CountryRegionCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1157579162_PK_CountryRegion_CountryRegionCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_CountryRegion_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1157579162_AK_CountryRegion_Name.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.EmailAddress">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1509580416.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1509580416.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_EmailAddress_BusinessEntityID_EmailAddressID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1509580416_PK_EmailAddress_BusinessEntityID_EmailAddressID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_EmailAddress_EmailAddress">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1509580416_IX_EmailAddress_EmailAddress.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1509580416.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_EmailAddress_Person_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1509580416_FK_EmailAddress_Person_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.Password">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\2037582297.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_2037582297.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_Password_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2037582297_PK_Password_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_2037582297.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_Password_Person_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_2037582297_FK_Password_Person_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.Person">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\2085582468.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/triggers_2085582468.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.iuPerson">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2075154438.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_2085582468.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_Person_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2085582468_PK_Person_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_Person_LastName_FirstName_MiddleName">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2085582468_IX_Person_LastName_FirstName_MiddleName.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_Person_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2085582468_AK_Person_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PXML_Person_AddContact">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2085582468_PXML_Person_AddContact.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PXML_Person_Demographics">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2085582468_PXML_Person_Demographics.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.XMLPATH_Person_Demographics">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2085582468_XMLPATH_Person_Demographics.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.XMLPROPERTY_Person_Demographics">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2085582468_XMLPROPERTY_Person_Demographics.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.XMLVALUE_Person_Demographics">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2085582468_XMLVALUE_Person_Demographics.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_2085582468.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_Person_BusinessEntity_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_2085582468_FK_Person_BusinessEntity_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_Person_Pet">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_2085582468_FK_Person_Pet.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PersonPhone">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\82099333.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_82099333.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_PersonPhone_BusinessEntityID_PhoneNumber_PhoneNumberTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/82099333_PK_PersonPhone_BusinessEntityID_PhoneNumber_PhoneNumberTypeID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_PersonPhone_PhoneNumber">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/82099333_IX_PersonPhone_PhoneNumber.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_82099333.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_PersonPhone_Person_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_82099333_FK_PersonPhone_Person_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_PersonPhone_PhoneNumberType_PhoneNumberTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_82099333_FK_PersonPhone_PhoneNumberType_PhoneNumberTypeID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.Pet">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1575676661.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1575676661.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_Pet">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1575676661_PK_Pet.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1575676661.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_Pet_Owner">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1575676661_FK_Pet_Owner.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_Pet_Pet">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1575676661_FK_Pet_Pet.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PhoneNumberType">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\114099447.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_114099447.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_PhoneNumberType_PhoneNumberTypeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/114099447_PK_PhoneNumberType_PhoneNumberTypeID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.StateProvince">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\782625831.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_782625831.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.PK_StateProvince_StateProvinceID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/782625831_PK_StateProvince_StateProvinceID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_StateProvince_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/782625831_AK_StateProvince_Name.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_StateProvince_StateProvinceCode_CountryRegionCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/782625831_AK_StateProvince_StateProvinceCode_CountryRegionCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AK_StateProvince_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/782625831_AK_StateProvince_rowguid.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_782625831.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_StateProvince_CountryRegion_CountryRegionCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_782625831_FK_StateProvince_CountryRegion_CountryRegionCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.FK_StateProvince_SalesTerritory_TerritoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_782625831_FK_StateProvince_SalesTerritory_TerritoryID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.BillOfMaterials">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\821577965.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_821577965.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_BillOfMaterials_BillOfMaterialsID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/821577965_PK_BillOfMaterials_BillOfMaterialsID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/821577965_AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_BillOfMaterials_UnitMeasureCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/821577965_IX_BillOfMaterials_UnitMeasureCode.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_821577965.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_BillOfMaterials_Product_ProductAssemblyID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_821577965_FK_BillOfMaterials_Product_ProductAssemblyID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_BillOfMaterials_Product_ComponentID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_821577965_FK_BillOfMaterials_Product_ComponentID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_BillOfMaterials_UnitMeasure_UnitMeasureCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_821577965_FK_BillOfMaterials_UnitMeasure_UnitMeasureCode.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.Culture">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1221579390.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1221579390.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_Culture_CultureID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1221579390_PK_Culture_CultureID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_Culture_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1221579390_AK_Culture_Name.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.Document">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1397580017.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1397580017.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_Document_DocumentNode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1397580017_PK_Document_DocumentNode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.UQ__Document__F73921F744672977">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1397580017_UQ__Document__F73921F744672977.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_Document_DocumentLevel_DocumentNode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1397580017_AK_Document_DocumentLevel_DocumentNode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_Document_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1397580017_AK_Document_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_Document_FileName_Revision">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1397580017_IX_Document_FileName_Revision.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FULLTEXT_INDEX_Document">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1397580017_FULLTEXT_INDEX_Document.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1397580017.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_Document_Employee_Owner">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1397580017_FK_Document_Employee_Owner.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.Illustration">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1877581727.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1877581727.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_Illustration_IllustrationID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1877581727_PK_Illustration_IllustrationID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.Location">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1941581955.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1941581955.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_Location_LocationID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1941581955_PK_Location_LocationID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_Location_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1941581955_AK_Location_Name.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.Product">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\146099561.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_146099561.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/146099561_PK_Product_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_Product_ProductNumber">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/146099561_AK_Product_ProductNumber.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_Product_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/146099561_AK_Product_Name.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_Product_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/146099561_AK_Product_rowguid.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_146099561.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_Product_UnitMeasure_SizeUnitMeasureCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_146099561_FK_Product_UnitMeasure_SizeUnitMeasureCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_Product_UnitMeasure_WeightUnitMeasureCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_146099561_FK_Product_UnitMeasure_WeightUnitMeasureCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_Product_ProductModel_ProductModelID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_146099561_FK_Product_ProductModel_ProductModelID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_Product_ProductSubcategory_ProductSubcategoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_146099561_FK_Product_ProductSubcategory_ProductSubcategoryID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductCategory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\386100416.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_386100416.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductCategory_ProductCategoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/386100416_PK_ProductCategory_ProductCategoryID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_ProductCategory_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/386100416_AK_ProductCategory_Name.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_ProductCategory_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/386100416_AK_ProductCategory_rowguid.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductCostHistory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\434100587.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_434100587.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductCostHistory_ProductID_StartDate">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/434100587_PK_ProductCostHistory_ProductID_StartDate.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_434100587.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductCostHistory_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_434100587_FK_ProductCostHistory_Product_ProductID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductDescription">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\498100815.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_498100815.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductDescription_ProductDescriptionID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/498100815_PK_ProductDescription_ProductDescriptionID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_ProductDescription_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/498100815_AK_ProductDescription_rowguid.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductDocument">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\546100986.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_546100986.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductDocument_ProductID_DocumentNode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/546100986_PK_ProductDocument_ProductID_DocumentNode.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_546100986.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductDocument_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_546100986_FK_ProductDocument_Product_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductDocument_Document_DocumentNode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_546100986_FK_ProductDocument_Document_DocumentNode.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductInventory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\578101100.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_578101100.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductInventory_ProductID_LocationID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/578101100_PK_ProductInventory_ProductID_LocationID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_578101100.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductInventory_Location_LocationID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_578101100_FK_ProductInventory_Location_LocationID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductInventory_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_578101100_FK_ProductInventory_Product_ProductID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductListPriceHistory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\674101442.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_674101442.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductListPriceHistory_ProductID_StartDate">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/674101442_PK_ProductListPriceHistory_ProductID_StartDate.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_674101442.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductListPriceHistory_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_674101442_FK_ProductListPriceHistory_Product_ProductID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductModel">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\738101670.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_738101670.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductModel_ProductModelID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/738101670_PK_ProductModel_ProductModelID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_ProductModel_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/738101670_AK_ProductModel_Name.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_ProductModel_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/738101670_AK_ProductModel_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PXML_ProductModel_CatalogDescription">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/738101670_PXML_ProductModel_CatalogDescription.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PXML_ProductModel_Instructions">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/738101670_PXML_ProductModel_Instructions.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductModelIllustration">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\786101841.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_786101841.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductModelIllustration_ProductModelID_IllustrationID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/786101841_PK_ProductModelIllustration_ProductModelID_IllustrationID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_786101841.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductModelIllustration_ProductModel_ProductModelID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_786101841_FK_ProductModelIllustration_ProductModel_ProductModelID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductModelIllustration_Illustration_IllustrationID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_786101841_FK_ProductModelIllustration_Illustration_IllustrationID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductModelProductDescriptionCulture">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\818101955.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_818101955.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductModelProductDescriptionCulture_ProductModelID_ProductDescriptionID_CultureID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/818101955_PK_ProductModelProductDescriptionCulture_ProductModelID_ProductDescriptionID_CultureID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_818101955.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_818101955_FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductModelProductDescriptionCulture_Culture_CultureID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_818101955_FK_ProductModelProductDescriptionCulture_Culture_CultureID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_818101955_FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductPhoto">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\850102069.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_850102069.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductPhoto_ProductPhotoID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/850102069_PK_ProductPhoto_ProductPhotoID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductProductPhoto">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\882102183.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_882102183.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductProductPhoto_ProductID_ProductPhotoID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/882102183_PK_ProductProductPhoto_ProductID_ProductPhotoID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_882102183.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductProductPhoto_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_882102183_FK_ProductProductPhoto_Product_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductProductPhoto_ProductPhoto_ProductPhotoID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_882102183_FK_ProductProductPhoto_ProductPhoto_ProductPhotoID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductReview">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\930102354.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_930102354.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductReview_ProductReviewID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/930102354_PK_ProductReview_ProductReviewID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_ProductReview_ProductID_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/930102354_IX_ProductReview_ProductID_Name.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FULLTEXT_INDEX_ProductReview">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/930102354_FULLTEXT_INDEX_ProductReview.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_930102354.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductReview_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_930102354_FK_ProductReview_Product_ProductID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductSubcategory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\994102582.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_994102582.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ProductSubcategory_ProductSubcategoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/994102582_PK_ProductSubcategory_ProductSubcategoryID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_ProductSubcategory_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/994102582_AK_ProductSubcategory_Name.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_ProductSubcategory_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/994102582_AK_ProductSubcategory_rowguid.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_994102582.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_ProductSubcategory_ProductCategory_ProductCategoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_994102582_FK_ProductSubcategory_ProductCategory_ProductCategoryID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ScrapReason">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\334624235.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_334624235.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_ScrapReason_ScrapReasonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/334624235_PK_ScrapReason_ScrapReasonID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_ScrapReason_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/334624235_AK_ScrapReason_Name.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.TransactionHistory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\894626230.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_894626230.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_TransactionHistory_TransactionID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/894626230_PK_TransactionHistory_TransactionID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_TransactionHistory_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/894626230_IX_TransactionHistory_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_TransactionHistory_ReferenceOrderID_ReferenceOrderLineID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/894626230_IX_TransactionHistory_ReferenceOrderID_ReferenceOrderLineID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_894626230.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_TransactionHistory_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_894626230_FK_TransactionHistory_Product_ProductID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.TransactionHistoryArchive">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\974626515.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_974626515.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_TransactionHistoryArchive_TransactionID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/974626515_PK_TransactionHistoryArchive_TransactionID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_TransactionHistoryArchive_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/974626515_IX_TransactionHistoryArchive_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_TransactionHistoryArchive_ReferenceOrderID_ReferenceOrderLineID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/974626515_IX_TransactionHistoryArchive_ReferenceOrderID_ReferenceOrderLineID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.UnitMeasure">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1054626800.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1054626800.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_UnitMeasure_UnitMeasureCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1054626800_PK_UnitMeasure_UnitMeasureCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.AK_UnitMeasure_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1054626800_AK_UnitMeasure_Name.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.WorkOrder">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1166627199.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/triggers_1166627199.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.iWorkOrder">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/39671189.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.uWorkOrder">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/55671246.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1166627199.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_WorkOrder_WorkOrderID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1166627199_PK_WorkOrder_WorkOrderID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_WorkOrder_ScrapReasonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1166627199_IX_WorkOrder_ScrapReasonID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_WorkOrder_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1166627199_IX_WorkOrder_ProductID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1166627199.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_WorkOrder_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1166627199_FK_WorkOrder_Product_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_WorkOrder_ScrapReason_ScrapReasonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1166627199_FK_WorkOrder_ScrapReason_ScrapReasonID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.WorkOrderRouting">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1246627484.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1246627484.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1246627484_PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_WorkOrderRouting_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1246627484_IX_WorkOrderRouting_ProductID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1246627484.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_WorkOrderRouting_Location_LocationID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1246627484_FK_WorkOrderRouting_Location_LocationID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.FK_WorkOrderRouting_WorkOrder_WorkOrderID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1246627484_FK_WorkOrderRouting_WorkOrder_WorkOrderID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.ProductVendor">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1042102753.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1042102753.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.PK_ProductVendor_ProductID_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1042102753_PK_ProductVendor_ProductID_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.IX_ProductVendor_UnitMeasureCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1042102753_IX_ProductVendor_UnitMeasureCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.IX_ProductVendor_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1042102753_IX_ProductVendor_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1042102753.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.FK_ProductVendor_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1042102753_FK_ProductVendor_Product_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.FK_ProductVendor_UnitMeasure_UnitMeasureCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1042102753_FK_ProductVendor_UnitMeasure_UnitMeasureCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.FK_ProductVendor_Vendor_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1042102753_FK_ProductVendor_Vendor_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.PurchaseOrderDetail">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1170103209.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/triggers_1170103209.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.iPurchaseOrderDetail">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2091154495.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.uPurchaseOrderDetail">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2107154552.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1170103209.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.PK_PurchaseOrderDetail_PurchaseOrderID_PurchaseOrderDetailID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1170103209_PK_PurchaseOrderDetail_PurchaseOrderID_PurchaseOrderDetailID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.IX_PurchaseOrderDetail_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1170103209_IX_PurchaseOrderDetail_ProductID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1170103209.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.FK_PurchaseOrderDetail_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1170103209_FK_PurchaseOrderDetail_Product_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.FK_PurchaseOrderDetail_PurchaseOrderHeader_PurchaseOrderID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1170103209_FK_PurchaseOrderDetail_PurchaseOrderHeader_PurchaseOrderID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.PurchaseOrderHeader">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1266103551.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/triggers_1266103551.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.uPurchaseOrderHeader">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2123154609.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1266103551.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.PK_PurchaseOrderHeader_PurchaseOrderID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1266103551_PK_PurchaseOrderHeader_PurchaseOrderID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.IX_PurchaseOrderHeader_VendorID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1266103551_IX_PurchaseOrderHeader_VendorID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.IX_PurchaseOrderHeader_EmployeeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1266103551_IX_PurchaseOrderHeader_EmployeeID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1266103551.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.FK_PurchaseOrderHeader_Employee_EmployeeID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1266103551_FK_PurchaseOrderHeader_Employee_EmployeeID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.FK_PurchaseOrderHeader_Vendor_VendorID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1266103551_FK_PurchaseOrderHeader_Vendor_VendorID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.FK_PurchaseOrderHeader_ShipMethod_ShipMethodID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1266103551_FK_PurchaseOrderHeader_ShipMethod_ShipMethodID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.ShipMethod">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\398624463.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_398624463.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.PK_ShipMethod_ShipMethodID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/398624463_PK_ShipMethod_ShipMethodID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.AK_ShipMethod_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/398624463_AK_ShipMethod_Name.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.AK_ShipMethod_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/398624463_AK_ShipMethod_rowguid.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.Vendor">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1086626914.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/triggers_1086626914.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.dVendor">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/23671132.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1086626914.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.PK_Vendor_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1086626914_PK_Vendor_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.AK_Vendor_AccountNumber">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1086626914_AK_Vendor_AccountNumber.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1086626914.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.FK_Vendor_BusinessEntity_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1086626914_FK_Vendor_BusinessEntity_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.CountryRegionCurrency">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1125579048.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1125579048.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_CountryRegionCurrency_CountryRegionCode_CurrencyCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1125579048_PK_CountryRegionCurrency_CountryRegionCode_CurrencyCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.IX_CountryRegionCurrency_CurrencyCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1125579048_IX_CountryRegionCurrency_CurrencyCode.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1125579048.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_CountryRegionCurrency_CountryRegion_CountryRegionCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1125579048_FK_CountryRegionCurrency_CountryRegion_CountryRegionCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_CountryRegionCurrency_Currency_CurrencyCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1125579048_FK_CountryRegionCurrency_Currency_CurrencyCode.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.CreditCard">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1189579276.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1189579276.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_CreditCard_CreditCardID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1189579276_PK_CreditCard_CreditCardID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_CreditCard_CardNumber">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1189579276_AK_CreditCard_CardNumber.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.Currency">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1253579504.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1253579504.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_Currency_CurrencyCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1253579504_PK_Currency_CurrencyCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_Currency_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1253579504_AK_Currency_Name.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.CurrencyRate">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1285579618.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1285579618.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_CurrencyRate_CurrencyRateID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1285579618_PK_CurrencyRate_CurrencyRateID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_CurrencyRate_CurrencyRateDate_FromCurrencyCode_ToCurrencyCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1285579618_AK_CurrencyRate_CurrencyRateDate_FromCurrencyCode_ToCurrencyCode.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1285579618.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_CurrencyRate_Currency_FromCurrencyCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1285579618_FK_CurrencyRate_Currency_FromCurrencyCode.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_CurrencyRate_Currency_ToCurrencyCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1285579618_FK_CurrencyRate_Currency_ToCurrencyCode.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.Customer">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1317579732.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1317579732.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_Customer_CustomerID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1317579732_PK_Customer_CustomerID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_Customer_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1317579732_AK_Customer_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_Customer_AccountNumber">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1317579732_AK_Customer_AccountNumber.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.IX_Customer_TerritoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1317579732_IX_Customer_TerritoryID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1317579732.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_Customer_Person_PersonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1317579732_FK_Customer_Person_PersonID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_Customer_Store_StoreID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1317579732_FK_Customer_Store_StoreID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_Customer_SalesTerritory_TerritoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1317579732_FK_Customer_SalesTerritory_TerritoryID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PersonCreditCard">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\50099219.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_50099219.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_PersonCreditCard_BusinessEntityID_CreditCardID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/50099219_PK_PersonCreditCard_BusinessEntityID_CreditCardID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_50099219.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_PersonCreditCard_Person_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_50099219_FK_PersonCreditCard_Person_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_PersonCreditCard_CreditCard_CreditCardID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_50099219_FK_PersonCreditCard_CreditCard_CreditCardID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SalesOrderDetail">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1474104292.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/triggers_1474104292.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.iduSalesOrderDetail">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2139154666.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1474104292.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SalesOrderDetail_SalesOrderID_SalesOrderDetailID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1474104292_PK_SalesOrderDetail_SalesOrderID_SalesOrderDetailID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesOrderDetail_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1474104292_AK_SalesOrderDetail_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.IX_SalesOrderDetail_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1474104292_IX_SalesOrderDetail_ProductID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1474104292.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1474104292_FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderDetail_SpecialOfferProduct_SpecialOfferIDProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1474104292_FK_SalesOrderDetail_SpecialOfferProduct_SpecialOfferIDProductID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SalesOrderHeader">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1586104691.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/triggers_1586104691.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.uSalesOrderHeader">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/7671075.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1586104691.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SalesOrderHeader_SalesOrderID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1586104691_PK_SalesOrderHeader_SalesOrderID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesOrderHeader_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1586104691_AK_SalesOrderHeader_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesOrderHeader_SalesOrderNumber">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1586104691_AK_SalesOrderHeader_SalesOrderNumber.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.IX_SalesOrderHeader_CustomerID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1586104691_IX_SalesOrderHeader_CustomerID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.IX_SalesOrderHeader_SalesPersonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1586104691_IX_SalesOrderHeader_SalesPersonID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1586104691.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeader_Address_BillToAddressID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1586104691_FK_SalesOrderHeader_Address_BillToAddressID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeader_Address_ShipToAddressID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1586104691_FK_SalesOrderHeader_Address_ShipToAddressID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeader_CreditCard_CreditCardID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1586104691_FK_SalesOrderHeader_CreditCard_CreditCardID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeader_CurrencyRate_CurrencyRateID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1586104691_FK_SalesOrderHeader_CurrencyRate_CurrencyRateID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeader_Customer_CustomerID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1586104691_FK_SalesOrderHeader_Customer_CustomerID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeader_SalesPerson_SalesPersonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1586104691_FK_SalesOrderHeader_SalesPerson_SalesPersonID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeader_ShipMethod_ShipMethodID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1586104691_FK_SalesOrderHeader_ShipMethod_ShipMethodID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeader_SalesTerritory_TerritoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1586104691_FK_SalesOrderHeader_SalesTerritory_TerritoryID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SalesOrderHeaderSalesReason">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1842105603.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1842105603.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SalesOrderHeaderSalesReason_SalesOrderID_SalesReasonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1842105603_PK_SalesOrderHeaderSalesReason_SalesOrderID_SalesReasonID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1842105603.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeaderSalesReason_SalesReason_SalesReasonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1842105603_FK_SalesOrderHeaderSalesReason_SalesReason_SalesReasonID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesOrderHeaderSalesReason_SalesOrderHeader_SalesOrderID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1842105603_FK_SalesOrderHeaderSalesReason_SalesOrderHeader_SalesOrderID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SalesPerson">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\1874105717.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_1874105717.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SalesPerson_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1874105717_PK_SalesPerson_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesPerson_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/1874105717_AK_SalesPerson_rowguid.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_1874105717.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesPerson_Employee_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1874105717_FK_SalesPerson_Employee_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesPerson_SalesTerritory_TerritoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_1874105717_FK_SalesPerson_SalesTerritory_TerritoryID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SalesPersonQuotaHistory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\2066106401.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_2066106401.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SalesPersonQuotaHistory_BusinessEntityID_QuotaDate">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2066106401_PK_SalesPersonQuotaHistory_BusinessEntityID_QuotaDate.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesPersonQuotaHistory_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2066106401_AK_SalesPersonQuotaHistory_rowguid.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_2066106401.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesPersonQuotaHistory_SalesPerson_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_2066106401_FK_SalesPersonQuotaHistory_SalesPerson_BusinessEntityID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SalesReason">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\2130106629.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_2130106629.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SalesReason_SalesReasonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/2130106629_PK_SalesReason_SalesReasonID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SalesTaxRate">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\14623095.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_14623095.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SalesTaxRate_SalesTaxRateID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/14623095_PK_SalesTaxRate_SalesTaxRateID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesTaxRate_StateProvinceID_TaxType">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/14623095_AK_SalesTaxRate_StateProvinceID_TaxType.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesTaxRate_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/14623095_AK_SalesTaxRate_rowguid.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_14623095.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesTaxRate_StateProvince_StateProvinceID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_14623095_FK_SalesTaxRate_StateProvince_StateProvinceID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SalesTerritory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\94623380.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_94623380.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SalesTerritory_TerritoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/94623380_PK_SalesTerritory_TerritoryID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesTerritory_Name">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/94623380_AK_SalesTerritory_Name.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesTerritory_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/94623380_AK_SalesTerritory_rowguid.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_94623380.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesTerritory_CountryRegion_CountryRegionCode">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_94623380_FK_SalesTerritory_CountryRegion_CountryRegionCode.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SalesTerritoryHistory">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\270624007.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_270624007.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SalesTerritoryHistory_BusinessEntityID_StartDate_TerritoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/270624007_PK_SalesTerritoryHistory_BusinessEntityID_StartDate_TerritoryID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SalesTerritoryHistory_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/270624007_AK_SalesTerritoryHistory_rowguid.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_270624007.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesTerritoryHistory_SalesPerson_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_270624007_FK_SalesTerritoryHistory_SalesPerson_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SalesTerritoryHistory_SalesTerritory_TerritoryID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_270624007_FK_SalesTerritoryHistory_SalesTerritory_TerritoryID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.ShoppingCartItem">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\510624862.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_510624862.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_ShoppingCartItem_ShoppingCartItemID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/510624862_PK_ShoppingCartItem_ShoppingCartItemID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.IX_ShoppingCartItem_ShoppingCartID_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/510624862_IX_ShoppingCartItem_ShoppingCartID_ProductID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_510624862.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_ShoppingCartItem_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_510624862_FK_ShoppingCartItem_Product_ProductID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SpecialOffer">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\590625147.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_590625147.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SpecialOffer_SpecialOfferID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/590625147_PK_SpecialOffer_SpecialOfferID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SpecialOffer_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/590625147_AK_SpecialOffer_rowguid.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.SpecialOfferProduct">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\734625660.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_734625660.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_SpecialOfferProduct_SpecialOfferID_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/734625660_PK_SpecialOfferProduct_SpecialOfferID_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_SpecialOfferProduct_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/734625660_AK_SpecialOfferProduct_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.IX_SpecialOfferProduct_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/734625660_IX_SpecialOfferProduct_ProductID.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_734625660.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SpecialOfferProduct_Product_ProductID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_734625660_FK_SpecialOfferProduct_Product_ProductID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_SpecialOfferProduct_SpecialOffer_SpecialOfferID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_734625660_FK_SpecialOfferProduct_SpecialOffer_SpecialOfferID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.Store">
+<param name="Local" value="DbEngine\localhost\AdventureWorks2016\Tables\846626059.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/indexes_on_846626059.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PK_Store_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/846626059_PK_Store_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.AK_Store_rowguid">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/846626059_AK_Store_rowguid.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.IX_Store_SalesPersonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/846626059_IX_Store_SalesPersonID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.PXML_Store_Demographics">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Indexes/846626059_PXML_Store_Demographics.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Relationships">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/relationships_on_846626059.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_Store_BusinessEntity_BusinessEntityID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_846626059_FK_Store_BusinessEntity_BusinessEntityID.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.FK_Store_SalesPerson_SalesPersonID">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Tables/Relationships/relationship_846626059_FK_Store_SalesPerson_SalesPersonID.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/triggers.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.dEmployee">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2059154381.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.iuPerson">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2075154438.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.iWorkOrder">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/39671189.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.uWorkOrder">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/55671246.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.dVendor">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/23671132.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.iPurchaseOrderDetail">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2091154495.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.uPurchaseOrderDetail">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2107154552.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.uPurchaseOrderHeader">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2123154609.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.iduSalesOrderDetail">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/2139154666.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.uSalesOrderHeader">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Triggers/7671075.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Users">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/users.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="dbo">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Users/1.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="guest">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Users/2.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Views">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/views.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.vEmployee">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/87671360.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.vEmployeeDepartment">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/103671417.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.vEmployeeDepartmentHistory">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/119671474.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.vJobCandidate">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/167671645.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.vJobCandidateEducation">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/199671759.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.vJobCandidateEmployment">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/183671702.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.vAdditionalContactInfo">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/71671303.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.vStateProvinceCountryRegion">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/295672101.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/indexes_on_295672101.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IX_vStateProvinceCountryRegion">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/Indexes/295672101_IX_vStateProvinceCountryRegion.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.vProductAndDescription">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/215671816.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Indexes">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/indexes_on_215671816.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.IX_vProductAndDescription">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/Indexes/215671816_IX_vProductAndDescription.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.vProductModelCatalogDescription">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/231671873.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.vProductModelInstructions">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/247671930.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.vVendorWithAddresses">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/375672386.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Purchasing.vVendorWithContacts">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/359672329.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.vIndividualCustomer">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/135671531.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.vPersonDemographics">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/151671588.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.vSalesPerson">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/263671987.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.vSalesPersonSalesByFiscalYears">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/279672044.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.vStoreWithAddresses">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/343672272.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.vStoreWithContacts">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/327672215.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.vStoreWithDemographics">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/Views/311672158.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="XML schema collections">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/XmlSchemaCollections.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HumanResources.HRResumeSchemaCollection">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/XMLSchemaCollections/65538.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.AdditionalContactInfoSchemaCollection">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/XMLSchemaCollections/65536.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Person.IndividualSurveySchemaCollection">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/XMLSchemaCollections/65537.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ManuInstructionsSchemaCollection">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/XMLSchemaCollections/65540.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Production.ProductDescriptionSchemaCollection">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/XMLSchemaCollections/65539.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sales.StoreSurveySchemaCollection">
+<param name="Local" value="DbEngine/localhost/AdventureWorks2016/XMLSchemaCollections/65541.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Server info">
+<param name="Local" value="DbEngine/localhost/srv_object_index.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Server information">
+<param name="Local" value="DbEngine/localhost/ServerOverview.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SQL Server">
+<param name="Local" value="server_index.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="localhost">
+<param name="Local" value="SQLServer/localhost/sqlserveroverview.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Server information">
+<param name="Local" value="SQLServer/localhost/Server information.htm">
+</OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Configuration">
+<param name="Local" value="SQLServer/localhost/Configuration.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Information">
+<param name="Local" value="SQLServer/localhost/Information.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Settings">
+<param name="Local" value="SQLServer/localhost/Settings.htm">
+</OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="User options">
+<param name="Local" value="SQLServer/localhost/User options.htm">
+</OBJECT></LI>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Server objects">
+<param name="Local" value="SQLServer/localhost/Server objects.htm">
+</OBJECT></LI>
+</UL>
+</UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="About this documentation">
+<param name="Local" value="about.htm">
+</OBJECT></LI>
+
+</UL>
+</BODY>
+</HTML>

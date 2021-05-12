@@ -1,0 +1,59 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd" changeLogId="63b1a4ed-f54f-48e6-ad1f-8be812595f1f">
+	<changeSet author="testUser" id="addPetID">
+		<addColumn schemaName="Person" tableName="Person">
+			<column name="PetID" type="int"/>
+		</addColumn>
+	</changeSet>
+	<changeSet author="testUser" id="createPetTable">
+		<createTable schemaName="Person" tableName="Pet">
+		   <column name="PetID" type="int">
+               <constraints primaryKey="true"/>
+           </column>
+           <column name="Name" type="varchar(25)">
+		       <constraints nullable="false"/>
+		   </column>
+		   <column name="Type" type="varchar(25)">
+		       <constraints nullable="false"/>
+		   </column>
+		   <column name="Breed" type="varchar(25)"/>
+		   <column name="Color" type="varchar(25)">
+		       <constraints nullable="false"/>
+		   </column>
+		   <column name="Age" type="int"/>
+           <column name="OwnerID" type="int">
+               <constraints nullable="false"/>
+           </column>
+		</createTable>
+	</changeSet>
+	<changeSet author="testUser" id="connectTables">
+		<addForeignKeyConstraint  baseColumnNames="PetID"    
+            baseTableName="Person"  
+            baseTableSchemaName="Person"  
+            constraintName="FK_Person_Pet_PetID" 
+            referencedColumnNames="PetID"  
+            referencedTableName="Pet"  
+            referencedTableSchemaName="Person"  
+            validate="true"/>
+		<addForeignKeyConstraint  baseColumnNames="OwnerID"   
+            baseTableName="Pet"  
+            baseTableSchemaName="Person"  
+            constraintName="FK_Pet_Person_OwnerID"
+            referencedColumnNames="BusinessEntityID"
+            referencedTableName="Person"  
+            referencedTableSchemaName="Person"  
+            validate="true"/>
+	</changeSet>
+	<changeSet author="testUser" id="modifyBreedLength">
+		<modifyDataType  
+            columnName="Breed"  
+            newDataType="varchar(50)"  
+            schemaName="Person"  
+            tableName="Pet"/>
+	</changeSet>
+	<changeSet author="testUser" id="removeColor">
+		<dropColumn schemaName="Person" tableName="Pet">
+			<column name="Color"/>
+		</dropColumn>
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,3335 @@
+{
+  "snapshot": {
+    "created": "2021-03-14T15:01:42.812",
+    "database": {
+      "productVersion": "15.00.4102",
+      "shortName": "mssql",
+      "majorVersion": "15",
+      "minorVersion": "0",
+      "user": "sa",
+      "productName": "Microsoft SQL Server",
+      "url": "jdbc:sqlserver://localhost:1433;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=15;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=true;databaseName=AdventureWorks2019;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;"
+    },
+    "objects": {
+      "com.datical.liquibase.ext.storedlogic.checkconstraint.CheckConstraint": [
+        {
+          "checkConstraint": {
+            "body": "([EmailPromotion]>=(0) AND [EmailPromotion]<=(2))",
+            "disabled": false,
+            "name": "CK_Person_EmailPromotion",
+            "snapshotId": "0568104",
+            "table": "liquibase.structure.core.Table#0568103"
+          }
+        },
+        {
+          "checkConstraint": {
+            "body": "([PersonType] IS NULL OR (upper([PersonType])='GC' OR upper([PersonType])='SP' OR upper([PersonType])='EM' OR upper([PersonType])='IN' OR upper([PersonType])='VC' OR upper([PersonType])='SC'))",
+            "disabled": false,
+            "name": "CK_Person_PersonType",
+            "snapshotId": "0568105",
+            "table": "liquibase.structure.core.Table#0568103"
+          }
+        }]
+      ,
+      "com.datical.liquibase.ext.storedlogic.trigger.Trigger": [
+        {
+          "trigger": {
+            "body": "CREATE TRIGGER [ddlDatabaseTriggerLog] ON DATABASE \nFOR DDL_DATABASE_LEVEL_EVENTS AS \nBEGIN\n    SET NOCOUNT ON;\n\n    DECLARE @data XML;\n    DECLARE @schema sysname;\n    DECLARE @object sysname;\n    DECLARE @eventType sysname;\n\n    SET @data = EVENTDATA();\n    SET @eventType = @data.value('(/EVENT_INSTANCE/EventType)[1]', 'sysname');\n    SET @schema = @data.value('(/EVENT_INSTANCE/SchemaName)[1]', 'sysname');\n    SET @object = @data.value('(/EVENT_INSTANCE/ObjectName)[1]', 'sysname') \n\n    IF @object IS NOT NULL\n        PRINT '  ' + @eventType + ' - ' + @schema + '.' + @object;\n    ELSE\n        PRINT '  ' + @eventType + ' - ' + @schema;\n\n    IF @eventType IS NULL\n        PRINT CONVERT(nvarchar(max), @data);\n\n    INSERT [dbo].[DatabaseLog] \n        (\n        [PostTime], \n        [DatabaseUser], \n        [Event], \n        [Schema], \n        [Object], \n        [TSQL], \n        [XmlEvent]\n        ) \n    VALUES \n        (\n        GETDATE(), \n        CONVERT(sysname, CURRENT_USER), \n        @eventType, \n        CONVERT(sysname, @schema), \n        CONVERT(sysname, @object), \n        @data.value('(/EVENT_INSTANCE/TSQLCommand)[1]', 'nvarchar(max)'), \n        @data\n        );\nEND;",
+            "disabled": true,
+            "name": "ddlDatabaseTriggerLog",
+            "snapshotId": "0568101",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "trigger": {
+            "body": "CREATE TRIGGER [Person].[iuPerson] ON [Person].[Person] \nAFTER INSERT, UPDATE NOT FOR REPLICATION AS \nBEGIN\n    DECLARE @Count int;\n\n    SET @Count = @@ROWCOUNT;\n    IF @Count = 0 \n        RETURN;\n\n    SET NOCOUNT ON;\n\n    IF UPDATE([BusinessEntityID]) OR UPDATE([Demographics]) \n    BEGIN\n        UPDATE [Person].[Person] \n        SET [Person].[Person].[Demographics] = N'<IndividualSurvey xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey\"> \n            <TotalPurchaseYTD>0.00</TotalPurchaseYTD> \n            </IndividualSurvey>' \n        FROM inserted \n        WHERE [Person].[Person].[BusinessEntityID] = inserted.[BusinessEntityID] \n            AND inserted.[Demographics] IS NULL;\n        \n        UPDATE [Person].[Person] \n        SET [Demographics].modify(N'declare default element namespace \"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey\"; \n            insert <TotalPurchaseYTD>0.00</TotalPurchaseYTD> \n            as first \n            into (/IndividualSurvey)[1]') \n        FROM inserted \n        WHERE [Person].[Person].[BusinessEntityID] = inserted.[BusinessEntityID] \n            AND inserted.[Demographics] IS NOT NULL \n            AND inserted.[Demographics].exist(N'declare default element namespace \n                \"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey\"; \n                /IndividualSurvey/TotalPurchaseYTD') <> 1;\n    END;\nEND;",
+            "disabled": false,
+            "name": "iuPerson",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568252",
+            "tableName": "Person",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        }]
+      ,
+      "liquibase.structure.core.Catalog": [
+        {
+          "catalog": {
+            "default": true,
+            "name": "AdventureWorks2019",
+            "snapshotId": "0568100"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Column": [
+        {
+          "column": {
+            "computed": false,
+            "name": "AdditionalContactInfo",
+            "nullable": true,
+            "order": "10!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "Additional contact information about the person stored in xml format.",
+            "snapshotId": "0568119",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "xml"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "AddressID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568212",
+            "remarks": "Primary key for Address records.",
+            "snapshotId": "0568214",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "AddressID",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568238",
+            "remarks": "Primary key. Foreign key to Address.AddressID.",
+            "snapshotId": "0568241",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "AddressLine1",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568212",
+            "remarks": "First street address line.",
+            "snapshotId": "0568216",
+            "type": {
+              "columnSize": "60!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "AddressLine2",
+            "nullable": true,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568212",
+            "remarks": "Second street address line.",
+            "snapshotId": "0568217",
+            "type": {
+              "columnSize": "60!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "AddressTypeID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568131",
+            "remarks": "Primary key for AddressType records.",
+            "snapshotId": "0568133",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "AddressTypeID",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568238",
+            "remarks": "Primary key. Foreign key to AddressType.AddressTypeID.",
+            "snapshotId": "0568242",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "BusinessEntityID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568124",
+            "remarks": "Primary key for all customers, vendors, and employees.",
+            "snapshotId": "0568123",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "BusinessEntityID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568238",
+            "remarks": "Primary key. Foreign key to BusinessEntity.BusinessEntityID.",
+            "snapshotId": "0568240",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "BusinessEntityID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568189",
+            "remarks": "Primary key. Foreign key to BusinessEntity.BusinessEntityID.",
+            "snapshotId": "0568191",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "BusinessEntityID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568147",
+            "remarks": "Primary key. Person associated with this email address.  Foreign key to Person.BusinessEntityID",
+            "snapshotId": "0568149",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "BusinessEntityID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568203",
+            "snapshotId": "0568205",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "BusinessEntityID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "Primary key for Person records.",
+            "snapshotId": "0568107",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "BusinessEntityID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568228",
+            "remarks": "Business entity identification number. Foreign key to Person.BusinessEntityID.",
+            "snapshotId": "0568230",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "BusinessEntityID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568263",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "City",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568212",
+            "remarks": "Name of the city.",
+            "snapshotId": "0568218",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "City",
+            "nullable": true,
+            "order": "8!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568270",
+            "type": {
+              "columnSize": "50!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "ContactTypeID",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568189",
+            "remarks": "Primary key.  Foreign key to ContactType.ContactTypeID.",
+            "snapshotId": "0568193",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "ContactTypeID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568140",
+            "remarks": "Primary key for ContactType records.",
+            "snapshotId": "0568142",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "CountryRegion",
+            "nullable": true,
+            "order": "11!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568273",
+            "type": {
+              "columnSize": "50!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "CountryRegionCode",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568172",
+            "remarks": "ISO standard code for countries and regions.",
+            "snapshotId": "0568171",
+            "type": {
+              "columnSize": "3!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "CountryRegionCode",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568157",
+            "remarks": "ISO standard country or region code. Foreign key to CountryRegion.CountryRegionCode.",
+            "snapshotId": "0568166",
+            "type": {
+              "columnSize": "3!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "CountryRegionCode",
+            "nullable": false,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568253",
+            "snapshotId": "0568256",
+            "type": {
+              "columnSize": "3!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "CountryRegionName",
+            "nullable": false,
+            "order": "7!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568253",
+            "snapshotId": "0568261",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Demographics",
+            "nullable": true,
+            "order": "11!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "Personal information such as hobbies, and income collected from online shoppers. Used for sales analysis.",
+            "snapshotId": "0568120",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "xml"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "EMailAddress",
+            "nullable": true,
+            "order": "13!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568275",
+            "type": {
+              "columnSize": "128!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "EMailSpecialInstructions",
+            "nullable": true,
+            "order": "14!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568276",
+            "type": {
+              "columnSize": "-1!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "EMailTelephoneNumber",
+            "nullable": true,
+            "order": "15!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568277",
+            "type": {
+              "columnSize": "50!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "EmailAddress",
+            "nullable": true,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568147",
+            "remarks": "E-mail address for the person.",
+            "snapshotId": "0568152",
+            "type": {
+              "columnSize": "50!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "EmailAddressID",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568147",
+            "remarks": "Primary key. ID of this email address.",
+            "snapshotId": "0568150",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "0!{java.lang.Integer}",
+            "defaultValueConstraintName": "DF_Person_EmailPromotion",
+            "name": "EmailPromotion",
+            "nullable": false,
+            "order": "9!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "0 = Contact does not wish to receive e-mail promotions, 1 = Contact does wish to receive e-mail promotions from AdventureWorks, 2 = Contact does wish to receive e-mail promotions from AdventureWorks and selected partners.",
+            "snapshotId": "0568118",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "FirstName",
+            "nullable": false,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "First name of the person.",
+            "snapshotId": "0568112",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "FirstName",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568264",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "HomeAddressSpecialInstructions",
+            "nullable": true,
+            "order": "12!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568274",
+            "type": {
+              "columnSize": "-1!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "1!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_StateProvince_IsOnlyStateProvinceFlag",
+            "name": "IsOnlyStateProvinceFlag",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568157",
+            "remarks": "0 = StateProvinceCode exists. 1 = StateProvinceCode unavailable, using CountryRegionCode.",
+            "snapshotId": "0568167",
+            "type": {
+              "columnSize": "1!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Flag"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "IsOnlyStateProvinceFlag",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568253",
+            "snapshotId": "0568258",
+            "type": {
+              "columnSize": "1!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Flag"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "LastName",
+            "nullable": false,
+            "order": "7!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "Last name of the person.",
+            "snapshotId": "0568111",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "LastName",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568266",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "MiddleName",
+            "nullable": true,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "Middle name or middle initial of the person.",
+            "snapshotId": "0568113",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "MiddleName",
+            "nullable": true,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568265",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_Address_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "9!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568212",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568225",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_AddressType_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568131",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568138",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_BusinessEntity_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568124",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568128",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_BusinessEntityAddress_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568238",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568247",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_BusinessEntityContact_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568189",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568198",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_ContactType_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568140",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568145",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_CountryRegion_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568172",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568176",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_EmailAddress_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568147",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568154",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_Password_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568203",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568209",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_Person_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "13!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568121",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_PersonPhone_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568228",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568234",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_PhoneNumberType_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568183",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568187",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_StateProvince_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "8!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568157",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "0568169",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "17!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568279",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Name",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568131",
+            "remarks": "Address type description. For example, Billing, Home, or Shipping.",
+            "snapshotId": "0568135",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Name",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568140",
+            "remarks": "Contact type description.",
+            "snapshotId": "0568144",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Name",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568172",
+            "remarks": "Country or region name.",
+            "snapshotId": "0568175",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Name",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568183",
+            "remarks": "Name of the telephone number type",
+            "snapshotId": "0568186",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Name",
+            "nullable": false,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568157",
+            "remarks": "State or province description.",
+            "snapshotId": "0568163",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "0!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_Person_NameStyle",
+            "name": "NameStyle",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "0 = The data in FirstName and LastName are stored in western style (first name, last name) order.  1 = Eastern style (last name, first name) order.",
+            "snapshotId": "0568115",
+            "type": {
+              "columnSize": "1!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "NameStyle"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "PasswordHash",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568203",
+            "remarks": "Password for the e-mail account.",
+            "snapshotId": "0568206",
+            "type": {
+              "columnSize": "128!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "PasswordSalt",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568203",
+            "remarks": "Random value concatenated with the password string before the password is hashed.",
+            "snapshotId": "0568207",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "varchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "PersonID",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568189",
+            "remarks": "Primary key. Foreign key to Person.BusinessEntityID.",
+            "snapshotId": "0568192",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "PersonType",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "Primary type of person: SC = Store Contact, IN = Individual (retail) customer, SP = Sales person, EM = Employee (non-sales), VC = Vendor contact, GC = General contact",
+            "snapshotId": "0568114",
+            "type": {
+              "columnSize": "2!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-15!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "PhoneNumber",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568228",
+            "remarks": "Telephone number identification number.",
+            "snapshotId": "0568231",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Phone"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "PhoneNumberTypeID",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568228",
+            "remarks": "Kind of phone number. Foreign key to PhoneNumberType.PhoneNumberTypeID.",
+            "snapshotId": "0568232",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "PhoneNumberTypeID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568183",
+            "remarks": "Primary key for telephone number type records.",
+            "snapshotId": "0568185",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "PostalCode",
+            "nullable": false,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568212",
+            "remarks": "Postal code for the street address.",
+            "snapshotId": "0568220",
+            "type": {
+              "columnSize": "15!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "PostalCode",
+            "nullable": true,
+            "order": "10!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568272",
+            "type": {
+              "columnSize": "50!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "SpatialLocation",
+            "nullable": true,
+            "order": "7!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568212",
+            "remarks": "Latitude and longitude of this address.",
+            "snapshotId": "0568224",
+            "type": {
+              "columnSize": "-1!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "geography"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "StateProvince",
+            "nullable": true,
+            "order": "9!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568271",
+            "type": {
+              "columnSize": "50!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "StateProvinceCode",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568157",
+            "remarks": "ISO standard state or province code.",
+            "snapshotId": "0568165",
+            "type": {
+              "columnSize": "3!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-15!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "StateProvinceCode",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568253",
+            "snapshotId": "0568257",
+            "type": {
+              "columnSize": "3!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-15!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "StateProvinceID",
+            "nullable": false,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568212",
+            "remarks": "Unique identification number for the state or province. Foreign key to StateProvince table.",
+            "snapshotId": "0568219",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "StateProvinceID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568157",
+            "remarks": "Primary key for StateProvince records.",
+            "snapshotId": "0568159",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "StateProvinceID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568253",
+            "snapshotId": "0568255",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "StateProvinceName",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568253",
+            "snapshotId": "0568259",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "Name"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Street",
+            "nullable": true,
+            "order": "7!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568269",
+            "type": {
+              "columnSize": "50!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Suffix",
+            "nullable": true,
+            "order": "8!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "Surname suffix. For example, Sr. or Jr.",
+            "snapshotId": "0568117",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "TelephoneNumber",
+            "nullable": true,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568267",
+            "type": {
+              "columnSize": "50!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "TelephoneSpecialInstructions",
+            "nullable": true,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568268",
+            "type": {
+              "columnSize": "-1!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "TerritoryID",
+            "nullable": false,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568157",
+            "remarks": "ID of the territory in which the state or province is located. Foreign key to SalesTerritory.SalesTerritoryID.",
+            "snapshotId": "0568168",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "TerritoryID",
+            "nullable": false,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568253",
+            "snapshotId": "0568260",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Title",
+            "nullable": true,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "A courtesy title. For example, Mr. or Ms.",
+            "snapshotId": "0568116",
+            "type": {
+              "columnSize": "8!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "newid()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_Address_rowguid",
+            "name": "rowguid",
+            "nullable": false,
+            "order": "8!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568212",
+            "remarks": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.",
+            "rowGuid": true,
+            "snapshotId": "0568222",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "newid()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_AddressType_rowguid",
+            "name": "rowguid",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568131",
+            "remarks": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.",
+            "rowGuid": true,
+            "snapshotId": "0568137",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "newid()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_BusinessEntity_rowguid",
+            "name": "rowguid",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568124",
+            "remarks": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.",
+            "rowGuid": true,
+            "snapshotId": "0568127",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "newid()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_BusinessEntityAddress_rowguid",
+            "name": "rowguid",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568238",
+            "remarks": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.",
+            "rowGuid": true,
+            "snapshotId": "0568246",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "newid()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_BusinessEntityContact_rowguid",
+            "name": "rowguid",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568189",
+            "remarks": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.",
+            "rowGuid": true,
+            "snapshotId": "0568196",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "newid()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_EmailAddress_rowguid",
+            "name": "rowguid",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568147",
+            "remarks": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.",
+            "rowGuid": true,
+            "snapshotId": "0568153",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "newid()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_Password_rowguid",
+            "name": "rowguid",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568203",
+            "remarks": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.",
+            "rowGuid": true,
+            "snapshotId": "0568208",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "newid()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_Person_rowguid",
+            "name": "rowguid",
+            "nullable": false,
+            "order": "12!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568103",
+            "remarks": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.",
+            "rowGuid": true,
+            "snapshotId": "0568109",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "newid()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_StateProvince_rowguid",
+            "name": "rowguid",
+            "nullable": false,
+            "order": "7!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568157",
+            "remarks": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.",
+            "rowGuid": true,
+            "snapshotId": "0568161",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "rowguid",
+            "nullable": false,
+            "order": "16!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#0568262",
+            "snapshotId": "0568278",
+            "type": {
+              "columnSize": "16!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "uniqueidentifier"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "TerritoryID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#0568180",
+            "remarks": "Primary key for SalesTerritory records.",
+            "snapshotId": "0568179",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        }]
+      ,
+      "liquibase.structure.core.ForeignKey": [
+        {
+          "foreignKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568223",
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568219"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568212",
+            "initiallyDeferred": false,
+            "name": "FK_Address_StateProvince_StateProvinceID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568159"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568157",
+            "snapshotId": "0568226",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568244",
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568242"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568238",
+            "initiallyDeferred": false,
+            "name": "FK_BusinessEntityAddress_AddressType_AddressTypeID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568133"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568131",
+            "snapshotId": "0568249",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568243",
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568241"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568238",
+            "initiallyDeferred": false,
+            "name": "FK_BusinessEntityAddress_Address_AddressID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568214"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568212",
+            "snapshotId": "0568248",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568240"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568238",
+            "initiallyDeferred": false,
+            "name": "FK_BusinessEntityAddress_BusinessEntity_BusinessEntityID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568123"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568124",
+            "snapshotId": "0568250",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568191"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568189",
+            "initiallyDeferred": false,
+            "name": "FK_BusinessEntityContact_BusinessEntity_BusinessEntityID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568123"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568124",
+            "snapshotId": "0568199",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568197",
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568193"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568189",
+            "initiallyDeferred": false,
+            "name": "FK_BusinessEntityContact_ContactType_ContactTypeID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568142"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568140",
+            "snapshotId": "0568200",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568194",
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568192"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568189",
+            "initiallyDeferred": false,
+            "name": "FK_BusinessEntityContact_Person_PersonID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568107"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568103",
+            "snapshotId": "0568201",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568149"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568147",
+            "initiallyDeferred": false,
+            "name": "FK_EmailAddress_Person_BusinessEntityID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568107"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568103",
+            "snapshotId": "0568155",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568204",
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568205"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568203",
+            "initiallyDeferred": false,
+            "name": "FK_Password_Person_BusinessEntityID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568107"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568103",
+            "snapshotId": "0568210",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568230"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568228",
+            "initiallyDeferred": false,
+            "name": "FK_PersonPhone_Person_BusinessEntityID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568107"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568103",
+            "snapshotId": "0568235",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568232"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568228",
+            "initiallyDeferred": false,
+            "name": "FK_PersonPhone_PhoneNumberType_PhoneNumberTypeID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568185"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568183",
+            "snapshotId": "0568236",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568106",
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568107"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568103",
+            "initiallyDeferred": false,
+            "name": "FK_Person_BusinessEntity_BusinessEntityID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568123"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568124",
+            "snapshotId": "0568122",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568166"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568157",
+            "initiallyDeferred": false,
+            "name": "FK_StateProvince_CountryRegion_CountryRegionCode",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568171"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568172",
+            "snapshotId": "0568170",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        },
+        {
+          "foreignKey": {
+            "deferrable": false,
+            "deleteRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#0568168"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#0568157",
+            "initiallyDeferred": false,
+            "name": "FK_StateProvince_SalesTerritory_TerritoryID",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#0568179"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#0568180",
+            "snapshotId": "0568178",
+            "updateRule": "importedKeyNoAction!{liquibase.structure.core.ForeignKeyConstraintType}"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Index": [
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568135"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_AddressType_Name",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568134",
+            "table": "liquibase.structure.core.Table#0568131",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568137"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_AddressType_rowguid",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568136",
+            "table": "liquibase.structure.core.Table#0568131",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568222"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_Address_rowguid",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568221",
+            "table": "liquibase.structure.core.Table#0568212",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568246"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_BusinessEntityAddress_rowguid",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568245",
+            "table": "liquibase.structure.core.Table#0568238",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568196"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_BusinessEntityContact_rowguid",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568195",
+            "table": "liquibase.structure.core.Table#0568189",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568127"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_BusinessEntity_rowguid",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568126",
+            "table": "liquibase.structure.core.Table#0568124",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568144"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_ContactType_Name",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568143",
+            "table": "liquibase.structure.core.Table#0568140",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568175"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_CountryRegion_Name",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568174",
+            "table": "liquibase.structure.core.Table#0568172",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568109"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_Person_rowguid",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568108",
+            "table": "liquibase.structure.core.Table#0568103",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568163"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_StateProvince_Name",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568162",
+            "table": "liquibase.structure.core.Table#0568157",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568165",
+              "liquibase.structure.core.Column#0568166"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_StateProvince_StateProvinceCode_CountryRegionCode",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568164",
+            "table": "liquibase.structure.core.Table#0568157",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568161"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "AK_StateProvince_rowguid",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568160",
+            "table": "liquibase.structure.core.Table#0568157",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568216",
+              "liquibase.structure.core.Column#0568217",
+              "liquibase.structure.core.Column#0568218",
+              "liquibase.structure.core.Column#0568219",
+              "liquibase.structure.core.Column#0568220"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568215",
+            "table": "liquibase.structure.core.Table#0568212",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568219"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_Address_StateProvinceID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568223",
+            "table": "liquibase.structure.core.Table#0568212",
+            "unique": false
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568241"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_BusinessEntityAddress_AddressID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568243",
+            "table": "liquibase.structure.core.Table#0568238",
+            "unique": false
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568242"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_BusinessEntityAddress_AddressTypeID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568244",
+            "table": "liquibase.structure.core.Table#0568238",
+            "unique": false
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568193"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_BusinessEntityContact_ContactTypeID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568197",
+            "table": "liquibase.structure.core.Table#0568189",
+            "unique": false
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568192"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_BusinessEntityContact_PersonID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568194",
+            "table": "liquibase.structure.core.Table#0568189",
+            "unique": false
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568152"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_EmailAddress_EmailAddress",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568151",
+            "table": "liquibase.structure.core.Table#0568147",
+            "unique": false
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568231"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_PersonPhone_PhoneNumber",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568233",
+            "table": "liquibase.structure.core.Table#0568228",
+            "unique": false
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#0568111",
+              "liquibase.structure.core.Column#0568112",
+              "liquibase.structure.core.Column#0568113"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_Person_LastName_FirstName_MiddleName",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568110",
+            "table": "liquibase.structure.core.Table#0568103",
+            "unique": false
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568255",
+              "liquibase.structure.core.Column#0568256"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "IX_vStateProvinceCountryRegion",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568254",
+            "table": "liquibase.structure.core.View#0568253",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568133"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_AddressType_AddressTypeID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568132",
+            "table": "liquibase.structure.core.Table#0568131",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568214"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_Address_AddressID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568213",
+            "table": "liquibase.structure.core.Table#0568212",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568240",
+              "liquibase.structure.core.Column#0568241",
+              "liquibase.structure.core.Column#0568242"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_BusinessEntityAddress_BusinessEntityID_AddressID_AddressTypeID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568239",
+            "table": "liquibase.structure.core.Table#0568238",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568191",
+              "liquibase.structure.core.Column#0568192",
+              "liquibase.structure.core.Column#0568193"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_BusinessEntityContact_BusinessEntityID_PersonID_ContactTypeID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568190",
+            "table": "liquibase.structure.core.Table#0568189",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568123"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_BusinessEntity_BusinessEntityID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568125",
+            "table": "liquibase.structure.core.Table#0568124",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568142"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_ContactType_ContactTypeID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568141",
+            "table": "liquibase.structure.core.Table#0568140",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568171"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_CountryRegion_CountryRegionCode",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568173",
+            "table": "liquibase.structure.core.Table#0568172",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568149",
+              "liquibase.structure.core.Column#0568150"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_EmailAddress_BusinessEntityID_EmailAddressID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568148",
+            "table": "liquibase.structure.core.Table#0568147",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568205"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_Password_BusinessEntityID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568204",
+            "table": "liquibase.structure.core.Table#0568203",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568230",
+              "liquibase.structure.core.Column#0568231",
+              "liquibase.structure.core.Column#0568232"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_PersonPhone_BusinessEntityID_PhoneNumber_PhoneNumberTypeID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568229",
+            "table": "liquibase.structure.core.Table#0568228",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568107"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_Person_BusinessEntityID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568106",
+            "table": "liquibase.structure.core.Table#0568103",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568185"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_PhoneNumberType_PhoneNumberTypeID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568184",
+            "table": "liquibase.structure.core.Table#0568183",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#0568159"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_StateProvince_StateProvinceID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "0568158",
+            "table": "liquibase.structure.core.Table#0568157",
+            "unique": true
+          }
+        }]
+      ,
+      "liquibase.structure.core.PrimaryKey": [
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568132",
+            "columns": [
+              "liquibase.structure.core.Column#0568133"]
+            ,
+            "name": "PK_AddressType_AddressTypeID",
+            "snapshotId": "0568139",
+            "table": "liquibase.structure.core.Table#0568131"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568213",
+            "columns": [
+              "liquibase.structure.core.Column#0568214"]
+            ,
+            "name": "PK_Address_AddressID",
+            "snapshotId": "0568227",
+            "table": "liquibase.structure.core.Table#0568212"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568239",
+            "columns": [
+              "liquibase.structure.core.Column#0568240",
+              "liquibase.structure.core.Column#0568241",
+              "liquibase.structure.core.Column#0568242"]
+            ,
+            "name": "PK_BusinessEntityAddress_BusinessEntityID_AddressID_AddressTypeID",
+            "snapshotId": "0568251",
+            "table": "liquibase.structure.core.Table#0568238"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568190",
+            "columns": [
+              "liquibase.structure.core.Column#0568191",
+              "liquibase.structure.core.Column#0568192",
+              "liquibase.structure.core.Column#0568193"]
+            ,
+            "name": "PK_BusinessEntityContact_BusinessEntityID_PersonID_ContactTypeID",
+            "snapshotId": "0568202",
+            "table": "liquibase.structure.core.Table#0568189"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568125",
+            "columns": [
+              "liquibase.structure.core.Column#0568123"]
+            ,
+            "name": "PK_BusinessEntity_BusinessEntityID",
+            "snapshotId": "0568129",
+            "table": "liquibase.structure.core.Table#0568124"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568141",
+            "columns": [
+              "liquibase.structure.core.Column#0568142"]
+            ,
+            "name": "PK_ContactType_ContactTypeID",
+            "snapshotId": "0568146",
+            "table": "liquibase.structure.core.Table#0568140"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568173",
+            "columns": [
+              "liquibase.structure.core.Column#0568171"]
+            ,
+            "name": "PK_CountryRegion_CountryRegionCode",
+            "snapshotId": "0568177",
+            "table": "liquibase.structure.core.Table#0568172"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568148",
+            "columns": [
+              "liquibase.structure.core.Column#0568149",
+              "liquibase.structure.core.Column#0568150"]
+            ,
+            "name": "PK_EmailAddress_BusinessEntityID_EmailAddressID",
+            "snapshotId": "0568156",
+            "table": "liquibase.structure.core.Table#0568147"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568204",
+            "columns": [
+              "liquibase.structure.core.Column#0568205"]
+            ,
+            "name": "PK_Password_BusinessEntityID",
+            "snapshotId": "0568211",
+            "table": "liquibase.structure.core.Table#0568203"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568229",
+            "columns": [
+              "liquibase.structure.core.Column#0568230",
+              "liquibase.structure.core.Column#0568231",
+              "liquibase.structure.core.Column#0568232"]
+            ,
+            "name": "PK_PersonPhone_BusinessEntityID_PhoneNumber_PhoneNumberTypeID",
+            "snapshotId": "0568237",
+            "table": "liquibase.structure.core.Table#0568228"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568106",
+            "columns": [
+              "liquibase.structure.core.Column#0568107"]
+            ,
+            "name": "PK_Person_BusinessEntityID",
+            "snapshotId": "0568130",
+            "table": "liquibase.structure.core.Table#0568103"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568184",
+            "columns": [
+              "liquibase.structure.core.Column#0568185"]
+            ,
+            "name": "PK_PhoneNumberType_PhoneNumberTypeID",
+            "snapshotId": "0568188",
+            "table": "liquibase.structure.core.Table#0568183"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#0568158",
+            "columns": [
+              "liquibase.structure.core.Column#0568159"]
+            ,
+            "name": "PK_StateProvince_StateProvinceID",
+            "snapshotId": "0568182",
+            "table": "liquibase.structure.core.Table#0568157"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Schema": [
+        {
+          "schema": {
+            "catalog": "liquibase.structure.core.Catalog#0568100",
+            "name": "Person",
+            "snapshotId": "0568102"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Table": [
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568214",
+              "liquibase.structure.core.Column#0568216",
+              "liquibase.structure.core.Column#0568217",
+              "liquibase.structure.core.Column#0568218",
+              "liquibase.structure.core.Column#0568219",
+              "liquibase.structure.core.Column#0568220",
+              "liquibase.structure.core.Column#0568224",
+              "liquibase.structure.core.Column#0568222",
+              "liquibase.structure.core.Column#0568225"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568213",
+              "liquibase.structure.core.Index#0568215",
+              "liquibase.structure.core.Index#0568221",
+              "liquibase.structure.core.Index#0568223"]
+            ,
+            "name": "Address",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#0568226"]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568227",
+            "remarks": "Street address information for customers, employees, and vendors.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568212"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568133",
+              "liquibase.structure.core.Column#0568135",
+              "liquibase.structure.core.Column#0568137",
+              "liquibase.structure.core.Column#0568138"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568132",
+              "liquibase.structure.core.Index#0568134",
+              "liquibase.structure.core.Index#0568136"]
+            ,
+            "name": "AddressType",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568139",
+            "remarks": "Types of addresses stored in the Address table.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568131"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568123",
+              "liquibase.structure.core.Column#0568127",
+              "liquibase.structure.core.Column#0568128"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568125",
+              "liquibase.structure.core.Index#0568126"]
+            ,
+            "name": "BusinessEntity",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568129",
+            "remarks": "Source of the ID that connects vendors, customers, and employees with address and contact information.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568124"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568240",
+              "liquibase.structure.core.Column#0568241",
+              "liquibase.structure.core.Column#0568242",
+              "liquibase.structure.core.Column#0568246",
+              "liquibase.structure.core.Column#0568247"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568239",
+              "liquibase.structure.core.Index#0568243",
+              "liquibase.structure.core.Index#0568244",
+              "liquibase.structure.core.Index#0568245"]
+            ,
+            "name": "BusinessEntityAddress",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#0568248",
+              "liquibase.structure.core.ForeignKey#0568249",
+              "liquibase.structure.core.ForeignKey#0568250"]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568251",
+            "remarks": "Cross-reference table mapping customers, vendors, and employees to their addresses.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568238"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568191",
+              "liquibase.structure.core.Column#0568192",
+              "liquibase.structure.core.Column#0568193",
+              "liquibase.structure.core.Column#0568196",
+              "liquibase.structure.core.Column#0568198"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568190",
+              "liquibase.structure.core.Index#0568194",
+              "liquibase.structure.core.Index#0568195",
+              "liquibase.structure.core.Index#0568197"]
+            ,
+            "name": "BusinessEntityContact",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#0568199",
+              "liquibase.structure.core.ForeignKey#0568200",
+              "liquibase.structure.core.ForeignKey#0568201"]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568202",
+            "remarks": "Cross-reference table mapping stores, vendors, and employees to people",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568189"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568142",
+              "liquibase.structure.core.Column#0568144",
+              "liquibase.structure.core.Column#0568145"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568141",
+              "liquibase.structure.core.Index#0568143"]
+            ,
+            "name": "ContactType",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568146",
+            "remarks": "Lookup table containing the types of business entity contacts.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568140"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568171",
+              "liquibase.structure.core.Column#0568175",
+              "liquibase.structure.core.Column#0568176"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568173",
+              "liquibase.structure.core.Index#0568174"]
+            ,
+            "name": "CountryRegion",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568177",
+            "remarks": "Lookup table containing the ISO standard codes for countries and regions.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568172"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568149",
+              "liquibase.structure.core.Column#0568150",
+              "liquibase.structure.core.Column#0568152",
+              "liquibase.structure.core.Column#0568153",
+              "liquibase.structure.core.Column#0568154"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568148",
+              "liquibase.structure.core.Index#0568151"]
+            ,
+            "name": "EmailAddress",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#0568155"]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568156",
+            "remarks": "Where to send a person email.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568147"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568205",
+              "liquibase.structure.core.Column#0568206",
+              "liquibase.structure.core.Column#0568207",
+              "liquibase.structure.core.Column#0568208",
+              "liquibase.structure.core.Column#0568209"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568204"]
+            ,
+            "name": "Password",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#0568210"]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568211",
+            "remarks": "One way hashed authentication information",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568203"
+          }
+        },
+        {
+          "table": {
+            "checkConstraints": [
+              "com.datical.liquibase.ext.storedlogic.checkconstraint.CheckConstraint#0568104",
+              "com.datical.liquibase.ext.storedlogic.checkconstraint.CheckConstraint#0568105"]
+            ,
+            "columns": [
+              "liquibase.structure.core.Column#0568107",
+              "liquibase.structure.core.Column#0568114",
+              "liquibase.structure.core.Column#0568115",
+              "liquibase.structure.core.Column#0568116",
+              "liquibase.structure.core.Column#0568112",
+              "liquibase.structure.core.Column#0568113",
+              "liquibase.structure.core.Column#0568111",
+              "liquibase.structure.core.Column#0568117",
+              "liquibase.structure.core.Column#0568118",
+              "liquibase.structure.core.Column#0568119",
+              "liquibase.structure.core.Column#0568120",
+              "liquibase.structure.core.Column#0568109",
+              "liquibase.structure.core.Column#0568121"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568106",
+              "liquibase.structure.core.Index#0568108",
+              "liquibase.structure.core.Index#0568110"]
+            ,
+            "name": "Person",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#0568122"]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568130",
+            "remarks": "Human beings involved with AdventureWorks: employees, customer contacts, and vendor contacts.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568103"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568230",
+              "liquibase.structure.core.Column#0568231",
+              "liquibase.structure.core.Column#0568232",
+              "liquibase.structure.core.Column#0568234"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568229",
+              "liquibase.structure.core.Index#0568233"]
+            ,
+            "name": "PersonPhone",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#0568235",
+              "liquibase.structure.core.ForeignKey#0568236"]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568237",
+            "remarks": "Telephone number and type of a person.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568228"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568185",
+              "liquibase.structure.core.Column#0568186",
+              "liquibase.structure.core.Column#0568187"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568184"]
+            ,
+            "name": "PhoneNumberType",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568188",
+            "remarks": "Type of phone number of a person.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568183"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#0568159",
+              "liquibase.structure.core.Column#0568165",
+              "liquibase.structure.core.Column#0568166",
+              "liquibase.structure.core.Column#0568167",
+              "liquibase.structure.core.Column#0568163",
+              "liquibase.structure.core.Column#0568168",
+              "liquibase.structure.core.Column#0568161",
+              "liquibase.structure.core.Column#0568169"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#0568158",
+              "liquibase.structure.core.Index#0568160",
+              "liquibase.structure.core.Index#0568162",
+              "liquibase.structure.core.Index#0568164"]
+            ,
+            "name": "StateProvince",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#0568170",
+              "liquibase.structure.core.ForeignKey#0568178"]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#0568182",
+            "remarks": "State and province lookup table.",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568157"
+          }
+        }]
+      ,
+      "liquibase.structure.core.View": [
+        {
+          "view": {
+            "columns": [
+              "liquibase.structure.core.Column#0568263",
+              "liquibase.structure.core.Column#0568264",
+              "liquibase.structure.core.Column#0568265",
+              "liquibase.structure.core.Column#0568266",
+              "liquibase.structure.core.Column#0568267",
+              "liquibase.structure.core.Column#0568268",
+              "liquibase.structure.core.Column#0568269",
+              "liquibase.structure.core.Column#0568270",
+              "liquibase.structure.core.Column#0568271",
+              "liquibase.structure.core.Column#0568272",
+              "liquibase.structure.core.Column#0568273",
+              "liquibase.structure.core.Column#0568274",
+              "liquibase.structure.core.Column#0568275",
+              "liquibase.structure.core.Column#0568276",
+              "liquibase.structure.core.Column#0568277",
+              "liquibase.structure.core.Column#0568278",
+              "liquibase.structure.core.Column#0568279"]
+            ,
+            "definition": "SELECT \n    [BusinessEntityID] \n    ,[FirstName]\n    ,[MiddleName]\n    ,[LastName]\n    ,[ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:telephoneNumber)[1]/act:number', 'nvarchar(50)') AS [TelephoneNumber] \n    ,LTRIM(RTRIM([ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:telephoneNumber/act:SpecialInstructions/text())[1]', 'nvarchar(max)'))) AS [TelephoneSpecialInstructions] \n    ,[ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\";\n        (act:homePostalAddress/act:Street)[1]', 'nvarchar(50)') AS [Street] \n    ,[ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:homePostalAddress/act:City)[1]', 'nvarchar(50)') AS [City] \n    ,[ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:homePostalAddress/act:StateProvince)[1]', 'nvarchar(50)') AS [StateProvince] \n    ,[ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:homePostalAddress/act:PostalCode)[1]', 'nvarchar(50)') AS [PostalCode] \n    ,[ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:homePostalAddress/act:CountryRegion)[1]', 'nvarchar(50)') AS [CountryRegion] \n    ,[ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:homePostalAddress/act:SpecialInstructions/text())[1]', 'nvarchar(max)') AS [HomeAddressSpecialInstructions] \n    ,[ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:eMail/act:eMailAddress)[1]', 'nvarchar(128)') AS [EMailAddress] \n    ,LTRIM(RTRIM([ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:eMail/act:SpecialInstructions/text())[1]', 'nvarchar(max)'))) AS [EMailSpecialInstructions] \n    ,[ContactInfo].ref.value(N'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n        declare namespace act=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes\"; \n        (act:eMail/act:SpecialInstructions/act:telephoneNumber/act:number)[1]', 'nvarchar(50)') AS [EMailTelephoneNumber] \n    ,[rowguid] \n    ,[ModifiedDate]\nFROM [Person].[Person]\nOUTER APPLY [AdditionalContactInfo].nodes(\n    'declare namespace ci=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo\"; \n    /ci:AdditionalContactInfo') AS ContactInfo(ref) \nWHERE [AdditionalContactInfo] IS NOT NULL;",
+            "name": "vAdditionalContactInfo",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568262"
+          }
+        },
+        {
+          "view": {
+            "columns": [
+              "liquibase.structure.core.Column#0568255",
+              "liquibase.structure.core.Column#0568257",
+              "liquibase.structure.core.Column#0568258",
+              "liquibase.structure.core.Column#0568259",
+              "liquibase.structure.core.Column#0568260",
+              "liquibase.structure.core.Column#0568256",
+              "liquibase.structure.core.Column#0568261"]
+            ,
+            "definition": "CREATE VIEW [Person].[vStateProvinceCountryRegion] \nWITH SCHEMABINDING \nAS \nSELECT \n    sp.[StateProvinceID] \n    ,sp.[StateProvinceCode] \n    ,sp.[IsOnlyStateProvinceFlag] \n    ,sp.[Name] AS [StateProvinceName] \n    ,sp.[TerritoryID] \n    ,cr.[CountryRegionCode] \n    ,cr.[Name] AS [CountryRegionName]\nFROM [Person].[StateProvince] sp \n    INNER JOIN [Person].[CountryRegion] cr \n    ON sp.[CountryRegionCode] = cr.[CountryRegionCode];",
+            "indexes": [
+              "liquibase.structure.core.Index#0568254"]
+            ,
+            "name": "vStateProvinceCountryRegion",
+            "schema": "liquibase.structure.core.Schema#0568102",
+            "snapshotId": "0568253"
+          }
+        }]
+      
+    },
+    "referencedObjects": {
+      "liquibase.structure.core.Schema": [
+        {
+          "schema": {
+            "catalog": "liquibase.structure.core.Catalog#0568100",
+            "name": "SALES",
+            "snapshotId": "0568181"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Table": [
+        {
+          "table": {
+            "name": "SalesTerritory",
+            "schema": "liquibase.structure.core.Schema#0568181",
+            "snapshotId": "0568180"
+          }
+        }]
+      
+    },
+    "snapshotControl": {
+      "snapshotControl": {
+        "includedType": [
+          "com.datical.liquibase.ext.appdba.synonym.Synonym",
+          "com.datical.liquibase.ext.storedlogic.checkconstraint.CheckConstraint",
+          "com.datical.liquibase.ext.storedlogic.databasepackage.DatabasePackage",
+          "com.datical.liquibase.ext.storedlogic.databasepackage.DatabasePackageBody",
+          "com.datical.liquibase.ext.storedlogic.function.Function",
+          "com.datical.liquibase.ext.storedlogic.trigger.Trigger",
+          "liquibase.structure.core.Catalog",
+          "liquibase.structure.core.Column",
+          "liquibase.structure.core.ForeignKey",
+          "liquibase.structure.core.Index",
+          "liquibase.structure.core.PrimaryKey",
+          "liquibase.structure.core.Schema",
+          "liquibase.structure.core.Sequence",
+          "liquibase.structure.core.StoredProcedure",
+          "liquibase.structure.core.Table",
+          "liquibase.structure.core.UniqueConstraint",
+          "liquibase.structure.core.View"]
+        
+      }
+    }
+  }
+}

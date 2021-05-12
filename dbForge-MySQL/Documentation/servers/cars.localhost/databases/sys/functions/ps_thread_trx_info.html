@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>ps_thread_trx_info</title>
+<script src="../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../styles/bootstrap/Default Dark.css" type="text/css">
+<link rel="stylesheet" href="../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Cars.localhost.html" data-mapping-enabled="true">Cars.localhost</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\Databases.html" data-mapping-enabled="true">Databases</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\sys.html" data-mapping-enabled="true">sys</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\Functions.html" data-mapping-enabled="true">Functions</a></li>
+            <li class="active">ps_thread_trx_info</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../images/Dark\function.svg" title="ps_thread_trx_info" />
+            <h1 class="inline-middle">ps_thread_trx_info</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span><br />Description<br />-----------<br /><br />Returns a JSON object with info on the given threads current transaction, <br />and the statements it has already executed, derived from the<br />performance_schema.events_transactions_current and<br />performance_schema.events_statements_history tables (so the consumers <br />for these also have to be enabled within Performance Schema to get full<br />data in the object).<br /><br />When the output exceeds the default truncation length (65535), a JSON error<br />object is returned, such as:<br /><br />{ "error": "Trx info truncated: Row 6 was cut by GROUP_CONCAT()" }<br /><br />Similar error objects are returned for other warnings/and exceptions raised<br />when calling the function.<br /><br />The max length of the output of this function can be controlled with the<br />ps_thread_trx_info.max_length variable set via sys_config, or the<br />@sys.ps_thread_trx_info.max_length user variable, as appropriate.<br /><br />Parameters<br />-----------<br /><br />in_thread_id (BIGINT UNSIGNED):<br />  The id of the thread to return the transaction info for.<br /><br />Example<br />-----------<br /><br />SELECT sys.ps_thread_trx_info(48)\G<br />*************************** 1. row ***************************<br />sys.ps_thread_trx_info(48): [<br />  {<br />    "time": "790.70 us",<br />    "state": "COMMITTED",<br />    "mode": "READ WRITE",<br />    "autocommitted": "NO",<br />    "gtid": "AUTOMATIC",<br />    "isolation": "REPEATABLE READ",<br />    "statements_executed": [<br />      {<br />        "sql_text": "INSERT INTO info VALUES (1, 'foo')",<br />        "time": "471.02 us",<br />        "schema": "trx",<br />        "rows_examined": 0,<br />        "rows_affected": 1,<br />        "rows_sent": 0,<br />        "tmp_tables": 0,<br />        "tmp_disk_tables": 0,<br />        "sort_rows": 0,<br />        "sort_merge_passes": 0<br />      },<br />      {<br />        "sql_text": "COMMIT",<br />        "time": "254.42 us",<br />        "schema": "trx",<br />        "rows_examined": 0,<br />        "rows_affected": 0,<br />        "rows_sent": 0,<br />        "tmp_tables": 0,<br />        "tmp_disk_tables": 0,<br />        "sort_rows": 0,<br />        "sort_merge_passes": 0<br />      }<br />    ]<br />  },<br />  {<br />    "time": "426.20 us",<br />    "state": "COMMITTED",<br />    "mode": "READ WRITE",<br />    "autocommitted": "NO",<br />    "gtid": "AUTOMATIC",<br />    "isolation": "REPEATABLE READ",<br />    "statements_executed": [<br />      {<br />        "sql_text": "INSERT INTO info VALUES (2, 'bar')",<br />        "time": "107.33 us",<br />        "schema": "trx",<br />        "rows_examined": 0,<br />        "rows_affected": 1,<br />        "rows_sent": 0,<br />        "tmp_tables": 0,<br />        "tmp_disk_tables": 0,<br />        "sort_rows": 0,<br />        "sort_merge_passes": 0<br />      },<br />      {<br />        "sql_text": "COMMIT",<br />        "time": "213.23 us",<br />        "schema": "trx",<br />        "rows_examined": 0,<br />        "rows_affected": 0,<br />        "rows_sent": 0,<br />        "tmp_tables": 0,<br />        "tmp_disk_tables": 0,<br />        "sort_rows": 0,<br />        "sort_merge_passes": 0<br />      }<br />    ]<br />  }<br />]<br />1 row in set (0.03 sec)</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>SQL Access</td>
+                  <td>READS SQL DATA</td>
+                </tr>
+                <tr>
+                  <td>Deterministic</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Security</td>
+                  <td>Invoker</td>
+                </tr>
+                <tr>
+                  <td>Definer</td>
+                  <td>mysql.sys@'localhost'</td>
+                </tr>
+                <tr>
+                  <td>SQL Mode</td>
+                  <td>ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION</td>
+                </tr>
+                <tr>
+                  <td>Language</td>
+                  <td>SQL</td>
+                </tr>
+                <tr>
+                  <td>Created</td>
+                  <td>2021. 04. 10. 15:36:58</td>
+                </tr>
+                <tr>
+                  <td>Last Modified</td>
+                  <td>2021. 04. 10. 15:36:58</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Parameters" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Parameters</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th>Precision</th>
+                  <th>Scale</th>
+                </tr>
+                <tr>
+                  <td>in_thread_id</td>
+                  <td>BIGINT</td>
+                  <td></td>
+                  <td>20</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>(Result)</td>
+                  <td>LONGTEXT</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="zero-clipboard">
+              <span class="btn-clipboard btn-default panel-default" data-clipboard-action="copy" data-clipboard-target=".SqlScript" data-toggle="tooltip" title="Copy to clipboard">Copy</span></div><div class="SqlScript  panel-default" style="word-wrap: break-word; padding-right:60px">
+              <font color="#569cd6">CREATE</font>&nbsp;<font color="#569cd6">FUNCTION</font>&nbsp;<font color="#ffffff">ps_thread_trx_info</font><font color="#b4b4b4">(</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff">in_thread_id</font>&nbsp;<font color="#4ec9b0">BIGINT</font>&nbsp;<font color="#569cd6">UNSIGNED</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#b4b4b4">)</font><br />&nbsp;&nbsp;<font color="#569cd6">RETURNS</font>&nbsp;<font color="#4ec9b0">LONGTEXT</font>&nbsp;<font color="#4ec9b0">CHARSET</font>&nbsp;<font color="#dcdcdc">utf8mb4</font><br />&nbsp;&nbsp;<font color="#569cd6">SQL</font>&nbsp;<font color="#569cd6">SECURITY</font>&nbsp;<font color="#569cd6">INVOKER</font><br />&nbsp;&nbsp;<font color="#569cd6">READS</font>&nbsp;<font color="#569cd6">SQL</font>&nbsp;<font color="#569cd6">DATA</font><br />&nbsp;&nbsp;<font color="#569cd6">COMMENT</font>&nbsp;<font color="#d69d85">'<br />&nbsp;&nbsp;Description<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Returns a JSON object with info on the given threads current transaction, <br />&nbsp;&nbsp;and the statements it has already executed, derived from the<br />&nbsp;&nbsp;performance_schema.events_transactions_current and<br />&nbsp;&nbsp;performance_schema.events_statements_history tables (so the consumers <br />&nbsp;&nbsp;for these also have to be enabled within Performance Schema to get full<br />&nbsp;&nbsp;data in the object).<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;When the output exceeds the default truncation length (65535), a JSON error<br />&nbsp;&nbsp;object is returned, such as:<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;{ "error": "Trx info truncated: Row 6 was cut by GROUP_CONCAT()" }<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Similar error objects are returned for other warnings/and exceptions raised<br />&nbsp;&nbsp;when calling the function.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;The max length of the output of this function can be controlled with the<br />&nbsp;&nbsp;ps_thread_trx_info.max_length variable set via sys_config, or the<br />&nbsp;&nbsp;@sys.ps_thread_trx_info.max_length user variable, as appropriate.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Parameters<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;in_thread_id (BIGINT UNSIGNED):<br />&nbsp;&nbsp;  The id of the thread to return the transaction info for.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Example<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;SELECT sys.ps_thread_trx_info(48)\\G<br />&nbsp;&nbsp;*************************** 1. row ***************************<br />&nbsp;&nbsp;sys.ps_thread_trx_info(48): [<br />&nbsp;&nbsp;  {<br />&nbsp;&nbsp;    "time": "790.70 us",<br />&nbsp;&nbsp;    "state": "COMMITTED",<br />&nbsp;&nbsp;    "mode": "READ WRITE",<br />&nbsp;&nbsp;    "autocommitted": "NO",<br />&nbsp;&nbsp;    "gtid": "AUTOMATIC",<br />&nbsp;&nbsp;    "isolation": "REPEATABLE READ",<br />&nbsp;&nbsp;    "statements_executed": [<br />&nbsp;&nbsp;      {<br />&nbsp;&nbsp;        "sql_text": "INSERT INTO info VALUES (1, ''foo'')",<br />&nbsp;&nbsp;        "time": "471.02 us",<br />&nbsp;&nbsp;        "schema": "trx",<br />&nbsp;&nbsp;        "rows_examined": 0,<br />&nbsp;&nbsp;        "rows_affected": 1,<br />&nbsp;&nbsp;        "rows_sent": 0,<br />&nbsp;&nbsp;        "tmp_tables": 0,<br />&nbsp;&nbsp;        "tmp_disk_tables": 0,<br />&nbsp;&nbsp;        "sort_rows": 0,<br />&nbsp;&nbsp;        "sort_merge_passes": 0<br />&nbsp;&nbsp;      },<br />&nbsp;&nbsp;      {<br />&nbsp;&nbsp;        "sql_text": "COMMIT",<br />&nbsp;&nbsp;        "time": "254.42 us",<br />&nbsp;&nbsp;        "schema": "trx",<br />&nbsp;&nbsp;        "rows_examined": 0,<br />&nbsp;&nbsp;        "rows_affected": 0,<br />&nbsp;&nbsp;        "rows_sent": 0,<br />&nbsp;&nbsp;        "tmp_tables": 0,<br />&nbsp;&nbsp;        "tmp_disk_tables": 0,<br />&nbsp;&nbsp;        "sort_rows": 0,<br />&nbsp;&nbsp;        "sort_merge_passes": 0<br />&nbsp;&nbsp;      }<br />&nbsp;&nbsp;    ]<br />&nbsp;&nbsp;  },<br />&nbsp;&nbsp;  {<br />&nbsp;&nbsp;    "time": "426.20 us",<br />&nbsp;&nbsp;    "state": "COMMITTED",<br />&nbsp;&nbsp;    "mode": "READ WRITE",<br />&nbsp;&nbsp;    "autocommitted": "NO",<br />&nbsp;&nbsp;    "gtid": "AUTOMATIC",<br />&nbsp;&nbsp;    "isolation": "REPEATABLE READ",<br />&nbsp;&nbsp;    "statements_executed": [<br />&nbsp;&nbsp;      {<br />&nbsp;&nbsp;        "sql_text": "INSERT INTO info VALUES (2, ''bar'')",<br />&nbsp;&nbsp;        "time": "107.33 us",<br />&nbsp;&nbsp;        "schema": "trx",<br />&nbsp;&nbsp;        "rows_examined": 0,<br />&nbsp;&nbsp;        "rows_affected": 1,<br />&nbsp;&nbsp;        "rows_sent": 0,<br />&nbsp;&nbsp;        "tmp_tables": 0,<br />&nbsp;&nbsp;        "tmp_disk_tables": 0,<br />&nbsp;&nbsp;        "sort_rows": 0,<br />&nbsp;&nbsp;        "sort_merge_passes": 0<br />&nbsp;&nbsp;      },<br />&nbsp;&nbsp;      {<br />&nbsp;&nbsp;        "sql_text": "COMMIT",<br />&nbsp;&nbsp;        "time": "213.23 us",<br />&nbsp;&nbsp;        "schema": "trx",<br />&nbsp;&nbsp;        "rows_examined": 0,<br />&nbsp;&nbsp;        "rows_affected": 0,<br />&nbsp;&nbsp;        "rows_sent": 0,<br />&nbsp;&nbsp;        "tmp_tables": 0,<br />&nbsp;&nbsp;        "tmp_disk_tables": 0,<br />&nbsp;&nbsp;        "sort_rows": 0,<br />&nbsp;&nbsp;        "sort_merge_passes": 0<br />&nbsp;&nbsp;      }<br />&nbsp;&nbsp;    ]<br />&nbsp;&nbsp;  }<br />&nbsp;&nbsp;]<br />&nbsp;&nbsp;1 row in set (0.03 sec)<br />&nbsp;&nbsp;'</font><br /><font color="#569cd6">BEGIN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_output</font>&nbsp;<font color="#4ec9b0">LONGTEXT</font>&nbsp;<font color="#569cd6">DEFAULT</font>&nbsp;<font color="#d69d85">'{}'</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_msg_text</font>&nbsp;<font color="#4ec9b0">TEXT</font>&nbsp;<font color="#569cd6">DEFAULT</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_signal_msg</font>&nbsp;<font color="#4ec9b0">TEXT</font>&nbsp;<font color="#569cd6">DEFAULT</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_mysql_errno</font>&nbsp;<font color="#4ec9b0">INT</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_max_output_len</font>&nbsp;<font color="#4ec9b0">BIGINT</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#608b4e">-- Capture warnings/errors such as group_concat truncation</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#608b4e">-- and report as JSON error objects</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#569cd6">EXIT</font>&nbsp;<font color="#569cd6">HANDLER</font>&nbsp;<font color="#569cd6">FOR</font>&nbsp;<font color="#569cd6">SQLWARNING</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">SQLEXCEPTION</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">BEGIN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">GET</font>&nbsp;<font color="#569cd6">DIAGNOSTICS</font>&nbsp;<font color="#569cd6">CONDITION</font>&nbsp;<font color="#b5cea8">1</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff">v_msg_text</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">MESSAGE_TEXT</font><font color="#b4b4b4">,</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff">v_mysql_errno</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">MYSQL_ERRNO</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">IF</font>&nbsp;<font color="#ffffff">v_mysql_errno</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#b5cea8">1260</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_signal_msg</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'{ "error": "Trx info truncated: '</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">v_msg_text</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'" }'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">ELSE</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_signal_msg</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'{ "error": "'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">v_msg_text</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'" }'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">END</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">RETURN</font>&nbsp;<font color="#ffffff">v_signal_msg</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">END</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#608b4e">-- Set configuration options</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">IF</font>&nbsp;<font color="#b4b4b4">(</font><font color="#008080">@sys</font><font color="#b4b4b4">.</font><font color="#ffffff">ps_thread_trx_info</font><font color="#b4b4b4">.</font><font color="#ffffff">max_length</font>&nbsp;<font color="#569cd6">IS</font>&nbsp;<font color="#569cd6">NULL</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#008080">@sys</font><font color="#b4b4b4">.</font><font color="#ffffff">ps_thread_trx_info</font><font color="#b4b4b4">.</font><font color="#ffffff">max_length</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">sys</font><font color="#b4b4b4">.</font><font color="#ffffff">sys_get_config</font><font color="#b4b4b4">(</font><font color="#d69d85">'ps_thread_trx_info.max_length'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b5cea8">65535</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">END</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+          <span class="badge inline-middle">1</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\sys_get_config.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\function.svg" class="image-small" />
+              <span>sys_get_config</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span class="text-muted">No items found</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;10. 04. 2021</div>
+  </div>
+</body>
+</html>

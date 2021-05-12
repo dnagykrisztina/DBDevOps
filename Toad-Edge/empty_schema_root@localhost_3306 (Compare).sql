@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS `Compare`;
+
+CREATE DATABASE `Compare`;
+
+COMMIT;

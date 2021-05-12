@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>format_path</title>
+<script src="../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../styles/bootstrap/Default Dark.css" type="text/css">
+<link rel="stylesheet" href="../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Cars.localhost.html" data-mapping-enabled="true">Cars.localhost</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\Databases.html" data-mapping-enabled="true">Databases</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\sys.html" data-mapping-enabled="true">sys</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\Functions.html" data-mapping-enabled="true">Functions</a></li>
+            <li class="active">format_path</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../images/Dark\function.svg" title="format_path" />
+            <h1 class="inline-middle">format_path</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span><br />Description<br />-----------<br /><br />Takes a raw path value, and strips out the datadir or tmpdir<br />replacing with @@datadir and @@tmpdir respectively.<br /><br />Also normalizes the paths across operating systems, so backslashes<br />on Windows are converted to forward slashes<br /><br />Parameters<br />-----------<br /><br />path (VARCHAR(512)):<br />  The raw file path value to format.<br /><br />Returns<br />-----------<br /><br />VARCHAR(512) CHARSET UTF8MB4<br /><br />Example<br />-----------<br /><br />mysql> select @@datadir;<br />+-----------------------------------------------+<br />| @@datadir                                     |<br />+-----------------------------------------------+<br />| /Users/mark/sandboxes/SmallTree/AMaster/data/ |<br />+-----------------------------------------------+<br />1 row in set (0.06 sec)<br /><br />mysql> select format_path('/Users/mark/sandboxes/SmallTree/AMaster/data/mysql/proc.MYD') AS path;<br />+--------------------------+<br />| path                     |<br />+--------------------------+<br />| @@datadir/mysql/proc.MYD |<br />+--------------------------+<br />1 row in set (0.03 sec)</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>SQL Access</td>
+                  <td>NO SQL</td>
+                </tr>
+                <tr>
+                  <td>Deterministic</td>
+                  <td><p class="value-true">True</p></td>
+                </tr>
+                <tr>
+                  <td>Security</td>
+                  <td>Invoker</td>
+                </tr>
+                <tr>
+                  <td>Definer</td>
+                  <td>mysql.sys@'localhost'</td>
+                </tr>
+                <tr>
+                  <td>SQL Mode</td>
+                  <td>ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION</td>
+                </tr>
+                <tr>
+                  <td>Language</td>
+                  <td>SQL</td>
+                </tr>
+                <tr>
+                  <td>Created</td>
+                  <td>2021. 04. 10. 15:36:58</td>
+                </tr>
+                <tr>
+                  <td>Last Modified</td>
+                  <td>2021. 04. 10. 15:36:58</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Parameters" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Parameters</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th>Precision</th>
+                  <th>Scale</th>
+                </tr>
+                <tr>
+                  <td>in_path</td>
+                  <td>VARCHAR</td>
+                  <td>512</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>(Result)</td>
+                  <td>VARCHAR</td>
+                  <td>512</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="zero-clipboard">
+              <span class="btn-clipboard btn-default panel-default" data-clipboard-action="copy" data-clipboard-target=".SqlScript" data-toggle="tooltip" title="Copy to clipboard">Copy</span></div><div class="SqlScript  panel-default" style="word-wrap: break-word; padding-right:60px">
+              <font color="#569cd6">CREATE</font>&nbsp;<font color="#569cd6">FUNCTION</font>&nbsp;<font color="#ffffff">format_path</font><font color="#b4b4b4">(</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff">in_path</font>&nbsp;<font color="#4ec9b0">VARCHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">512</font><font color="#b4b4b4">)</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#b4b4b4">)</font><br />&nbsp;&nbsp;<font color="#569cd6">RETURNS</font>&nbsp;<font color="#4ec9b0">VARCHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">512</font><font color="#b4b4b4">)</font>&nbsp;<font color="#4ec9b0">CHARSET</font>&nbsp;<font color="#dcdcdc">utf8mb4</font><br />&nbsp;&nbsp;<font color="#569cd6">DETERMINISTIC</font><br />&nbsp;&nbsp;<font color="#569cd6">SQL</font>&nbsp;<font color="#569cd6">SECURITY</font>&nbsp;<font color="#569cd6">INVOKER</font><br />&nbsp;&nbsp;<font color="#569cd6">NO</font>&nbsp;<font color="#569cd6">SQL</font><br />&nbsp;&nbsp;<font color="#569cd6">COMMENT</font>&nbsp;<font color="#d69d85">'<br />&nbsp;&nbsp;Description<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Takes a raw path value, and strips out the datadir or tmpdir<br />&nbsp;&nbsp;replacing with @@datadir and @@tmpdir respectively.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Also normalizes the paths across operating systems, so backslashes<br />&nbsp;&nbsp;on Windows are converted to forward slashes<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Parameters<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;path (VARCHAR(512)):<br />&nbsp;&nbsp;  The raw file path value to format.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Returns<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;VARCHAR(512) CHARSET UTF8MB4<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Example<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;mysql&gt; select @@datadir;<br />&nbsp;&nbsp;+-----------------------------------------------+<br />&nbsp;&nbsp;| @@datadir                                     |<br />&nbsp;&nbsp;+-----------------------------------------------+<br />&nbsp;&nbsp;| /Users/mark/sandboxes/SmallTree/AMaster/data/ |<br />&nbsp;&nbsp;+-----------------------------------------------+<br />&nbsp;&nbsp;1 row in set (0.06 sec)<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;mysql&gt; select format_path(''/Users/mark/sandboxes/SmallTree/AMaster/data/mysql/proc.MYD'') AS path;<br />&nbsp;&nbsp;+--------------------------+<br />&nbsp;&nbsp;| path                     |<br />&nbsp;&nbsp;+--------------------------+<br />&nbsp;&nbsp;| @@datadir/mysql/proc.MYD |<br />&nbsp;&nbsp;+--------------------------+<br />&nbsp;&nbsp;1 row in set (0.03 sec)<br />&nbsp;&nbsp;'</font><br /><font color="#569cd6">BEGIN</font><br />&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#4ec9b0">VARCHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">512</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_undo_dir</font>&nbsp;<font color="#4ec9b0">VARCHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">1024</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">path_separator</font>&nbsp;<font color="#4ec9b0">CHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">DEFAULT</font>&nbsp;<font color="#d69d85">'/'</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">IF</font>&nbsp;<font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">version_compile_os</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#d69d85">'win%'</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">path_separator</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#d69d85">'\\'</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">END</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#608b4e">-- OSX hides /private/ in variables, but Performance Schema does not</font><br />&nbsp;&nbsp;<font color="#569cd6">IF</font>&nbsp;<font color="#ffffff">in_path</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#d69d85">'/private/%'</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">REPLACE</font><font color="#b4b4b4">(</font><font color="#ffffff">in_path</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'/private'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">ELSE</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">in_path</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">END</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#608b4e">-- @@global.innodb_undo_directory is only set when separate undo logs are used</font><br />&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_undo_dir</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ff00ff">IFNULL</font><font color="#b4b4b4">(</font><font color="#b4b4b4">(</font><font color="#569cd6">SELECT</font>&nbsp;<font color="#ffffff">VARIABLE_VALUE</font>&nbsp;<font color="#569cd6">FROM</font>&nbsp;<font color="#569cd6">performance_schema</font><font color="#b4b4b4">.</font><font color="#ffffff">global_variables</font>&nbsp;<font color="#569cd6">WHERE</font>&nbsp;<font color="#ffffff">VARIABLE_NAME</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#d69d85">'innodb_undo_directory'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">IF</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#569cd6">IS</font>&nbsp;<font color="#569cd6">NULL</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">RETURN</font>&nbsp;<font color="#569cd6">NULL</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">ELSEIF</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">datadir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">datadir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">ESCAPE</font>&nbsp;<font color="#d69d85">'|'</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">REPLACE</font><font color="#b4b4b4">(</font><font color="#ffffff">v_path</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">datadir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'@@datadir'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">datadir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">ELSEIF</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">tmpdir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">tmpdir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">ESCAPE</font>&nbsp;<font color="#d69d85">'|'</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">REPLACE</font><font color="#b4b4b4">(</font><font color="#ffffff">v_path</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">tmpdir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'@@tmpdir'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">tmpdir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">ELSEIF</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">slave_load_tmpdir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">slave_load_tmpdir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">ESCAPE</font>&nbsp;<font color="#d69d85">'|'</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">REPLACE</font><font color="#b4b4b4">(</font><font color="#ffffff">v_path</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">slave_load_tmpdir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'@@slave_load_tmpdir'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">slave_load_tmpdir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">ELSEIF</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">innodb_data_home_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">innodb_data_home_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">ESCAPE</font>&nbsp;<font color="#d69d85">'|'</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">REPLACE</font><font color="#b4b4b4">(</font><font color="#ffffff">v_path</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">innodb_data_home_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'@@innodb_data_home_dir'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">innodb_data_home_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">ELSEIF</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">innodb_log_group_home_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">innodb_log_group_home_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">ESCAPE</font>&nbsp;<font color="#d69d85">'|'</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">REPLACE</font><font color="#b4b4b4">(</font><font color="#ffffff">v_path</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">innodb_log_group_home_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'@@innodb_log_group_home_dir'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">innodb_log_group_home_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">ELSEIF</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#ffffff">v_undo_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#ffffff">v_undo_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">ESCAPE</font>&nbsp;<font color="#d69d85">'|'</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">REPLACE</font><font color="#b4b4b4">(</font><font color="#ffffff">v_path</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">v_undo_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'@@innodb_undo_directory'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#ffffff">v_undo_dir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">ELSEIF</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">basedir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">basedir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">'%'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">ESCAPE</font>&nbsp;<font color="#d69d85">'|'</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_path</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">REPLACE</font><font color="#b4b4b4">(</font><font color="#ffffff">v_path</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">basedir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'@@basedir'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">(</font><font color="#ff00ff">SUBSTRING</font><font color="#b4b4b4">(</font><font color="#569cd6">@@global</font><font color="#b4b4b4">.</font><font color="#ffffff">basedir</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b4b4b4">-</font><font color="#b5cea8">1</font><font color="#b4b4b4">)</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">path_separator</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">''</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">END</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">RETURN</font>&nbsp;<font color="#ffffff">v_path</font><font color="#b4b4b4">;</font><br /><font color="#569cd6">END</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span class="text-muted">No items found</span>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+          <span class="badge inline-middle">3</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\io_global_by_file_by_bytes.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>io_global_by_file_by_bytes</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\io_global_by_file_by_latency.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>io_global_by_file_by_latency</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\latest_file_io.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>latest_file_io</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;10. 04. 2021</div>
+  </div>
+</body>
+</html>

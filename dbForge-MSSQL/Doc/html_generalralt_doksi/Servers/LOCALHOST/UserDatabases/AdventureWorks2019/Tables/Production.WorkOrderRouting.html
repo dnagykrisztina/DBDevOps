@@ -1,0 +1,578 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Production.WorkOrderRouting</title>
+<script src="../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../styles/bootstrap/Default.css" type="text/css">
+<link rel="stylesheet" href="../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-8">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../Servers\LOCALHOST\LOCALHOST.html" data-mapping-enabled="true">LOCALHOST</a></li>
+            <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\UserDatabases.html" data-mapping-enabled="true">User databases</a></li>
+            <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\AdventureWorks2019.html" data-mapping-enabled="true">AdventureWorks2019</a></li>
+            <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Tables.html" data-mapping-enabled="true">Tables</a></li>
+            <li class="active">Production.WorkOrderRouting</li>
+          </ol>
+        </div>
+        <div class="align-right col-xs-4">DBDevOps</div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../images/table.svg" title="Production.WorkOrderRouting" />
+            <h1 class="inline-middle">Production.WorkOrderRouting</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span>Work order details.</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>Collation</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>File Group</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Filestream File Group</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Is Partitioned</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Partitioned Column</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Partition Scheme</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>File Groups</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Filestream Partition Scheme</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Filestream File Groups</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Heap</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Full Text Catalog</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Full Text</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Compression</td>
+                  <td>NONE</td>
+                </tr>
+                <tr>
+                  <td>Row Count (~)</td>
+                  <td>67131</td>
+                </tr>
+                <tr>
+                  <td>Created</td>
+                  <td>2017. 10. 27. 14:33:01</td>
+                </tr>
+                <tr>
+                  <td>Last Modified</td>
+                  <td>2017. 10. 27. 14:33:14</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Columns" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Columns</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Key</th>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th>Precision</th>
+                  <th>Scale</th>
+                  <th>Not Null</th>
+                  <th>Identity</th>
+                  <th>Rule</th>
+                  <th>Default</th>
+                  <th>Computed</th>
+                  <th>Persisted</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/primarykey.svg" data-toggle="tooltip" title="Primary Key PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence" />
+                    </a></div><div><a class="anchor-link" href="#ForeignKeys"><img class="image-small" src="../../../../../images/foreignkey.svg" data-toggle="tooltip" title="Foreign Keys FK_WorkOrderRouting_WorkOrder_WorkOrderID: Production.WorkOrder" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/Cluster.svg" data-toggle="tooltip" title="Cluster Key PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence" />
+                    </a></div></td>
+                  <td>WorkOrderID</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Primary key. Foreign key to WorkOrder.WorkOrderID.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/primarykey.svg" data-toggle="tooltip" title="Primary Key PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/Cluster.svg" data-toggle="tooltip" title="Cluster Key PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/index.svg" data-toggle="tooltip" title="Indexes IX_WorkOrderRouting_ProductID" />
+                    </a></div></td>
+                  <td>ProductID</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Primary key. Foreign key to Product.ProductID.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/primarykey.svg" data-toggle="tooltip" title="Primary Key PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/Cluster.svg" data-toggle="tooltip" title="Cluster Key PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence" />
+                    </a></div></td>
+                  <td>OperationSequence</td>
+                  <td>smallint</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Primary key. Indicates the manufacturing process sequence.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#ForeignKeys"><img class="image-small" src="../../../../../images/foreignkey.svg" data-toggle="tooltip" title="Foreign Keys FK_WorkOrderRouting_Location_LocationID: Production.Location" />
+                    </a></div></td>
+                  <td>LocationID</td>
+                  <td>smallint</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Manufacturing location where the part is processed. Foreign key to Location.LocationID.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>ScheduledStartDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Planned manufacturing start date.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>ScheduledEndDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Planned manufacturing end date.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>ActualStartDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Actual start date.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>ActualEndDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Actual end date.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#CheckConstraints"><img class="image-small" src="../../../../../images/checkconstraint.svg" data-toggle="tooltip" title="Check Constraint CK_WorkOrderRouting_ActualResourceHrs" />
+                    </a></div></td>
+                  <td>ActualResourceHrs</td>
+                  <td>decimal</td>
+                  <td>5</td>
+                  <td>9</td>
+                  <td>4</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Number of manufacturing hours used.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#CheckConstraints"><img class="image-small" src="../../../../../images/checkconstraint.svg" data-toggle="tooltip" title="Check Constraint CK_WorkOrderRouting_PlannedCost" />
+                    </a></div></td>
+                  <td>PlannedCost</td>
+                  <td>money</td>
+                  <td>8</td>
+                  <td>19</td>
+                  <td>4</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Estimated manufacturing cost.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#CheckConstraints"><img class="image-small" src="../../../../../images/checkconstraint.svg" data-toggle="tooltip" title="Check Constraint CK_WorkOrderRouting_ActualCost" />
+                    </a></div></td>
+                  <td>ActualCost</td>
+                  <td>money</td>
+                  <td>8</td>
+                  <td>19</td>
+                  <td>4</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Actual manufacturing cost.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>ModifiedDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td>(getdate())</td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Date and time the record was last updated.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Indexes" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Indexes</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Key</th>
+                  <th>Name</th>
+                  <th>Columns</th>
+                  <th>Unique</th>
+                  <th>Type</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>IX_WorkOrderRouting_ProductID</td>
+                  <td>ProductID</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td>
+                    <span>Nonclustered index.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/primarykey.svg" data-toggle="tooltip" title="Primary Key PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/Cluster.svg" data-toggle="tooltip" title="Cluster Key PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence" />
+                    </a></div></td>
+                  <td>PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence</td>
+                  <td>WorkOrderID, ProductID, OperationSequence</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td>
+                    <span>Clustered index created by a primary key constraint.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="CheckConstraints" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Check Constraints</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Columns</th>
+                  <th>Condition</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td>CK_WorkOrderRouting_ActualCost</td>
+                  <td>ActualCost</td>
+                  <td>([ActualCost]>(0.00))</td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CK_WorkOrderRouting_ActualEndDate</td>
+                  <td></td>
+                  <td>([ActualEndDate]>=[ActualStartDate] OR [ActualEndDate] IS NULL OR [ActualStartDate] IS NULL)</td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CK_WorkOrderRouting_ActualResourceHrs</td>
+                  <td>ActualResourceHrs</td>
+                  <td>([ActualResourceHrs]>=(0.0000))</td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CK_WorkOrderRouting_PlannedCost</td>
+                  <td>PlannedCost</td>
+                  <td>([PlannedCost]>(0.00))</td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CK_WorkOrderRouting_ScheduledEndDate</td>
+                  <td></td>
+                  <td>([ScheduledEndDate]>=[ScheduledStartDate])</td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="ForeignKeys" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Foreign Keys</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Columns</th>
+                  <th class="column-description-60">Description</th>
+                </tr>
+                <tr>
+                  <td>FK_WorkOrderRouting_Location_LocationID</td>
+                  <td>LocationID</td>
+                  <td>
+                    <span>Foreign key constraint referencing Location.LocationID.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>FK_WorkOrderRouting_WorkOrder_WorkOrderID</td>
+                  <td>WorkOrderID</td>
+                  <td>
+                    <span>Foreign key constraint referencing WorkOrder.WorkOrderID.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="sqlscript panel-default">
+              <font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">TABLE</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrderRouting</font>&nbsp;<font color="#808080">(</font><br>&nbsp;&nbsp;<font color="#000000">WorkOrderID</font>&nbsp;<font color="#0000ff">int</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ProductID</font>&nbsp;<font color="#0000ff">int</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">OperationSequence</font>&nbsp;<font color="#0000ff">smallint</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">LocationID</font>&nbsp;<font color="#0000ff">smallint</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ScheduledStartDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ScheduledEndDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ActualStartDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ActualEndDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ActualResourceHrs</font>&nbsp;<font color="#0000ff">decimal</font><font color="#808080">(</font><font color="#000000">9</font><font color="#808080">,</font>&nbsp;<font color="#000000">4</font><font color="#808080">)</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">PlannedCost</font>&nbsp;<font color="#0000ff">money</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ActualCost</font>&nbsp;<font color="#0000ff">money</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ModifiedDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">DF_WorkOrderRouting_ModifiedDate</font>&nbsp;<font color="#0000ff">DEFAULT</font>&nbsp;<font color="#808080">(</font><font color="#ff00ff">getdate</font><font color="#808080">(</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence</font>&nbsp;<font color="#0000ff">PRIMARY</font>&nbsp;<font color="#0000ff">KEY</font>&nbsp;<font color="#0000ff">CLUSTERED</font>&nbsp;<font color="#808080">(</font><font color="#000000">WorkOrderID</font><font color="#808080">,</font>&nbsp;<font color="#000000">ProductID</font><font color="#808080">,</font>&nbsp;<font color="#000000">OperationSequence</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">CK_WorkOrderRouting_ActualCost</font>&nbsp;<font color="#0000ff">CHECK</font>&nbsp;<font color="#808080">(</font><font color="#000000">[ActualCost]</font><font color="#808080">></font><font color="#808080">(</font><font color="#000000">0.00</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">CK_WorkOrderRouting_ActualEndDate</font>&nbsp;<font color="#0000ff">CHECK</font>&nbsp;<font color="#808080">(</font><font color="#000000">[ActualEndDate]</font><font color="#808080">></font><font color="#808080">=</font><font color="#000000">[ActualStartDate]</font>&nbsp;<font color="#808080">OR</font>&nbsp;<font color="#000000">[ActualEndDate]</font>&nbsp;<font color="#808080">IS</font>&nbsp;<font color="#808080">NULL</font>&nbsp;<font color="#808080">OR</font>&nbsp;<font color="#000000">[ActualStartDate]</font>&nbsp;<font color="#808080">IS</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">CK_WorkOrderRouting_ActualResourceHrs</font>&nbsp;<font color="#0000ff">CHECK</font>&nbsp;<font color="#808080">(</font><font color="#000000">[ActualResourceHrs]</font><font color="#808080">></font><font color="#808080">=</font><font color="#808080">(</font><font color="#000000">0.0000</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">CK_WorkOrderRouting_PlannedCost</font>&nbsp;<font color="#0000ff">CHECK</font>&nbsp;<font color="#808080">(</font><font color="#000000">[PlannedCost]</font><font color="#808080">></font><font color="#808080">(</font><font color="#000000">0.00</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">CK_WorkOrderRouting_ScheduledEndDate</font>&nbsp;<font color="#0000ff">CHECK</font>&nbsp;<font color="#808080">(</font><font color="#000000">[ScheduledEndDate]</font><font color="#808080">></font><font color="#808080">=</font><font color="#000000">[ScheduledStartDate]</font><font color="#808080">)</font><br><font color="#808080">)</font><br><font color="#0000ff">ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">INDEX</font>&nbsp;<font color="#000000">IX_WorkOrderRouting_ProductID</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrderRouting</font>&nbsp;<font color="#808080">(</font><font color="#000000">ProductID</font><font color="#808080">)</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">ALTER</font>&nbsp;<font color="#0000ff">TABLE</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrderRouting</font><br>&nbsp;&nbsp;<font color="#0000ff">ADD</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">FK_WorkOrderRouting_Location_LocationID</font>&nbsp;<font color="#0000ff">FOREIGN</font>&nbsp;<font color="#0000ff">KEY</font>&nbsp;<font color="#808080">(</font><font color="#000000">LocationID</font><font color="#808080">)</font>&nbsp;<font color="#0000ff">REFERENCES</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#0000ff">Location</font>&nbsp;<font color="#808080">(</font><font color="#000000">LocationID</font><font color="#808080">)</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Foreign key constraint referencing Location.LocationID.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'FK_WorkOrderRouting_Location_LocationID'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">ALTER</font>&nbsp;<font color="#0000ff">TABLE</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrderRouting</font><br>&nbsp;&nbsp;<font color="#0000ff">ADD</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">FK_WorkOrderRouting_WorkOrder_WorkOrderID</font>&nbsp;<font color="#0000ff">FOREIGN</font>&nbsp;<font color="#0000ff">KEY</font>&nbsp;<font color="#808080">(</font><font color="#000000">WorkOrderID</font><font color="#808080">)</font>&nbsp;<font color="#0000ff">REFERENCES</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrder</font>&nbsp;<font color="#808080">(</font><font color="#000000">WorkOrderID</font><font color="#808080">)</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Foreign key constraint referencing WorkOrder.WorkOrderID.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'FK_WorkOrderRouting_WorkOrder_WorkOrderID'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Work order details.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Primary key. Foreign key to WorkOrder.WorkOrderID.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderID'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Primary key. Foreign key to Product.ProductID.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ProductID'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Primary key. Indicates the manufacturing process sequence.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'OperationSequence'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Manufacturing location where the part is processed. Foreign key to Location.LocationID.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'LocationID'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Planned manufacturing start date.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ScheduledStartDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Planned manufacturing end date.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ScheduledEndDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Actual start date.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ActualStartDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Actual end date.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ActualEndDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Number of manufacturing hours used.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ActualResourceHrs'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Estimated manufacturing cost.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'PlannedCost'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Actual manufacturing cost.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ActualCost'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Date and time the record was last updated.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ModifiedDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Nonclustered index.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'INDEX'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'IX_WorkOrderRouting_ProductID'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Clustered index created by a primary key constraint.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'INDEX'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Primary key (clustered) constraint'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Check constraint [ActualCost] > (0.00)'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'CK_WorkOrderRouting_ActualCost'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Check constraint [ActualEndDate] >= [ActualStartDate] OR [ActualEndDate] IS NULL OR [ActualStartDate] IS NULL'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'CK_WorkOrderRouting_ActualEndDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Check constraint [ActualResourceHrs] >= (0.0000)'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'CK_WorkOrderRouting_ActualResourceHrs'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Check constraint [PlannedCost] > (0.00)'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'CK_WorkOrderRouting_PlannedCost'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Check constraint [ScheduledEndDate] >= [ScheduledStartDate]'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'CK_WorkOrderRouting_ScheduledEndDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Default constraint value of GETDATE()'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'WorkOrderRouting'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'DF_WorkOrderRouting_ModifiedDate'</font><br><font color="#0000ff">GO</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+          <span class="badge inline-middle">3</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Security\Schemas\Production.html" data-mapping-enabled="true"><span>Production</span></a></li>
+              <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Production.Location.html" data-mapping-enabled="true"><span>Production.Location</span></a></li>
+              <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Production.WorkOrder.html" data-mapping-enabled="true"><span>Production.WorkOrder</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span class="text-muted">No items found</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;Nagy Krisztina Dalma</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;2021. 03. 15</div>
+  </div>
+</body>
+</html>

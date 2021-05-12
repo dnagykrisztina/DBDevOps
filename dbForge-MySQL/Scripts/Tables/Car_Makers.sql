@@ -1,0 +1,16 @@
+﻿CREATE TABLE Car_Makers (
+  ID INT NOT NULL,
+  Maker VARCHAR(15) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  FullName VARCHAR(25) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  Country INT DEFAULT NULL,
+  PRIMARY KEY (ID)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 712,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_0900_ai_ci,
+ROW_FORMAT = DYNAMIC;
+
+ALTER TABLE Car_Makers 
+  ADD CONSTRAINT car_maker_country_id_fk FOREIGN KEY (Country)
+    REFERENCES Countries(CountryID);

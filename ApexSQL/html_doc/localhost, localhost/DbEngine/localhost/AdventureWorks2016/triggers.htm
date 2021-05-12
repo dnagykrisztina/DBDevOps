@@ -1,0 +1,201 @@
+﻿<HTML>
+<HEAD>
+    <TITLE>Triggers</TITLE>
+    <LINK HREF="../../../style.css" REL="stylesheet" TYPE="text/css">
+
+    <SCRIPT SRC="../../../script.js"></SCRIPT>
+
+</HEAD>
+<BODY>
+    <IMG ID="collapseImage" ALT="Collapse image" SRC="../../../ImagesMetro/collapse.gif" STYLE="display: none; height: 0; width: 0;" />
+    <IMG ID="expandImage" ALT="Expand image" SRC="../../../ImagesMetro/expand.gif" STYLE="display: none; height: 0; width: 0;" />
+    <DIV ID="pagetop">
+        <div class='text-output-header'><p><font size="3">Sample header text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-header {display:block; float:left; width:100%;}div.text-output-header p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+        <P CLASS="apexdoc-header">
+            <IMG BORDER="0" CLASS="vmiddle" SRC="../../../Images32x32Metro/OBJECT_TRIGGER.png">&nbsp;List of triggers</P>
+        <P CLASS="apexdoc-header-bottom">
+	<SPAN onclick="ExpandCollapseSections(this)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0">
+		<IMG ID="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../../../ImagesMetro/collapse.gif"></IMG>
+		<LABEL id="collapseAllLabel" for="toggleAllImage" style="display: inline;">Collapse all</LABEL>
+		<LABEL id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand all</LABEL>
+	</SPAN>
+</P>
+
+    </DIV>
+    <DIV ID="pagebody">
+        
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Triggers')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Triggers')" tabindex="0">
+	<IMG id="TriggersToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Triggers
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="TriggersSection" CLASS="section" STYLE="display: inline;">
+            
+            <TABLE>
+                <TR CLASS="apexdoc-table-caption">
+                    <TD>Name&nbsp;</TD>
+                    <TD>Schema&nbsp;</TD>
+                    <TD>Description</TD>
+                    <TD>Instead&nbsp;of&nbsp;</TD>
+                    <TD>For&nbsp;<br/>insert
+                        <!--graphic-->
+                    </TD>
+                    <TD>For&nbsp;<br/>update
+                        <!--graphic-->
+                    </TD>
+                    <TD>For&nbsp;<br/>delete
+                        <!--graphic-->
+                    </TD>
+                    <TD>Table/view</TD>
+                </TR>
+                <TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/2059154381.htm">dEmployee</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>INSTEAD OF DELETE trigger which keeps Employees from being deleted.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/CHECK_OUT.png"></TD>
+  <TD>&nbsp;</TD>
+  <TD>&nbsp;</TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Delete" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_delete.gif"></TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1557580587.htm">HumanResources.Employee</A></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/2075154438.htm">iuPerson</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>AFTER INSERT, UPDATE trigger inserting Individual only if the Customer does not exist in the Store table and setting the ModifiedDate column in the Person table to the current date.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Insert" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_insert.gif"></TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Update" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_update.gif"></TD>
+  <TD>&nbsp;</TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/2085582468.htm">Person.Person</A></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/39671189.htm">iWorkOrder</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>AFTER INSERT trigger that inserts a row in the TransactionHistory table.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Insert" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_insert.gif"></TD>
+  <TD>&nbsp;</TD>
+  <TD>&nbsp;</TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1166627199.htm">Production.WorkOrder</A></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/55671246.htm">uWorkOrder</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>AFTER UPDATE trigger that inserts a row in the TransactionHistory table, updates ModifiedDate in the WorkOrder table.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>&nbsp;</TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Update" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_update.gif"></TD>
+  <TD>&nbsp;</TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1166627199.htm">Production.WorkOrder</A></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/23671132.htm">dVendor</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>INSTEAD OF DELETE trigger which keeps Vendors from being deleted.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/CHECK_OUT.png"></TD>
+  <TD>&nbsp;</TD>
+  <TD>&nbsp;</TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Delete" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_delete.gif"></TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1086626914.htm">Purchasing.Vendor</A></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/2091154495.htm">iPurchaseOrderDetail</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>AFTER INSERT trigger that inserts a row in the TransactionHistory table and updates the PurchaseOrderHeader.SubTotal column.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Insert" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_insert.gif"></TD>
+  <TD>&nbsp;</TD>
+  <TD>&nbsp;</TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1170103209.htm">Purchasing.PurchaseOrderDetail</A></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/2107154552.htm">uPurchaseOrderDetail</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>AFTER UPDATE trigger that inserts a row in the TransactionHistory table, updates ModifiedDate in PurchaseOrderDetail and updates the PurchaseOrderHeader.SubTotal column.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>&nbsp;</TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Update" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_update.gif"></TD>
+  <TD>&nbsp;</TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1170103209.htm">Purchasing.PurchaseOrderDetail</A></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/2123154609.htm">uPurchaseOrderHeader</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>AFTER UPDATE trigger that updates the RevisionNumber and ModifiedDate columns in the PurchaseOrderHeader table.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>&nbsp;</TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Update" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_update.gif"></TD>
+  <TD>&nbsp;</TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1266103551.htm">Purchasing.PurchaseOrderHeader</A></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/2139154666.htm">iduSalesOrderDetail</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>AFTER INSERT, DELETE, UPDATE trigger that inserts a row in the TransactionHistory table, updates ModifiedDate in SalesOrderDetail and updates the SalesOrderHeader.SubTotal column.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Insert" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_insert.gif"></TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Update" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_update.gif"></TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Delete" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_delete.gif"></TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1474104292.htm">Sales.SalesOrderDetail</A></TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Triggers/7671075.htm">uSalesOrderHeader</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>AFTER UPDATE trigger that updates the RevisionNumber and ModifiedDate columns in the SalesOrderHeader table.Updates the SalesYTD column in the SalesPerson and SalesTerritory tables.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>&nbsp;</TD>
+  <TD><IMG CLASS="vmiddle" ALT="For Update" border="0" SRC="../../../ImagesMetro/AUDIT_trigger_update.gif"></TD>
+  <TD>&nbsp;</TD>
+
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1586104691.htm">Sales.SalesOrderHeader</A></TD>
+</TR>
+
+            </TABLE>
+            <DIV CLASS="apexdoc-total-counter">
+                Total:&nbsp;10
+                &nbsp;trigger(s)</DIV>
+            
+        </DIV>
+        
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('seealso')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('seealso')" tabindex="0">
+	<IMG id="seealsoToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            See also
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="seealsoSection" CLASS="section" STYLE="display: inline;">
+            <P>
+                <A HREF="tables.htm">Tables</A>
+            </P>
+            <P>
+                <A HREF="views.htm">Views</A>
+            </P>
+            <P>
+                
+            </P>
+        </DIV>
+        <HR SIZE="1">
+<P></P>
+<BR>
+<BR>
+
+        <div class='text-output-footer'><p><font size="3">Sample footer text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-footer {display:block; float:left; width:100%;}div.text-output-footer p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+    </DIV>
+</BODY>
+</HTML>

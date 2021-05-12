@@ -1,0 +1,573 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Production.WorkOrder</title>
+<script src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/styles/bootstrap/Default.css" type="text/css">
+<link rel="stylesheet" href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/styles/main.css" type="text/css">
+<link rel="stylesheet" href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/styles/Format/pdf.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-8">
+          <ol class="breadcrumb">
+            <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/Root[Project].List[Servers]" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/LOCALHOST.html" data-mapping-enabled="true">LOCALHOST</a></li>
+            <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/UserDatabases.html" data-mapping-enabled="true">User databases</a></li>
+            <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/AdventureWorks2019.html" data-mapping-enabled="true">AdventureWorks2019</a></li>
+            <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/Tables.html" data-mapping-enabled="true">Tables</a></li>
+            <li class="active">Production.WorkOrder</li>
+          </ol>
+        </div>
+        <div class="align-right col-xs-4">DBDevOps</div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/table.svg" title="Production.WorkOrder" />
+            <h1 class="inline-middle">Production.WorkOrder</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span>Manufacturing work orders.</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>Collation</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>File Group</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Filestream File Group</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Is Partitioned</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Partitioned Column</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Partition Scheme</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>File Groups</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Filestream Partition Scheme</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Filestream File Groups</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Heap</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Full Text Catalog</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Full Text</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Compression</td>
+                  <td>NONE</td>
+                </tr>
+                <tr>
+                  <td>Row Count (~)</td>
+                  <td>72591</td>
+                </tr>
+                <tr>
+                  <td>Created</td>
+                  <td>2017. 10. 27. 14:33:01</td>
+                </tr>
+                <tr>
+                  <td>Last Modified</td>
+                  <td>2017. 10. 27. 14:33:14</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Columns" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Columns</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Key</th>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th>Precision</th>
+                  <th>Scale</th>
+                  <th>Not Null</th>
+                  <th>Identity</th>
+                  <th>Rule</th>
+                  <th>Default</th>
+                  <th>Computed</th>
+                  <th>Persisted</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/primarykey.svg" data-toggle="tooltip" title="Primary Key PK_WorkOrder_WorkOrderID" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/Cluster.svg" data-toggle="tooltip" title="Cluster Key PK_WorkOrder_WorkOrderID" />
+                    </a></div></td>
+                  <td>WorkOrderID</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td>1 - 1</td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Primary key for WorkOrder records.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#ForeignKeys"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/foreignkey.svg" data-toggle="tooltip" title="Foreign Keys FK_WorkOrder_Product_ProductID: Production.Product" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/index.svg" data-toggle="tooltip" title="Indexes IX_WorkOrder_ProductID" />
+                    </a></div></td>
+                  <td>ProductID</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Product identification number. Foreign key to Product.ProductID.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#CheckConstraints"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/checkconstraint.svg" data-toggle="tooltip" title="Check Constraint CK_WorkOrder_OrderQty" />
+                    </a></div></td>
+                  <td>OrderQty</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Product quantity to build.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>StockedQty</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-true">True</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Quantity built and put in inventory.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#CheckConstraints"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/checkconstraint.svg" data-toggle="tooltip" title="Check Constraint CK_WorkOrder_ScrappedQty" />
+                    </a></div></td>
+                  <td>ScrappedQty</td>
+                  <td>smallint</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Quantity that failed inspection.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>StartDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Work order start date.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>EndDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Work order end date.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>DueDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Work order due date.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#ForeignKeys"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/foreignkey.svg" data-toggle="tooltip" title="Foreign Keys FK_WorkOrder_ScrapReason_ScrapReasonID: Production.ScrapReason" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/index.svg" data-toggle="tooltip" title="Indexes IX_WorkOrder_ScrapReasonID" />
+                    </a></div></td>
+                  <td>ScrapReasonID</td>
+                  <td>smallint</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Reason for inspection failure.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>ModifiedDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td>(getdate())</td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Date and time the record was last updated.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="ComputedColumns" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Computed Columns</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Definition</th>
+                </tr>
+                <tr>
+                  <td>StockedQty</td>
+                  <td>(isnull([OrderQty]-[ScrappedQty],(0)))</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Indexes" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Indexes</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Key</th>
+                  <th>Name</th>
+                  <th>Columns</th>
+                  <th>Unique</th>
+                  <th>Type</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>IX_WorkOrder_ProductID</td>
+                  <td>ProductID</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td>
+                    <span>Nonclustered index.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>IX_WorkOrder_ScrapReasonID</td>
+                  <td>ScrapReasonID</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td>
+                    <span>Nonclustered index.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/primarykey.svg" data-toggle="tooltip" title="Primary Key PK_WorkOrder_WorkOrderID" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/images/Cluster.svg" data-toggle="tooltip" title="Cluster Key PK_WorkOrder_WorkOrderID" />
+                    </a></div></td>
+                  <td>PK_WorkOrder_WorkOrderID</td>
+                  <td>WorkOrderID</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td>
+                    <span>Clustered index created by a primary key constraint.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="DmlTriggers" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Triggers</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>ANSI Nulls ON</th>
+                  <th>Quoted Identifier ON</th>
+                  <th>On</th>
+                  <th>Not For Replication</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td>iWorkOrder</td>
+                  <td><p class="value-true">True</p></td>
+                  <td><p class="value-true">True</p></td>
+                  <td>AFTER INSERT</td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>AFTER INSERT trigger that inserts a row in the TransactionHistory table.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>uWorkOrder</td>
+                  <td><p class="value-true">True</p></td>
+                  <td><p class="value-true">True</p></td>
+                  <td>AFTER UPDATE</td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>AFTER UPDATE trigger that inserts a row in the TransactionHistory table, updates ModifiedDate in the WorkOrder table.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="CheckConstraints" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Check Constraints</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Columns</th>
+                  <th>Condition</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td>CK_WorkOrder_EndDate</td>
+                  <td></td>
+                  <td>([EndDate]>=[StartDate] OR [EndDate] IS NULL)</td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CK_WorkOrder_OrderQty</td>
+                  <td>OrderQty</td>
+                  <td>([OrderQty]>(0))</td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CK_WorkOrder_ScrappedQty</td>
+                  <td>ScrappedQty</td>
+                  <td>([ScrappedQty]>=(0))</td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="ForeignKeys" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Foreign Keys</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Columns</th>
+                  <th class="column-description-60">Description</th>
+                </tr>
+                <tr>
+                  <td>FK_WorkOrder_Product_ProductID</td>
+                  <td>ProductID</td>
+                  <td>
+                    <span>Foreign key constraint referencing Product.ProductID.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>FK_WorkOrder_ScrapReason_ScrapReasonID</td>
+                  <td>ScrapReasonID</td>
+                  <td>
+                    <span>Foreign key constraint referencing ScrapReason.ScrapReasonID.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="sqlscript panel-default">
+              <font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">TABLE</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrder</font>&nbsp;<font color="#808080">(</font><br />&nbsp;&nbsp;<font color="#000000">WorkOrderID</font>&nbsp;<font color="#0000ff">int</font>&nbsp;<font color="#0000ff">IDENTITY</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#000000">ProductID</font>&nbsp;<font color="#0000ff">int</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#000000">OrderQty</font>&nbsp;<font color="#0000ff">int</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#000000">StockedQty</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#808080">(</font><font color="#ff00ff">isnull</font><font color="#808080">(</font><font color="#000000">[OrderQty]</font><font color="#808080">-</font><font color="#000000">[ScrappedQty]</font><font color="#808080">,</font><font color="#808080">(</font><font color="#000000">0</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#000000">ScrappedQty</font>&nbsp;<font color="#0000ff">smallint</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#000000">StartDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#000000">EndDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#000000">DueDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#000000">ScrapReasonID</font>&nbsp;<font color="#0000ff">smallint</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#000000">ModifiedDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">DF_WorkOrder_ModifiedDate</font>&nbsp;<font color="#0000ff">DEFAULT</font>&nbsp;<font color="#808080">(</font><font color="#ff00ff">getdate</font><font color="#808080">(</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">PK_WorkOrder_WorkOrderID</font>&nbsp;<font color="#0000ff">PRIMARY</font>&nbsp;<font color="#0000ff">KEY</font>&nbsp;<font color="#0000ff">CLUSTERED</font>&nbsp;<font color="#808080">(</font><font color="#000000">WorkOrderID</font><font color="#808080">)</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">CK_WorkOrder_EndDate</font>&nbsp;<font color="#0000ff">CHECK</font>&nbsp;<font color="#808080">(</font><font color="#000000">[EndDate]</font><font color="#808080">&gt;</font><font color="#808080">=</font><font color="#000000">[StartDate]</font>&nbsp;<font color="#808080">OR</font>&nbsp;<font color="#000000">[EndDate]</font>&nbsp;<font color="#808080">IS</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">)</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">CK_WorkOrder_OrderQty</font>&nbsp;<font color="#0000ff">CHECK</font>&nbsp;<font color="#808080">(</font><font color="#000000">[OrderQty]</font><font color="#808080">&gt;</font><font color="#808080">(</font><font color="#000000">0</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">,</font><br />&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">CK_WorkOrder_ScrappedQty</font>&nbsp;<font color="#0000ff">CHECK</font>&nbsp;<font color="#808080">(</font><font color="#000000">[ScrappedQty]</font><font color="#808080">&gt;</font><font color="#808080">=</font><font color="#808080">(</font><font color="#000000">0</font><font color="#808080">)</font><font color="#808080">)</font><br /><font color="#808080">)</font><br /><font color="#0000ff">ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">INDEX</font>&nbsp;<font color="#000000">IX_WorkOrder_ProductID</font><br />&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrder</font>&nbsp;<font color="#808080">(</font><font color="#000000">ProductID</font><font color="#808080">)</font><br />&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">INDEX</font>&nbsp;<font color="#000000">IX_WorkOrder_ScrapReasonID</font><br />&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrder</font>&nbsp;<font color="#808080">(</font><font color="#000000">ScrapReasonID</font><font color="#808080">)</font><br />&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">SET</font>&nbsp;<font color="#0000ff">QUOTED_IDENTIFIER</font><font color="#808080">,</font>&nbsp;<font color="#0000ff">ANSI_NULLS</font>&nbsp;<font color="#0000ff">ON</font><br /><font color="#0000ff">GO</font><br /><font color="#0000ff">CREATE</font>&nbsp;<font color="#808080">OR</font>&nbsp;<font color="#0000ff">ALTER</font>&nbsp;<font color="#0000ff">TRIGGER</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">iWorkOrder</font>&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrder</font>&nbsp;<br /><font color="#0000ff">AFTER</font>&nbsp;<font color="#0000ff">INSERT</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<br /><font color="#0000ff">BEGIN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">DECLARE</font>&nbsp;<font color="#008080">@Count</font>&nbsp;<font color="#0000ff">int</font><font color="#808080">;</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SET</font>&nbsp;<font color="#008080">@Count</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#ff00ff">@@ROWCOUNT</font><font color="#808080">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#008080">@Count</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">0</font>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">RETURN</font><font color="#808080">;</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SET</font>&nbsp;<font color="#0000ff">NOCOUNT</font>&nbsp;<font color="#0000ff">ON</font><font color="#808080">;</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font>&nbsp;<font color="#0000ff">TRY</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">INSERT</font>&nbsp;<font color="#0000ff">INTO</font>&nbsp;<font color="#000000">[Production]</font><font color="#808080">.</font><font color="#000000">[TransactionHistory]</font><font color="#808080">(</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">[ProductID]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[ReferenceOrderID]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[TransactionType]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[TransactionDate]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[Quantity]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[ActualCost]</font><font color="#808080">)</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SELECT</font>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">inserted</font><font color="#808080">.</font><font color="#000000">[ProductID]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#0000ff">inserted</font><font color="#808080">.</font><font color="#000000">[WorkOrderID]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#ff0000">&#39;W&#39;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#ff00ff">GETDATE</font><font color="#808080">(</font><font color="#808080">)</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#0000ff">inserted</font><font color="#808080">.</font><font color="#000000">[OrderQty]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">0</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#0000ff">inserted</font><font color="#808080">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font>&nbsp;<font color="#0000ff">TRY</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font>&nbsp;<font color="#0000ff">CATCH</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">EXECUTE</font>&nbsp;<font color="#000000">[dbo]</font><font color="#808080">.</font><font color="#000000">[uspPrintError]</font><font color="#808080">;</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">-- Rollback any active or uncommittable transactions before</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">-- inserting information in the ErrorLog</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#ff00ff">@@TRANCOUNT</font>&nbsp;<font color="#808080">&gt;</font>&nbsp;<font color="#000000">0</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ROLLBACK</font>&nbsp;<font color="#0000ff">TRANSACTION</font><font color="#808080">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">EXECUTE</font>&nbsp;<font color="#000000">[dbo]</font><font color="#808080">.</font><font color="#000000">[uspLogError]</font><font color="#808080">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font>&nbsp;<font color="#0000ff">CATCH</font><font color="#808080">;</font><br /><font color="#0000ff">END</font><font color="#808080">;</font><br /><font color="#0000ff">GO</font><br /><font color="#0000ff">CREATE</font>&nbsp;<font color="#808080">OR</font>&nbsp;<font color="#0000ff">ALTER</font>&nbsp;<font color="#0000ff">TRIGGER</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">uWorkOrder</font>&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrder</font>&nbsp;<br /><font color="#0000ff">AFTER</font>&nbsp;<font color="#0000ff">UPDATE</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<br /><font color="#0000ff">BEGIN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">DECLARE</font>&nbsp;<font color="#008080">@Count</font>&nbsp;<font color="#0000ff">int</font><font color="#808080">;</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SET</font>&nbsp;<font color="#008080">@Count</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#ff00ff">@@ROWCOUNT</font><font color="#808080">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#008080">@Count</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">0</font>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">RETURN</font><font color="#808080">;</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SET</font>&nbsp;<font color="#0000ff">NOCOUNT</font>&nbsp;<font color="#0000ff">ON</font><font color="#808080">;</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font>&nbsp;<font color="#0000ff">TRY</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#0000ff">UPDATE</font><font color="#808080">(</font><font color="#000000">[ProductID]</font><font color="#808080">)</font>&nbsp;<font color="#808080">OR</font>&nbsp;<font color="#0000ff">UPDATE</font><font color="#808080">(</font><font color="#000000">[OrderQty]</font><font color="#808080">)</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">INSERT</font>&nbsp;<font color="#0000ff">INTO</font>&nbsp;<font color="#000000">[Production]</font><font color="#808080">.</font><font color="#000000">[TransactionHistory]</font><font color="#808080">(</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">[ProductID]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[ReferenceOrderID]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[TransactionType]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[TransactionDate]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#000000">[Quantity]</font><font color="#808080">)</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SELECT</font>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">inserted</font><font color="#808080">.</font><font color="#000000">[ProductID]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#0000ff">inserted</font><font color="#808080">.</font><font color="#000000">[WorkOrderID]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#ff0000">&#39;W&#39;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#ff00ff">GETDATE</font><font color="#808080">(</font><font color="#808080">)</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">,</font><font color="#0000ff">inserted</font><font color="#808080">.</font><font color="#000000">[OrderQty]</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#0000ff">inserted</font><font color="#808080">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font><font color="#808080">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font>&nbsp;<font color="#0000ff">TRY</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font>&nbsp;<font color="#0000ff">CATCH</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">EXECUTE</font>&nbsp;<font color="#000000">[dbo]</font><font color="#808080">.</font><font color="#000000">[uspPrintError]</font><font color="#808080">;</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">-- Rollback any active or uncommittable transactions before</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">-- inserting information in the ErrorLog</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#ff00ff">@@TRANCOUNT</font>&nbsp;<font color="#808080">&gt;</font>&nbsp;<font color="#000000">0</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">BEGIN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ROLLBACK</font>&nbsp;<font color="#0000ff">TRANSACTION</font><font color="#808080">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">EXECUTE</font>&nbsp;<font color="#000000">[dbo]</font><font color="#808080">.</font><font color="#000000">[uspLogError]</font><font color="#808080">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">END</font>&nbsp;<font color="#0000ff">CATCH</font><font color="#808080">;</font><br /><font color="#0000ff">END</font><font color="#808080">;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">ALTER</font>&nbsp;<font color="#0000ff">TABLE</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrder</font><br />&nbsp;&nbsp;<font color="#0000ff">ADD</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">FK_WorkOrder_Product_ProductID</font>&nbsp;<font color="#0000ff">FOREIGN</font>&nbsp;<font color="#0000ff">KEY</font>&nbsp;<font color="#808080">(</font><font color="#000000">ProductID</font><font color="#808080">)</font>&nbsp;<font color="#0000ff">REFERENCES</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">Product</font>&nbsp;<font color="#808080">(</font><font color="#000000">ProductID</font><font color="#808080">)</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Foreign key constraint referencing Product.ProductID.&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;CONSTRAINT&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;FK_WorkOrder_Product_ProductID&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">ALTER</font>&nbsp;<font color="#0000ff">TABLE</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#000000">WorkOrder</font><br />&nbsp;&nbsp;<font color="#0000ff">ADD</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">FK_WorkOrder_ScrapReason_ScrapReasonID</font>&nbsp;<font color="#0000ff">FOREIGN</font>&nbsp;<font color="#0000ff">KEY</font>&nbsp;<font color="#808080">(</font><font color="#000000">ScrapReasonID</font><font color="#808080">)</font>&nbsp;<font color="#0000ff">REFERENCES</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><br />&nbsp;&nbsp;<font color="#000000">ScrapReason</font>&nbsp;<font color="#808080">(</font><font color="#000000">ScrapReasonID</font><font color="#808080">)</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Foreign key constraint referencing ScrapReason.ScrapReasonID.&#39;</font><br /><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;CONSTRAINT&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;FK_WorkOrder_ScrapReason_ScrapReasonID&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;AFTER INSERT trigger that inserts a row in the </font><br /><font color="#ff0000">TransactionHistory table.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TRIGGER&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;iWorkOrder&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;AFTER UPDATE trigger that inserts a row in the </font><br /><font color="#ff0000">TransactionHistory table, updates ModifiedDate in the WorkOrder table.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TRIGGER&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;uWorkOrder&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Manufacturing work orders.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font><br />&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Primary key for WorkOrder records.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrderID&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Product identification number. Foreign key to </font><br /><font color="#ff0000">Product.ProductID.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;ProductID&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Product quantity to build.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font><br />&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;OrderQty&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Quantity built and put in inventory.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><br /><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;StockedQty&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Quantity that failed inspection.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;ScrappedQty&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Work order start date.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;StartDate&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Work order end date.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;EndDate&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Work order due date.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;DueDate&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Reason for inspection failure.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;ScrapReasonID&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Date and time the record was last updated.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;COLUMN&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;ModifiedDate&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Nonclustered index.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;INDEX&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;IX_WorkOrder_ProductID&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Nonclustered index.&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;INDEX&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;IX_WorkOrder_ScrapReasonID&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Clustered index created by a primary key constraint.&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;INDEX&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;PK_WorkOrder_WorkOrderID&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Primary key (clustered) constraint&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;CONSTRAINT&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;PK_WorkOrder_WorkOrderID&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Check constraint [EndDate] &gt;= [StartDate] OR [EndDate] IS </font><br /><font color="#ff0000">NULL&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;CONSTRAINT&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;CK_WorkOrder_EndDate&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Check constraint [OrderQty] &gt; (0)&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;CONSTRAINT&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;CK_WorkOrder_OrderQty&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Check constraint [ScrappedQty] &gt;= (0)&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;CONSTRAINT&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;CK_WorkOrder_ScrappedQty&#39;</font><br /><font color="#0000ff">GO</font><br /><br /><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N&#39;MS_Description&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;Default constraint value of GETDATE()&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;SCHEMA&#39;</font><font color="#808080">,</font>&nbsp;<br /><font color="#ff0000">N&#39;Production&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;TABLE&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;WorkOrder&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">&#39;CONSTRAINT&#39;</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N&#39;DF_WorkOrder_ModifiedDate&#39;</font><br /><font color="#0000ff">GO</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Depends On</h2>
+          <span class="badge inline-middle">6</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/Production.html" data-mapping-enabled="true"><span>Production</span></a></li>
+              <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/Production.Product.html" data-mapping-enabled="true"><span>Production.Product</span></a></li>
+              <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/Production.ScrapReason.html" data-mapping-enabled="true"><span>Production.ScrapReason</span></a></li>
+              <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/Production.TransactionHistory.html" data-mapping-enabled="true"><span>Production.TransactionHistory</span></a></li>
+              <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/dbo.uspPrintError.html" data-mapping-enabled="true"><span>dbo.uspPrintError</span></a></li>
+              <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/dbo.uspLogError.html" data-mapping-enabled="true"><span>dbo.uspLogError</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="inline-middle">Used By</h2>
+          <span class="badge inline-middle">1</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="file:///C:/Users/dnagykrisztina/Desktop/Szakdolgozat/devart-MSSQL/Doc/.temp/Production.WorkOrderRouting.html" data-mapping-enabled="true"><span>Production.WorkOrderRouting</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>dbo.ufnGetContactInformation</title>
+<script src="../../../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../../../styles/bootstrap/Default.css" type="text/css">
+<link rel="stylesheet" href="../../../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-8">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../../../Servers\LOCALHOST\LOCALHOST.html" data-mapping-enabled="true">LOCALHOST</a></li>
+            <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\UserDatabases.html" data-mapping-enabled="true">User databases</a></li>
+            <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\AdventureWorks2019.html" data-mapping-enabled="true">AdventureWorks2019</a></li>
+            <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Programmability.html" data-mapping-enabled="true">Programmability</a></li>
+            <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Functions\Functions.html" data-mapping-enabled="true">Functions</a></li>
+            <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Functions\TableValuedFunctions\TableValuedFunctions.html" data-mapping-enabled="true">Table-Valued Functions</a></li>
+            <li class="active">dbo.ufnGetContactInformation</li>
+          </ol>
+        </div>
+        <div class="align-right col-xs-4">DBDevOps</div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../../../images/tablefunction.svg" title="dbo.ufnGetContactInformation" />
+            <h1 class="inline-middle">dbo.ufnGetContactInformation</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span>Table value function returning the first name, last name, job title and contact type for a given contact.</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>ANSI Nulls ON</td>
+                  <td><p class="value-true">True</p></td>
+                </tr>
+                <tr>
+                  <td>Quoted Identifier ON</td>
+                  <td><p class="value-true">True</p></td>
+                </tr>
+                <tr>
+                  <td>Encrypted</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Execute As</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Null on Null Input</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Schema Bound</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Assembly</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Parameters" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Parameters</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td>@PersonID</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>
+                    <span>Input parameter for the table value function ufnGetContactInformation. Enter a valid PersonID from the Person.Contact table.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="sqlscript panel-default">
+              <font color="#0000ff">SET</font>&nbsp;<font color="#0000ff">QUOTED_IDENTIFIER</font><font color="#808080">,</font>&nbsp;<font color="#0000ff">ANSI_NULLS</font>&nbsp;<font color="#0000ff">ON</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">CREATE</font>&nbsp;<font color="#808080">OR</font>&nbsp;<font color="#0000ff">ALTER</font>&nbsp;<font color="#0000ff">FUNCTION</font>&nbsp;<font color="#008000">dbo</font><font color="#808080">.</font><font color="#000000">ufnGetContactInformation</font><font color="#808080">(</font><font color="#008080">@PersonID</font>&nbsp;<font color="#0000ff">int</font><font color="#808080">)</font><br><font color="#0000ff">RETURNS</font>&nbsp;<font color="#008080">@retContactInformation</font>&nbsp;<font color="#0000ff">TABLE</font>&nbsp;<br><font color="#808080">(</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008000">-- Columns returned by the function</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">[PersonID]</font>&nbsp;<font color="#0000ff">int</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">[FirstName]</font>&nbsp;<font color="#000000">[nvarchar]</font><font color="#808080">(</font><font color="#000000">50</font><font color="#808080">)</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">[LastName]</font>&nbsp;<font color="#000000">[nvarchar]</font><font color="#808080">(</font><font color="#000000">50</font><font color="#808080">)</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font>&nbsp;<br>&nbsp;<font color="#000000">[JobTitle]</font>&nbsp;<font color="#000000">[nvarchar]</font><font color="#808080">(</font><font color="#000000">50</font><font color="#808080">)</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">[BusinessEntityType]</font>&nbsp;<font color="#000000">[nvarchar]</font><font color="#808080">(</font><font color="#000000">50</font><font color="#808080">)</font>&nbsp;<font color="#808080">NULL</font><br><font color="#808080">)</font><br><font color="#0000ff">AS</font>&nbsp;<br><font color="#008000">-- Returns the first name, last name, job title and business entity type for the specified contact.</font><br><font color="#008000">-- Since a contact can serve multiple roles, more than one row may be returned.</font><br><font color="#0000ff">BEGIN</font><br>&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#008080">@PersonID</font>&nbsp;<font color="#808080">IS</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font>&nbsp;<br>&nbsp;&nbsp;<font color="#0000ff">BEGIN</font><br>&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#808080">EXISTS</font><font color="#808080">(</font><font color="#0000ff">SELECT</font>&nbsp;<font color="#808080">*</font>&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#000000">[HumanResources]</font><font color="#808080">.</font><font color="#000000">[Employee]</font>&nbsp;<font color="#000000">e</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">WHERE</font>&nbsp;<font color="#000000">e</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">)</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;<font color="#0000ff">INSERT</font>&nbsp;<font color="#0000ff">INTO</font>&nbsp;<font color="#008080">@retContactInformation</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SELECT</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">,</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">FirstName</font><font color="#808080">,</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">LastName</font><font color="#808080">,</font>&nbsp;<font color="#000000">e</font><font color="#808080">.</font><font color="#000000">[JobTitle]</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'Employee'</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#000000">[HumanResources]</font><font color="#808080">.</font><font color="#000000">[Employee]</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#000000">e</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">[Person]</font>&nbsp;<font color="#000000">p</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">e</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">WHERE</font>&nbsp;<font color="#000000">e</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">;</font><br><font color="#000000"></font><br>&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#808080">EXISTS</font><font color="#808080">(</font><font color="#0000ff">SELECT</font>&nbsp;<font color="#808080">*</font>&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#000000">[Purchasing]</font><font color="#808080">.</font><font color="#000000">[Vendor]</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#000000">v</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">[BusinessEntityContact]</font>&nbsp;<font color="#000000">bec</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">v</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">WHERE</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[PersonID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">)</font><br>&nbsp;&nbsp;&nbsp;<font color="#0000ff">INSERT</font>&nbsp;<font color="#0000ff">INTO</font>&nbsp;<font color="#008080">@retContactInformation</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SELECT</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">,</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">FirstName</font><font color="#808080">,</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">LastName</font><font color="#808080">,</font>&nbsp;<font color="#000000">ct</font><font color="#808080">.</font><font color="#000000">[Name]</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'Vendor Contact'</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#000000">[Purchasing]</font><font color="#808080">.</font><font color="#000000">[Vendor]</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#000000">v</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">[BusinessEntityContact]</font>&nbsp;<font color="#000000">bec</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">v</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">ContactType</font>&nbsp;<font color="#000000">ct</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">ct</font><font color="#808080">.</font><font color="#000000">[ContactTypeID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[ContactTypeID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">[Person]</font>&nbsp;<font color="#000000">p</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[PersonID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">WHERE</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[PersonID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">;</font><br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#808080">EXISTS</font><font color="#808080">(</font><font color="#0000ff">SELECT</font>&nbsp;<font color="#808080">*</font>&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#000000">[Sales]</font><font color="#808080">.</font><font color="#000000">[Store]</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#000000">s</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">[BusinessEntityContact]</font>&nbsp;<font color="#000000">bec</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">s</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">WHERE</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[PersonID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">)</font><br>&nbsp;&nbsp;&nbsp;<font color="#0000ff">INSERT</font>&nbsp;<font color="#0000ff">INTO</font>&nbsp;<font color="#008080">@retContactInformation</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SELECT</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">,</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">FirstName</font><font color="#808080">,</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">LastName</font><font color="#808080">,</font>&nbsp;<font color="#000000">ct</font><font color="#808080">.</font><font color="#000000">[Name]</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'Store Contact'</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#000000">[Sales]</font><font color="#808080">.</font><font color="#000000">[Store]</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#000000">s</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">[BusinessEntityContact]</font>&nbsp;<font color="#000000">bec</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">s</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">ContactType</font>&nbsp;<font color="#000000">ct</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">ct</font><font color="#808080">.</font><font color="#000000">[ContactTypeID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[ContactTypeID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">[Person]</font>&nbsp;<font color="#000000">p</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[PersonID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">WHERE</font>&nbsp;<font color="#000000">bec</font><font color="#808080">.</font><font color="#000000">[PersonID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">;</font><br><font color="#000000"></font><br>&nbsp;&nbsp;<font color="#0000ff">IF</font>&nbsp;<font color="#808080">EXISTS</font><font color="#808080">(</font><font color="#0000ff">SELECT</font>&nbsp;<font color="#808080">*</font>&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">[Person]</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#000000">p</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Sales]</font><font color="#808080">.</font><font color="#000000">[Customer]</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#000000">c</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">c</font><font color="#808080">.</font><font color="#000000">[PersonID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">WHERE</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@PersonID</font>&nbsp;<font color="#808080">AND</font>&nbsp;<font color="#000000">c</font><font color="#808080">.</font><font color="#000000">[StoreID]</font>&nbsp;<font color="#808080">IS</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">)</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;<font color="#0000ff">INSERT</font>&nbsp;<font color="#0000ff">INTO</font>&nbsp;<font color="#008080">@retContactInformation</font><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">SELECT</font>&nbsp;<font color="#008080">@PersonID</font><font color="#808080">,</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">FirstName</font><font color="#808080">,</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">LastName</font><font color="#808080">,</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'Consumer'</font>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">FROM</font>&nbsp;<font color="#000000">[Person]</font><font color="#808080">.</font><font color="#000000">[Person]</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#000000">p</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">INNER</font>&nbsp;<font color="#808080">JOIN</font>&nbsp;<font color="#000000">[Sales]</font><font color="#808080">.</font><font color="#000000">[Customer]</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#000000">c</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">c</font><font color="#808080">.</font><font color="#000000">[PersonID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">WHERE</font>&nbsp;<font color="#000000">p</font><font color="#808080">.</font><font color="#000000">[BusinessEntityID]</font>&nbsp;<font color="#808080">=</font>&nbsp;<font color="#008080">@PersonID</font>&nbsp;<font color="#808080">AND</font>&nbsp;<font color="#000000">c</font><font color="#808080">.</font><font color="#000000">[StoreID]</font>&nbsp;<font color="#808080">IS</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">;</font>&nbsp;<br>&nbsp;&nbsp;<font color="#0000ff">END</font><br><font color="#000000"></font><br>&nbsp;<font color="#0000ff">RETURN</font><font color="#808080">;</font><br><font color="#0000ff">END</font><font color="#808080">;</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Table value function returning the first name, last name, job title and contact type for a given contact.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'dbo'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'FUNCTION'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ufnGetContactInformation'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Input parameter for the table value function ufnGetContactInformation. Enter a valid PersonID from the Person.Contact table.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'dbo'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'FUNCTION'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ufnGetContactInformation'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'PARAMETER'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'@PersonID'</font><br><font color="#0000ff">GO</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+          <span class="badge inline-middle">7</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\HumanResources.Employee.html" data-mapping-enabled="true"><span>HumanResources.Employee</span></a></li>
+              <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Person.Person.html" data-mapping-enabled="true"><span>Person.Person</span></a></li>
+              <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Purchasing.Vendor.html" data-mapping-enabled="true"><span>Purchasing.Vendor</span></a></li>
+              <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Person.BusinessEntityContact.html" data-mapping-enabled="true"><span>Person.BusinessEntityContact</span></a></li>
+              <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Person.ContactType.html" data-mapping-enabled="true"><span>Person.ContactType</span></a></li>
+              <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.Store.html" data-mapping-enabled="true"><span>Sales.Store</span></a></li>
+              <li><a href="../../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.Customer.html" data-mapping-enabled="true"><span>Sales.Customer</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span class="text-muted">No items found</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;Nagy Krisztina Dalma</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;2021. 03. 15</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+docker run --name mssql-server -d -p 1433:1433 mssql-server:latest

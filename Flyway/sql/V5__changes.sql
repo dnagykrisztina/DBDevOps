@@ -1,0 +1,1 @@
+ALTER TABLE Cars.Car_Details ADD tireType varchar(50);

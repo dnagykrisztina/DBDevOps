@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HelpCollection SYSTEM "ms-help://hx/resources/HelpCollection.DTD">
+<HelpCollection DTDVersion="1.0" Title="Documentation: localhost, localhost">
+	<CompilerOptions CreateFullTextIndex="Yes">
+		<IncludeFile File="apexdoc.HxF"/>
+	</CompilerOptions>
+    	<!--<AttributeDef File="apexdoc.HxA"/>-->
+    
+    	<TOCDef File="apexdoc.HxT"/>
+	<!--<KeywordIndexDef File="apexdocF.HxK"/>-->
+    	<KeywordIndexDef File="apexdocK.HxK"/>
+	<KeywordIndexDef File="apexdocNamedURL.HxK"/>
+
+	<ItemMoniker Name="!DefaultToc" ProgId="HxDs.HxHierarchy" InitData=""/>
+	<ItemMoniker Name="!DefaultFullTextSearch" ProgId="HxDs.HxFullTextSearch" InitData=""/>
+	<ItemMoniker Name="!DefaultAssociativeIndex" ProgId="HxDs.HxIndex" InitData="A"/>
+	<ItemMoniker Name="!DefaultKeywordIndex" ProgId="HxDs.HxIndex" InitData="K"/>
+	<ItemMoniker Name="!SampleInfo" ProgId="HxDs.HxSampleCollection" InitData=""/>
+	<ItemMoniker Name="!DefaultNamedUrlIndex" ProgId="HxDs.HxIndex" InitData="NamedUrlIndex"/>
+</HelpCollection>

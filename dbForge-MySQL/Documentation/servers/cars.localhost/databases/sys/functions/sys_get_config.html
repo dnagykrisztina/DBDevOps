@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>sys_get_config</title>
+<script src="../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../styles/bootstrap/Default Dark.css" type="text/css">
+<link rel="stylesheet" href="../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Cars.localhost.html" data-mapping-enabled="true">Cars.localhost</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\Databases.html" data-mapping-enabled="true">Databases</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\sys.html" data-mapping-enabled="true">sys</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\Functions.html" data-mapping-enabled="true">Functions</a></li>
+            <li class="active">sys_get_config</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../images/Dark\function.svg" title="sys_get_config" />
+            <h1 class="inline-middle">sys_get_config</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span><br />Description<br />-----------<br /><br />Returns the value for the requested variable using the following logic:<br /><br />   1. If the option exists in sys.sys_config return the value from there.<br />   2. Else fall back on the provided default value.<br /><br />Notes for using sys_get_config():<br /><br />   * If the default value argument to sys_get_config() is NULL and case 2. is reached, NULL is returned.<br />     It is then expected that the caller is able to handle NULL for the given configuration option.<br />   * The convention is to name the user variables @sys.<name of variable>. It is <name of variable> that<br />     is stored in the sys_config table and is what is expected as the argument to sys_get_config().<br />   * If you want to check whether the configuration option has already been set and if not assign with<br />     the return value of sys_get_config() you can use IFNULL(...) (see example below). However this should<br />     not be done inside a loop (e.g. for each row in a result set) as for repeated calls where assignment<br />     is only needed in the first iteration using IFNULL(...) is expected to be significantly slower than<br />     using an IF (...) THEN ... END IF; block (see example below).<br /><br />Parameters<br />-----------<br /><br />in_variable_name (VARCHAR(128)):<br />  The name of the config option to return the value for.<br /><br />in_default_value (VARCHAR(128)):<br />  The default value to return if the variable does not exist in sys.sys_config.<br /><br />Returns<br />-----------<br /><br />VARCHAR(128)<br /><br />Example<br />-----------<br /><br />-- Get the configuration value from sys.sys_config falling back on 128 if the option is not present in the table.<br />mysql> SELECT sys.sys_get_config('statement_truncate_len', 128) AS Value;<br />+-------+<br />| Value |<br />+-------+<br />| 64    |<br />+-------+<br />1 row in set (0.00 sec)<br /><br />-- Check whether the option is already set, if not assign - IFNULL(...) one liner example.<br />mysql> SET @sys.statement_truncate_len = IFNULL(@sys.statement_truncate_len, sys.sys_get_config('statement_truncate_len', 64));<br />Query OK, 0 rows affected (0.00 sec)<br /><br />-- Check whether the option is already set, if not assign - IF ... THEN ... END IF example.<br />IF (@sys.statement_truncate_len IS NULL) THEN<br />    SET @sys.statement_truncate_len = sys.sys_get_config('statement_truncate_len', 64);<br />END IF;</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>SQL Access</td>
+                  <td>READS SQL DATA</td>
+                </tr>
+                <tr>
+                  <td>Deterministic</td>
+                  <td><p class="value-true">True</p></td>
+                </tr>
+                <tr>
+                  <td>Security</td>
+                  <td>Invoker</td>
+                </tr>
+                <tr>
+                  <td>Definer</td>
+                  <td>mysql.sys@'localhost'</td>
+                </tr>
+                <tr>
+                  <td>SQL Mode</td>
+                  <td>ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION</td>
+                </tr>
+                <tr>
+                  <td>Language</td>
+                  <td>SQL</td>
+                </tr>
+                <tr>
+                  <td>Created</td>
+                  <td>2021. 04. 10. 15:36:58</td>
+                </tr>
+                <tr>
+                  <td>Last Modified</td>
+                  <td>2021. 04. 10. 15:36:58</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Parameters" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Parameters</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th>Precision</th>
+                  <th>Scale</th>
+                </tr>
+                <tr>
+                  <td>in_variable_name</td>
+                  <td>VARCHAR</td>
+                  <td>128</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>in_default_value</td>
+                  <td>VARCHAR</td>
+                  <td>128</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>(Result)</td>
+                  <td>VARCHAR</td>
+                  <td>128</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="zero-clipboard">
+              <span class="btn-clipboard btn-default panel-default" data-clipboard-action="copy" data-clipboard-target=".SqlScript" data-toggle="tooltip" title="Copy to clipboard">Copy</span></div><div class="SqlScript  panel-default" style="word-wrap: break-word; padding-right:60px">
+              <font color="#569cd6">CREATE</font>&nbsp;<font color="#569cd6">FUNCTION</font>&nbsp;<font color="#ffffff">sys_get_config</font><font color="#b4b4b4">(</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff">in_variable_name</font>&nbsp;<font color="#4ec9b0">VARCHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">128</font><font color="#b4b4b4">)</font><font color="#b4b4b4">,</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff">in_default_value</font>&nbsp;<font color="#4ec9b0">VARCHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">128</font><font color="#b4b4b4">)</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#b4b4b4">)</font><br />&nbsp;&nbsp;<font color="#569cd6">RETURNS</font>&nbsp;<font color="#4ec9b0">VARCHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">128</font><font color="#b4b4b4">)</font>&nbsp;<font color="#4ec9b0">CHARSET</font>&nbsp;<font color="#dcdcdc">utf8mb4</font><br />&nbsp;&nbsp;<font color="#569cd6">DETERMINISTIC</font><br />&nbsp;&nbsp;<font color="#569cd6">SQL</font>&nbsp;<font color="#569cd6">SECURITY</font>&nbsp;<font color="#569cd6">INVOKER</font><br />&nbsp;&nbsp;<font color="#569cd6">READS</font>&nbsp;<font color="#569cd6">SQL</font>&nbsp;<font color="#569cd6">DATA</font><br />&nbsp;&nbsp;<font color="#569cd6">COMMENT</font>&nbsp;<font color="#d69d85">'<br />&nbsp;&nbsp;Description<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Returns the value for the requested variable using the following logic:<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;   1. If the option exists in sys.sys_config return the value from there.<br />&nbsp;&nbsp;   2. Else fall back on the provided default value.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Notes for using sys_get_config():<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;   * If the default value argument to sys_get_config() is NULL and case 2. is reached, NULL is returned.<br />&nbsp;&nbsp;     It is then expected that the caller is able to handle NULL for the given configuration option.<br />&nbsp;&nbsp;   * The convention is to name the user variables @sys.&lt;name of variable&gt;. It is &lt;name of variable&gt; that<br />&nbsp;&nbsp;     is stored in the sys_config table and is what is expected as the argument to sys_get_config().<br />&nbsp;&nbsp;   * If you want to check whether the configuration option has already been set and if not assign with<br />&nbsp;&nbsp;     the return value of sys_get_config() you can use IFNULL(...) (see example below). However this should<br />&nbsp;&nbsp;     not be done inside a loop (e.g. for each row in a result set) as for repeated calls where assignment<br />&nbsp;&nbsp;     is only needed in the first iteration using IFNULL(...) is expected to be significantly slower than<br />&nbsp;&nbsp;     using an IF (...) THEN ... END IF; block (see example below).<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Parameters<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;in_variable_name (VARCHAR(128)):<br />&nbsp;&nbsp;  The name of the config option to return the value for.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;in_default_value (VARCHAR(128)):<br />&nbsp;&nbsp;  The default value to return if the variable does not exist in sys.sys_config.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Returns<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;VARCHAR(128)<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Example<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;-- Get the configuration value from sys.sys_config falling back on 128 if the option is not present in the table.<br />&nbsp;&nbsp;mysql&gt; SELECT sys.sys_get_config(''statement_truncate_len'', 128) AS Value;<br />&nbsp;&nbsp;+-------+<br />&nbsp;&nbsp;| Value |<br />&nbsp;&nbsp;+-------+<br />&nbsp;&nbsp;| 64    |<br />&nbsp;&nbsp;+-------+<br />&nbsp;&nbsp;1 row in set (0.00 sec)<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;-- Check whether the option is already set, if not assign - IFNULL(...) one liner example.<br />&nbsp;&nbsp;mysql&gt; SET @sys.statement_truncate_len = IFNULL(@sys.statement_truncate_len, sys.sys_get_config(''statement_truncate_len'', 64));<br />&nbsp;&nbsp;Query OK, 0 rows affected (0.00 sec)<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;-- Check whether the option is already set, if not assign - IF ... THEN ... END IF example.<br />&nbsp;&nbsp;IF (@sys.statement_truncate_len IS NULL) THEN<br />&nbsp;&nbsp;    SET @sys.statement_truncate_len = sys.sys_get_config(''statement_truncate_len'', 64);<br />&nbsp;&nbsp;END IF;<br />&nbsp;&nbsp;'</font><br /><font color="#569cd6">BEGIN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_value</font>&nbsp;<font color="#4ec9b0">VARCHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">128</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">DEFAULT</font>&nbsp;<font color="#569cd6">NULL</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#608b4e">-- Check if we have the variable in the sys.sys_config table</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_value</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#b4b4b4">(</font><font color="#569cd6">SELECT</font>&nbsp;<font color="#569cd6">value</font>&nbsp;<font color="#569cd6">FROM</font>&nbsp;<font color="#ffffff">sys</font><font color="#b4b4b4">.</font><font color="#ffffff">sys_config</font>&nbsp;<font color="#569cd6">WHERE</font>&nbsp;<font color="#ffffff">variable</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">in_variable_name</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#608b4e">-- Protection against the variable not existing in sys_config</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">IF</font>&nbsp;<font color="#b4b4b4">(</font><font color="#ffffff">v_value</font>&nbsp;<font color="#569cd6">IS</font>&nbsp;<font color="#569cd6">NULL</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_value</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">in_default_value</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">END</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">RETURN</font>&nbsp;<font color="#ffffff">v_value</font><font color="#b4b4b4">;</font><br /><font color="#569cd6">END</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+          <span class="badge inline-middle">1</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Tables\sys_config.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\table.svg" class="image-small" />
+              <span>sys_config</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+          <span class="badge inline-middle">4</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Procedures\diagnostics.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\procedure.svg" class="image-small" />
+              <span>diagnostics</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Procedures\execute_prepared_stmt.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\procedure.svg" class="image-small" />
+              <span>execute_prepared_stmt</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\format_statement.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\function.svg" class="image-small" />
+              <span>format_statement</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_thread_trx_info.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\function.svg" class="image-small" />
+              <span>ps_thread_trx_info</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;10. 04. 2021</div>
+  </div>
+</body>
+</html>

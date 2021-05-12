@@ -1,0 +1,11 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog>
+	<changeSet author="testUser" id="AddTableComment">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="Car_Details" schemaName="Cars"/>
+        </preConditions>
+        <sql>
+            COMMENT ON TABLE Cars.Car_Details is 'This table contains the specific details of cars';
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,198 @@
+﻿<HTML>
+<HEAD>
+    <TITLE>
+        iuPerson
+    </TITLE>
+    <LINK HREF="../../../../style.css" REL="stylesheet" TYPE="text/css">
+
+    <SCRIPT SRC="../../../../script.js"></SCRIPT>
+
+</HEAD>
+<BODY>
+    <IMG ID="collapseImage" ALT="Collapse image" SRC="../../../../ImagesMetro/collapse.gif" STYLE="display: none; height: 0; width: 0;" />
+    <IMG ID="expandImage" ALT="Expand image" SRC="../../../../ImagesMetro/expand.gif" STYLE="display: none; height: 0; width: 0;" />
+    <DIV ID="pagetop">
+        <div class='text-output-header'><p><font size="3">Sample header text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-header {display:block; float:left; width:100%;}div.text-output-header p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+        <P CLASS="apexdoc-header">
+            <IMG BORDER="0" CLASS="vmiddle" SRC="../../../../Images32x32Metro/OBJECT_TRIGGER.png">
+            
+            Trigger:
+            AdventureWorks2016.Person.iuPerson
+            on
+             Table Person
+        </P>
+        <P CLASS="apexdoc-header-bottom">
+	<SPAN onclick="ExpandCollapseSections(this)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0">
+		<IMG ID="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../../../ImagesMetro/collapse.gif"></IMG>
+		<LABEL id="collapseAllLabel" for="toggleAllImage" style="display: inline;">Collapse all</LABEL>
+		<LABEL id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand all</LABEL>
+	</SPAN>
+</P>
+
+    </DIV>
+    <DIV ID="pagebody">
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">			
+	<SPAN onclick="ExpandCollapse('Description')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Description')" tabindex="0">
+	<IMG id="DescriptionToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../../ImagesMetro/collapse.gif"> 
+	</IMG> 
+		Description
+  	</SPAN>
+</H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+<DIV id="DescriptionSection" class="section" style="display: inline;">
+	<P>
+		AFTER INSERT, UPDATE trigger inserting Individual only if the Customer does not exist in the Store table and setting the ModifiedDate column in the Person table to the current date.
+	<P>
+</DIV>
+
+
+        <A NAME="properties"></A>
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('TriggerProperties')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('TriggerProperties')" tabindex="0">
+	<IMG id="TriggerPropertiesToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Trigger properties
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="TriggerPropertiesSection" CLASS="section" STYLE="display: inline;">
+            <TABLE CLASS="property-table">
+                <TR CLASS="apexdoc-table-caption">
+                    <TD>Name&nbsp;</TD>
+                    <TD>Value&nbsp;</TD>
+                </TR>
+                
+						<TR>
+							<TD>&nbsp;Schema&nbsp;</TD>
+							<TD>&nbsp;<A HREF="../../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A>&nbsp;</TD>
+						</TR>
+						<TR>
+							<TD>&nbsp;Owner&nbsp;</TD>
+							<TD>&nbsp;<A HREF="../../../../DbEngine/localhost/AdventureWorks2016/Users/1.htm">dbo</A>&nbsp;</TD>
+						</TR>
+                <TR>
+                    <TD>&nbsp;Creation&nbsp;date&nbsp;</TD>
+                    <TD>&nbsp;10. 19. 2017&nbsp;</TD>
+                </TR>
+                
+                <TR>
+                    <TD>&nbsp;Encrypted&nbsp;</TD>
+                            <TD CLASS="left" alignment="left"><IMG CLASS="vmiddle" border="0" SRC="../../../../ImagesMetro/RED_CROSS.gif"></TD>
+
+                </TR>
+                
+                <TR>
+                    <TD>&nbsp;Disabled&nbsp;</TD>
+                            <TD CLASS="left" alignment="left"><IMG CLASS="vmiddle" border="0" SRC="../../../../ImagesMetro/RED_CROSS.gif"></TD>
+
+                </TR>
+                <TR>
+                    <TD>&nbsp;ID&nbsp;</TD>
+                    <TD>&nbsp;2075154438&nbsp;</TD>
+                </TR>
+                <TR>
+                    <TD>&nbsp;Implementation&nbsp;type&nbsp;</TD>
+                    <TD>&nbsp;Transact SQL&nbsp;</TD>
+                </TR>
+            </TABLE>
+        </DIV>
+        
+        
+        <A NAME="options"></A>
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Creationoptions')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Creationoptions')" tabindex="0">
+	<IMG id="CreationoptionsToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Creation options
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="CreationoptionsSection" CLASS="section" STYLE="display: inline;">
+            <TABLE CLASS="property-table">
+                <TR CLASS="apexdoc-table-caption">
+                    <TD>Name</TD>
+                    <TD>Value</TD>
+                </TR>
+                <TR>
+                    <TD>QUOTED_IDENTIFIER</TD>
+                    <TD>
+                        ON
+                    </TD>
+                </TR>
+                <TR>
+                    <TD>ANSI_NULLS</TD>
+                    <TD>
+                        ON
+                    </TD>
+                </TR>
+            </TABLE>
+        </DIV>
+        
+        
+        <A NAME="type"></A>
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Type')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Type')" tabindex="0">
+	<IMG id="TypeToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Type
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="TypeSection" CLASS="section" STYLE="display: inline;">
+            <TABLE CLASS="property-table">
+                <TR CLASS="apexdoc-table-caption">
+                    <TD WIDTH="25%">Instead&nbsp;of</TD>
+                    <TD WIDTH="25%">Insert</TD>
+                    <TD WIDTH="25%">Update</TD>
+                    <TD WIDTH="25%">Delete</TD>
+                </TR>
+                <TR>
+                            <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../../ImagesMetro/RED_CROSS.gif"></TD>
+
+                            <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../../ImagesMetro/CHECK_OUT.png"></TD>
+
+                            <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../../ImagesMetro/CHECK_OUT.png"></TD>
+
+                            <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../../ImagesMetro/RED_CROSS.gif"></TD>
+
+                </TR>
+            </TABLE>
+        </DIV>
+        
+        <!--FRAGMENT_DEPENDENCIES-->
+<!--FRAGMENT_COLUMNLEVEL-->
+<!--FRAGMENT_GRAPHICAL-->
+
+        <!--FRAGMENT_DEPENDENCIES-->
+        <!--FRAGMENT_EXTENDED_PROPERTIES-->
+        <!--FRAGMENT_CUSTOM_TAGS-->
+        <!--FRAGMENT_DDL-->
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Seealso')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Seealso')" tabindex="0">
+	<IMG id="SeealsoToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            See also
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="SeealsoSection" CLASS="section" STYLE="display: inline;">
+      <P><A HREF="../triggers.htm">List of triggers</A></P>
+            <P>
+                <A HREF="../../../../DbEngine/localhost/AdventureWorks2016/Tables/2085582468.htm">Person.Person</A>
+            </P>
+            
+        </DIV>
+        <HR SIZE="1">
+<P></P>
+<BR>
+<BR>
+
+        <div class='text-output-footer'><p><font size="3">Sample footer text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-footer {display:block; float:left; width:100%;}div.text-output-footer p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+    </DIV>
+</BODY>
+</HTML>

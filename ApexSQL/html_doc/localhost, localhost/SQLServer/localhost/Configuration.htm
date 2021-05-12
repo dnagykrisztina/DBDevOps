@@ -1,0 +1,380 @@
+﻿<HTML>
+<HEAD>
+    <TITLE>
+        <!--NAME-->
+    </TITLE>
+    <LINK HREF="../../style.css" REL="stylesheet" TYPE="text/css">
+
+    <SCRIPT SRC="../../script.js"></SCRIPT>
+
+</HEAD>
+<BODY>
+    <IMG ID="collapseImage" ALT="Collapse image" SRC="../../ImagesMetro/collapse.gif" STYLE="display: none; height: 0; width: 0;" />
+    <IMG ID="expandImage" ALT="Expand image" SRC="../../ImagesMetro/expand.gif" STYLE="display: none; height: 0; width: 0;" />
+    <DIV ID="pagetop">
+        <div class='text-output-header'><p><font size="3">Sample header text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-header {display:block; float:left; width:100%;}div.text-output-header p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+        <P CLASS="apexdoc-header">
+            <!--<IMG BORDER="0" CLASS="vmiddle" SRC="../../Images32x32Metro/DATABASE_LIVE.png">-->&nbsp;Server configuration:
+            localhost
+        </P>
+        <P CLASS="apexdoc-header-bottom">
+	<SPAN onclick="ExpandCollapseSections(this)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0">
+		<IMG ID="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../../../ImagesMetro/collapse.gif"></IMG>
+		<LABEL id="collapseAllLabel" for="toggleAllImage" style="display: inline;">Collapse all</LABEL>
+		<LABEL id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand all</LABEL>
+	</SPAN>
+</P>
+
+    </DIV>
+    <DIV ID="pagebody">
+        <!--FRAGMENT_PROPERTIES-->
+        <A NAME="properties"></A>
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('properties')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('properties')" tabindex="0">
+	<IMG id="propertiesToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Server configuration properties
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="propertiesSection" CLASS="section" STYLE="display: inline;">
+            <TABLE CLASS="property-table">
+                <TR CLASS="apexdoc-table-caption">
+                    <TD>&nbsp;Property&nbsp;</TD>
+                    <TD>&nbsp;Value&nbsp;</TD>
+                </TR>
+                <TR>
+  <TD>&nbsp;Access check cache bucket count&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Access check cache quota&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Ad Hoc Distributed Queries&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Affinity I/O mask&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Affinity mask&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Affinity64 I/O mask&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Affinity64 mask&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Agent XPs&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allow polybase export&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allow updates&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Automatic soft-NUMA disabled&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Backup checksum default&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Backup compression default&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Blocked process threshold (s)&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;C2 audit mode&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Clr enabled&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Clr strict security&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Common criteria compliance enabled&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Contained database authentication&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Cost threshold for parallelism&nbsp;</TD>
+  <TD>&nbsp;5&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Cross db ownership chaining&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Cursor threshold&nbsp;</TD>
+  <TD>&nbsp;-1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Database Mail XPs&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Default full-text language&nbsp;</TD>
+  <TD>&nbsp;1033&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Default language&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Default trace enabled&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Disallow results from triggers&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;EKM provider enabled&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;External scripts enabled&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Filestream access level&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Fill factor (%)&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Ft crawl bandwidth (max)&nbsp;</TD>
+  <TD>&nbsp;100&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Ft crawl bandwidth (min)&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Ft notify bandwidth (max)&nbsp;</TD>
+  <TD>&nbsp;100&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Ft notify bandwidth (min)&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Hadoop connectivity&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Index create memory (KB)&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;In-doubt xact resolution&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Lightweight pooling&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Locks&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Max degree of parallelism&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Max full-text crawl range&nbsp;</TD>
+  <TD>&nbsp;4&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Max server memory (MB)&nbsp;</TD>
+  <TD>&nbsp;2147483647&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Max text repl size (B)&nbsp;</TD>
+  <TD>&nbsp;65536&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Max worker threads&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Media retention&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Min memory per query (KB)&nbsp;</TD>
+  <TD>&nbsp;1024&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Min server memory (MB)&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Nested triggers&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Network packet size (B)&nbsp;</TD>
+  <TD>&nbsp;4096&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Ole Automation Procedures&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Open objects&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Optimize for ad hoc workloads&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;PH timeout (s)&nbsp;</TD>
+  <TD>&nbsp;60&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Polybase network encryption&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Precompute rank&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Priority boost&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Query governor cost limit&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Query wait (s)&nbsp;</TD>
+  <TD>&nbsp;-1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Recovery interval (min)&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Remote access&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Remote admin connections&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Remote data archive&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Remote login timeout (s)&nbsp;</TD>
+  <TD>&nbsp;10&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Remote proc trans&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Remote query timeout (s)&nbsp;</TD>
+  <TD>&nbsp;600&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Replication XPs&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Scan for startup procs&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Server trigger recursion&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Set working set size&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Show advanced options&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;SMO and DMO XPs&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Transform noise words&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Two digit year cutoff&nbsp;</TD>
+  <TD>&nbsp;2049&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;User connections&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;User options&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Xp_cmdshell&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+
+            </TABLE>
+        </DIV>
+        <!--FRAGMENT_PROPERTIES-->
+		
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('seealso')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('seealso')" tabindex="0">
+	<IMG id="seealsoToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            See also
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="seealsoSection" CLASS="section" STYLE="display: inline;">
+            <P><A HREF="../../about.htm">About this documentation</A></P>
+        </DIV>
+        <HR SIZE="1">
+<P></P>
+<BR>
+<BR>
+
+        <div class='text-output-footer'><p><font size="3">Sample footer text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-footer {display:block; float:left; width:100%;}div.text-output-footer p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+    </DIV>
+</BODY>
+</HTML>

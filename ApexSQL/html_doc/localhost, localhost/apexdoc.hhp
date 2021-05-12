@@ -1,0 +1,15 @@
+[OPTIONS]
+Auto Index=Yes
+Binary TOC=Yes
+Compatibility=1.1 or later
+Compiled file=apexdoc.chm
+Contents file=apexdoc.hhc
+Index file=apexdoc.hhk
+Default topic=srv_index.htm
+Display compile progress=No
+Full-text search=Yes
+Title=Documentation: localhost, localhost
+Error log file=hhc.log
+
+
+[FILES]

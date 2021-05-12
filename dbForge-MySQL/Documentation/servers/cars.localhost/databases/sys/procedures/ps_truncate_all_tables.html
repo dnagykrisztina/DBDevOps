@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>ps_truncate_all_tables</title>
+<script src="../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../styles/bootstrap/Default Dark.css" type="text/css">
+<link rel="stylesheet" href="../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Cars.localhost.html" data-mapping-enabled="true">Cars.localhost</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\Databases.html" data-mapping-enabled="true">Databases</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\sys.html" data-mapping-enabled="true">sys</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Procedures\Procedures.html" data-mapping-enabled="true">Procedures</a></li>
+            <li class="active">ps_truncate_all_tables</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../images/Dark\procedure.svg" title="ps_truncate_all_tables" />
+            <h1 class="inline-middle">ps_truncate_all_tables</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span><br />Description<br />-----------<br /><br />Truncates all summary tables within Performance Schema, <br />resetting all aggregated instrumentation as a snapshot.<br /><br />Parameters<br />-----------<br /><br />in_verbose (BOOLEAN):<br />  Whether to print each TRUNCATE statement before running<br /><br />Example<br />-----------<br /><br />mysql> CALL sys.ps_truncate_all_tables(false);<br />+---------------------+<br />| summary             |<br />+---------------------+<br />| Truncated 44 tables |<br />+---------------------+<br />1 row in set (0.10 sec)<br /><br />Query OK, 0 rows affected (0.10 sec)</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>SQL Access</td>
+                  <td>MODIFIES SQL DATA</td>
+                </tr>
+                <tr>
+                  <td>Deterministic</td>
+                  <td><p class="value-true">True</p></td>
+                </tr>
+                <tr>
+                  <td>Security</td>
+                  <td>Invoker</td>
+                </tr>
+                <tr>
+                  <td>Definer</td>
+                  <td>mysql.sys@'localhost'</td>
+                </tr>
+                <tr>
+                  <td>SQL Mode</td>
+                  <td>ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION</td>
+                </tr>
+                <tr>
+                  <td>Language</td>
+                  <td>SQL</td>
+                </tr>
+                <tr>
+                  <td>Created</td>
+                  <td>2021. 04. 10. 15:37:00</td>
+                </tr>
+                <tr>
+                  <td>Last Modified</td>
+                  <td>2021. 04. 10. 15:37:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Parameters" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Parameters</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th>Precision</th>
+                  <th>Scale</th>
+                </tr>
+                <tr>
+                  <td>in_verbose</td>
+                  <td>BOOLEAN</td>
+                  <td></td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="zero-clipboard">
+              <span class="btn-clipboard btn-default panel-default" data-clipboard-action="copy" data-clipboard-target=".SqlScript" data-toggle="tooltip" title="Copy to clipboard">Copy</span></div><div class="SqlScript  panel-default" style="word-wrap: break-word; padding-right:60px">
+              <font color="#569cd6">CREATE</font>&nbsp;<font color="#569cd6">PROCEDURE</font>&nbsp;<font color="#ffffff">ps_truncate_all_tables</font><font color="#b4b4b4">(</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">IN</font>&nbsp;<font color="#ffffff">in_verbose</font>&nbsp;<font color="#4ec9b0">BOOLEAN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#b4b4b4">)</font><br />&nbsp;&nbsp;<font color="#569cd6">DETERMINISTIC</font><br />&nbsp;&nbsp;<font color="#569cd6">SQL</font>&nbsp;<font color="#569cd6">SECURITY</font>&nbsp;<font color="#569cd6">INVOKER</font><br />&nbsp;&nbsp;<font color="#569cd6">MODIFIES</font>&nbsp;<font color="#569cd6">SQL</font>&nbsp;<font color="#569cd6">DATA</font><br />&nbsp;&nbsp;<font color="#569cd6">COMMENT</font>&nbsp;<font color="#d69d85">'<br />&nbsp;&nbsp;Description<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Truncates all summary tables within Performance Schema, <br />&nbsp;&nbsp;resetting all aggregated instrumentation as a snapshot.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Parameters<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;in_verbose (BOOLEAN):<br />&nbsp;&nbsp;  Whether to print each TRUNCATE statement before running<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Example<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;mysql&gt; CALL sys.ps_truncate_all_tables(false);<br />&nbsp;&nbsp;+---------------------+<br />&nbsp;&nbsp;| summary             |<br />&nbsp;&nbsp;+---------------------+<br />&nbsp;&nbsp;| Truncated 44 tables |<br />&nbsp;&nbsp;+---------------------+<br />&nbsp;&nbsp;1 row in set (0.10 sec)<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Query OK, 0 rows affected (0.10 sec)<br />&nbsp;&nbsp;'</font><br /><font color="#569cd6">BEGIN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_done</font>&nbsp;<font color="#4ec9b0">INT</font>&nbsp;<font color="#569cd6">DEFAULT</font>&nbsp;<font color="#569cd6">FALSE</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_total_tables</font>&nbsp;<font color="#4ec9b0">INT</font>&nbsp;<font color="#569cd6">DEFAULT</font>&nbsp;<font color="#b5cea8">0</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">v_ps_table</font>&nbsp;<font color="#4ec9b0">VARCHAR</font><font color="#b4b4b4">(</font><font color="#b5cea8">64</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#ffffff">ps_tables</font>&nbsp;<font color="#569cd6">CURSOR</font>&nbsp;<font color="#569cd6">FOR</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">SELECT</font>&nbsp;<font color="#569cd6">table_name</font>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">FROM</font>&nbsp;<font color="#ffffff">INFORMATION_SCHEMA</font><font color="#b4b4b4">.</font><font color="#569cd6">TABLES</font>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">WHERE</font>&nbsp;<font color="#ffffff">table_schema</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#d69d85">'performance_schema'</font>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">AND</font>&nbsp;<font color="#b4b4b4">(</font><font color="#569cd6">table_name</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#d69d85">'%summary%'</font>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#b4b4b4">OR</font>&nbsp;<font color="#569cd6">table_name</font>&nbsp;<font color="#569cd6">LIKE</font>&nbsp;<font color="#d69d85">'%history%'</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DECLARE</font>&nbsp;<font color="#569cd6">CONTINUE</font>&nbsp;<font color="#569cd6">HANDLER</font>&nbsp;<font color="#569cd6">FOR</font>&nbsp;<font color="#b4b4b4">NOT</font>&nbsp;<font color="#569cd6">FOUND</font>&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_done</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#569cd6">TRUE</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">OPEN</font>&nbsp;<font color="#ffffff">ps_tables</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff">ps_tables_loop</font><font color="#b4b4b4">:</font>&nbsp;<font color="#569cd6">LOOP</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">FETCH</font>&nbsp;<font color="#ffffff">ps_tables</font>&nbsp;<font color="#569cd6">INTO</font>&nbsp;<font color="#ffffff">v_ps_table</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">IF</font>&nbsp;<font color="#ffffff">v_done</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">LEAVE</font>&nbsp;<font color="#ffffff">ps_tables_loop</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">END</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#008080">@truncate_stmt</font>&nbsp;<font color="#b4b4b4">:=</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'TRUNCATE TABLE performance_schema.'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">v_ps_table</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">IF</font>&nbsp;<font color="#ffffff">in_verbose</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">SELECT</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'Running: '</font><font color="#b4b4b4">,</font>&nbsp;<font color="#008080">@truncate_stmt</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">AS</font>&nbsp;<font color="#569cd6">status</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">END</font>&nbsp;<font color="#569cd6">IF</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">PREPARE</font>&nbsp;<font color="#ffffff">truncate_stmt</font>&nbsp;<font color="#569cd6">FROM</font>&nbsp;<font color="#008080">@truncate_stmt</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">EXECUTE</font>&nbsp;<font color="#ffffff">truncate_stmt</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">DEALLOCATE</font>&nbsp;<font color="#569cd6">PREPARE</font>&nbsp;<font color="#ffffff">truncate_stmt</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#ffffff">v_total_tables</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">v_total_tables</font>&nbsp;<font color="#b4b4b4">+</font>&nbsp;<font color="#b5cea8">1</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">END</font>&nbsp;<font color="#569cd6">LOOP</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">CLOSE</font>&nbsp;<font color="#ffffff">ps_tables</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">SELECT</font>&nbsp;<font color="#ff00ff">CONCAT</font><font color="#b4b4b4">(</font><font color="#d69d85">'Truncated '</font><font color="#b4b4b4">,</font>&nbsp;<font color="#ffffff">v_total_tables</font><font color="#b4b4b4">,</font>&nbsp;<font color="#d69d85">' tables'</font><font color="#b4b4b4">)</font>&nbsp;<font color="#569cd6">AS</font>&nbsp;<font color="#ffffff">summary</font><font color="#b4b4b4">;</font><br /><font color="#569cd6">END</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span class="text-muted">No items found</span>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span class="text-muted">No items found</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;10. 04. 2021</div>
+  </div>
+</body>
+</html>

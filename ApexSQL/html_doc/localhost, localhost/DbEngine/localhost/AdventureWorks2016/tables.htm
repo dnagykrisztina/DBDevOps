@@ -1,0 +1,582 @@
+﻿<HTML>
+<HEAD>
+    <TITLE>Tables</TITLE>
+    <LINK HREF="../../../style.css" REL="stylesheet" TYPE="text/css">
+
+    <SCRIPT SRC="../../../script.js"></SCRIPT>
+
+</HEAD>
+<BODY>
+    <IMG ID="collapseImage" ALT="Collapse image" SRC="../../../ImagesMetro/collapse.gif" STYLE="display: none; height: 0; width: 0;" />
+    <IMG ID="expandImage" ALT="Expand image" SRC="../../../ImagesMetro/expand.gif" STYLE="display: none; height: 0; width: 0;" />
+    <DIV ID="pagetop">
+        <div class='text-output-header'><p><font size="3">Sample header text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-header {display:block; float:left; width:100%;}div.text-output-header p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+        <P CLASS="apexdoc-header">
+            <IMG BORDER="0" CLASS="vmiddle" SRC="../../../Images32x32Metro/OBJECT_TABLE.png">&nbsp;List of tables</P>
+        <P CLASS="apexdoc-header-bottom">
+	<SPAN onclick="ExpandCollapseSections(this)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0">
+		<IMG ID="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../../../ImagesMetro/collapse.gif"></IMG>
+		<LABEL id="collapseAllLabel" for="toggleAllImage" style="display: inline;">Collapse all</LABEL>
+		<LABEL id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand all</LABEL>
+	</SPAN>
+</P>
+
+    </DIV>
+    <DIV ID="pagebody">
+        
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Tables')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Tables')" tabindex="0">
+	<IMG id="TablesToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Tables
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="TablesSection" CLASS="section" STYLE="display: inline;">
+            
+            <TABLE>
+                <TR CLASS="apexdoc-table-caption">
+                    <TD WIDTH="15%">Name&nbsp;</TD>
+                    <TD WIDTH="10%">Schema&nbsp;</TD>
+                    <TD>Description</TD>
+                    <TD WIDTH="5%">Columns</TD>
+                    <TD WIDTH="5%">Rows</TD>
+                </TR>
+                <TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/789577851.htm">AWBuildVersion</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Current version number of the AdventureWorks 2016 sample database.</TD>
+  <TD>4</TD>
+  <TD>1                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/565577053.htm">DatabaseLog</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Audit table tracking all DDL changes made to the AdventureWorks database. Data is captured by the database trigger ddlDatabaseTriggerLog.</TD>
+  <TD>8</TD>
+  <TD>1597                </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/597577167.htm">ErrorLog</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Audit table tracking errors in the the AdventureWorks database that are caught by the CATCH block of a TRY...CATCH construct. Data is inserted by stored procedure dbo.uspLogError when it is executed from inside the CATCH block of a TRY...CATCH construct.</TD>
+  <TD>9</TD>
+  <TD>0                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1365579903.htm">Department</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Lookup table containing the departments within the Adventure Works Cycles company.</TD>
+  <TD>4</TD>
+  <TD>16                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1557580587.htm">Employee</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Employee information such as salary, department, and title.</TD>
+  <TD>16</TD>
+  <TD>290                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1765581328.htm">EmployeeDepartmentHistory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Employee department transfers.</TD>
+  <TD>6</TD>
+  <TD>296                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1813581499.htm">EmployeePayHistory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Employee pay history.</TD>
+  <TD>5</TD>
+  <TD>316                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1909581841.htm">JobCandidate</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Résumés submitted to Human Resources by job applicants.</TD>
+  <TD>4</TD>
+  <TD>13                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/366624349.htm">Shift</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Work shift lookup table.</TD>
+  <TD>5</TD>
+  <TD>3                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/693577509.htm">Address</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Street address information for customers, employees, and vendors.</TD>
+  <TD>9</TD>
+  <TD>19614               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/741577680.htm">AddressType</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Types of addresses stored in the Address table.</TD>
+  <TD>4</TD>
+  <TD>6                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/949578421.htm">BusinessEntity</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Source of the ID that connects vendors, customers, and employees with address and contact information.</TD>
+  <TD>3</TD>
+  <TD>20777               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/997578592.htm">BusinessEntityAddress</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Cross-reference table mapping customers, vendors, and employees to their addresses.</TD>
+  <TD>5</TD>
+  <TD>19614               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1045578763.htm">BusinessEntityContact</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Cross-reference table mapping stores, vendors, and employees to people</TD>
+  <TD>5</TD>
+  <TD>909                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1093578934.htm">ContactType</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Lookup table containing the types of business entity contacts.</TD>
+  <TD>3</TD>
+  <TD>20                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1157579162.htm">CountryRegion</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Lookup table containing the ISO standard codes for countries and regions.</TD>
+  <TD>3</TD>
+  <TD>238                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1509580416.htm">EmailAddress</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Where to send a person email.</TD>
+  <TD>5</TD>
+  <TD>19972               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/2037582297.htm">Password</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>One way hashed authentication information</TD>
+  <TD>5</TD>
+  <TD>19972               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/2085582468.htm">Person</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Human beings involved with AdventureWorks: employees, customer contacts, and vendor contacts.</TD>
+  <TD>13</TD>
+  <TD>19972               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/82099333.htm">PersonPhone</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Telephone number and type of a person.</TD>
+  <TD>4</TD>
+  <TD>19972               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1575676661.htm">Pet</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>&nbsp;</TD>
+  <TD>6</TD>
+  <TD>0                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/114099447.htm">PhoneNumberType</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Type of phone number of a person.</TD>
+  <TD>3</TD>
+  <TD>3                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/782625831.htm">StateProvince</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>State and province lookup table.</TD>
+  <TD>8</TD>
+  <TD>181                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/821577965.htm">BillOfMaterials</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Items required to make bicycles and bicycle subassemblies. It identifies the heirarchical relationship between a parent product and its components.</TD>
+  <TD>9</TD>
+  <TD>2679                </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1221579390.htm">Culture</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Lookup table containing the languages in which some AdventureWorks data is stored.</TD>
+  <TD>3</TD>
+  <TD>8                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1397580017.htm">Document</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Product maintenance documents.</TD>
+  <TD>14</TD>
+  <TD>13                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1877581727.htm">Illustration</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Bicycle assembly diagrams.</TD>
+  <TD>3</TD>
+  <TD>5                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1941581955.htm">Location</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Product inventory and manufacturing locations.</TD>
+  <TD>5</TD>
+  <TD>14                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/146099561.htm">Product</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Products sold or used in the manfacturing of sold products.</TD>
+  <TD>25</TD>
+  <TD>504                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/386100416.htm">ProductCategory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>High-level product categorization.</TD>
+  <TD>4</TD>
+  <TD>4                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/434100587.htm">ProductCostHistory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Changes in the cost of a product over time.</TD>
+  <TD>5</TD>
+  <TD>395                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/498100815.htm">ProductDescription</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Product descriptions in several languages.</TD>
+  <TD>4</TD>
+  <TD>762                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/546100986.htm">ProductDocument</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Cross-reference table mapping products to related product documents.</TD>
+  <TD>3</TD>
+  <TD>32                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/578101100.htm">ProductInventory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Product inventory information.</TD>
+  <TD>7</TD>
+  <TD>1069                </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/674101442.htm">ProductListPriceHistory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Changes in the list price of a product over time.</TD>
+  <TD>5</TD>
+  <TD>395                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/738101670.htm">ProductModel</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Product model classification.</TD>
+  <TD>6</TD>
+  <TD>128                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/786101841.htm">ProductModelIllustration</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Cross-reference table mapping product models and illustrations.</TD>
+  <TD>3</TD>
+  <TD>7                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/818101955.htm">ProductModelProductDescriptionCulture</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Cross-reference table mapping product descriptions and the language the description is written in.</TD>
+  <TD>4</TD>
+  <TD>762                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/850102069.htm">ProductPhoto</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Product images.</TD>
+  <TD>6</TD>
+  <TD>101                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/882102183.htm">ProductProductPhoto</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Cross-reference table mapping products and product photos.</TD>
+  <TD>4</TD>
+  <TD>504                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/930102354.htm">ProductReview</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Customer reviews of products they have purchased.</TD>
+  <TD>8</TD>
+  <TD>4                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/994102582.htm">ProductSubcategory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Product subcategories. See ProductCategory table.</TD>
+  <TD>5</TD>
+  <TD>37                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/334624235.htm">ScrapReason</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Manufacturing failure reasons lookup table.</TD>
+  <TD>3</TD>
+  <TD>16                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/894626230.htm">TransactionHistory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Record of each purchase order, sales order, or work order transaction year to date.</TD>
+  <TD>9</TD>
+  <TD>113443              </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/974626515.htm">TransactionHistoryArchive</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Transactions for previous years.</TD>
+  <TD>9</TD>
+  <TD>89253               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1054626800.htm">UnitMeasure</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Unit of measure lookup table.</TD>
+  <TD>3</TD>
+  <TD>38                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1166627199.htm">WorkOrder</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Manufacturing work orders.</TD>
+  <TD>10</TD>
+  <TD>72591               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1246627484.htm">WorkOrderRouting</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Work order details.</TD>
+  <TD>12</TD>
+  <TD>67131               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1042102753.htm">ProductVendor</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>Cross-reference table mapping vendors with the products they supply.</TD>
+  <TD>11</TD>
+  <TD>460                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1170103209.htm">PurchaseOrderDetail</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>Individual products associated with a specific purchase order. See PurchaseOrderHeader.</TD>
+  <TD>11</TD>
+  <TD>8845                </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1266103551.htm">PurchaseOrderHeader</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>General purchase order information. See PurchaseOrderDetail.</TD>
+  <TD>13</TD>
+  <TD>4012                </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/398624463.htm">ShipMethod</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>Shipping company lookup table.</TD>
+  <TD>6</TD>
+  <TD>5                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1086626914.htm">Vendor</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>Companies from whom Adventure Works Cycles purchases parts or other goods.</TD>
+  <TD>8</TD>
+  <TD>104                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1125579048.htm">CountryRegionCurrency</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Cross-reference table mapping ISO currency codes to a country or region.</TD>
+  <TD>3</TD>
+  <TD>109                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1189579276.htm">CreditCard</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Customer credit card information.</TD>
+  <TD>6</TD>
+  <TD>19118               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1253579504.htm">Currency</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Lookup table containing standard ISO currencies.</TD>
+  <TD>3</TD>
+  <TD>105                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1285579618.htm">CurrencyRate</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Currency exchange rates.</TD>
+  <TD>7</TD>
+  <TD>13532               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1317579732.htm">Customer</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Current customer information. Also see the Person and Store tables.</TD>
+  <TD>7</TD>
+  <TD>19820               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/50099219.htm">PersonCreditCard</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Cross-reference table mapping people to their credit card information in the CreditCard table.</TD>
+  <TD>3</TD>
+  <TD>19118               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1474104292.htm">SalesOrderDetail</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Individual products associated with a specific sales order. See SalesOrderHeader.</TD>
+  <TD>11</TD>
+  <TD>121317              </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1586104691.htm">SalesOrderHeader</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>General sales order information.</TD>
+  <TD>26</TD>
+  <TD>31465               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1842105603.htm">SalesOrderHeaderSalesReason</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Cross-reference table mapping sales orders to sales reason codes.</TD>
+  <TD>3</TD>
+  <TD>27647               </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/1874105717.htm">SalesPerson</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Sales representative current information.</TD>
+  <TD>9</TD>
+  <TD>17                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/2066106401.htm">SalesPersonQuotaHistory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Sales performance tracking.</TD>
+  <TD>5</TD>
+  <TD>163                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/2130106629.htm">SalesReason</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Lookup table of customer purchase reasons.</TD>
+  <TD>4</TD>
+  <TD>10                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/14623095.htm">SalesTaxRate</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Tax rate lookup table.</TD>
+  <TD>7</TD>
+  <TD>29                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/94623380.htm">SalesTerritory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Sales territory lookup table.</TD>
+  <TD>10</TD>
+  <TD>10                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/270624007.htm">SalesTerritoryHistory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Sales representative transfers to other sales territories.</TD>
+  <TD>6</TD>
+  <TD>17                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/510624862.htm">ShoppingCartItem</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Contains online customer orders until the order is submitted or cancelled.</TD>
+  <TD>6</TD>
+  <TD>3                   </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/590625147.htm">SpecialOffer</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Sale discounts lookup table.</TD>
+  <TD>11</TD>
+  <TD>16                  </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/734625660.htm">SpecialOfferProduct</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Cross-reference table mapping products to special offer discounts.</TD>
+  <TD>4</TD>
+  <TD>538                 </TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Tables/846626059.htm">Store</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Customers (resellers) of Adventure Works products.</TD>
+  <TD>6</TD>
+  <TD>701                 </TD>
+</TR>
+
+            </TABLE>
+            <DIV CLASS="apexdoc-total-counter">
+                Total:&nbsp;72&nbsp;table(s)</DIV>
+            
+        </DIV>
+        
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('seealso')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('seealso')" tabindex="0">
+	<IMG id="seealsoToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            See also
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="seealsoSection" CLASS="section" STYLE="display: inline;">
+            <P>
+                <!--HREF_TABLES_STATISTICS_SUMMARY-->
+            </P>
+            <P>
+                
+            </P>
+        </DIV>
+        <HR SIZE="1">
+<P></P>
+<BR>
+<BR>
+
+        <div class='text-output-footer'><p><font size="3">Sample footer text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-footer {display:block; float:left; width:100%;}div.text-output-footer p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+    </DIV>
+</BODY>
+</HTML>

@@ -1,0 +1,191 @@
+﻿<HTML>
+<HEAD>
+    <TITLE>Functions</TITLE>
+    <LINK HREF="../../../style.css" REL="stylesheet" TYPE="text/css">
+
+    <SCRIPT SRC="../../../script.js"></SCRIPT>
+
+</HEAD>
+<BODY>
+    <IMG ID="collapseImage" ALT="Collapse image" SRC="../../../ImagesMetro/collapse.gif" STYLE="display: none; height: 0; width: 0;" />
+    <IMG ID="expandImage" ALT="Expand image" SRC="../../../ImagesMetro/expand.gif" STYLE="display: none; height: 0; width: 0;" />
+    <DIV ID="pagetop">
+        <div class='text-output-header'><p><font size="3">Sample header text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-header {display:block; float:left; width:100%;}div.text-output-header p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+        <P CLASS="apexdoc-header">
+            <IMG BORDER="0" CLASS="vmiddle" SRC="../../../Images32x32Metro/OBJECT_FUNCTION.png">&nbsp;List of functions</P>
+        <P CLASS="apexdoc-header-bottom">
+	<SPAN onclick="ExpandCollapseSections(this)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0">
+		<IMG ID="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../../../ImagesMetro/collapse.gif"></IMG>
+		<LABEL id="collapseAllLabel" for="toggleAllImage" style="display: inline;">Collapse all</LABEL>
+		<LABEL id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand all</LABEL>
+	</SPAN>
+</P>
+
+    </DIV>
+    <DIV ID="pagebody">
+        
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Functions')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Functions')" tabindex="0">
+	<IMG id="FunctionsToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Functions
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="FunctionsSection" CLASS="section" STYLE="display: inline;">
+            
+            <TABLE>
+                <TR CLASS="apexdoc-table-caption">
+                    <TD>Name&nbsp;</TD>
+                    <TD>Schema&nbsp;</TD>
+                    <TD>Description</TD>
+                    <TD>Type&nbsp;</TD>
+                    <TD>Schema&nbsp;bound&nbsp;</TD>
+                    <TD>Deterministic&nbsp;</TD>
+                    <TD>Encrypted&nbsp;</TD>
+                    <TD>Creation&nbsp;date&nbsp;</TD>
+                </TR>
+                <TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/1287675635.htm">ApexSQL_SourceControl_FrameworkVersion</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>&nbsp;</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">03. 28. 2021&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/407672500.htm">ufnGetAccountingEndDate</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function used in the uSalesOrderHeader trigger to set the starting account date.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/391672443.htm">ufnGetAccountingStartDate</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function used in the uSalesOrderHeader trigger to set the ending account date.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/423672557.htm">ufnGetContactInformation</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Table value function returning the first name, last name, job title and contact type for a given contact.</TD>
+  <TD>Table</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/503672842.htm">ufnGetDocumentStatusText</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function returning the text representation of the Status column in the Document table.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/439672614.htm">ufnGetProductDealerPrice</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function returning the dealer price for a given product on a particular order date.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/455672671.htm">ufnGetProductListPrice</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function returning the list price for a given product on a particular order date.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/471672728.htm">ufnGetProductStandardCost</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function returning the standard cost for a given product on a particular order date.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/519672899.htm">ufnGetPurchaseOrderStatusText</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function returning the text representation of the Status column in the PurchaseOrderHeader table.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/535672956.htm">ufnGetSalesOrderStatusText</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function returning the text representation of the Status column in the SalesOrderHeader table.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/487672785.htm">ufnGetStock</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function returning the quantity of inventory in LocationID 6 (Miscellaneous Storage)for a specified ProductID.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Functions/677577452.htm">ufnLeadingZeros</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/1.htm">dbo</A></TD>
+  <TD>Scalar function used by the Sales.Customer table to help set the account number.</TD>
+  <TD>Scalar</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/CHECK_OUT.png"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/CHECK_OUT.png"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered">10. 19. 2017&nbsp;</TD></TR>
+
+            </TABLE>
+            <DIV CLASS="apexdoc-total-counter">
+                Total:
+                12
+                Function(s)</DIV>
+            
+        </DIV>
+        
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Seealso')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Seealso')" tabindex="0">
+	<IMG id="SeealsoToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            See also
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="SeealsoSection" CLASS="section" STYLE="display: inline;">
+            <P>
+                <A HREF="procedures.htm">Procedures</A>
+            </P>
+            <P>
+                
+            </P>
+        </DIV>
+        <HR SIZE="1">
+<P></P>
+<BR>
+<BR>
+
+        <div class='text-output-footer'><p><font size="3">Sample footer text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-footer {display:block; float:left; width:100%;}div.text-output-footer p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+    </DIV>
+</BODY>
+</HTML>

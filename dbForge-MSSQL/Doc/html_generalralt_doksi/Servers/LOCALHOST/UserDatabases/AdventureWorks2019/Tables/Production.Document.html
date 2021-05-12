@@ -1,0 +1,631 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Production.Document</title>
+<script src="../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../styles/bootstrap/Default.css" type="text/css">
+<link rel="stylesheet" href="../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-8">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../Servers\LOCALHOST\LOCALHOST.html" data-mapping-enabled="true">LOCALHOST</a></li>
+            <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\UserDatabases.html" data-mapping-enabled="true">User databases</a></li>
+            <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\AdventureWorks2019.html" data-mapping-enabled="true">AdventureWorks2019</a></li>
+            <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Tables.html" data-mapping-enabled="true">Tables</a></li>
+            <li class="active">Production.Document</li>
+          </ol>
+        </div>
+        <div class="align-right col-xs-4">DBDevOps</div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../images/table.svg" title="Production.Document" />
+            <h1 class="inline-middle">Production.Document</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span>Product maintenance documents.</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>Collation</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>File Group</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Filestream File Group</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Is Partitioned</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Partitioned Column</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Partition Scheme</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>File Groups</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Filestream Partition Scheme</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Filestream File Groups</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Heap</td>
+                  <td><p class="value-false">False</p></td>
+                </tr>
+                <tr>
+                  <td>Full Text Catalog</td>
+                  <td><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Storage\FullTextCatalogs\AW2016FullTextCatalog.html" data-mapping-enabled="true"><span>AW2016FullTextCatalog</span></a></td>
+                </tr>
+                <tr>
+                  <td>Full Text</td>
+                  <td>PK_Document_DocumentNode</td>
+                </tr>
+                <tr>
+                  <td>Compression</td>
+                  <td>NONE</td>
+                </tr>
+                <tr>
+                  <td>Row Count (~)</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <td>Created</td>
+                  <td>2017. 10. 27. 14:33:01</td>
+                </tr>
+                <tr>
+                  <td>Last Modified</td>
+                  <td>2017. 10. 27. 14:33:14</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Columns" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Columns</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Key</th>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th>Precision</th>
+                  <th>Scale</th>
+                  <th>Not Null</th>
+                  <th>Identity</th>
+                  <th>Rule</th>
+                  <th>Default</th>
+                  <th>Computed</th>
+                  <th>Persisted</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/primarykey.svg" data-toggle="tooltip" title="Primary Key PK_Document_DocumentNode" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/Cluster.svg" data-toggle="tooltip" title="Cluster Key PK_Document_DocumentNode" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/index.svg" data-toggle="tooltip" title="Indexes AK_Document_DocumentLevel_DocumentNode" />
+                    </a></div></td>
+                  <td>DocumentNode</td>
+                  <td>hierarchyid</td>
+                  <td>892</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Primary key for Document records.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/index.svg" data-toggle="tooltip" title="Indexes AK_Document_DocumentLevel_DocumentNode" />
+                    </a></div></td>
+                  <td>DocumentLevel</td>
+                  <td>smallint</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-true">True</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Depth in the document hierarchy.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Title</td>
+                  <td>nvarchar</td>
+                  <td>50</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Title of the document.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#ForeignKeys"><img class="image-small" src="../../../../../images/foreignkey.svg" data-toggle="tooltip" title="Foreign Keys FK_Document_Employee_Owner: HumanResources.Employee" />
+                    </a></div></td>
+                  <td>Owner</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Employee who controls the document.  Foreign key to Employee.BusinessEntityID</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>FolderFlag</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td>(0)</td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>0 = This is a folder, 1 = This is a document.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/index.svg" data-toggle="tooltip" title="Indexes IX_Document_FileName_Revision" />
+                    </a></div></td>
+                  <td>FileName</td>
+                  <td>nvarchar</td>
+                  <td>400</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>File name of the document</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>FileExtension</td>
+                  <td>nvarchar</td>
+                  <td>8</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>File extension indicating the document type. For example, .doc or .txt.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/index.svg" data-toggle="tooltip" title="Indexes IX_Document_FileName_Revision" />
+                    </a></div></td>
+                  <td>Revision</td>
+                  <td>nchar</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Revision number of the document. </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>ChangeNumber</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td>(0)</td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Engineering change approval number.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#CheckConstraints"><img class="image-small" src="../../../../../images/checkconstraint.svg" data-toggle="tooltip" title="Check Constraint CK_Document_Status" />
+                    </a></div></td>
+                  <td>Status</td>
+                  <td>tinyint</td>
+                  <td>1</td>
+                  <td>3</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>1 = Pending approval, 2 = Approved, 3 = Obsolete</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/index.svg" data-toggle="tooltip" title="Indexes Document" />
+                    </a></div></td>
+                  <td>DocumentSummary</td>
+                  <td>nvarchar</td>
+                  <td></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Document abstract.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/index.svg" data-toggle="tooltip" title="Indexes Document" />
+                    </a></div></td>
+                  <td>Document</td>
+                  <td>varbinary</td>
+                  <td></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Complete document.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/index.svg" data-toggle="tooltip" title="Indexes AK_Document_rowguid
+UQ__Document__F73921F7C5112C2E" />
+                    <span class="badge badge-small">
+                    2</span></a></div></td>
+                  <td>rowguid</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td>(newid())</td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>ROWGUIDCOL number uniquely identifying the record. Required for FileStream.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>ModifiedDate</td>
+                  <td>datetime</td>
+                  <td>8</td>
+                  <td>23</td>
+                  <td>3</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td></td>
+                  <td>(getdate())</td>
+                  <td><p class="value-false">False</p></td>
+                  <td><p class="value-false">False</p></td>
+                  <td>
+                    <span>Date and time the record was last updated.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="ComputedColumns" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Computed Columns</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Definition</th>
+                </tr>
+                <tr>
+                  <td>DocumentLevel</td>
+                  <td>([DocumentNode].[GetLevel]())</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Indexes" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Indexes</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Key</th>
+                  <th>Name</th>
+                  <th>Columns</th>
+                  <th>Unique</th>
+                  <th>Type</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>AK_Document_DocumentLevel_DocumentNode</td>
+                  <td>DocumentLevel, DocumentNode</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td>
+                    <span>Unique nonclustered index.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>AK_Document_rowguid</td>
+                  <td>rowguid</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td>
+                    <span>Unique nonclustered index. Used to support FileStream.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>IX_Document_FileName_Revision</td>
+                  <td>FileName, Revision</td>
+                  <td><p class="value-false">False</p></td>
+                  <td></td>
+                  <td>
+                    <span>Unique nonclustered index.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/primarykey.svg" data-toggle="tooltip" title="Primary Key PK_Document_DocumentNode" />
+                    </a></div><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/Cluster.svg" data-toggle="tooltip" title="Cluster Key PK_Document_DocumentNode" />
+                    </a></div></td>
+                  <td>PK_Document_DocumentNode</td>
+                  <td>DocumentNode</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td>
+                    <span>Clustered index created by a primary key constraint.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><a class="anchor-link" href="#Indexes"><img class="image-small" src="../../../../../images/primarykey.svg" data-toggle="tooltip" title="Primary Key UQ__Document__F73921F7C5112C2E" />
+                    </a></div></td>
+                  <td>UQ__Document__F73921F7C5112C2E</td>
+                  <td>rowguid</td>
+                  <td><p class="value-true">True</p></td>
+                  <td></td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="CheckConstraints" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Check Constraints</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Columns</th>
+                  <th>Condition</th>
+                  <th class="column-description-35">Description</th>
+                </tr>
+                <tr>
+                  <td>CK_Document_Status</td>
+                  <td>Status</td>
+                  <td>([Status]>=(1) AND [Status]<=(3))</td>
+                  <td>
+                    <span></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="ForeignKeys" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Foreign Keys</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Columns</th>
+                  <th class="column-description-60">Description</th>
+                </tr>
+                <tr>
+                  <td>FK_Document_Employee_Owner</td>
+                  <td>BusinessEntityID</td>
+                  <td>
+                    <span>Foreign key constraint referencing Employee.BusinessEntityID.</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="sqlscript panel-default">
+              <font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">TABLE</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#0000ff">Document</font>&nbsp;<font color="#808080">(</font><br>&nbsp;&nbsp;<font color="#000000">DocumentNode</font>&nbsp;<font color="#0000ff">hierarchyid</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">DocumentLevel</font>&nbsp;<font color="#0000ff">AS</font>&nbsp;<font color="#808080">(</font><font color="#000000">[DocumentNode]</font><font color="#808080">.</font><font color="#000000">[GetLevel]</font><font color="#808080">(</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">Title</font>&nbsp;<font color="#0000ff">nvarchar</font><font color="#808080">(</font><font color="#000000">50</font><font color="#808080">)</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">Owner</font>&nbsp;<font color="#0000ff">int</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">FolderFlag</font>&nbsp;<font color="#0000ff">bit</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">DF_Document_FolderFlag</font>&nbsp;<font color="#0000ff">DEFAULT</font>&nbsp;<font color="#808080">(</font><font color="#000000">0</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">FileName</font>&nbsp;<font color="#0000ff">nvarchar</font><font color="#808080">(</font><font color="#000000">400</font><font color="#808080">)</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">FileExtension</font>&nbsp;<font color="#0000ff">nvarchar</font><font color="#808080">(</font><font color="#000000">8</font><font color="#808080">)</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">Revision</font>&nbsp;<font color="#0000ff">nchar</font><font color="#808080">(</font><font color="#000000">5</font><font color="#808080">)</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ChangeNumber</font>&nbsp;<font color="#0000ff">int</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">DF_Document_ChangeNumber</font>&nbsp;<font color="#0000ff">DEFAULT</font>&nbsp;<font color="#808080">(</font><font color="#000000">0</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">Status</font>&nbsp;<font color="#0000ff">tinyint</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">DocumentSummary</font>&nbsp;<font color="#0000ff">nvarchar</font><font color="#808080">(</font><font color="#ff00ff">max</font><font color="#808080">)</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">Document</font>&nbsp;<font color="#0000ff">varbinary</font><font color="#808080">(</font><font color="#ff00ff">max</font><font color="#808080">)</font>&nbsp;<font color="#808080">NULL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">rowguid</font>&nbsp;<font color="#0000ff">uniqueidentifier</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">DF_Document_rowguid</font>&nbsp;<font color="#0000ff">DEFAULT</font>&nbsp;<font color="#808080">(</font><font color="#ff00ff">newid</font><font color="#808080">(</font><font color="#808080">)</font><font color="#808080">)</font>&nbsp;<font color="#0000ff">ROWGUIDCOL</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#000000">ModifiedDate</font>&nbsp;<font color="#0000ff">datetime</font>&nbsp;<font color="#808080">NOT</font>&nbsp;<font color="#808080">NULL</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">DF_Document_ModifiedDate</font>&nbsp;<font color="#0000ff">DEFAULT</font>&nbsp;<font color="#808080">(</font><font color="#ff00ff">getdate</font><font color="#808080">(</font><font color="#808080">)</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">PK_Document_DocumentNode</font>&nbsp;<font color="#0000ff">PRIMARY</font>&nbsp;<font color="#0000ff">KEY</font>&nbsp;<font color="#0000ff">CLUSTERED</font>&nbsp;<font color="#808080">(</font><font color="#000000">DocumentNode</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">UNIQUE</font>&nbsp;<font color="#808080">(</font><font color="#000000">rowguid</font><font color="#808080">)</font><font color="#808080">,</font><br>&nbsp;&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">CK_Document_Status</font>&nbsp;<font color="#0000ff">CHECK</font>&nbsp;<font color="#808080">(</font><font color="#000000">[Status]</font><font color="#808080">></font><font color="#808080">=</font><font color="#808080">(</font><font color="#000000">1</font><font color="#808080">)</font>&nbsp;<font color="#808080">AND</font>&nbsp;<font color="#000000">[Status]</font><font color="#808080"><</font><font color="#808080">=</font><font color="#808080">(</font><font color="#000000">3</font><font color="#808080">)</font><font color="#808080">)</font><br><font color="#808080">)</font><br><font color="#0000ff">ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br><font color="#0000ff">TEXTIMAGE_ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">UNIQUE</font>&nbsp;<font color="#0000ff">INDEX</font>&nbsp;<font color="#000000">AK_Document_DocumentLevel_DocumentNode</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#0000ff">Document</font>&nbsp;<font color="#808080">(</font><font color="#000000">DocumentLevel</font><font color="#808080">,</font>&nbsp;<font color="#000000">DocumentNode</font><font color="#808080">)</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">UNIQUE</font>&nbsp;<font color="#0000ff">INDEX</font>&nbsp;<font color="#000000">AK_Document_rowguid</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#0000ff">Document</font>&nbsp;<font color="#808080">(</font><font color="#000000">rowguid</font><font color="#808080">)</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">INDEX</font>&nbsp;<font color="#000000">IX_Document_FileName_Revision</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#0000ff">Document</font>&nbsp;<font color="#808080">(</font><font color="#0000ff">FileName</font><font color="#808080">,</font>&nbsp;<font color="#000000">Revision</font><font color="#808080">)</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">[PRIMARY]</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">ALTER</font>&nbsp;<font color="#0000ff">TABLE</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#0000ff">Document</font><br>&nbsp;&nbsp;<font color="#0000ff">ADD</font>&nbsp;<font color="#0000ff">CONSTRAINT</font>&nbsp;<font color="#000000">FK_Document_Employee_Owner</font>&nbsp;<font color="#0000ff">FOREIGN</font>&nbsp;<font color="#0000ff">KEY</font>&nbsp;<font color="#808080">(</font><font color="#0000ff">Owner</font><font color="#808080">)</font>&nbsp;<font color="#0000ff">REFERENCES</font>&nbsp;<font color="#000000">HumanResources</font><font color="#808080">.</font><font color="#000000">Employee</font>&nbsp;<font color="#808080">(</font><font color="#000000">BusinessEntityID</font><font color="#808080">)</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Foreign key constraint referencing Employee.BusinessEntityID.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'FK_Document_Employee_Owner'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Product maintenance documents.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Primary key for Document records.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'DocumentNode'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Depth in the document hierarchy.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'DocumentLevel'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Title of the document.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Title'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Employee who controls the document.  Foreign key to Employee.BusinessEntityID'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Owner'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'0 = This is a folder, 1 = This is a document.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'FolderFlag'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'File name of the document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'FileName'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'File extension indicating the document type. For example, .doc or .txt.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'FileExtension'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Revision number of the document. '</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Revision'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Engineering change approval number.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ChangeNumber'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'1 = Pending approval, 2 = Approved, 3 = Obsolete'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Status'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document abstract.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'DocumentSummary'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Complete document.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ROWGUIDCOL number uniquely identifying the record. Required for FileStream.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'rowguid'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Date and time the record was last updated.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'COLUMN'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'ModifiedDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Unique nonclustered index.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'INDEX'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'AK_Document_DocumentLevel_DocumentNode'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Unique nonclustered index. Used to support FileStream.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'INDEX'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'AK_Document_rowguid'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Unique nonclustered index.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'INDEX'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'IX_Document_FileName_Revision'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Clustered index created by a primary key constraint.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'INDEX'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'PK_Document_DocumentNode'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Primary key (clustered) constraint'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'PK_Document_DocumentNode'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Check constraint [Status] BETWEEN (1) AND (3)'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'CK_Document_Status'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Default constraint value of 0'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'DF_Document_ChangeNumber'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Default constraint value of GETDATE()'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'DF_Document_ModifiedDate'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Default constraint value of NEWID()'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Production'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'TABLE'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Document'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'CONSTRAINT'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'DF_Document_rowguid'</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">FULLTEXT</font>&nbsp;<font color="#0000ff">INDEX</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">Production</font><font color="#808080">.</font><font color="#0000ff">Document</font><font color="#808080">(</font><font color="#000000">DocumentSummary</font>&nbsp;<font color="#0000ff">LANGUAGE</font>&nbsp;<font color="#000000">1033</font><font color="#808080">,</font>&nbsp;<font color="#0000ff">Document</font>&nbsp;<font color="#0000ff">TYPE</font>&nbsp;<font color="#0000ff">COLUMN</font>&nbsp;<font color="#000000">FileExtension</font>&nbsp;<font color="#0000ff">LANGUAGE</font>&nbsp;<font color="#000000">1033</font><font color="#808080">)</font><br>&nbsp;&nbsp;<font color="#0000ff">KEY</font>&nbsp;<font color="#0000ff">INDEX</font>&nbsp;<font color="#000000">PK_Document_DocumentNode</font><br>&nbsp;&nbsp;<font color="#0000ff">ON</font>&nbsp;<font color="#000000">AW2016FullTextCatalog</font><br>&nbsp;&nbsp;<font color="#0000ff">WITH</font>&nbsp;<font color="#0000ff">CHANGE_TRACKING</font>&nbsp;<font color="#0000ff">AUTO</font><font color="#808080">,</font>&nbsp;<font color="#0000ff">STOPLIST</font>&nbsp;<font color="#0000ff">SYSTEM</font><br><font color="#0000ff">GO</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+          <span class="badge inline-middle">3</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Security\Schemas\Production.html" data-mapping-enabled="true"><span>Production</span></a></li>
+              <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\HumanResources.Employee.html" data-mapping-enabled="true"><span>HumanResources.Employee</span></a></li>
+              <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Storage\FullTextCatalogs\AW2016FullTextCatalog.html" data-mapping-enabled="true"><span>AW2016FullTextCatalog</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+          <span class="badge inline-middle">1</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Production.ProductDocument.html" data-mapping-enabled="true"><span>Production.ProductDocument</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;Nagy Krisztina Dalma</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;2021. 03. 15</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,677 @@
+Cannot drop the database 'ApexSQLTest', because it does not exist or you do not have permission.
+Running script
+Dropping database
+Changed database context to 'master'.
+Create database ApexSQLTest
+Changed database context to 'ApexSQLTest'.
+Error 207, Severity 16, Line 3329 (at line 11 within procedure 'vVendorWithContacts')
+Invalid column name 'Suffix'.
+Error 207, Severity 16, Line 3900 (at line 10 within procedure 'vEmployeeDepartment')
+Invalid column name 'Suffix'.
+Error 207, Severity 16, Line 3926 (at line 10 within procedure 'vEmployeeDepartmentHistory')
+Invalid column name 'Suffix'.
+Error 207, Severity 16, Line 4500 (at line 10 within procedure 'vEmployee')
+Invalid column name 'Suffix'.
+Error 207, Severity 16, Line 4600 (at line 11 within procedure 'vStoreWithContacts')
+Invalid column name 'Suffix'.
+Error 207, Severity 16, Line 4659 (at line 10 within procedure 'vSalesPerson')
+Invalid column name 'Suffix'.
+Error 207, Severity 16, Line 4990 (at line 10 within procedure 'vIndividualCustomer')
+Invalid column name 'Suffix'.
+Create schema HumanResources
+Create schema Person
+Create schema Production
+Create schema Purchasing
+Create schema Sales
+Create fulltext catalog AW2016FullTextCatalog
+Create type OrderNumber
+Create type NameStyle
+Create type Phone
+Create type Flag
+Create type AccountNumber
+Create type Name
+Create table ErrorLog
+Add default constraint DF_ErrorLog_ErrorTime to ErrorLog
+Create table DatabaseLog
+Create table AWBuildVersion
+Add default constraint DF_AWBuildVersion_ModifiedDate to AWBuildVersion
+Create function ufnGetAccountingEndDate
+Create function ufnGetAccountingStartDate
+Create function ufnGetDocumentStatusText
+Create function ufnGetPurchaseOrderStatusText
+Create function ufnGetSalesOrderStatusText
+Create function ufnLeadingZeros
+Create procedure uspPrintError
+Create trigger ddlDatabasetriggerLog
+Create XML schema collection StoreSurveySchemaCollection
+Create XML schema collection ProductDescriptionSchemaCollection
+Create XML schema collection ManuInstructionsSchemaCollection
+Create XML schema collection IndividualSurveySchemaCollection
+Create XML schema collection AdditionalContactInfoSchemaCollection
+Create XML schema collection HRResumeSchemaCollection
+Create table ProductPhoto
+Add default constraint DF_ProductPhoto_ModifiedDate to ProductPhoto
+Create table ContactType
+Add default constraint DF_ContactType_ModifiedDate to ContactType
+Create index AK_ContactType_Name on ContactType
+Create table CountryRegion
+Add default constraint DF_CountryRegion_ModifiedDate to CountryRegion
+Create index AK_CountryRegion_Name on CountryRegion
+Create table ShipMethod
+Add check constraint CK_ShipMethod_ShipBase to ShipMethod
+Add check constraint CK_ShipMethod_ShipRate to ShipMethod
+Add default constraint DF_ShipMethod_ShipBase to ShipMethod
+Add default constraint DF_ShipMethod_ShipRate to ShipMethod
+Add default constraint DF_ShipMethod_rowguid to ShipMethod
+Add default constraint DF_ShipMethod_ModifiedDate to ShipMethod
+Create index AK_ShipMethod_Name on ShipMethod
+Create index AK_ShipMethod_rowguid on ShipMethod
+Create table Pet
+Create table Illustration
+Add default constraint DF_Illustration_ModifiedDate to Illustration
+Create table Culture
+Add default constraint DF_Culture_ModifiedDate to Culture
+Create index AK_Culture_Name on Culture
+Create table ProductDescription
+Add default constraint DF_ProductDescription_rowguid to ProductDescription
+Add default constraint DF_ProductDescription_ModifiedDate to ProductDescription
+Create index AK_ProductDescription_rowguid on ProductDescription
+Create table BusinessEntity
+Add default constraint DF_BusinessEntity_rowguid to BusinessEntity
+Add default constraint DF_BusinessEntity_ModifiedDate to BusinessEntity
+Create index AK_BusinessEntity_rowguid on BusinessEntity
+Create table Location
+Add check constraint CK_Location_CostRate to Location
+Add check constraint CK_Location_Availability to Location
+Add default constraint DF_Location_CostRate to Location
+Add default constraint DF_Location_Availability to Location
+Add default constraint DF_Location_ModifiedDate to Location
+Create index AK_Location_Name on Location
+Create table PhoneNumberType
+Add default constraint DF_PhoneNumberType_ModifiedDate to PhoneNumberType
+Create table SalesReason
+Add default constraint DF_SalesReason_ModifiedDate to SalesReason
+Create table AddressType
+Add default constraint DF_AddressType_rowguid to AddressType
+Add default constraint DF_AddressType_ModifiedDate to AddressType
+Create index AK_AddressType_rowguid on AddressType
+Create index AK_AddressType_Name on AddressType
+Create table Shift
+Add default constraint DF_Shift_ModifiedDate to Shift
+Create index AK_Shift_Name on Shift
+Create index AK_Shift_StartTime_EndTime on Shift
+Create table UnitMeasure
+Add default constraint DF_UnitMeasure_ModifiedDate to UnitMeasure
+Create index AK_UnitMeasure_Name on UnitMeasure
+Create table TransactionHistoryArchive
+Add check constraint CK_TransactionHistoryArchive_TransactionType to TransactionHistoryArchive
+Add default constraint DF_TransactionHistoryArchive_ReferenceOrderLineID to TransactionHistoryArchive
+Add default constraint DF_TransactionHistoryArchive_TransactionDate to TransactionHistoryArchive
+Add default constraint DF_TransactionHistoryArchive_ModifiedDate to TransactionHistoryArchive
+Create index IX_TransactionHistoryArchive_ProductID on TransactionHistoryArchive
+Create index IX_TransactionHistoryArchive_ReferenceOrderID_ReferenceOrderLineID on TransactionHistoryArchive
+Create table ScrapReason
+Add default constraint DF_ScrapReason_ModifiedDate to ScrapReason
+Create index AK_ScrapReason_Name on ScrapReason
+Create table Department
+Add default constraint DF_Department_ModifiedDate to Department
+Create index AK_Department_Name on Department
+Create table SpecialOffer
+Add check constraint CK_SpecialOffer_EndDate to SpecialOffer
+Add check constraint CK_SpecialOffer_DiscountPct to SpecialOffer
+Add check constraint CK_SpecialOffer_MinQty to SpecialOffer
+Add check constraint CK_SpecialOffer_MaxQty to SpecialOffer
+Add default constraint DF_SpecialOffer_DiscountPct to SpecialOffer
+Add default constraint DF_SpecialOffer_MinQty to SpecialOffer
+Add default constraint DF_SpecialOffer_rowguid to SpecialOffer
+Add default constraint DF_SpecialOffer_ModifiedDate to SpecialOffer
+Create index AK_SpecialOffer_rowguid on SpecialOffer
+Create table ProductCategory
+Add default constraint DF_ProductCategory_rowguid to ProductCategory
+Add default constraint DF_ProductCategory_ModifiedDate to ProductCategory
+Create index AK_ProductCategory_Name on ProductCategory
+Create index AK_ProductCategory_rowguid on ProductCategory
+Create table CreditCard
+Add default constraint DF_CreditCard_ModifiedDate to CreditCard
+Create index AK_CreditCard_CardNumber on CreditCard
+Create table Currency
+Add default constraint DF_Currency_ModifiedDate to Currency
+Create index AK_Currency_Name on Currency
+Create procedure uspLogError
+Create table CurrencyRate
+Add default constraint DF_CurrencyRate_ModifiedDate to CurrencyRate
+Create index AK_CurrencyRate_CurrencyRateDate_FromCurrencyCode_ToCurrencyCode on CurrencyRate
+Create table Person
+Add check constraint CK_Person_EmailPromotion to Person
+Add check constraint CK_Person_PersonType to Person
+Add default constraint DF_Person_ModifiedDate to Person
+Add default constraint DF_Person_NameStyle to Person
+Add default constraint DF_Person_EmailPromotion to Person
+Add default constraint DF_Person_rowguid to Person
+Create index IX_Person_LastName_FirstName_MiddleName on Person
+Create index AK_Person_rowguid on Person
+Create XML index PXML_Person_AddContact on Person
+Create XML index PXML_Person_Demographics on Person
+Create XML index XMLPATH_Person_Demographics on Person
+Create XML index XMLPROPERTY_Person_Demographics on Person
+Create XML index XMLVALUE_Person_Demographics on Person
+Create table CountryRegionCurrency
+Add default constraint DF_CountryRegionCurrency_ModifiedDate to CountryRegionCurrency
+Create index IX_CountryRegionCurrency_CurrencyCode on CountryRegionCurrency
+Create table SalesTerritory
+Add check constraint CK_SalesTerritory_SalesYTD to SalesTerritory
+Add check constraint CK_SalesTerritory_SalesLastYear to SalesTerritory
+Add check constraint CK_SalesTerritory_CostYTD to SalesTerritory
+Add check constraint CK_SalesTerritory_CostLastYear to SalesTerritory
+Add default constraint DF_SalesTerritory_SalesYTD to SalesTerritory
+Add default constraint DF_SalesTerritory_SalesLastYear to SalesTerritory
+Add default constraint DF_SalesTerritory_CostYTD to SalesTerritory
+Add default constraint DF_SalesTerritory_CostLastYear to SalesTerritory
+Add default constraint DF_SalesTerritory_rowguid to SalesTerritory
+Add default constraint DF_SalesTerritory_ModifiedDate to SalesTerritory
+Create index AK_SalesTerritory_Name on SalesTerritory
+Create index AK_SalesTerritory_rowguid on SalesTerritory
+Create table Vendor
+Add check constraint CK_Vendor_CreditRating to Vendor
+Add default constraint DF_Vendor_PreferredVendorStatus to Vendor
+Add default constraint DF_Vendor_ActiveFlag to Vendor
+Add default constraint DF_Vendor_ModifiedDate to Vendor
+Create index AK_Vendor_AccountNumber on Vendor
+Create table ProductModel
+Add default constraint DF_ProductModel_rowguid to ProductModel
+Add default constraint DF_ProductModel_ModifiedDate to ProductModel
+Create index AK_ProductModel_Name on ProductModel
+Create index AK_ProductModel_rowguid on ProductModel
+Create XML index PXML_ProductModel_CatalogDescription on ProductModel
+Create XML index PXML_ProductModel_Instructions on ProductModel
+Create table ProductSubcategory
+Add default constraint DF_ProductSubcategory_rowguid to ProductSubcategory
+Add default constraint DF_ProductSubcategory_ModifiedDate to ProductSubcategory
+Create index AK_ProductSubcategory_Name on ProductSubcategory
+Create index AK_ProductSubcategory_rowguid on ProductSubcategory
+Create table ProductModelIllustration
+Add default constraint DF_ProductModelIllustration_ModifiedDate to ProductModelIllustration
+Create table PersonCreditCard
+Add default constraint DF_PersonCreditCard_ModifiedDate to PersonCreditCard
+Create table ProductModelProductDescriptionCulture
+Add default constraint DF_ProductModelProductDescriptionCulture_ModifiedDate to ProductModelProductDescriptionCulture
+Create table PersonPhone
+Add default constraint DF_PersonPhone_ModifiedDate to PersonPhone
+Create index IX_PersonPhone_PhoneNumber on PersonPhone
+Create table StateProvince
+Add default constraint DF_StateProvince_IsOnlyStateProvinceFlag to StateProvince
+Add default constraint DF_StateProvince_rowguid to StateProvince
+Add default constraint DF_StateProvince_ModifiedDate to StateProvince
+Create index AK_StateProvince_Name on StateProvince
+Create index AK_StateProvince_StateProvinceCode_CountryRegionCode on StateProvince
+Create index AK_StateProvince_rowguid on StateProvince
+Create table Password
+Add default constraint DF_Password_rowguid to Password
+Add default constraint DF_Password_ModifiedDate to Password
+Create table EmailAddress
+Add default constraint DF_EmailAddress_rowguid to EmailAddress
+Add default constraint DF_EmailAddress_ModifiedDate to EmailAddress
+Create index IX_EmailAddress_EmailAddress on EmailAddress
+Create table BusinessEntityContact
+Add default constraint DF_BusinessEntityContact_rowguid to BusinessEntityContact
+Add default constraint DF_BusinessEntityContact_ModifiedDate to BusinessEntityContact
+Create index AK_BusinessEntityContact_rowguid on BusinessEntityContact
+Create index IX_BusinessEntityContact_PersonID on BusinessEntityContact
+Create index IX_BusinessEntityContact_ContactTypeID on BusinessEntityContact
+Create table Product
+Add check constraint CK_Product_SafetyStockLevel to Product
+Add check constraint CK_Product_ReorderPoint to Product
+Add check constraint CK_Product_StandardCost to Product
+Add check constraint CK_Product_ListPrice to Product
+Add check constraint CK_Product_Weight to Product
+Add check constraint CK_Product_DaysToManufacture to Product
+Add check constraint CK_Product_ProductLine to Product
+Add check constraint CK_Product_Class to Product
+Add check constraint CK_Product_Style to Product
+Add check constraint CK_Product_SellEndDate to Product
+Add default constraint DF_Product_MakeFlag to Product
+Add default constraint DF_Product_FinishedGoodsFlag to Product
+Add default constraint DF_Product_rowguid to Product
+Add default constraint DF_Product_ModifiedDate to Product
+Create index AK_Product_ProductNumber on Product
+Create index AK_Product_Name on Product
+Create index AK_Product_rowguid on Product
+Create table Employee
+Add check constraint CK_Employee_BirthDate to Employee
+Add check constraint CK_Employee_MaritalStatus to Employee
+Add check constraint CK_Employee_HireDate to Employee
+Add check constraint CK_Employee_Gender to Employee
+Add check constraint CK_Employee_VacationHours to Employee
+Add check constraint CK_Employee_SickLeaveHours to Employee
+Add default constraint DF_Employee_SalariedFlag to Employee
+Add default constraint DF_Employee_VacationHours to Employee
+Add default constraint DF_Employee_SickLeaveHours to Employee
+Add default constraint DF_Employee_CurrentFlag to Employee
+Add default constraint DF_Employee_rowguid to Employee
+Add default constraint DF_Employee_ModifiedDate to Employee
+Create index IX_Employee_OrganizationNode on Employee
+Create index IX_Employee_OrganizationLevel_OrganizationNode on Employee
+Create index AK_Employee_LoginID on Employee
+Create index AK_Employee_NationalIDNumber on Employee
+Create index AK_Employee_rowguid on Employee
+Create view vPersonDemographics
+Create view vProductModelInstructions
+Create view vProductModelCatalogDescription
+Create view vAdditionalContactInfo
+Create trigger iuPerson
+Create trigger dVendor
+Create table SalesTaxRate
+Add check constraint CK_SalesTaxRate_TaxType to SalesTaxRate
+Add default constraint DF_SalesTaxRate_TaxRate to SalesTaxRate
+Add default constraint DF_SalesTaxRate_rowguid to SalesTaxRate
+Add default constraint DF_SalesTaxRate_ModifiedDate to SalesTaxRate
+Create index AK_SalesTaxRate_StateProvinceID_TaxType on SalesTaxRate
+Create index AK_SalesTaxRate_rowguid on SalesTaxRate
+Create table ShoppingCartItem
+Add check constraint CK_ShoppingCartItem_Quantity to ShoppingCartItem
+Add default constraint DF_ShoppingCartItem_Quantity to ShoppingCartItem
+Add default constraint DF_ShoppingCartItem_DateCreated to ShoppingCartItem
+Add default constraint DF_ShoppingCartItem_ModifiedDate to ShoppingCartItem
+Create index IX_ShoppingCartItem_ShoppingCartID_ProductID on ShoppingCartItem
+Create table SalesPerson
+Add check constraint CK_SalesPerson_SalesQuota to SalesPerson
+Add check constraint CK_SalesPerson_Bonus to SalesPerson
+Add check constraint CK_SalesPerson_CommissionPct to SalesPerson
+Add check constraint CK_SalesPerson_SalesYTD to SalesPerson
+Add check constraint CK_SalesPerson_SalesLastYear to SalesPerson
+Add default constraint DF_SalesPerson_Bonus to SalesPerson
+Add default constraint DF_SalesPerson_CommissionPct to SalesPerson
+Add default constraint DF_SalesPerson_SalesYTD to SalesPerson
+Add default constraint DF_SalesPerson_SalesLastYear to SalesPerson
+Add default constraint DF_SalesPerson_rowguid to SalesPerson
+Add default constraint DF_SalesPerson_ModifiedDate to SalesPerson
+Create index AK_SalesPerson_rowguid on SalesPerson
+Create table SpecialOfferProduct
+Add default constraint DF_SpecialOfferProduct_rowguid to SpecialOfferProduct
+Add default constraint DF_SpecialOfferProduct_ModifiedDate to SpecialOfferProduct
+Create index AK_SpecialOfferProduct_rowguid on SpecialOfferProduct
+Create index IX_SpecialOfferProduct_ProductID on SpecialOfferProduct
+Create table ProductVendor
+Add check constraint CK_ProductVendor_AverageLeadTime to ProductVendor
+Add check constraint CK_ProductVendor_StandardPrice to ProductVendor
+Add check constraint CK_ProductVendor_LastReceiptCost to ProductVendor
+Add check constraint CK_ProductVendor_MinOrderQty to ProductVendor
+Add check constraint CK_ProductVendor_MaxOrderQty to ProductVendor
+Add check constraint CK_ProductVendor_OnOrderQty to ProductVendor
+Add default constraint DF_ProductVendor_ModifiedDate to ProductVendor
+Create index IX_ProductVendor_UnitMeasureCode on ProductVendor
+Create index IX_ProductVendor_BusinessEntityID on ProductVendor
+Create table PurchaseOrderHeader
+Add check constraint CK_PurchaseOrderHeader_Status to PurchaseOrderHeader
+Add check constraint CK_PurchaseOrderHeader_ShipDate to PurchaseOrderHeader
+Add check constraint CK_PurchaseOrderHeader_SubTotal to PurchaseOrderHeader
+Add check constraint CK_PurchaseOrderHeader_TaxAmt to PurchaseOrderHeader
+Add check constraint CK_PurchaseOrderHeader_Freight to PurchaseOrderHeader
+Add default constraint DF_PurchaseOrderHeader_RevisionNumber to PurchaseOrderHeader
+Add default constraint DF_PurchaseOrderHeader_Status to PurchaseOrderHeader
+Add default constraint DF_PurchaseOrderHeader_OrderDate to PurchaseOrderHeader
+Add default constraint DF_PurchaseOrderHeader_SubTotal to PurchaseOrderHeader
+Add default constraint DF_PurchaseOrderHeader_TaxAmt to PurchaseOrderHeader
+Add default constraint DF_PurchaseOrderHeader_Freight to PurchaseOrderHeader
+Add default constraint DF_PurchaseOrderHeader_ModifiedDate to PurchaseOrderHeader
+Create index IX_PurchaseOrderHeader_VendorID on PurchaseOrderHeader
+Create index IX_PurchaseOrderHeader_EmployeeID on PurchaseOrderHeader
+Create table JobCandidate
+Add default constraint DF_JobCandidate_ModifiedDate to JobCandidate
+Create index IX_JobCandidate_BusinessEntityID on JobCandidate
+Create fulltext index  on JobCandidate
+Create table EmployeePayHistory
+Add check constraint CK_EmployeePayHistory_PayFrequency to EmployeePayHistory
+Add check constraint CK_EmployeePayHistory_Rate to EmployeePayHistory
+Add default constraint DF_EmployeePayHistory_ModifiedDate to EmployeePayHistory
+Create table WorkOrder
+Add check constraint CK_WorkOrder_OrderQty to WorkOrder
+Add check constraint CK_WorkOrder_ScrappedQty to WorkOrder
+Add check constraint CK_WorkOrder_EndDate to WorkOrder
+Add default constraint DF_WorkOrder_ModifiedDate to WorkOrder
+Create index IX_WorkOrder_ScrapReasonID on WorkOrder
+Create index IX_WorkOrder_ProductID on WorkOrder
+Create table TransactionHistory
+Add check constraint CK_TransactionHistory_TransactionType to TransactionHistory
+Add default constraint DF_TransactionHistory_ReferenceOrderLineID to TransactionHistory
+Add default constraint DF_TransactionHistory_TransactionDate to TransactionHistory
+Add default constraint DF_TransactionHistory_ModifiedDate to TransactionHistory
+Create index IX_TransactionHistory_ProductID on TransactionHistory
+Create index IX_TransactionHistory_ReferenceOrderID_ReferenceOrderLineID on TransactionHistory
+Create table ProductReview
+Add check constraint CK_ProductReview_Rating to ProductReview
+Add default constraint DF_ProductReview_ReviewDate to ProductReview
+Add default constraint DF_ProductReview_ModifiedDate to ProductReview
+Create index IX_ProductReview_ProductID_Name on ProductReview
+Create fulltext index  on ProductReview
+Create table ProductProductPhoto
+Add default constraint DF_ProductProductPhoto_Primary to ProductProductPhoto
+Add default constraint DF_ProductProductPhoto_ModifiedDate to ProductProductPhoto
+Create table BillOfMaterials
+Add check constraint CK_BillOfMaterials_EndDate to BillOfMaterials
+Add check constraint CK_BillOfMaterials_ProductAssemblyID to BillOfMaterials
+Add check constraint CK_BillOfMaterials_BOMLevel to BillOfMaterials
+Add check constraint CK_BillOfMaterials_PerAssemblyQty to BillOfMaterials
+Add default constraint DF_BillOfMaterials_StartDate to BillOfMaterials
+Add default constraint DF_BillOfMaterials_PerAssemblyQty to BillOfMaterials
+Add default constraint DF_BillOfMaterials_ModifiedDate to BillOfMaterials
+Create index AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate on BillOfMaterials
+Create index IX_BillOfMaterials_UnitMeasureCode on BillOfMaterials
+Create table ProductListPriceHistory
+Add check constraint CK_ProductListPriceHistory_EndDate to ProductListPriceHistory
+Add check constraint CK_ProductListPriceHistory_ListPrice to ProductListPriceHistory
+Add default constraint DF_ProductListPriceHistory_ModifiedDate to ProductListPriceHistory
+Create table Document
+Add check constraint CK_Document_Status to Document
+Add default constraint DF_Document_FolderFlag to Document
+Add default constraint DF_Document_ChangeNumber to Document
+Add default constraint DF_Document_rowguid to Document
+Add default constraint DF_Document_ModifiedDate to Document
+Create index AK_Document_DocumentLevel_DocumentNode on Document
+Create index AK_Document_rowguid on Document
+Create index IX_Document_FileName_Revision on Document
+Create fulltext index  on Document
+Create table ProductInventory
+Add check constraint CK_ProductInventory_Shelf to ProductInventory
+Add check constraint CK_ProductInventory_Bin to ProductInventory
+Add default constraint DF_ProductInventory_Quantity to ProductInventory
+Add default constraint DF_ProductInventory_rowguid to ProductInventory
+Add default constraint DF_ProductInventory_ModifiedDate to ProductInventory
+Create table Address
+Add default constraint DF_Address_rowguid to Address
+Add default constraint DF_Address_ModifiedDate to Address
+Create index AK_Address_rowguid on Address
+Create index IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode on Address
+Create index IX_Address_StateProvinceID on Address
+Create table ProductCostHistory
+Add check constraint CK_ProductCostHistory_EndDate to ProductCostHistory
+Add check constraint CK_ProductCostHistory_StandardCost to ProductCostHistory
+Add default constraint DF_ProductCostHistory_ModifiedDate to ProductCostHistory
+Create table EmployeeDepartmentHistory
+Add check constraint CK_EmployeeDepartmentHistory_EndDate to EmployeeDepartmentHistory
+Add default constraint DF_EmployeeDepartmentHistory_ModifiedDate to EmployeeDepartmentHistory
+Create index IX_EmployeeDepartmentHistory_DepartmentID on EmployeeDepartmentHistory
+Create index IX_EmployeeDepartmentHistory_ShiftID on EmployeeDepartmentHistory
+Create view vVendorWithContacts
+Create view vStateProvinceCountryRegion
+Create index IX_vStateProvinceCountryRegion on vStateProvinceCountryRegion
+Create view vProductAndDescription
+Create index IX_vProductAndDescription on vProductAndDescription
+Create procedure uspUpdateEmployeePersonalInfo
+Create procedure uspUpdateEmployeeLogin
+Create procedure uspGetManagerEmployees
+Create procedure uspGetEmployeeManagers
+Create trigger dEmployee
+Create table WorkOrderRouting
+Add check constraint CK_WorkOrderRouting_ScheduledEndDate to WorkOrderRouting
+Add check constraint CK_WorkOrderRouting_ActualEndDate to WorkOrderRouting
+Add check constraint CK_WorkOrderRouting_ActualResourceHrs to WorkOrderRouting
+Add check constraint CK_WorkOrderRouting_PlannedCost to WorkOrderRouting
+Add check constraint CK_WorkOrderRouting_ActualCost to WorkOrderRouting
+Add default constraint DF_WorkOrderRouting_ModifiedDate to WorkOrderRouting
+Create index IX_WorkOrderRouting_ProductID on WorkOrderRouting
+Create table PurchaseOrderDetail
+Add check constraint CK_PurchaseOrderDetail_OrderQty to PurchaseOrderDetail
+Add check constraint CK_PurchaseOrderDetail_UnitPrice to PurchaseOrderDetail
+Add check constraint CK_PurchaseOrderDetail_ReceivedQty to PurchaseOrderDetail
+Add check constraint CK_PurchaseOrderDetail_RejectedQty to PurchaseOrderDetail
+Add default constraint DF_PurchaseOrderDetail_ModifiedDate to PurchaseOrderDetail
+Create index IX_PurchaseOrderDetail_ProductID on PurchaseOrderDetail
+Create table BusinessEntityAddress
+Add default constraint DF_BusinessEntityAddress_rowguid to BusinessEntityAddress
+Add default constraint DF_BusinessEntityAddress_ModifiedDate to BusinessEntityAddress
+Create index AK_BusinessEntityAddress_rowguid on BusinessEntityAddress
+Create index IX_BusinessEntityAddress_AddressID on BusinessEntityAddress
+Create index IX_BusinessEntityAddress_AddressTypeID on BusinessEntityAddress
+Create table ProductDocument
+Add default constraint DF_ProductDocument_ModifiedDate to ProductDocument
+Create table SalesPersonQuotaHistory
+Add check constraint CK_SalesPersonQuotaHistory_SalesQuota to SalesPersonQuotaHistory
+Add default constraint DF_SalesPersonQuotaHistory_rowguid to SalesPersonQuotaHistory
+Add default constraint DF_SalesPersonQuotaHistory_ModifiedDate to SalesPersonQuotaHistory
+Create index AK_SalesPersonQuotaHistory_rowguid on SalesPersonQuotaHistory
+Create table Store
+Add default constraint DF_Store_rowguid to Store
+Add default constraint DF_Store_ModifiedDate to Store
+Create index AK_Store_rowguid on Store
+Create index IX_Store_SalesPersonID on Store
+Create XML index PXML_Store_Demographics on Store
+Create table SalesTerritoryHistory
+Add check constraint CK_SalesTerritoryHistory_EndDate to SalesTerritoryHistory
+Add default constraint DF_SalesTerritoryHistory_rowguid to SalesTerritoryHistory
+Add default constraint DF_SalesTerritoryHistory_ModifiedDate to SalesTerritoryHistory
+Create index AK_SalesTerritoryHistory_rowguid on SalesTerritoryHistory
+Create view vEmployeeDepartment
+Create view vEmployeeDepartmentHistory
+Create view vJobCandidate
+Create view vJobCandidateEducation
+Create view vJobCandidateEmployment
+Create function ufnGetStock
+Create function ufnGetProductDealerPrice
+Create function ufnGetProductStandardCost
+Create function ufnGetProductListPrice
+Create procedure uspGetBillOfMaterials
+Create procedure uspSearchCandidateResumes
+Create procedure uspGetWhereUsedProductID
+Create procedure uspUpdateEmployeeHireInfo
+Create trigger uPurchaseOrderHeader
+Create trigger iWorkOrder
+Create trigger uWorkOrder
+Create table Customer
+Add default constraint DF_Customer_rowguid to Customer
+Add default constraint DF_Customer_ModifiedDate to Customer
+Create index AK_Customer_rowguid on Customer
+Create index AK_Customer_AccountNumber on Customer
+Create index IX_Customer_TerritoryID on Customer
+Create view vEmployee
+Create view vStoreWithDemographics
+Create view vStoreWithAddresses
+Create view vStoreWithContacts
+Create view vVendorWithAddresses
+Create view vSalesPerson
+Create trigger uPurchaseOrderDetail
+Create trigger iPurchaseOrderDetail
+Create table SalesOrderHeader
+Add check constraint CK_SalesOrderHeader_Status to SalesOrderHeader
+Add check constraint CK_SalesOrderHeader_DueDate to SalesOrderHeader
+Add check constraint CK_SalesOrderHeader_ShipDate to SalesOrderHeader
+Add check constraint CK_SalesOrderHeader_SubTotal to SalesOrderHeader
+Add check constraint CK_SalesOrderHeader_TaxAmt to SalesOrderHeader
+Add check constraint CK_SalesOrderHeader_Freight to SalesOrderHeader
+Add default constraint DF_SalesOrderHeader_RevisionNumber to SalesOrderHeader
+Add default constraint DF_SalesOrderHeader_OrderDate to SalesOrderHeader
+Add default constraint DF_SalesOrderHeader_Status to SalesOrderHeader
+Add default constraint DF_SalesOrderHeader_OnlineOrderFlag to SalesOrderHeader
+Add default constraint DF_SalesOrderHeader_SubTotal to SalesOrderHeader
+Add default constraint DF_SalesOrderHeader_TaxAmt to SalesOrderHeader
+Add default constraint DF_SalesOrderHeader_Freight to SalesOrderHeader
+Add default constraint DF_SalesOrderHeader_rowguid to SalesOrderHeader
+Add default constraint DF_SalesOrderHeader_ModifiedDate to SalesOrderHeader
+Create index AK_SalesOrderHeader_rowguid on SalesOrderHeader
+Create index AK_SalesOrderHeader_SalesOrderNumber on SalesOrderHeader
+Create index IX_SalesOrderHeader_CustomerID on SalesOrderHeader
+Create index IX_SalesOrderHeader_SalesPersonID on SalesOrderHeader
+Create view vIndividualCustomer
+Create function ufnGetContactInformation
+Create table SalesOrderHeaderSalesReason
+Add default constraint DF_SalesOrderHeaderSalesReason_ModifiedDate to SalesOrderHeaderSalesReason
+Create table SalesOrderDetail
+Add check constraint CK_SalesOrderDetail_OrderQty to SalesOrderDetail
+Add check constraint CK_SalesOrderDetail_UnitPrice to SalesOrderDetail
+Add check constraint CK_SalesOrderDetail_UnitPriceDiscount to SalesOrderDetail
+Add default constraint DF_SalesOrderDetail_UnitPriceDiscount to SalesOrderDetail
+Add default constraint DF_SalesOrderDetail_rowguid to SalesOrderDetail
+Add default constraint DF_SalesOrderDetail_ModifiedDate to SalesOrderDetail
+Create index AK_SalesOrderDetail_rowguid on SalesOrderDetail
+Create index IX_SalesOrderDetail_ProductID on SalesOrderDetail
+Create view vSalesPersonSalesByFiscalYears
+Create trigger uSalesOrderHeader
+Create trigger iduSalesOrderDetail
+Create foreign key FK_Pet_Owner on Pet
+Create foreign key FK_Pet_Pet on Pet
+Create foreign key FK_CurrencyRate_Currency_FromCurrencyCode on CurrencyRate
+Create foreign key FK_CurrencyRate_Currency_ToCurrencyCode on CurrencyRate
+Create foreign key FK_Person_BusinessEntity_BusinessEntityID on Person
+Create foreign key FK_Person_Pet on Person
+Create foreign key FK_CountryRegionCurrency_CountryRegion_CountryRegionCode on CountryRegionCurrency
+Create foreign key FK_CountryRegionCurrency_Currency_CurrencyCode on CountryRegionCurrency
+Create foreign key FK_SalesTerritory_CountryRegion_CountryRegionCode on SalesTerritory
+Create foreign key FK_Vendor_BusinessEntity_BusinessEntityID on Vendor
+Create foreign key FK_ProductSubcategory_ProductCategory_ProductCategoryID on ProductSubcategory
+Create foreign key FK_ProductModelIllustration_ProductModel_ProductModelID on ProductModelIllustration
+Create foreign key FK_ProductModelIllustration_Illustration_IllustrationID on ProductModelIllustration
+Create foreign key FK_PersonCreditCard_Person_BusinessEntityID on PersonCreditCard
+Create foreign key FK_PersonCreditCard_CreditCard_CreditCardID on PersonCreditCard
+Create foreign key FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID on ProductModelProductDescriptionCulture
+Create foreign key FK_ProductModelProductDescriptionCulture_Culture_CultureID on ProductModelProductDescriptionCulture
+Create foreign key FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID on ProductModelProductDescriptionCulture
+Create foreign key FK_PersonPhone_Person_BusinessEntityID on PersonPhone
+Create foreign key FK_PersonPhone_PhoneNumberType_PhoneNumberTypeID on PersonPhone
+Create foreign key FK_StateProvince_CountryRegion_CountryRegionCode on StateProvince
+Create foreign key FK_StateProvince_SalesTerritory_TerritoryID on StateProvince
+Create foreign key FK_Password_Person_BusinessEntityID on Password
+Create foreign key FK_EmailAddress_Person_BusinessEntityID on EmailAddress
+Create foreign key FK_BusinessEntityContact_Person_PersonID on BusinessEntityContact
+Create foreign key FK_BusinessEntityContact_ContactType_ContactTypeID on BusinessEntityContact
+Create foreign key FK_BusinessEntityContact_BusinessEntity_BusinessEntityID on BusinessEntityContact
+Create foreign key FK_Product_UnitMeasure_SizeUnitMeasureCode on Product
+Create foreign key FK_Product_UnitMeasure_WeightUnitMeasureCode on Product
+Create foreign key FK_Product_ProductModel_ProductModelID on Product
+Create foreign key FK_Product_ProductSubcategory_ProductSubcategoryID on Product
+Create foreign key FK_Employee_Person_BusinessEntityID on Employee
+Create foreign key FK_SalesTaxRate_StateProvince_StateProvinceID on SalesTaxRate
+Create foreign key FK_ShoppingCartItem_Product_ProductID on ShoppingCartItem
+Create foreign key FK_SalesPerson_Employee_BusinessEntityID on SalesPerson
+Create foreign key FK_SalesPerson_SalesTerritory_TerritoryID on SalesPerson
+Create foreign key FK_SpecialOfferProduct_Product_ProductID on SpecialOfferProduct
+Create foreign key FK_SpecialOfferProduct_SpecialOffer_SpecialOfferID on SpecialOfferProduct
+Create foreign key FK_ProductVendor_Product_ProductID on ProductVendor
+Create foreign key FK_ProductVendor_UnitMeasure_UnitMeasureCode on ProductVendor
+Create foreign key FK_ProductVendor_Vendor_BusinessEntityID on ProductVendor
+Create foreign key FK_PurchaseOrderHeader_Employee_EmployeeID on PurchaseOrderHeader
+Create foreign key FK_PurchaseOrderHeader_Vendor_VendorID on PurchaseOrderHeader
+Create foreign key FK_PurchaseOrderHeader_ShipMethod_ShipMethodID on PurchaseOrderHeader
+Create foreign key FK_JobCandidate_Employee_BusinessEntityID on JobCandidate
+Create foreign key FK_EmployeePayHistory_Employee_BusinessEntityID on EmployeePayHistory
+Create foreign key FK_WorkOrder_Product_ProductID on WorkOrder
+Create foreign key FK_WorkOrder_ScrapReason_ScrapReasonID on WorkOrder
+Create foreign key FK_TransactionHistory_Product_ProductID on TransactionHistory
+Create foreign key FK_ProductReview_Product_ProductID on ProductReview
+Create foreign key FK_ProductProductPhoto_Product_ProductID on ProductProductPhoto
+Create foreign key FK_ProductProductPhoto_ProductPhoto_ProductPhotoID on ProductProductPhoto
+Create foreign key FK_BillOfMaterials_Product_ProductAssemblyID on BillOfMaterials
+Create foreign key FK_BillOfMaterials_Product_ComponentID on BillOfMaterials
+Create foreign key FK_BillOfMaterials_UnitMeasure_UnitMeasureCode on BillOfMaterials
+Create foreign key FK_ProductListPriceHistory_Product_ProductID on ProductListPriceHistory
+Create foreign key FK_Document_Employee_Owner on Document
+Create foreign key FK_ProductInventory_Location_LocationID on ProductInventory
+Create foreign key FK_ProductInventory_Product_ProductID on ProductInventory
+Create foreign key FK_Address_StateProvince_StateProvinceID on Address
+Create foreign key FK_ProductCostHistory_Product_ProductID on ProductCostHistory
+Create foreign key FK_EmployeeDepartmentHistory_Department_DepartmentID on EmployeeDepartmentHistory
+Create foreign key FK_EmployeeDepartmentHistory_Employee_BusinessEntityID on EmployeeDepartmentHistory
+Create foreign key FK_EmployeeDepartmentHistory_Shift_ShiftID on EmployeeDepartmentHistory
+Create foreign key FK_WorkOrderRouting_Location_LocationID on WorkOrderRouting
+Create foreign key FK_WorkOrderRouting_WorkOrder_WorkOrderID on WorkOrderRouting
+Create foreign key FK_PurchaseOrderDetail_Product_ProductID on PurchaseOrderDetail
+Create foreign key FK_PurchaseOrderDetail_PurchaseOrderHeader_PurchaseOrderID on PurchaseOrderDetail
+Create foreign key FK_BusinessEntityAddress_Address_AddressID on BusinessEntityAddress
+Create foreign key FK_BusinessEntityAddress_AddressType_AddressTypeID on BusinessEntityAddress
+Create foreign key FK_BusinessEntityAddress_BusinessEntity_BusinessEntityID on BusinessEntityAddress
+Create foreign key FK_ProductDocument_Product_ProductID on ProductDocument
+Create foreign key FK_ProductDocument_Document_DocumentNode on ProductDocument
+Create foreign key FK_SalesPersonQuotaHistory_SalesPerson_BusinessEntityID on SalesPersonQuotaHistory
+Create foreign key FK_Store_BusinessEntity_BusinessEntityID on Store
+Create foreign key FK_Store_SalesPerson_SalesPersonID on Store
+Create foreign key FK_SalesTerritoryHistory_SalesPerson_BusinessEntityID on SalesTerritoryHistory
+Create foreign key FK_SalesTerritoryHistory_SalesTerritory_TerritoryID on SalesTerritoryHistory
+Create foreign key FK_Customer_Person_PersonID on Customer
+Create foreign key FK_Customer_Store_StoreID on Customer
+Create foreign key FK_Customer_SalesTerritory_TerritoryID on Customer
+Create foreign key FK_SalesOrderHeader_Address_BillToAddressID on SalesOrderHeader
+Create foreign key FK_SalesOrderHeader_Address_ShipToAddressID on SalesOrderHeader
+Create foreign key FK_SalesOrderHeader_CreditCard_CreditCardID on SalesOrderHeader
+Create foreign key FK_SalesOrderHeader_CurrencyRate_CurrencyRateID on SalesOrderHeader
+Create foreign key FK_SalesOrderHeader_Customer_CustomerID on SalesOrderHeader
+Create foreign key FK_SalesOrderHeader_SalesPerson_SalesPersonID on SalesOrderHeader
+Create foreign key FK_SalesOrderHeader_ShipMethod_ShipMethodID on SalesOrderHeader
+Create foreign key FK_SalesOrderHeader_SalesTerritory_TerritoryID on SalesOrderHeader
+Create foreign key FK_SalesOrderHeaderSalesReason_SalesReason_SalesReasonID on SalesOrderHeaderSalesReason
+Create foreign key FK_SalesOrderHeaderSalesReason_SalesOrderHeader_SalesOrderID on SalesOrderHeaderSalesReason
+Create foreign key FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID on SalesOrderDetail
+Create foreign key FK_SalesOrderDetail_SpecialOfferProduct_SpecialOfferIDProductID on SalesOrderDetail
+
+
+Inserting static data for table: dbo.AWBuildVersion
+Inserting static data for table: Production.Culture
+Inserting static data for table: Production.Illustration
+Inserting static data for table: Production.Location
+Inserting static data for table: Production.ProductCategory
+Inserting static data for table: Production.ProductDescription
+Inserting static data for table: Production.ProductPhoto
+Inserting static data for table: Person.PhoneNumberType
+Inserting static data for table: Production.ScrapReason
+Inserting static data for table: Production.UnitMeasure
+Inserting static data for table: Purchasing.ShipMethod
+Inserting static data for table: Sales.CreditCard
+Inserting static data for table: Sales.Currency
+Inserting static data for table: Sales.SalesReason
+Inserting static data for table: Sales.SpecialOffer
+Inserting static data for table: Production.TransactionHistoryArchive
+Inserting static data for table: Production.ProductModel
+Inserting static data for table: HumanResources.Shift
+Inserting static data for table: Person.CountryRegion
+Inserting static data for table: dbo.DatabaseLog
+Inserting static data for table: Person.ContactType
+Inserting static data for table: HumanResources.Department
+Inserting static data for table: Person.BusinessEntity
+Inserting static data for table: Person.AddressType
+Inserting static data for table: Purchasing.Vendor
+Inserting static data for table: Production.ProductSubcategory
+Inserting static data for table: Sales.CountryRegionCurrency
+Inserting static data for table: Production.ProductModelProductDescriptionCulture
+Inserting static data for table: Production.ProductModelIllustration
+Inserting static data for table: Sales.CurrencyRate
+Inserting static data for table: Person.Person
+Inserting static data for table: Sales.SalesTerritory
+Inserting static data for table: Sales.PersonCreditCard
+Inserting static data for table: Production.Product
+Inserting static data for table: Person.BusinessEntityContact
+Inserting static data for table: HumanResources.Employee
+Inserting static data for table: Person.StateProvince
+Inserting static data for table: Person.EmailAddress
+Inserting static data for table: Person.PersonPhone
+Inserting static data for table: Person.Password
+Inserting static data for table: Sales.SalesPerson
+Inserting static data for table: Sales.SalesTaxRate
+Inserting static data for table: Sales.ShoppingCartItem
+Inserting static data for table: HumanResources.EmployeeDepartmentHistory
+Inserting static data for table: Purchasing.PurchaseOrderHeader
+Inserting static data for table: Purchasing.ProductVendor
+Inserting static data for table: HumanResources.JobCandidate
+Inserting static data for table: Production.WorkOrder
+Inserting static data for table: HumanResources.EmployeePayHistory
+Inserting static data for table: Production.TransactionHistory
+Inserting static data for table: Production.ProductReview
+Inserting static data for table: Production.ProductProductPhoto
+Inserting static data for table: Person.Address
+Inserting static data for table: Sales.SpecialOfferProduct
+Inserting static data for table: Production.BillOfMaterials
+Inserting static data for table: Production.ProductListPriceHistory
+Inserting static data for table: Production.Document
+Inserting static data for table: Production.ProductInventory
+Inserting static data for table: Production.ProductCostHistory
+Inserting static data for table: Purchasing.PurchaseOrderDetail
+Inserting static data for table: Sales.SalesTerritoryHistory
+Inserting static data for table: Person.BusinessEntityAddress
+Inserting static data for table: Sales.Store
+Inserting static data for table: Sales.SalesPersonQuotaHistory
+Inserting static data for table: Production.WorkOrderRouting
+Inserting static data for table: Production.ProductDocument
+Inserting static data for table: Sales.Customer
+Inserting static data for table: Sales.SalesOrderHeader
+Inserting static data for table: Sales.SalesOrderHeaderSalesReason
+Inserting static data for table: Sales.SalesOrderDetail
+
+
+Script operation with errors

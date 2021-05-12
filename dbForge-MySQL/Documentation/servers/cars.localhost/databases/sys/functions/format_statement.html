@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>format_statement</title>
+<script src="../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../styles/bootstrap/Default Dark.css" type="text/css">
+<link rel="stylesheet" href="../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Cars.localhost.html" data-mapping-enabled="true">Cars.localhost</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\Databases.html" data-mapping-enabled="true">Databases</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\sys.html" data-mapping-enabled="true">sys</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\Functions.html" data-mapping-enabled="true">Functions</a></li>
+            <li class="active">format_statement</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../images/Dark\function.svg" title="format_statement" />
+            <h1 class="inline-middle">format_statement</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span><br />Description<br />-----------<br /><br />Formats a normalized statement, truncating it if it is > 64 characters long by default.<br /><br />To configure the length to truncate the statement to by default, update the `statement_truncate_len`<br />variable with `sys_config` table to a different value. Alternatively, to change it just for just <br />your particular session, use `SET @sys.statement_truncate_len := <some new value>`.<br /><br />Useful for printing statement related data from Performance Schema from <br />the command line.<br /><br />Parameters<br />-----------<br /><br />statement (LONGTEXT): <br />  The statement to format.<br /><br />Returns<br />-----------<br /><br />LONGTEXT<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.format_statement(digest_text)<br />    ->   FROM performance_schema.events_statements_summary_by_digest<br />    ->  ORDER by sum_timer_wait DESC limit 5;<br />+-------------------------------------------------------------------+<br />| sys.format_statement(digest_text)                                 |<br />+-------------------------------------------------------------------+<br />| CREATE SQL SECURITY INVOKER VI ... KE ? AND `variable_value` > ?  |<br />| CREATE SQL SECURITY INVOKER VI ... ait` IS NOT NULL , `esc` . ... |<br />| CREATE SQL SECURITY INVOKER VI ... ait` IS NOT NULL , `sys` . ... |<br />| CREATE SQL SECURITY INVOKER VI ...  , `compressed_size` ) ) DESC  |<br />| CREATE SQL SECURITY INVOKER VI ... LIKE ? ORDER BY `timer_start`  |<br />+-------------------------------------------------------------------+<br />5 rows in set (0.00 sec)</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>SQL Access</td>
+                  <td>NO SQL</td>
+                </tr>
+                <tr>
+                  <td>Deterministic</td>
+                  <td><p class="value-true">True</p></td>
+                </tr>
+                <tr>
+                  <td>Security</td>
+                  <td>Invoker</td>
+                </tr>
+                <tr>
+                  <td>Definer</td>
+                  <td>mysql.sys@'localhost'</td>
+                </tr>
+                <tr>
+                  <td>SQL Mode</td>
+                  <td>ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION</td>
+                </tr>
+                <tr>
+                  <td>Language</td>
+                  <td>SQL</td>
+                </tr>
+                <tr>
+                  <td>Created</td>
+                  <td>2021. 04. 10. 15:36:58</td>
+                </tr>
+                <tr>
+                  <td>Last Modified</td>
+                  <td>2021. 04. 10. 15:36:58</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="Parameters" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Parameters</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Data Type</th>
+                  <th>Length</th>
+                  <th>Precision</th>
+                  <th>Scale</th>
+                </tr>
+                <tr>
+                  <td>statement</td>
+                  <td>LONGTEXT</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>(Result)</td>
+                  <td>LONGTEXT</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="zero-clipboard">
+              <span class="btn-clipboard btn-default panel-default" data-clipboard-action="copy" data-clipboard-target=".SqlScript" data-toggle="tooltip" title="Copy to clipboard">Copy</span></div><div class="SqlScript  panel-default" style="word-wrap: break-word; padding-right:60px">
+              <font color="#569cd6">CREATE</font>&nbsp;<font color="#569cd6">FUNCTION</font>&nbsp;<font color="#ffffff">format_statement</font><font color="#b4b4b4">(</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#569cd6">statement</font>&nbsp;<font color="#4ec9b0">LONGTEXT</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="#b4b4b4">)</font><br />&nbsp;&nbsp;<font color="#569cd6">RETURNS</font>&nbsp;<font color="#4ec9b0">LONGTEXT</font>&nbsp;<font color="#4ec9b0">CHARSET</font>&nbsp;<font color="#dcdcdc">utf8mb4</font><br />&nbsp;&nbsp;<font color="#569cd6">DETERMINISTIC</font><br />&nbsp;&nbsp;<font color="#569cd6">SQL</font>&nbsp;<font color="#569cd6">SECURITY</font>&nbsp;<font color="#569cd6">INVOKER</font><br />&nbsp;&nbsp;<font color="#569cd6">NO</font>&nbsp;<font color="#569cd6">SQL</font><br />&nbsp;&nbsp;<font color="#569cd6">COMMENT</font>&nbsp;<font color="#d69d85">'<br />&nbsp;&nbsp;Description<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Formats a normalized statement, truncating it if it is &gt; 64 characters long by default.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;To configure the length to truncate the statement to by default, update the `statement_truncate_len`<br />&nbsp;&nbsp;variable with `sys_config` table to a different value. Alternatively, to change it just for just <br />&nbsp;&nbsp;your particular session, use `SET @sys.statement_truncate_len := &lt;some new value&gt;`.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Useful for printing statement related data from Performance Schema from <br />&nbsp;&nbsp;the command line.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Parameters<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;statement (LONGTEXT): <br />&nbsp;&nbsp;  The statement to format.<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Returns<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;LONGTEXT<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;Example<br />&nbsp;&nbsp;-----------<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;mysql&gt; SELECT sys.format_statement(digest_text)<br />&nbsp;&nbsp;    -&gt;   FROM performance_schema.events_statements_summary_by_digest<br />&nbsp;&nbsp;    -&gt;  ORDER by sum_timer_wait DESC limit 5;<br />&nbsp;&nbsp;+-------------------------------------------------------------------+<br />&nbsp;&nbsp;| sys.format_statement(digest_text)                                 |<br />&nbsp;&nbsp;+-------------------------------------------------------------------+<br />&nbsp;&nbsp;| CREATE SQL SECURITY INVOKER VI ... KE ? AND `variable_value` &gt; ?  |<br />&nbsp;&nbsp;| CREATE SQL SECURITY INVOKER VI ... ait` IS NOT NULL , `esc` . ... |<br />&nbsp;&nbsp;| CREATE SQL SECURITY INVOKER VI ... ait` IS NOT NULL , `sys` . ... |<br />&nbsp;&nbsp;| CREATE SQL SECURITY INVOKER VI ...  , `compressed_size` ) ) DESC  |<br />&nbsp;&nbsp;| CREATE SQL SECURITY INVOKER VI ... LIKE ? ORDER BY `timer_start`  |<br />&nbsp;&nbsp;+-------------------------------------------------------------------+<br />&nbsp;&nbsp;5 rows in set (0.00 sec)<br />&nbsp;&nbsp;'</font><br /><font color="#569cd6">BEGIN</font><br />&nbsp;&nbsp;<font color="#608b4e">-- Check if we have the configured length, if not, init it</font><br />&nbsp;&nbsp;<font color="#569cd6">IF</font>&nbsp;<font color="#008080">@sys</font><font color="#b4b4b4">.</font><font color="#ffffff">statement_truncate_len</font>&nbsp;<font color="#569cd6">IS</font>&nbsp;<font color="#569cd6">NULL</font>&nbsp;<font color="#569cd6">THEN</font><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4ec9b0">SET</font>&nbsp;<font color="#008080">@sys</font><font color="#b4b4b4">.</font><font color="#ffffff">statement_truncate_len</font>&nbsp;<font color="#b4b4b4">=</font>&nbsp;<font color="#ffffff">sys_get_config</font><font color="#b4b4b4">(</font><font color="#d69d85">'statement_truncate_len'</font><font color="#b4b4b4">,</font>&nbsp;<font color="#b5cea8">64</font><font color="#b4b4b4">)</font><font color="#b4b4b4">;</font><br />&nbsp;&nbsp;<font color="#569cd6">END</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+          <span class="badge inline-middle">1</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\sys_get_config.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\function.svg" class="image-small" />
+              <span>sys_get_config</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+          <span class="badge inline-middle">9</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\innodb_lock_waits.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>innodb_lock_waits</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\processlist.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>processlist</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\schema_table_lock_waits.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>schema_table_lock_waits</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\statement_analysis.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>statement_analysis</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\statements_with_errors_or_warnings.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>statements_with_errors_or_warnings</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\statements_with_full_table_scans.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>statements_with_full_table_scans</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\statements_with_runtimes_in_95th_percentile.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>statements_with_runtimes_in_95th_percentile</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\statements_with_sorting.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>statements_with_sorting</span></a></li>
+              <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\Views\statements_with_temp_tables.html" data-mapping-enabled="true"><img src="../../../../../images/Dark\view.svg" class="image-small" />
+              <span>statements_with_temp_tables</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;10. 04. 2021</div>
+  </div>
+</body>
+</html>

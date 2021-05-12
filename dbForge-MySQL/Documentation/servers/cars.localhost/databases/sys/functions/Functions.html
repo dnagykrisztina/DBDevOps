@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Functions</title>
+<script src="../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../styles/bootstrap/Default Dark.css" type="text/css">
+<link rel="stylesheet" href="../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Cars.localhost.html" data-mapping-enabled="true">Cars.localhost</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\Databases.html" data-mapping-enabled="true">Databases</a></li>
+            <li><a href="../../../../../Servers\Cars.localhost\Databases\sys\sys.html" data-mapping-enabled="true">sys</a></li>
+            <li class="active">Functions</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../images/Dark\folder.svg" title="Functions" />
+            <h1 class="inline-middle">Functions</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+
+
+      <div id="Functions" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Objects</h2>
+          <span class="badge inline-middle">22</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered table-100">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th class="column-description-60">Description</th>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\extract_schema_from_file_name.html" data-mapping-enabled="true"><span>extract_schema_from_file_name</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Takes a raw file path, and attempts to extract the schema name from it.<br /><br />Useful for when interacting with Performance Schema data <br />concerning IO statistics, for example.<br /><br />Currently relies on the fact that a table data file will be within a <br />specified database directory (will not work with partitions or tables<br />that specify an individual DATA_DIRECTORY).<br /><br />Parameters<br />-----------<br /><br />path (VARCHAR(512)):<br />  The full file path to a data file to extract the schema name from.<br /><br />Returns<br />-----------<br /><br />VARCHAR(64)<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.extract_schema_from_file_name('/var/lib/mysql/employees/employee.ibd');<br />+----------------------------------------------------------------------------+<br />| sys.extract_schema_from_file_name('/var/lib/mysql/employees/employee.ibd') |<br />+----------------------------------------------------------------------------+<br />| employees                                                                  |<br />+----------------------------------------------------------------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\extract_table_from_file_name.html" data-mapping-enabled="true"><span>extract_table_from_file_name</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Takes a raw file path, and extracts the table name from it.<br /><br />Useful for when interacting with Performance Schema data <br />concerning IO statistics, for example.<br /><br />Parameters<br />-----------<br /><br />path (VARCHAR(512)):<br />  The full file path to a data file to extract the table name from.<br /><br />Returns<br />-----------<br /><br />VARCHAR(64)<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.extract_table_from_file_name('/var/lib/mysql/employees/employee.ibd');<br />+---------------------------------------------------------------------------+<br />| sys.extract_table_from_file_name('/var/lib/mysql/employees/employee.ibd') |<br />+---------------------------------------------------------------------------+<br />| employee                                                                  |<br />+---------------------------------------------------------------------------+<br />1 row in set (0.02 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\format_bytes.html" data-mapping-enabled="true"><span>format_bytes</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Takes a raw bytes value, and converts it to a human readable format.<br /><br />Parameters<br />-----------<br /><br />bytes (TEXT):<br />  A raw bytes value.<br /><br />Returns<br />-----------<br /><br />TEXT<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.format_bytes(2348723492723746) AS size;<br />+----------+<br />| size     |<br />+----------+<br />| 2.09 PiB |<br />+----------+<br />1 row in set (0.00 sec)<br /><br />mysql> SELECT sys.format_bytes(2348723492723) AS size;<br />+----------+<br />| size     |<br />+----------+<br />| 2.14 TiB |<br />+----------+<br />1 row in set (0.00 sec)<br /><br />mysql> SELECT sys.format_bytes(23487234) AS size;<br />+-----------+<br />| size      |<br />+-----------+<br />| 22.40 MiB |<br />+-----------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\format_path.html" data-mapping-enabled="true"><span>format_path</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Takes a raw path value, and strips out the datadir or tmpdir<br />replacing with @@datadir and @@tmpdir respectively.<br /><br />Also normalizes the paths across operating systems, so backslashes<br />on Windows are converted to forward slashes<br /><br />Parameters<br />-----------<br /><br />path (VARCHAR(512)):<br />  The raw file path value to format.<br /><br />Returns<br />-----------<br /><br />VARCHAR(512) CHARSET UTF8MB4<br /><br />Example<br />-----------<br /><br />mysql> select @@datadir;<br />+-----------------------------------------------+<br />| @@datadir                                     |<br />+-----------------------------------------------+<br />| /Users/mark/sandboxes/SmallTree/AMaster/data/ |<br />+-----------------------------------------------+<br />1 row in set (0.06 sec)<br /><br />mysql> select format_path('/Users/mark/sandboxes/SmallTree/AMaster/data/mysql/proc.MYD') AS path;<br />+--------------------------+<br />| path                     |<br />+--------------------------+<br />| @@datadir/mysql/proc.MYD |<br />+--------------------------+<br />1 row in set (0.03 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\format_statement.html" data-mapping-enabled="true"><span>format_statement</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Formats a normalized statement, truncating it if it is > 64 characters long by default.<br /><br />To configure the length to truncate the statement to by default, update the `statement_truncate_len`<br />variable with `sys_config` table to a different value. Alternatively, to change it just for just <br />your particular session, use `SET @sys.statement_truncate_len := <some new value>`.<br /><br />Useful for printing statement related data from Performance Schema from <br />the command line.<br /><br />Parameters<br />-----------<br /><br />statement (LONGTEXT): <br />  The statement to format.<br /><br />Returns<br />-----------<br /><br />LONGTEXT<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.format_statement(digest_text)<br />    ->   FROM performance_schema.events_statements_summary_by_digest<br />    ->  ORDER by sum_timer_wait DESC limit 5;<br />+-------------------------------------------------------------------+<br />| sys.format_statement(digest_text)                                 |<br />+-------------------------------------------------------------------+<br />| CREATE SQL SECURITY INVOKER VI ... KE ? AND `variable_value` > ?  |<br />| CREATE SQL SECURITY INVOKER VI ... ait` IS NOT NULL , `esc` . ... |<br />| CREATE SQL SECURITY INVOKER VI ... ait` IS NOT NULL , `sys` . ... |<br />| CREATE SQL SECURITY INVOKER VI ...  , `compressed_size` ) ) DESC  |<br />| CREATE SQL SECURITY INVOKER VI ... LIKE ? ORDER BY `timer_start`  |<br />+-------------------------------------------------------------------+<br />5 rows in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\format_time.html" data-mapping-enabled="true"><span>format_time</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Takes a raw picoseconds value, and converts it to a human readable form.<br /><br />Picoseconds are the precision that all latency values are printed in<br />within Performance Schema, however are not user friendly when wanting<br />to scan output from the command line.<br /><br />Parameters<br />-----------<br /><br />picoseconds (TEXT):<br />  The raw picoseconds value to convert.<br /><br />Returns<br />-----------<br /><br />TEXT CHARSET UTF8MB4<br /><br />Example<br />-----------<br /><br />mysql> select format_time(342342342342345);<br />+------------------------------+<br />| format_time(342342342342345) |<br />+------------------------------+<br />| 00:05:42                     |<br />+------------------------------+<br />1 row in set (0.00 sec)<br /><br />mysql> select format_time(342342342);<br />+------------------------+<br />| format_time(342342342) |<br />+------------------------+<br />| 342.34 us              |<br />+------------------------+<br />1 row in set (0.00 sec)<br /><br />mysql> select format_time(34234);<br />+--------------------+<br />| format_time(34234) |<br />+--------------------+<br />| 34.23 ns           |<br />+--------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\list_add.html" data-mapping-enabled="true"><span>list_add</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Takes a list, and a value to add to the list, and returns the resulting list.<br /><br />Useful for altering certain session variables, like sql_mode or optimizer_switch for instance.<br /><br />Parameters<br />-----------<br /><br />in_list (TEXT):<br />  The comma separated list to add a value to<br /><br />in_add_value (TEXT):<br />  The value to add to the input list<br /><br />Returns<br />-----------<br /><br />TEXT<br /><br />Example<br />--------<br /><br />mysql> select @@sql_mode;<br />+-----------------------------------------------------------------------------------+<br />| @@sql_mode                                                                        |<br />+-----------------------------------------------------------------------------------+<br />| ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |<br />+-----------------------------------------------------------------------------------+<br />1 row in set (0.00 sec)<br /><br />mysql> set sql_mode = sys.list_add(@@sql_mode, 'ANSI_QUOTES');<br />Query OK, 0 rows affected (0.06 sec)<br /><br />mysql> select @@sql_mode;<br />+-----------------------------------------------------------------------------------------------+<br />| @@sql_mode                                                                                    |<br />+-----------------------------------------------------------------------------------------------+<br />| ANSI_QUOTES,ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |<br />+-----------------------------------------------------------------------------------------------+<br />1 row in set (0.00 sec)<br /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\list_drop.html" data-mapping-enabled="true"><span>list_drop</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Takes a list, and a value to attempt to remove from the list, and returns the resulting list.<br /><br />Useful for altering certain session variables, like sql_mode or optimizer_switch for instance.<br /><br />Parameters<br />-----------<br /><br />in_list (TEXT):<br />  The comma separated list to drop a value from<br /><br />in_drop_value (TEXT):<br />  The value to drop from the input list<br /><br />Returns<br />-----------<br /><br />TEXT<br /><br />Example<br />--------<br /><br />mysql> select @@sql_mode;<br />+-----------------------------------------------------------------------------------------------+<br />| @@sql_mode                                                                                    |<br />+-----------------------------------------------------------------------------------------------+<br />| ANSI_QUOTES,ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |<br />+-----------------------------------------------------------------------------------------------+<br />1 row in set (0.00 sec)<br /><br />mysql> set sql_mode = sys.list_drop(@@sql_mode, 'ONLY_FULL_GROUP_BY');<br />Query OK, 0 rows affected (0.03 sec)<br /><br />mysql> select @@sql_mode;<br />+----------------------------------------------------------------------------+<br />| @@sql_mode                                                                 |<br />+----------------------------------------------------------------------------+<br />| ANSI_QUOTES,STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |<br />+----------------------------------------------------------------------------+<br />1 row in set (0.00 sec)<br /></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_is_account_enabled.html" data-mapping-enabled="true"><span>ps_is_account_enabled</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Determines whether instrumentation of an account is enabled <br />within Performance Schema.<br /><br />Parameters<br />-----------<br /><br />in_host VARCHAR(255): <br />  The hostname of the account to check.<br />in_user VARCHAR(32):<br />  The username of the account to check.<br /><br />Returns<br />-----------<br /><br />ENUM('YES', 'NO', 'PARTIAL')<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.ps_is_account_enabled('localhost', 'root');<br />+------------------------------------------------+<br />| sys.ps_is_account_enabled('localhost', 'root') |<br />+------------------------------------------------+<br />| YES                                            |<br />+------------------------------------------------+<br />1 row in set (0.01 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_is_consumer_enabled.html" data-mapping-enabled="true"><span>ps_is_consumer_enabled</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Determines whether a consumer is enabled (taking the consumer hierarchy into consideration)<br />within the Performance Schema.<br /><br />An exception with errno 3047 is thrown if an unknown consumer name is passed to the function.<br />A consumer name of NULL returns NULL.<br /><br />Parameters<br />-----------<br /><br />in_consumer VARCHAR(64): <br />  The name of the consumer to check.<br /><br />Returns<br />-----------<br /><br />ENUM('YES', 'NO')<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.ps_is_consumer_enabled('events_stages_history');<br />+-----------------------------------------------------+<br />| sys.ps_is_consumer_enabled('events_stages_history') |<br />+-----------------------------------------------------+<br />| NO                                                  |<br />+-----------------------------------------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_is_instrument_default_enabled.html" data-mapping-enabled="true"><span>ps_is_instrument_default_enabled</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Returns whether an instrument is enabled by default in this version of MySQL.<br /><br />Parameters<br />-----------<br /><br />in_instrument VARCHAR(128): <br />  The instrument to check.<br /><br />Returns<br />-----------<br /><br />ENUM('YES', 'NO')<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.ps_is_instrument_default_enabled('statement/sql/select');<br />+--------------------------------------------------------------+<br />| sys.ps_is_instrument_default_enabled('statement/sql/select') |<br />+--------------------------------------------------------------+<br />| YES                                                          |<br />+--------------------------------------------------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_is_instrument_default_timed.html" data-mapping-enabled="true"><span>ps_is_instrument_default_timed</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Returns whether an instrument is timed by default in this version of MySQL.<br /><br />Parameters<br />-----------<br /><br />in_instrument VARCHAR(128): <br />  The instrument to check.<br /><br />Returns<br />-----------<br /><br />ENUM('YES', 'NO')<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.ps_is_instrument_default_timed('statement/sql/select');<br />+------------------------------------------------------------+<br />| sys.ps_is_instrument_default_timed('statement/sql/select') |<br />+------------------------------------------------------------+<br />| YES                                                        |<br />+------------------------------------------------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_is_thread_instrumented.html" data-mapping-enabled="true"><span>ps_is_thread_instrumented</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Checks whether the provided connection id is instrumented within Performance Schema.<br /><br />Parameters<br />-----------<br /><br />in_connection_id (BIGINT UNSIGNED):<br />  The id of the connection to check.<br /><br />Returns<br />-----------<br /><br />ENUM('YES', 'NO', 'UNKNOWN')<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.ps_is_thread_instrumented(CONNECTION_ID());<br />+------------------------------------------------+<br />| sys.ps_is_thread_instrumented(CONNECTION_ID()) |<br />+------------------------------------------------+<br />| YES                                            |<br />+------------------------------------------------+</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_thread_account.html" data-mapping-enabled="true"><span>ps_thread_account</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Return the user@host account for the given Performance Schema thread id.<br /><br />Parameters<br />-----------<br /><br />in_thread_id (BIGINT UNSIGNED):<br />  The id of the thread to return the account for.<br /><br />Example<br />-----------<br /><br />mysql> select thread_id, processlist_user, processlist_host from performance_schema.threads where type = 'foreground';<br />+-----------+------------------+------------------+<br />| thread_id | processlist_user | processlist_host |<br />+-----------+------------------+------------------+<br />|        23 | NULL             | NULL             |<br />|        30 | root             | localhost        |<br />|        31 | msandbox         | localhost        |<br />|        32 | msandbox         | localhost        |<br />+-----------+------------------+------------------+<br />4 rows in set (0.00 sec)<br /><br />mysql> select sys.ps_thread_account(31);<br />+---------------------------+<br />| sys.ps_thread_account(31) |<br />+---------------------------+<br />| msandbox@localhost        |<br />+---------------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_thread_id.html" data-mapping-enabled="true"><span>ps_thread_id</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Return the Performance Schema THREAD_ID for the specified connection ID.<br /><br />Parameters<br />-----------<br /><br />in_connection_id (BIGINT UNSIGNED):<br />  The id of the connection to return the thread id for. If NULL, the current<br />  connection thread id is returned.<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.ps_thread_id(79);<br />+----------------------+<br />| sys.ps_thread_id(79) |<br />+----------------------+<br />|                   98 |<br />+----------------------+<br />1 row in set (0.00 sec)<br /><br />mysql> SELECT sys.ps_thread_id(CONNECTION_ID());<br />+-----------------------------------+<br />| sys.ps_thread_id(CONNECTION_ID()) |<br />+-----------------------------------+<br />|                                98 |<br />+-----------------------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_thread_stack.html" data-mapping-enabled="true"><span>ps_thread_stack</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Outputs a JSON formatted stack of all statements, stages and events<br />within Performance Schema for the specified thread.<br /><br />Parameters<br />-----------<br /><br />thd_id (BIGINT UNSIGNED):<br />  The id of the thread to trace. This should match the thread_id<br />  column from the performance_schema.threads table.<br />in_verbose (BOOLEAN):<br />  Include file:lineno information in the events.<br /><br />Example<br />-----------<br /><br />(line separation added for output)<br /><br />mysql> SELECT sys.ps_thread_stack(37, FALSE) AS thread_stack\G<br />*************************** 1. row ***************************<br />thread_stack: {"rankdir": "LR","nodesep": "0.10","stack_created": "2014-02-19 13:39:03",<br />"mysql_version": "5.7.3-m13","mysql_user": "root@localhost","events": <br />[{"nesting_event_id": "0", "event_id": "10", "timer_wait": 256.35, "event_info": <br />"sql/select", "wait_info": "select @@version_comment limit 1\<br />errors: 0\<br />warnings: 0\<br />lock time:<br />...</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\ps_thread_trx_info.html" data-mapping-enabled="true"><span>ps_thread_trx_info</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Returns a JSON object with info on the given threads current transaction, <br />and the statements it has already executed, derived from the<br />performance_schema.events_transactions_current and<br />performance_schema.events_statements_history tables (so the consumers <br />for these also have to be enabled within Performance Schema to get full<br />data in the object).<br /><br />When the output exceeds the default truncation length (65535), a JSON error<br />object is returned, such as:<br /><br />{ "error": "Trx info truncated: Row 6 was cut by GROUP_CONCAT()" }<br /><br />Similar error objects are returned for other warnings/and exceptions raised<br />when calling the function.<br /><br />The max length of the output of this function can be controlled with the<br />ps_thread_trx_info.max_length variable set via sys_config, or the<br />@sys.ps_thread_trx_info.max_length user variable, as appropriate.<br /><br />Parameters<br />-----------<br /><br />in_thread_id (BIGINT UNSIGNED):<br />  The id of the thread to return the transaction info for.<br /><br />Example<br />-----------<br /><br />SELECT sys.ps_thread_trx_info(48)\G<br />*************************** 1. row ***************************<br />sys.ps_thread_trx_info(48): [<br />  {<br />    "time": "790.70 us",<br />    "state": "COMMITTED",<br />    "mode": "READ WRITE",<br />    "autocommitted": "NO",<br />    "gtid": "AUTOMATIC",<br />    "isolation": "REPEATABLE READ",<br />    "statements_executed": [<br />      {<br />        "sql_text": "INSERT INTO info VALUES (1, 'foo')",<br />        "time": "471.02 us",<br />        "schema": "trx",<br />        "rows_examined": 0,<br />        "rows_affected": 1,<br />        "rows_sent": 0,<br />        "tmp_tables": 0,<br />        "tmp_disk_tables": 0,<br />        "sort_rows": 0,<br />        "sort_merge_passes": 0<br />      },<br />      {<br />        "sql_text": "COMMIT",<br />        "time": "254.42 us",<br />        "schema": "trx",<br />        "rows_examined": 0,<br />        "rows_affected": 0,<br />        "rows_sent": 0,<br />        "tmp_tables": 0,<br />        "tmp_disk_tables": 0,<br />        "sort_rows": 0,<br />        "sort_merge_passes": 0<br />      }<br />    ]<br />  },<br />  {<br />    "time": "426.20 us",<br />    "state": "COMMITTED",<br />    "mode": "READ WRITE",<br />    "autocommitted": "NO",<br />    "gtid": "AUTOMATIC",<br />    "isolation": "REPEATABLE READ",<br />    "statements_executed": [<br />      {<br />        "sql_text": "INSERT INTO info VALUES (2, 'bar')",<br />        "time": "107.33 us",<br />        "schema": "trx",<br />        "rows_examined": 0,<br />        "rows_affected": 1,<br />        "rows_sent": 0,<br />        "tmp_tables": 0,<br />        "tmp_disk_tables": 0,<br />        "sort_rows": 0,<br />        "sort_merge_passes": 0<br />      },<br />      {<br />        "sql_text": "COMMIT",<br />        "time": "213.23 us",<br />        "schema": "trx",<br />        "rows_examined": 0,<br />        "rows_affected": 0,<br />        "rows_sent": 0,<br />        "tmp_tables": 0,<br />        "tmp_disk_tables": 0,<br />        "sort_rows": 0,<br />        "sort_merge_passes": 0<br />      }<br />    ]<br />  }<br />]<br />1 row in set (0.03 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\quote_identifier.html" data-mapping-enabled="true"><span>quote_identifier</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Takes an unquoted identifier (schema name, table name, etc.) and<br />returns the identifier quoted with backticks.<br /><br />Parameters<br />-----------<br /><br />in_identifier (TEXT):<br />  The identifier to quote.<br /><br />Returns<br />-----------<br /><br />TEXT CHARSET UTF8MB4<br /><br />Example<br />-----------<br /><br />mysql> SELECT sys.quote_identifier('my_identifier') AS Identifier;<br />+-----------------+<br />| Identifier      |<br />+-----------------+<br />| `my_identifier` |<br />+-----------------+<br />1 row in set (0.00 sec)<br /><br />mysql> SELECT sys.quote_identifier('my`idenfier') AS Identifier;<br />+----------------+<br />| Identifier     |<br />+----------------+<br />| `my``idenfier` |<br />+----------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\sys_get_config.html" data-mapping-enabled="true"><span>sys_get_config</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Returns the value for the requested variable using the following logic:<br /><br />   1. If the option exists in sys.sys_config return the value from there.<br />   2. Else fall back on the provided default value.<br /><br />Notes for using sys_get_config():<br /><br />   * If the default value argument to sys_get_config() is NULL and case 2. is reached, NULL is returned.<br />     It is then expected that the caller is able to handle NULL for the given configuration option.<br />   * The convention is to name the user variables @sys.<name of variable>. It is <name of variable> that<br />     is stored in the sys_config table and is what is expected as the argument to sys_get_config().<br />   * If you want to check whether the configuration option has already been set and if not assign with<br />     the return value of sys_get_config() you can use IFNULL(...) (see example below). However this should<br />     not be done inside a loop (e.g. for each row in a result set) as for repeated calls where assignment<br />     is only needed in the first iteration using IFNULL(...) is expected to be significantly slower than<br />     using an IF (...) THEN ... END IF; block (see example below).<br /><br />Parameters<br />-----------<br /><br />in_variable_name (VARCHAR(128)):<br />  The name of the config option to return the value for.<br /><br />in_default_value (VARCHAR(128)):<br />  The default value to return if the variable does not exist in sys.sys_config.<br /><br />Returns<br />-----------<br /><br />VARCHAR(128)<br /><br />Example<br />-----------<br /><br />-- Get the configuration value from sys.sys_config falling back on 128 if the option is not present in the table.<br />mysql> SELECT sys.sys_get_config('statement_truncate_len', 128) AS Value;<br />+-------+<br />| Value |<br />+-------+<br />| 64    |<br />+-------+<br />1 row in set (0.00 sec)<br /><br />-- Check whether the option is already set, if not assign - IFNULL(...) one liner example.<br />mysql> SET @sys.statement_truncate_len = IFNULL(@sys.statement_truncate_len, sys.sys_get_config('statement_truncate_len', 64));<br />Query OK, 0 rows affected (0.00 sec)<br /><br />-- Check whether the option is already set, if not assign - IF ... THEN ... END IF example.<br />IF (@sys.statement_truncate_len IS NULL) THEN<br />    SET @sys.statement_truncate_len = sys.sys_get_config('statement_truncate_len', 64);<br />END IF;</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\version_major.html" data-mapping-enabled="true"><span>version_major</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Returns the major version of MySQL Server.<br /><br />Returns<br />-----------<br /><br />TINYINT UNSIGNED<br /><br />Example<br />-----------<br /><br />mysql> SELECT VERSION(), sys.version_major();<br />+--------------------------------------+---------------------+<br />| VERSION()                            | sys.version_major() |<br />+--------------------------------------+---------------------+<br />| 5.7.9-enterprise-commercial-advanced | 5                   |<br />+--------------------------------------+---------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\version_minor.html" data-mapping-enabled="true"><span>version_minor</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Returns the minor (release series) version of MySQL Server.<br /><br />Returns<br />-----------<br /><br />TINYINT UNSIGNED<br /><br />Example<br />-----------<br /><br />mysql> SELECT VERSION(), sys.server_minor();<br />+--------------------------------------+---------------------+<br />| VERSION()                            | sys.version_minor() |<br />+--------------------------------------+---------------------+<br />| 5.7.9-enterprise-commercial-advanced | 7                   |<br />+--------------------------------------+---------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="../../../../../Servers\Cars.localhost\Databases\sys\Functions\version_patch.html" data-mapping-enabled="true"><span>version_patch</span></a></td>
+                  <td>
+                    <span><br />Description<br />-----------<br /><br />Returns the patch release version of MySQL Server.<br /><br />Returns<br />-----------<br /><br />TINYINT UNSIGNED<br /><br />Example<br />-----------<br /><br />mysql> SELECT VERSION(), sys.version_patch();<br />+--------------------------------------+---------------------+<br />| VERSION()                            | sys.version_patch() |<br />+--------------------------------------+---------------------+<br />| 5.7.9-enterprise-commercial-advanced | 9                   |<br />+--------------------------------------+---------------------+<br />1 row in set (0.00 sec)</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;10. 04. 2021</div>
+  </div>
+</body>
+</html>

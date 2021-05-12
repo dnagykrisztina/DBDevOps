@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Sales</title>
+<script src="../../../../../../scripts/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="../../../../../../scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../../../scripts/clipboard.min.js" type="text/javascript"></script>
+<script src="../../../../../../scripts/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../../../../styles/bootstrap/Default.css" type="text/css">
+<link rel="stylesheet" href="../../../../../../styles/main.css" type="text/css">
+</head>
+<body class="watermark">
+
+  <div class="page-wrap">
+    <div class="header">
+      <div class="row">
+        <div class="col-xs-8">
+          <ol class="breadcrumb">
+            <li><a href="../../../../../../startpage.html" data-mapping-enabled="true">Project</a></li>
+            <li><a href="../../../../../../Servers\Servers.html" data-mapping-enabled="true">Servers</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\LOCALHOST.html" data-mapping-enabled="true">LOCALHOST</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\UserDatabases.html" data-mapping-enabled="true">User databases</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\AdventureWorks2019.html" data-mapping-enabled="true">AdventureWorks2019</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Security\Security.html" data-mapping-enabled="true">Security</a></li>
+            <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Security\Schemas\Schemas.html" data-mapping-enabled="true">Schemas</a></li>
+            <li class="active">Sales</li>
+          </ol>
+        </div>
+        <div class="align-right col-xs-4">DBDevOps</div>
+      </div>
+      <div class="row">
+        <div class="title col-xs-12">
+          <div><img class="inline-middle image-large" src="../../../../../../images/schema.svg" title="Sales" />
+            <h1 class="inline-middle">Sales</h1>
+            <div class="dropdown actions-btn-wrap">
+              <button type="button" class="btn btn-default actions-btn" data-toggle="dropdown"><span class="icon-actions icon-small actions-btn-span"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a id="CollapseAll" href="#">Collapse All</a></li>
+                <li><a id="ExpandAll" href="#">Expand All</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div id="Description" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Description</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span>Contains objects related to customers, sales orders, and sales territories.</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Properties</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>Owner</td>
+                  <td>dbo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="SqlScript" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">SQL Script</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="sqlscript panel-default">
+              <font color="#0000ff">CREATE</font>&nbsp;<font color="#0000ff">SCHEMA</font>&nbsp;<font color="#000000">Sales</font>&nbsp;<font color="#0000ff">AUTHORIZATION</font>&nbsp;<font color="#008000">dbo</font><br><font color="#0000ff">GO</font><br><font color="#000000"></font><br><font color="#0000ff">EXEC</font>&nbsp;<font color="#008000">sys</font><font color="#808080">.</font><font color="#800000">sp_addextendedproperty</font>&nbsp;<font color="#ff0000">N'MS_Description'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Contains objects related to customers, sales orders, and sales territories.'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">'SCHEMA'</font><font color="#808080">,</font>&nbsp;<font color="#ff0000">N'Sales'</font><br><font color="#0000ff">GO</font></div>
+          </div>
+        </div>
+      </div>
+      <div id="DependsOn" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Depends On</h2>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <span class="text-muted">No items found</span>
+          </div>
+        </div>
+      </div>
+      <div id="UsedBy" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="icon-bottom inline-middle expanded icon-small"></span>
+          <span class="icon-right inline-middle collapsed icon-small" style="display:none"></span>
+          <h2 class="inline-middle">Used By</h2>
+          <span class="badge inline-middle">27</span>
+        </div>
+        <div class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="items-list">
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.CountryRegionCurrency.html" data-mapping-enabled="true"><span>Sales.CountryRegionCurrency</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.CreditCard.html" data-mapping-enabled="true"><span>Sales.CreditCard</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.Currency.html" data-mapping-enabled="true"><span>Sales.Currency</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.CurrencyRate.html" data-mapping-enabled="true"><span>Sales.CurrencyRate</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.Customer.html" data-mapping-enabled="true"><span>Sales.Customer</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.PersonCreditCard.html" data-mapping-enabled="true"><span>Sales.PersonCreditCard</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SalesOrderDetail.html" data-mapping-enabled="true"><span>Sales.SalesOrderDetail</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SalesOrderHeader.html" data-mapping-enabled="true"><span>Sales.SalesOrderHeader</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SalesOrderHeaderSalesReason.html" data-mapping-enabled="true"><span>Sales.SalesOrderHeaderSalesReason</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SalesPerson.html" data-mapping-enabled="true"><span>Sales.SalesPerson</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SalesPersonQuotaHistory.html" data-mapping-enabled="true"><span>Sales.SalesPersonQuotaHistory</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SalesReason.html" data-mapping-enabled="true"><span>Sales.SalesReason</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SalesTaxRate.html" data-mapping-enabled="true"><span>Sales.SalesTaxRate</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SalesTerritory.html" data-mapping-enabled="true"><span>Sales.SalesTerritory</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SalesTerritoryHistory.html" data-mapping-enabled="true"><span>Sales.SalesTerritoryHistory</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.ShoppingCartItem.html" data-mapping-enabled="true"><span>Sales.ShoppingCartItem</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SpecialOffer.html" data-mapping-enabled="true"><span>Sales.SpecialOffer</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.SpecialOfferProduct.html" data-mapping-enabled="true"><span>Sales.SpecialOfferProduct</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Tables\Sales.Store.html" data-mapping-enabled="true"><span>Sales.Store</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Views\Sales.vIndividualCustomer.html" data-mapping-enabled="true"><span>Sales.vIndividualCustomer</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Views\Sales.vPersonDemographics.html" data-mapping-enabled="true"><span>Sales.vPersonDemographics</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Views\Sales.vSalesPerson.html" data-mapping-enabled="true"><span>Sales.vSalesPerson</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Views\Sales.vSalesPersonSalesByFiscalYears.html" data-mapping-enabled="true"><span>Sales.vSalesPersonSalesByFiscalYears</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Views\Sales.vStoreWithAddresses.html" data-mapping-enabled="true"><span>Sales.vStoreWithAddresses</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Views\Sales.vStoreWithContacts.html" data-mapping-enabled="true"><span>Sales.vStoreWithContacts</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Views\Sales.vStoreWithDemographics.html" data-mapping-enabled="true"><span>Sales.vStoreWithDemographics</span></a></li>
+              <li><a href="../../../../../../Servers\LOCALHOST\UserDatabases\AdventureWorks2019\Programmability\Types\XmlSchemaCollection\Sales.StoreSurveySchemaCollection.html" data-mapping-enabled="true"><span>Sales.StoreSurveySchemaCollection</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="col-xs-4">Author:&nbsp;Nagy Krisztina Dalma</div>
+    <div class="col-xs-4 align-center">Copyright &#169; All Rights Reserved</div>
+    <div class="col-xs-4 align-right">Created:&nbsp;2021. 03. 15</div>
+  </div>
+</body>
+</html>

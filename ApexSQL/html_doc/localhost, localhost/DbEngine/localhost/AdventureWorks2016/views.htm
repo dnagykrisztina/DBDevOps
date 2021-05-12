@@ -1,0 +1,241 @@
+﻿<HTML>
+<HEAD>
+    <TITLE>Views</TITLE>
+    <LINK HREF="../../../style.css" REL="stylesheet" TYPE="text/css">
+
+    <SCRIPT SRC="../../../script.js"></SCRIPT>
+
+</HEAD>
+<BODY>
+    <IMG ID="collapseImage" ALT="Collapse image" SRC="../../../ImagesMetro/collapse.gif" STYLE="display: none; height: 0; width: 0;" />
+    <IMG ID="expandImage" ALT="Expand image" SRC="../../../ImagesMetro/expand.gif" STYLE="display: none; height: 0; width: 0;" />
+    <DIV ID="pagetop">
+        <div class='text-output-header'><p><font size="3">Sample header text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-header {display:block; float:left; width:100%;}div.text-output-header p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+        <P CLASS="apexdoc-header">
+            <IMG BORDER="0" CLASS="vmiddle" SRC="../../../Images32x32Metro/OBJECT_VIEW.png">&nbsp;List of views</P>
+        <P CLASS="apexdoc-header-bottom">
+	<SPAN onclick="ExpandCollapseSections(this)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0">
+		<IMG ID="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../../../ImagesMetro/collapse.gif"></IMG>
+		<LABEL id="collapseAllLabel" for="toggleAllImage" style="display: inline;">Collapse all</LABEL>
+		<LABEL id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand all</LABEL>
+	</SPAN>
+</P>
+
+    </DIV>
+    <DIV ID="pagebody">
+        
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Views')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Views')" tabindex="0">
+	<IMG id="ViewsToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Views
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="ViewsSection" CLASS="section" STYLE="display: inline;">
+            
+            <TABLE>
+                <TR CLASS="apexdoc-table-caption">
+                    <TD>Name&nbsp;</TD>
+                    <TD>Schema&nbsp;</TD>
+                    <TD>Description</TD>
+                    <TD>Schema&nbsp;bound</TD>
+                    <TD>Encrypted</TD>
+                    <TD>Creation&nbsp;date</TD>
+                </TR>
+                <TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/87671360.htm">vEmployee</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Employee names and addresses.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/103671417.htm">vEmployeeDepartment</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Returns employee name, title, and current department.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/119671474.htm">vEmployeeDepartmentHistory</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Returns employee name and current and previous departments.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/167671645.htm">vJobCandidate</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Job candidate names and resumes.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/199671759.htm">vJobCandidateEducation</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Displays the content from each education related element in the xml column Resume in the HumanResources.JobCandidate table. The content has been localized into French, Simplified Chinese and Thai. Some data may not display correctly unless supplemental language support is installed.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/183671702.htm">vJobCandidateEmployment</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/5.htm">HumanResources</A></TD>
+  <TD>Displays the content from each employement history related element in the xml column Resume in the HumanResources.JobCandidate table. The content has been localized into French, Simplified Chinese and Thai. Some data may not display correctly unless supplemental language support is installed.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/71671303.htm">vAdditionalContactInfo</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Displays the contact name and content from each element in the xml column AdditionalContactInfo for that person.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/295672101.htm">vStateProvinceCountryRegion</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/6.htm">Person</A></TD>
+  <TD>Joins StateProvince table with CountryRegion table.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/CHECK_OUT.png"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/215671816.htm">vProductAndDescription</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Product names and descriptions. Product descriptions are provided in multiple languages.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/CHECK_OUT.png"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/231671873.htm">vProductModelCatalogDescription</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Displays the content from each element in the xml column CatalogDescription for each product in the Production.ProductModel table that has catalog data.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/247671930.htm">vProductModelInstructions</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/7.htm">Production</A></TD>
+  <TD>Displays the content from each element in the xml column Instructions for each product in the Production.ProductModel table that has manufacturing instructions.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/375672386.htm">vVendorWithAddresses</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>Vendor (company) names and addresses .</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/359672329.htm">vVendorWithContacts</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/8.htm">Purchasing</A></TD>
+  <TD>Vendor (company) names  and the names of vendor employees to contact.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/135671531.htm">vIndividualCustomer</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Individual customers (names and addresses) that purchase Adventure Works Cycles products online.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/151671588.htm">vPersonDemographics</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Displays the content from each element in the xml column Demographics for each customer in the Person.Person table.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/263671987.htm">vSalesPerson</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Sales representiatives (names and addresses) and their sales-related information.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/279672044.htm">vSalesPersonSalesByFiscalYears</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Uses PIVOT to return aggregated sales information for each sales representative.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/343672272.htm">vStoreWithAddresses</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Stores (including store addresses) that sell Adventure Works Cycles products to consumers.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/327672215.htm">vStoreWithContacts</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Stores (including store contacts) that sell Adventure Works Cycles products to consumers.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+<TR>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Views/311672158.htm">vStoreWithDemographics</A></TD>
+  <TD><A HREF="../../../DbEngine/localhost/AdventureWorks2016/Schemas/9.htm">Sales</A></TD>
+  <TD>Stores (including demographics) that sell Adventure Works Cycles products to consumers.</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../../ImagesMetro/RED_CROSS.gif"></TD>
+  <TD>10. 19. 2017&nbsp;</TD>
+</TR>
+
+            </TABLE>
+            <DIV CLASS="apexdoc-total-counter">
+                Total:
+                20
+                view(s)</DIV>
+            
+        </DIV>
+        
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('seealso')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('seealso')" tabindex="0">
+	<IMG id="seealsoToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            See also
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="seealsoSection" CLASS="section" STYLE="display: inline;">
+            <P>
+                <A HREF="tables.htm">Tables</A>
+            </P>
+            <P>
+                
+            </P>
+        </DIV>
+        <HR SIZE="1">
+<P></P>
+<BR>
+<BR>
+
+        <div class='text-output-footer'><p><font size="3">Sample footer text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-footer {display:block; float:left; width:100%;}div.text-output-footer p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+    </DIV>
+</BODY>
+</HTML>

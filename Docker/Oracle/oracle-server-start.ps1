@@ -1,0 +1,1 @@
+docker run --name oracle-server-redgate -d -p 1521:1521 oracle-server:latest

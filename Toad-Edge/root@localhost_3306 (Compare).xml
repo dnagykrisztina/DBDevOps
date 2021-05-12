@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><Connections>
+  <Connection SubType="MYSQL_5_7" autoCommit="true" type="Jdbc">
+    <Path>MYSQL_5_7</Path>
+    <Name>root@localhost:3306 (Compare)</Name>
+    <Host>localhost</Host>
+    <Port>3306</Port>
+    <User>root</User>
+    <ConnectionString>jdbc:mysql://localhost:3306/Compare</ConnectionString>
+    <SavePassword>true</SavePassword>
+    <Password>Gb1GUbCLGrPmHdXCEaJClQ==</Password>
+    <RestoreWork>true</RestoreWork>
+    <LastConnectionDate>2021-04-10T13:23:15</LastConnectionDate>
+    <Color>#0080FF</Color>
+    <Database>Compare</Database>
+    <serverTimezone>Europe/Prague</serverTimezone>
+    <Options>
+      <UUID>00fa5333-394f-4bec-b9a2-5969026a0996</UUID>
+      <Origin>toadedge</Origin>
+      <AutoLogon>false</AutoLogon>
+      <RestoreState>true</RestoreState>
+      <Performance>1</Performance>
+      <DriverPath>C:\Program Files\Quest Software\Toad Edge\lib\drivers\mysql-jdbc8.jar</DriverPath>
+      <PerformanceOptions/>
+      <SSH>
+        <Enable>false</Enable>
+      </SSH>
+      <SSL>
+        <Enable>false</Enable>
+      </SSL>
+    </Options>
+  </Connection>
+</Connections>

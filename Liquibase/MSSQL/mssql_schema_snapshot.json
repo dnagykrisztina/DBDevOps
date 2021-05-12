@@ -1,0 +1,807 @@
+{
+  "snapshot": {
+    "created": "2021-03-14T13:57:29.906",
+    "database": {
+      "productVersion": "15.00.4102",
+      "shortName": "mssql",
+      "majorVersion": "15",
+      "minorVersion": "0",
+      "user": "sa",
+      "productName": "Microsoft SQL Server",
+      "url": "jdbc:sqlserver://localhost:1433;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=15;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=true;databaseName=AdventureWorks2019;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;"
+    },
+    "objects": {
+      "com.datical.liquibase.ext.storedlogic.function.Function": [
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnGetAccountingEndDate]()\r\nRETURNS [datetime] \r\nAS \r\nBEGIN\r\n    RETURN DATEADD(millisecond, -2, CONVERT(datetime, '20040701', 112));\r\nEND;\r\n",
+            "name": "ufnGetAccountingEndDate",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb140",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnGetAccountingStartDate]()\r\nRETURNS [datetime] \r\nAS \r\nBEGIN\r\n    RETURN CONVERT(datetime, '20030701', 112);\r\nEND;\r\n",
+            "name": "ufnGetAccountingStartDate",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb144",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnGetContactInformation](@PersonID int)\r\nRETURNS @retContactInformation TABLE \r\n(\r\n    -- Columns returned by the function\r\n    [PersonID] int NOT NULL, \r\n    [FirstName] [nvarchar](50) NULL, \r\n    [LastName] [nvarchar](50) NULL, \r\n\t[JobTitle] [nvarchar](50) NULL,\r\n    [BusinessEntityType] [nvarchar](50) NULL\r\n)\r\nAS \r\n-- Returns the first name, last name, job title and business entity type for the specified contact.\r\n-- Since a contact can serve multiple roles, more than one row may be returned.\r\nBEGIN\r\n\tIF @PersonID IS NOT NULL \r\n\t\tBEGIN\r\n\t\tIF EXISTS(SELECT * FROM [HumanResources].[Employee] e \r\n\t\t\t\t\tWHERE e.[BusinessEntityID] = @PersonID) \r\n\t\t\tINSERT INTO @retContactInformation\r\n\t\t\t\tSELECT @PersonID, p.FirstName, p.LastName, e.[JobTitle], 'Employee'\r\n\t\t\t\tFROM [HumanResources].[Employee] AS e\r\n\t\t\t\t\tINNER JOIN [Person].[Person] p\r\n\t\t\t\t\tON p.[BusinessEntityID] = e.[BusinessEntityID]\r\n\t\t\t\tWHERE e.[BusinessEntityID] = @PersonID;\r\n\r\n\t\tIF EXISTS(SELECT * FROM [Purchasing].[Vendor] AS v\r\n\t\t\t\t\tINNER JOIN [Person].[BusinessEntityContact] bec \r\n\t\t\t\t\tON bec.[BusinessEntityID] = v.[BusinessEntityID]\r\n\t\t\t\t\tWHERE bec.[PersonID] = @PersonID)\r\n\t\t\tINSERT INTO @retContactInformation\r\n\t\t\t\tSELECT @PersonID, p.FirstName, p.LastName, ct.[Name], 'Vendor Contact' \r\n\t\t\t\tFROM [Purchasing].[Vendor] AS v\r\n\t\t\t\t\tINNER JOIN [Person].[BusinessEntityContact] bec \r\n\t\t\t\t\tON bec.[BusinessEntityID] = v.[BusinessEntityID]\r\n\t\t\t\t\tINNER JOIN [Person].ContactType ct\r\n\t\t\t\t\tON ct.[ContactTypeID] = bec.[ContactTypeID]\r\n\t\t\t\t\tINNER JOIN [Person].[Person] p\r\n\t\t\t\t\tON p.[BusinessEntityID] = bec.[PersonID]\r\n\t\t\t\tWHERE bec.[PersonID] = @PersonID;\r\n\t\t\r\n\t\tIF EXISTS(SELECT * FROM [Sales].[Store] AS s\r\n\t\t\t\t\tINNER JOIN [Person].[BusinessEntityContact] bec \r\n\t\t\t\t\tON bec.[BusinessEntityID] = s.[BusinessEntityID]\r\n\t\t\t\t\tWHERE bec.[PersonID] = @PersonID)\r\n\t\t\tINSERT INTO @retContactInformation\r\n\t\t\t\tSELECT @PersonID, p.FirstName, p.LastName, ct.[Name], 'Store Contact' \r\n\t\t\t\tFROM [Sales].[Store] AS s\r\n\t\t\t\t\tINNER JOIN [Person].[BusinessEntityContact] bec \r\n\t\t\t\t\tON bec.[BusinessEntityID] = s.[BusinessEntityID]\r\n\t\t\t\t\tINNER JOIN [Person].ContactType ct\r\n\t\t\t\t\tON ct.[ContactTypeID] = bec.[ContactTypeID]\r\n\t\t\t\t\tINNER JOIN [Person].[Person] p\r\n\t\t\t\t\tON p.[BusinessEntityID] = bec.[PersonID]\r\n\t\t\t\tWHERE bec.[PersonID] = @PersonID;\r\n\r\n\t\tIF EXISTS(SELECT * FROM [Person].[Person] AS p\r\n\t\t\t\t\tINNER JOIN [Sales].[Customer] AS c\r\n\t\t\t\t\tON c.[PersonID] = p.[BusinessEntityID]\r\n\t\t\t\t\tWHERE p.[BusinessEntityID] = @PersonID AND c.[StoreID] IS NULL) \r\n\t\t\tINSERT INTO @retContactInformation\r\n\t\t\t\tSELECT @PersonID, p.FirstName, p.LastName, NULL, 'Consumer' \r\n\t\t\t\tFROM [Person].[Person] AS p\r\n\t\t\t\t\tINNER JOIN [Sales].[Customer] AS c\r\n\t\t\t\t\tON c.[PersonID] = p.[BusinessEntityID]\r\n\t\t\t\t\tWHERE p.[BusinessEntityID] = @PersonID AND c.[StoreID] IS NULL; \r\n\t\tEND\r\n\r\n\tRETURN;\r\nEND;\r\n",
+            "name": "ufnGetContactInformation",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb145",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnGetDocumentStatusText](@Status [tinyint])\r\nRETURNS [nvarchar](16) \r\nAS \r\n-- Returns the sales order status text representation for the status value.\r\nBEGIN\r\n    DECLARE @ret [nvarchar](16);\r\n\r\n    SET @ret = \r\n        CASE @Status\r\n            WHEN 1 THEN N'Pending approval'\r\n            WHEN 2 THEN N'Approved'\r\n            WHEN 3 THEN N'Obsolete'\r\n            ELSE N'** Invalid **'\r\n        END;\r\n    \r\n    RETURN @ret\r\nEND;\r\n",
+            "name": "ufnGetDocumentStatusText",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb146",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\n\r\n\r\nCREATE FUNCTION [dbo].[ufnGetProductDealerPrice](@ProductID [int], @OrderDate [datetime])\r\nRETURNS [money] \r\nAS \r\n-- Returns the dealer price for the product on a specific date.\r\nBEGIN\r\n    DECLARE @DealerPrice money;\r\n    DECLARE @DealerDiscount money;\r\n\r\n    SET @DealerDiscount = 0.60  -- 60% of list price\r\n\r\n    SELECT @DealerPrice = plph.[ListPrice] * @DealerDiscount \r\n    FROM [Production].[Product] p \r\n        INNER JOIN [Production].[ProductListPriceHistory] plph \r\n        ON p.[ProductID] = plph.[ProductID] \r\n            AND p.[ProductID] = @ProductID \r\n            AND @OrderDate BETWEEN plph.[StartDate] AND COALESCE(plph.[EndDate], CONVERT(datetime, '99991231', 112)); -- Make sure we get all the prices!\r\n\r\n    RETURN @DealerPrice;\r\nEND;\r\n",
+            "name": "ufnGetProductDealerPrice",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb149",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnGetProductListPrice](@ProductID [int], @OrderDate [datetime])\r\nRETURNS [money] \r\nAS \r\nBEGIN\r\n    DECLARE @ListPrice money;\r\n\r\n    SELECT @ListPrice = plph.[ListPrice] \r\n    FROM [Production].[Product] p \r\n        INNER JOIN [Production].[ProductListPriceHistory] plph \r\n        ON p.[ProductID] = plph.[ProductID] \r\n            AND p.[ProductID] = @ProductID \r\n            AND @OrderDate BETWEEN plph.[StartDate] AND COALESCE(plph.[EndDate], CONVERT(datetime, '99991231', 112)); -- Make sure we get all the prices!\r\n\r\n    RETURN @ListPrice;\r\nEND;\r\n",
+            "name": "ufnGetProductListPrice",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb147",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnGetProductStandardCost](@ProductID [int], @OrderDate [datetime])\r\nRETURNS [money] \r\nAS \r\n-- Returns the standard cost for the product on a specific date.\r\nBEGIN\r\n    DECLARE @StandardCost money;\r\n\r\n    SELECT @StandardCost = pch.[StandardCost] \r\n    FROM [Production].[Product] p \r\n        INNER JOIN [Production].[ProductCostHistory] pch \r\n        ON p.[ProductID] = pch.[ProductID] \r\n            AND p.[ProductID] = @ProductID \r\n            AND @OrderDate BETWEEN pch.[StartDate] AND COALESCE(pch.[EndDate], CONVERT(datetime, '99991231', 112)); -- Make sure we get all the prices!\r\n\r\n    RETURN @StandardCost;\r\nEND;\r\n",
+            "name": "ufnGetProductStandardCost",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb141",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnGetPurchaseOrderStatusText](@Status [tinyint])\r\nRETURNS [nvarchar](15) \r\nAS \r\n-- Returns the sales order status text representation for the status value.\r\nBEGIN\r\n    DECLARE @ret [nvarchar](15);\r\n\r\n    SET @ret = \r\n        CASE @Status\r\n            WHEN 1 THEN 'Pending'\r\n            WHEN 2 THEN 'Approved'\r\n            WHEN 3 THEN 'Rejected'\r\n            WHEN 4 THEN 'Complete'\r\n            ELSE '** Invalid **'\r\n        END;\r\n    \r\n    RETURN @ret\r\nEND;\r\n",
+            "name": "ufnGetPurchaseOrderStatusText",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb150",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnGetSalesOrderStatusText](@Status [tinyint])\r\nRETURNS [nvarchar](15) \r\nAS \r\n-- Returns the sales order status text representation for the status value.\r\nBEGIN\r\n    DECLARE @ret [nvarchar](15);\r\n\r\n    SET @ret = \r\n        CASE @Status\r\n            WHEN 1 THEN 'In process'\r\n            WHEN 2 THEN 'Approved'\r\n            WHEN 3 THEN 'Backordered'\r\n            WHEN 4 THEN 'Rejected'\r\n            WHEN 5 THEN 'Shipped'\r\n            WHEN 6 THEN 'Cancelled'\r\n            ELSE '** Invalid **'\r\n        END;\r\n    \r\n    RETURN @ret\r\nEND;\r\n",
+            "name": "ufnGetSalesOrderStatusText",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb148",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnGetStock](@ProductID [int])\r\nRETURNS [int] \r\nAS \r\n-- Returns the stock level for the product. This function is used internally only\r\nBEGIN\r\n    DECLARE @ret int;\r\n    \r\n    SELECT @ret = SUM(p.[Quantity]) \r\n    FROM [Production].[ProductInventory] p \r\n    WHERE p.[ProductID] = @ProductID \r\n        AND p.[LocationID] = '6'; -- Only look at inventory in the misc storage\r\n    \r\n    IF (@ret IS NULL) \r\n        SET @ret = 0\r\n    \r\n    RETURN @ret\r\nEND;\r\n",
+            "name": "ufnGetStock",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb142",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "function": {
+            "body": "\r\nCREATE FUNCTION [dbo].[ufnLeadingZeros](\r\n    @Value int\r\n) \r\nRETURNS varchar(8) \r\nWITH SCHEMABINDING \r\nAS \r\nBEGIN\r\n    DECLARE @ReturnValue varchar(8);\r\n\r\n    SET @ReturnValue = CONVERT(varchar(8), @Value);\r\n    SET @ReturnValue = REPLICATE('0', 8 - DATALENGTH(@ReturnValue)) + @ReturnValue;\r\n\r\n    RETURN (@ReturnValue);\r\nEND;\r\n",
+            "name": "ufnLeadingZeros",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb143",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        }]
+      ,
+      "com.datical.liquibase.ext.storedlogic.trigger.Trigger": [
+        {
+          "trigger": {
+            "body": "CREATE TRIGGER [ddlDatabaseTriggerLog] ON DATABASE \nFOR DDL_DATABASE_LEVEL_EVENTS AS \nBEGIN\n    SET NOCOUNT ON;\n\n    DECLARE @data XML;\n    DECLARE @schema sysname;\n    DECLARE @object sysname;\n    DECLARE @eventType sysname;\n\n    SET @data = EVENTDATA();\n    SET @eventType = @data.value('(/EVENT_INSTANCE/EventType)[1]', 'sysname');\n    SET @schema = @data.value('(/EVENT_INSTANCE/SchemaName)[1]', 'sysname');\n    SET @object = @data.value('(/EVENT_INSTANCE/ObjectName)[1]', 'sysname') \n\n    IF @object IS NOT NULL\n        PRINT '  ' + @eventType + ' - ' + @schema + '.' + @object;\n    ELSE\n        PRINT '  ' + @eventType + ' - ' + @schema;\n\n    IF @eventType IS NULL\n        PRINT CONVERT(nvarchar(max), @data);\n\n    INSERT [dbo].[DatabaseLog] \n        (\n        [PostTime], \n        [DatabaseUser], \n        [Event], \n        [Schema], \n        [Object], \n        [TSQL], \n        [XmlEvent]\n        ) \n    VALUES \n        (\n        GETDATE(), \n        CONVERT(sysname, CURRENT_USER), \n        @eventType, \n        CONVERT(sysname, @schema), \n        CONVERT(sysname, @object), \n        @data.value('(/EVENT_INSTANCE/TSQLCommand)[1]', 'nvarchar(max)'), \n        @data\n        );\nEND;",
+            "disabled": true,
+            "name": "ddlDatabaseTriggerLog",
+            "snapshotId": "6bdb101",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        }]
+      ,
+      "liquibase.structure.core.Catalog": [
+        {
+          "catalog": {
+            "default": true,
+            "name": "AdventureWorks2019",
+            "snapshotId": "6bdb100"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Column": [
+        {
+          "column": {
+            "computed": false,
+            "name": "Database Version",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb115",
+            "remarks": "Version number of the database in 9.yy.mm.dd.00 format.",
+            "snapshotId": "6bdb118",
+            "type": {
+              "columnSize": "25!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "DatabaseLogID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb122",
+            "remarks": "Primary key for DatabaseLog records.",
+            "snapshotId": "6bdb124",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "DatabaseUser",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb122",
+            "remarks": "The user who implemented the DDL change.",
+            "snapshotId": "6bdb126",
+            "type": {
+              "columnSize": "256!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "sysname"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "ErrorLine",
+            "nullable": true,
+            "order": "8!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb103",
+            "remarks": "The line number at which the error occurred.",
+            "snapshotId": "6bdb112",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "ErrorLogID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb103",
+            "remarks": "Primary key for ErrorLog records.",
+            "snapshotId": "6bdb105",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "ErrorMessage",
+            "nullable": false,
+            "order": "9!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb103",
+            "remarks": "The message text of the error that occurred.",
+            "snapshotId": "6bdb113",
+            "type": {
+              "columnSize": "4000!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "ErrorNumber",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb103",
+            "remarks": "The error number of the error that occurred.",
+            "snapshotId": "6bdb108",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "ErrorProcedure",
+            "nullable": true,
+            "order": "7!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb103",
+            "remarks": "The name of the stored procedure or trigger where the error occurred.",
+            "snapshotId": "6bdb111",
+            "type": {
+              "columnSize": "126!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "ErrorSeverity",
+            "nullable": true,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb103",
+            "remarks": "The severity of the error that occurred.",
+            "snapshotId": "6bdb109",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "ErrorState",
+            "nullable": true,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb103",
+            "remarks": "The state number of the error that occurred.",
+            "snapshotId": "6bdb110",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "4!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "int"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_ErrorLog_ErrorTime",
+            "name": "ErrorTime",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb103",
+            "remarks": "The date and time at which the error occurred.",
+            "snapshotId": "6bdb106",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Event",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb122",
+            "remarks": "The type of DDL statement that was executed.",
+            "snapshotId": "6bdb127",
+            "type": {
+              "columnSize": "256!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "sysname"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "defaultValue": "getdate()!{liquibase.statement.DatabaseFunction}",
+            "defaultValueConstraintName": "DF_AWBuildVersion_ModifiedDate",
+            "name": "ModifiedDate",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb115",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "6bdb120",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Object",
+            "nullable": true,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb122",
+            "remarks": "The object that was changed by the DDL statment.",
+            "snapshotId": "6bdb129",
+            "type": {
+              "columnSize": "256!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "sysname"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "PostTime",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb122",
+            "remarks": "The date and time the DDL change occurred.",
+            "snapshotId": "6bdb125",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "Schema",
+            "nullable": true,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb122",
+            "remarks": "The schema to which the changed object belongs.",
+            "snapshotId": "6bdb128",
+            "type": {
+              "columnSize": "256!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "sysname"
+            }
+          }
+        },
+        {
+          "column": {
+            "autoIncrementInformation": {
+              "incrementBy": "1!{java.math.BigInteger}",
+              "startWith": "1!{java.math.BigInteger}"
+            },
+            "computed": false,
+            "name": "SystemInformationID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb115",
+            "remarks": "Primary key for AWBuildVersion records.",
+            "snapshotId": "6bdb117",
+            "type": {
+              "columnSize": "3!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-6!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "tinyint"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "TSQL",
+            "nullable": false,
+            "order": "7!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb122",
+            "remarks": "The exact Transact-SQL statement that was executed.",
+            "snapshotId": "6bdb130",
+            "type": {
+              "columnSize": "-1!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-9!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "nvarchar"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "UserName",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb103",
+            "remarks": "The user who executed the batch in which the error occurred.",
+            "snapshotId": "6bdb107",
+            "type": {
+              "columnSize": "256!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "1111!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "sysname"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "VersionDate",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb115",
+            "remarks": "Date and time the record was last updated.",
+            "snapshotId": "6bdb119",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "datetime"
+            }
+          }
+        },
+        {
+          "column": {
+            "computed": false,
+            "name": "XmlEvent",
+            "nullable": false,
+            "order": "8!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#6bdb122",
+            "remarks": "The raw XML data generated by database trigger.",
+            "snapshotId": "6bdb131",
+            "type": {
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "-1!{java.lang.Integer}",
+              "radix": "10!{java.lang.Integer}",
+              "typeName": "xml"
+            }
+          }
+        }]
+      ,
+      "liquibase.structure.core.Index": [
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#6bdb117"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_AWBuildVersion_SystemInformationID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "6bdb116",
+            "table": "liquibase.structure.core.Table#6bdb115",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": false,
+            "columns": [
+              "liquibase.structure.core.Column#6bdb124"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_DatabaseLog_DatabaseLogID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "6bdb123",
+            "table": "liquibase.structure.core.Table#6bdb122",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "allowPageLocks": true,
+            "allowRowLocks": true,
+            "clustered": true,
+            "columns": [
+              "liquibase.structure.core.Column#6bdb105"]
+            ,
+            "fillFactor": "0!{java.lang.Short}",
+            "ignoreDuplicateKeys": false,
+            "incrementalStatistics": false,
+            "name": "PK_ErrorLog_ErrorLogID",
+            "padIndex": false,
+            "recomputeStatistics": true,
+            "snapshotId": "6bdb104",
+            "table": "liquibase.structure.core.Table#6bdb103",
+            "unique": true
+          }
+        }]
+      ,
+      "liquibase.structure.core.PrimaryKey": [
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#6bdb116",
+            "columns": [
+              "liquibase.structure.core.Column#6bdb117"]
+            ,
+            "name": "PK_AWBuildVersion_SystemInformationID",
+            "snapshotId": "6bdb121",
+            "table": "liquibase.structure.core.Table#6bdb115"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#6bdb123",
+            "columns": [
+              "liquibase.structure.core.Column#6bdb124"]
+            ,
+            "name": "PK_DatabaseLog_DatabaseLogID",
+            "snapshotId": "6bdb132",
+            "table": "liquibase.structure.core.Table#6bdb122"
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#6bdb104",
+            "columns": [
+              "liquibase.structure.core.Column#6bdb105"]
+            ,
+            "name": "PK_ErrorLog_ErrorLogID",
+            "snapshotId": "6bdb114",
+            "table": "liquibase.structure.core.Table#6bdb103"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Schema": [
+        {
+          "schema": {
+            "catalog": "liquibase.structure.core.Catalog#6bdb100",
+            "default": true,
+            "name": "dbo",
+            "snapshotId": "6bdb102"
+          }
+        }]
+      ,
+      "liquibase.structure.core.StoredProcedure": [
+        {
+          "storedProcedure": {
+            "body": "\r\nCREATE PROCEDURE [dbo].[uspGetBillOfMaterials]\r\n    @StartProductID [int],\r\n    @CheckDate [datetime]\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n    -- Use recursive query to generate a multi-level Bill of Material (i.e. all level 1 \r\n    -- components of a level 0 assembly, all level 2 components of a level 1 assembly)\r\n    -- The CheckDate eliminates any components that are no longer used in the product on this date.\r\n    WITH [BOM_cte]([ProductAssemblyID], [ComponentID], [ComponentDesc], [PerAssemblyQty], [StandardCost], [ListPrice], [BOMLevel], [RecursionLevel]) -- CTE name and columns\r\n    AS (\r\n        SELECT b.[ProductAssemblyID], b.[ComponentID], p.[Name], b.[PerAssemblyQty], p.[StandardCost], p.[ListPrice], b.[BOMLevel], 0 -- Get the initial list of components for the bike assembly\r\n        FROM [Production].[BillOfMaterials] b\r\n            INNER JOIN [Production].[Product] p \r\n            ON b.[ComponentID] = p.[ProductID] \r\n        WHERE b.[ProductAssemblyID] = @StartProductID \r\n            AND @CheckDate >= b.[StartDate] \r\n            AND @CheckDate <= ISNULL(b.[EndDate], @CheckDate)\r\n        UNION ALL\r\n        SELECT b.[ProductAssemblyID], b.[ComponentID], p.[Name], b.[PerAssemblyQty], p.[StandardCost], p.[ListPrice], b.[BOMLevel], [RecursionLevel] + 1 -- Join recursive member to anchor\r\n        FROM [BOM_cte] cte\r\n            INNER JOIN [Production].[BillOfMaterials] b \r\n            ON b.[ProductAssemblyID] = cte.[ComponentID]\r\n            INNER JOIN [Production].[Product] p \r\n            ON b.[ComponentID] = p.[ProductID] \r\n        WHERE @CheckDate >= b.[StartDate] \r\n            AND @CheckDate <= ISNULL(b.[EndDate], @CheckDate)\r\n        )\r\n    -- Outer select from the CTE\r\n    SELECT b.[ProductAssemblyID], b.[ComponentID], b.[ComponentDesc], SUM(b.[PerAssemblyQty]) AS [TotalQuantity] , b.[StandardCost], b.[ListPrice], b.[BOMLevel], b.[RecursionLevel]\r\n    FROM [BOM_cte] b\r\n    GROUP BY b.[ComponentID], b.[ComponentDesc], b.[ProductAssemblyID], b.[BOMLevel], b.[RecursionLevel], b.[StandardCost], b.[ListPrice]\r\n    ORDER BY b.[BOMLevel], b.[ProductAssemblyID], b.[ComponentID]\r\n    OPTION (MAXRECURSION 25) \r\nEND;\r\n",
+            "name": "uspGetBillOfMaterials",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb133",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "storedProcedure": {
+            "body": "\r\nCREATE PROCEDURE [dbo].[uspGetEmployeeManagers]\r\n    @BusinessEntityID [int]\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n    -- Use recursive query to list out all Employees required for a particular Manager\r\n    WITH [EMP_cte]([BusinessEntityID], [OrganizationNode], [FirstName], [LastName], [JobTitle], [RecursionLevel]) -- CTE name and columns\r\n    AS (\r\n        SELECT e.[BusinessEntityID], e.[OrganizationNode], p.[FirstName], p.[LastName], e.[JobTitle], 0 -- Get the initial Employee\r\n        FROM [HumanResources].[Employee] e \r\n\t\t\tINNER JOIN [Person].[Person] as p\r\n\t\t\tON p.[BusinessEntityID] = e.[BusinessEntityID]\r\n        WHERE e.[BusinessEntityID] = @BusinessEntityID\r\n        UNION ALL\r\n        SELECT e.[BusinessEntityID], e.[OrganizationNode], p.[FirstName], p.[LastName], e.[JobTitle], [RecursionLevel] + 1 -- Join recursive member to anchor\r\n        FROM [HumanResources].[Employee] e \r\n            INNER JOIN [EMP_cte]\r\n            ON e.[OrganizationNode] = [EMP_cte].[OrganizationNode].GetAncestor(1)\r\n            INNER JOIN [Person].[Person] p \r\n            ON p.[BusinessEntityID] = e.[BusinessEntityID]\r\n    )\r\n    -- Join back to Employee to return the manager name \r\n    SELECT [EMP_cte].[RecursionLevel], [EMP_cte].[BusinessEntityID], [EMP_cte].[FirstName], [EMP_cte].[LastName], \r\n        [EMP_cte].[OrganizationNode].ToString() AS [OrganizationNode], p.[FirstName] AS 'ManagerFirstName', p.[LastName] AS 'ManagerLastName'  -- Outer select from the CTE\r\n    FROM [EMP_cte] \r\n        INNER JOIN [HumanResources].[Employee] e \r\n        ON [EMP_cte].[OrganizationNode].GetAncestor(1) = e.[OrganizationNode]\r\n        INNER JOIN [Person].[Person] p \r\n        ON p.[BusinessEntityID] = e.[BusinessEntityID]\r\n    ORDER BY [RecursionLevel], [EMP_cte].[OrganizationNode].ToString()\r\n    OPTION (MAXRECURSION 25) \r\nEND;\r\n",
+            "name": "uspGetEmployeeManagers",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb136",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "storedProcedure": {
+            "body": "\r\nCREATE PROCEDURE [dbo].[uspGetManagerEmployees]\r\n    @BusinessEntityID [int]\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n    -- Use recursive query to list out all Employees required for a particular Manager\r\n    WITH [EMP_cte]([BusinessEntityID], [OrganizationNode], [FirstName], [LastName], [RecursionLevel]) -- CTE name and columns\r\n    AS (\r\n        SELECT e.[BusinessEntityID], e.[OrganizationNode], p.[FirstName], p.[LastName], 0 -- Get the initial list of Employees for Manager n\r\n        FROM [HumanResources].[Employee] e \r\n\t\t\tINNER JOIN [Person].[Person] p \r\n\t\t\tON p.[BusinessEntityID] = e.[BusinessEntityID]\r\n        WHERE e.[BusinessEntityID] = @BusinessEntityID\r\n        UNION ALL\r\n        SELECT e.[BusinessEntityID], e.[OrganizationNode], p.[FirstName], p.[LastName], [RecursionLevel] + 1 -- Join recursive member to anchor\r\n        FROM [HumanResources].[Employee] e \r\n            INNER JOIN [EMP_cte]\r\n            ON e.[OrganizationNode].GetAncestor(1) = [EMP_cte].[OrganizationNode]\r\n\t\t\tINNER JOIN [Person].[Person] p \r\n\t\t\tON p.[BusinessEntityID] = e.[BusinessEntityID]\r\n        )\r\n    -- Join back to Employee to return the manager name \r\n    SELECT [EMP_cte].[RecursionLevel], [EMP_cte].[OrganizationNode].ToString() as [OrganizationNode], p.[FirstName] AS 'ManagerFirstName', p.[LastName] AS 'ManagerLastName',\r\n        [EMP_cte].[BusinessEntityID], [EMP_cte].[FirstName], [EMP_cte].[LastName] -- Outer select from the CTE\r\n    FROM [EMP_cte] \r\n        INNER JOIN [HumanResources].[Employee] e \r\n        ON [EMP_cte].[OrganizationNode].GetAncestor(1) = e.[OrganizationNode]\r\n\t\t\tINNER JOIN [Person].[Person] p \r\n\t\t\tON p.[BusinessEntityID] = e.[BusinessEntityID]\r\n    ORDER BY [RecursionLevel], [EMP_cte].[OrganizationNode].ToString()\r\n    OPTION (MAXRECURSION 25) \r\nEND;\r\n",
+            "name": "uspGetManagerEmployees",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb135",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "storedProcedure": {
+            "body": "\r\nCREATE PROCEDURE [dbo].[uspGetWhereUsedProductID]\r\n    @StartProductID [int],\r\n    @CheckDate [datetime]\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n    --Use recursive query to generate a multi-level Bill of Material (i.e. all level 1 components of a level 0 assembly, all level 2 components of a level 1 assembly)\r\n    WITH [BOM_cte]([ProductAssemblyID], [ComponentID], [ComponentDesc], [PerAssemblyQty], [StandardCost], [ListPrice], [BOMLevel], [RecursionLevel]) -- CTE name and columns\r\n    AS (\r\n        SELECT b.[ProductAssemblyID], b.[ComponentID], p.[Name], b.[PerAssemblyQty], p.[StandardCost], p.[ListPrice], b.[BOMLevel], 0 -- Get the initial list of components for the bike assembly\r\n        FROM [Production].[BillOfMaterials] b\r\n            INNER JOIN [Production].[Product] p \r\n            ON b.[ProductAssemblyID] = p.[ProductID] \r\n        WHERE b.[ComponentID] = @StartProductID \r\n            AND @CheckDate >= b.[StartDate] \r\n            AND @CheckDate <= ISNULL(b.[EndDate], @CheckDate)\r\n        UNION ALL\r\n        SELECT b.[ProductAssemblyID], b.[ComponentID], p.[Name], b.[PerAssemblyQty], p.[StandardCost], p.[ListPrice], b.[BOMLevel], [RecursionLevel] + 1 -- Join recursive member to anchor\r\n        FROM [BOM_cte] cte\r\n            INNER JOIN [Production].[BillOfMaterials] b \r\n            ON cte.[ProductAssemblyID] = b.[ComponentID]\r\n            INNER JOIN [Production].[Product] p \r\n            ON b.[ProductAssemblyID] = p.[ProductID] \r\n        WHERE @CheckDate >= b.[StartDate] \r\n            AND @CheckDate <= ISNULL(b.[EndDate], @CheckDate)\r\n        )\r\n    -- Outer select from the CTE\r\n    SELECT b.[ProductAssemblyID], b.[ComponentID], b.[ComponentDesc], SUM(b.[PerAssemblyQty]) AS [TotalQuantity] , b.[StandardCost], b.[ListPrice], b.[BOMLevel], b.[RecursionLevel]\r\n    FROM [BOM_cte] b\r\n    GROUP BY b.[ComponentID], b.[ComponentDesc], b.[ProductAssemblyID], b.[BOMLevel], b.[RecursionLevel], b.[StandardCost], b.[ListPrice]\r\n    ORDER BY b.[BOMLevel], b.[ProductAssemblyID], b.[ComponentID]\r\n    OPTION (MAXRECURSION 25) \r\nEND;\r\n",
+            "name": "uspGetWhereUsedProductID",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb139",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "storedProcedure": {
+            "body": "\r\n-- uspLogError logs error information in the ErrorLog table about the \r\n-- error that caused execution to jump to the CATCH block of a \r\n-- TRY...CATCH construct. This should be executed from within the scope \r\n-- of a CATCH block otherwise it will return without inserting error \r\n-- information. \r\nCREATE PROCEDURE [dbo].[uspLogError] \r\n    @ErrorLogID [int] = 0 OUTPUT -- contains the ErrorLogID of the row inserted\r\nAS                               -- by uspLogError in the ErrorLog table\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n    -- Output parameter value of 0 indicates that error \r\n    -- information was not logged\r\n    SET @ErrorLogID = 0;\r\n\r\n    BEGIN TRY\r\n        -- Return if there is no error information to log\r\n        IF ERROR_NUMBER() IS NULL\r\n            RETURN;\r\n\r\n        -- Return if inside an uncommittable transaction.\r\n        -- Data insertion/modification is not allowed when \r\n        -- a transaction is in an uncommittable state.\r\n        IF XACT_STATE() = -1\r\n        BEGIN\r\n            PRINT 'Cannot log error since the current transaction is in an uncommittable state. ' \r\n                + 'Rollback the transaction before executing uspLogError in order to successfully log error information.';\r\n            RETURN;\r\n        END\r\n\r\n        INSERT [dbo].[ErrorLog] \r\n            (\r\n            [UserName], \r\n            [ErrorNumber], \r\n            [ErrorSeverity], \r\n            [ErrorState], \r\n            [ErrorProcedure], \r\n            [ErrorLine], \r\n            [ErrorMessage]\r\n            ) \r\n        VALUES \r\n            (\r\n            CONVERT(sysname, CURRENT_USER), \r\n            ERROR_NUMBER(),\r\n            ERROR_SEVERITY(),\r\n            ERROR_STATE(),\r\n            ERROR_PROCEDURE(),\r\n            ERROR_LINE(),\r\n            ERROR_MESSAGE()\r\n            );\r\n\r\n        -- Pass back the ErrorLogID of the row inserted\r\n        SET @ErrorLogID = @@IDENTITY;\r\n    END TRY\r\n    BEGIN CATCH\r\n        PRINT 'An error occurred in stored procedure uspLogError: ';\r\n        EXECUTE [dbo].[uspPrintError];\r\n        RETURN -1;\r\n    END CATCH\r\nEND;\r\n",
+            "name": "uspLogError",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb137",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "storedProcedure": {
+            "body": "\r\n-- uspPrintError prints error information about the error that caused \r\n-- execution to jump to the CATCH block of a TRY...CATCH construct. \r\n-- Should be executed from within the scope of a CATCH block otherwise \r\n-- it will return without printing any error information.\r\nCREATE PROCEDURE [dbo].[uspPrintError] \r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n    -- Print error information. \r\n    PRINT 'Error ' + CONVERT(varchar(50), ERROR_NUMBER()) +\r\n          ', Severity ' + CONVERT(varchar(5), ERROR_SEVERITY()) +\r\n          ', State ' + CONVERT(varchar(5), ERROR_STATE()) + \r\n          ', Procedure ' + ISNULL(ERROR_PROCEDURE(), '-') + \r\n          ', Line ' + CONVERT(varchar(5), ERROR_LINE());\r\n    PRINT ERROR_MESSAGE();\r\nEND;\r\n",
+            "name": "uspPrintError",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb134",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        },
+        {
+          "storedProcedure": {
+            "body": "\r\n--A stored procedure which demonstrates integrated full text search\r\n\r\nCREATE PROCEDURE [dbo].[uspSearchCandidateResumes]\r\n    @searchString [nvarchar](1000),   \r\n    @useInflectional [bit]=0,\r\n    @useThesaurus [bit]=0,\r\n    @language[int]=0\r\n\r\n\r\nWITH EXECUTE AS CALLER\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n      DECLARE @string nvarchar(1050)\r\n      --setting the lcid to the default instance LCID if needed\r\n      IF @language = NULL OR @language = 0 \r\n      BEGIN \r\n            SELECT @language =CONVERT(int, serverproperty('lcid'))  \r\n      END\r\n      \r\n\r\n            --FREETEXTTABLE case as inflectional and Thesaurus were required\r\n      IF @useThesaurus = 1 AND @useInflectional = 1  \r\n        BEGIN\r\n                  SELECT FT_TBL.[JobCandidateID], KEY_TBL.[RANK] FROM [HumanResources].[JobCandidate] AS FT_TBL \r\n                        INNER JOIN FREETEXTTABLE([HumanResources].[JobCandidate],*, @searchString,LANGUAGE @language) AS KEY_TBL\r\n                   ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]\r\n            END\r\n\r\n      ELSE IF @useThesaurus = 1\r\n            BEGIN\r\n                  SELECT @string ='FORMSOF(THESAURUS,\"'+@searchString +'\"'+')'      \r\n                  SELECT FT_TBL.[JobCandidateID], KEY_TBL.[RANK] FROM [HumanResources].[JobCandidate] AS FT_TBL \r\n                        INNER JOIN CONTAINSTABLE([HumanResources].[JobCandidate],*, @string,LANGUAGE @language) AS KEY_TBL\r\n                   ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]\r\n        END\r\n\r\n      ELSE IF @useInflectional = 1\r\n            BEGIN\r\n                  SELECT @string ='FORMSOF(INFLECTIONAL,\"'+@searchString +'\"'+')'\r\n                  SELECT FT_TBL.[JobCandidateID], KEY_TBL.[RANK] FROM [HumanResources].[JobCandidate] AS FT_TBL \r\n                        INNER JOIN CONTAINSTABLE([HumanResources].[JobCandidate],*, @string,LANGUAGE @language) AS KEY_TBL\r\n                   ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]\r\n        END\r\n  \r\n      ELSE --base case, plain CONTAINSTABLE\r\n            BEGIN\r\n                  SELECT @string='\"'+@searchString +'\"'\r\n                  SELECT FT_TBL.[JobCandidateID],KEY_TBL.[RANK] FROM [HumanResources].[JobCandidate] AS FT_TBL \r\n                        INNER JOIN CONTAINSTABLE([HumanResources].[JobCandidate],*,@string,LANGUAGE @language) AS KEY_TBL\r\n                   ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]\r\n            END\r\n\r\nEND;\r\n",
+            "name": "uspSearchCandidateResumes",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb138",
+            "usesQuotedIdentifier": true,
+            "valid": true
+          }
+        }]
+      ,
+      "liquibase.structure.core.Table": [
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#6bdb117",
+              "liquibase.structure.core.Column#6bdb118",
+              "liquibase.structure.core.Column#6bdb119",
+              "liquibase.structure.core.Column#6bdb120"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#6bdb116"]
+            ,
+            "name": "AWBuildVersion",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#6bdb121",
+            "remarks": "Current version number of the AdventureWorks 2016 sample database.",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb115"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#6bdb124",
+              "liquibase.structure.core.Column#6bdb125",
+              "liquibase.structure.core.Column#6bdb126",
+              "liquibase.structure.core.Column#6bdb127",
+              "liquibase.structure.core.Column#6bdb128",
+              "liquibase.structure.core.Column#6bdb129",
+              "liquibase.structure.core.Column#6bdb130",
+              "liquibase.structure.core.Column#6bdb131"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#6bdb123"]
+            ,
+            "name": "DatabaseLog",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#6bdb132",
+            "remarks": "Audit table tracking all DDL changes made to the AdventureWorks database. Data is captured by the database trigger ddlDatabaseTriggerLog.",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb122"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#6bdb105",
+              "liquibase.structure.core.Column#6bdb106",
+              "liquibase.structure.core.Column#6bdb107",
+              "liquibase.structure.core.Column#6bdb108",
+              "liquibase.structure.core.Column#6bdb109",
+              "liquibase.structure.core.Column#6bdb110",
+              "liquibase.structure.core.Column#6bdb111",
+              "liquibase.structure.core.Column#6bdb112",
+              "liquibase.structure.core.Column#6bdb113"]
+            ,
+            "default_tablespace": false,
+            "indexes": [
+              "liquibase.structure.core.Index#6bdb104"]
+            ,
+            "name": "ErrorLog",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#6bdb114",
+            "remarks": "Audit table tracking errors in the the AdventureWorks database that are caught by the CATCH block of a TRY...CATCH construct. Data is inserted by stored procedure dbo.uspLogError when it is executed from inside the CATCH block of a TRY...CATCH construct.",
+            "schema": "liquibase.structure.core.Schema#6bdb102",
+            "snapshotId": "6bdb103"
+          }
+        }]
+      
+    },
+    "snapshotControl": {
+      "snapshotControl": {
+        "includedType": [
+          "com.datical.liquibase.ext.appdba.synonym.Synonym",
+          "com.datical.liquibase.ext.storedlogic.checkconstraint.CheckConstraint",
+          "com.datical.liquibase.ext.storedlogic.databasepackage.DatabasePackage",
+          "com.datical.liquibase.ext.storedlogic.databasepackage.DatabasePackageBody",
+          "com.datical.liquibase.ext.storedlogic.function.Function",
+          "com.datical.liquibase.ext.storedlogic.trigger.Trigger",
+          "liquibase.structure.core.Catalog",
+          "liquibase.structure.core.Column",
+          "liquibase.structure.core.ForeignKey",
+          "liquibase.structure.core.Index",
+          "liquibase.structure.core.PrimaryKey",
+          "liquibase.structure.core.Schema",
+          "liquibase.structure.core.Sequence",
+          "liquibase.structure.core.StoredProcedure",
+          "liquibase.structure.core.Table",
+          "liquibase.structure.core.UniqueConstraint",
+          "liquibase.structure.core.View"]
+        
+      }
+    }
+  }
+}

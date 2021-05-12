@@ -1,0 +1,515 @@
+﻿<HTML>
+<HEAD>
+    <TITLE>BookStore</TITLE>
+    <LINK HREF="../../style.css" REL="stylesheet" TYPE="text/css">
+
+    <SCRIPT SRC="../../script.js"></SCRIPT>
+
+</HEAD>
+<BODY>
+    <IMG ID="collapseImage" ALT="Collapse image" SRC="../../ImagesMetro/collapse.gif" STYLE="display: none; height: 0; width: 0;" />
+    <IMG ID="expandImage" ALT="Expand image" SRC="../../ImagesMetro/expand.gif" STYLE="display: none; height: 0; width: 0;" />
+    <DIV ID="pagetop">
+        <div class='text-output-header'><p><font size="3">Sample header text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-header {display:block; float:left; width:100%;}div.text-output-header p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+        <P CLASS="apexdoc-header">
+            <IMG BORDER="0" CLASS="vmiddle" SRC="../../Images32x32Metro/SERVER.png">&nbsp;Server
+            buildkitsandbox
+        </P>
+        <P CLASS="apexdoc-header-bottom">
+	<SPAN onclick="ExpandCollapseSections(this)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage)" tabindex="0">
+		<IMG ID="toggleAllImage" class="toggleAll" alt="CollapseAll image" src="../../../ImagesMetro/collapse.gif"></IMG>
+		<LABEL id="collapseAllLabel" for="toggleAllImage" style="display: inline;">Collapse all</LABEL>
+		<LABEL id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand all</LABEL>
+	</SPAN>
+</P>
+
+    </DIV>
+    <DIV ID="pagebody">
+        <!--FRAGMENT_PROPERTIES-->
+        <A NAME="properties"></A>
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('ServerProperties')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('ServerProperties')" tabindex="0">
+	<IMG id="ServerPropertiesToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Server properties
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="ServerPropertiesSection" CLASS="section" STYLE="display: inline;">
+            <TABLE CLASS="property-table">
+                <TR CLASS="apexdoc-table-caption">
+                    <TD>&nbsp;Name&nbsp;</TD>
+                    <TD>&nbsp;Value&nbsp;</TD>
+                </TR>
+                <TR>
+  <TD>&nbsp;Code page&nbsp;</TD>
+  <TD>&nbsp;1252&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Network name&nbsp;</TD>
+  <TD>&nbsp;11a8d23a1e3b&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Language&nbsp;</TD>
+  <TD>&nbsp;us_english&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Maximum degree of parallelism&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Service name&nbsp;</TD>
+  <TD>&nbsp;MSSQLSERVER&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Instance name&nbsp;</TD>
+  <TD>&nbsp;&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Collation&nbsp;</TD>
+  <TD>&nbsp;SQL_Latin1_General_CP1_CI_AS&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Is clustered&nbsp;</TD>
+  <TD>&nbsp;<IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/RED_CROSS.gif">&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Is full text search installed&nbsp;</TD>
+  <TD>&nbsp;<IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/CHECK_OUT.png">&nbsp;</TD>
+</TR>
+
+            </TABLE>
+        </DIV>
+        <!--FRAGMENT_PROPERTIES-->
+    <!--FRAGMENT_VERSION-->
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Version')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Version')" tabindex="0">
+	<IMG id="VersionToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Version
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="VersionSection" CLASS="section" STYLE="display: inline;">
+            <TABLE><TR><TD>Microsoft SQL Server 2017 (RTM-CU23) (KB5000685) - 14.0.3381.3 (X64) 
+	Feb  9 2021 12:08:50 
+	Copyright (C) 2017 Microsoft Corporation
+	Developer Edition (64-bit) on Linux (Ubuntu 16.04.7 LTS)</TD></TR></TABLE>
+        </DIV>
+        <!--FRAGMENT_VERSION-->
+        <!--FRAGMENT_DATABASES-->
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('Databases')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('Databases')" tabindex="0">
+	<IMG id="DatabasesToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Databases
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="DatabasesSection" CLASS="section" STYLE="display: inline;">
+            
+            <TABLE>
+                <TR CLASS="apexdoc-table-caption">
+                    <TD WIDTH="18">&nbsp;</TD>
+                    <TD WIDTH="30%">Database</TD>
+                    <TD>Owner</TD>
+                    <TD WIDTH="10%">System&nbsp;</TD>
+                </TR>
+                <tr>
+  <TD><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/DATABASE.gif"></TD>
+  <TD><A HREF="../../DbEngine/localhost/AdventureWorks2016/db_object_index.htm">AdventureWorks2016</A></TD>
+  <TD>sa</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/RED_CROSS.gif"></TD>
+</tr>
+<tr>
+  <TD><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/DATABASE.gif"></TD>
+  <TD>master</TD>
+  <TD>sa</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/CHECK_OUT.png"></TD>
+</tr>
+<tr>
+  <TD><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/DATABASE.gif"></TD>
+  <TD>model</TD>
+  <TD>sa</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/CHECK_OUT.png"></TD>
+</tr>
+<tr>
+  <TD><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/DATABASE.gif"></TD>
+  <TD>msdb</TD>
+  <TD>sa</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/CHECK_OUT.png"></TD>
+</tr>
+<tr>
+  <TD><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/DATABASE.gif"></TD>
+  <TD>tempdb</TD>
+  <TD>sa</TD>
+        <TD CLASS="centered"><IMG CLASS="vmiddle" border="0" SRC="../../ImagesMetro/CHECK_OUT.png"></TD>
+</tr>
+
+            </TABLE>
+            <DIV CLASS="apexdoc-total-counter">
+                Total:
+                5
+                database(s)</DIV>
+            
+        </DIV>
+        <!--FRAGMENT_DATABASES-->
+        <!--FRAGMENT_CONFIGURATION-->
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('ServerConfiguration')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('ServerConfiguration')" tabindex="0">
+	<IMG id="ServerConfigurationToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            Server configuration
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="ServerConfigurationSection" CLASS="section" STYLE="display: inline;">
+            <TABLE CLASS="property-table">
+                <TR CLASS="apexdoc-table-caption">
+                    <TD>&nbsp;Parameter&nbsp;name&nbsp;</TD>
+                    <TD>&nbsp;Value&nbsp;</TD>
+                </TR>
+                <TR>
+  <TD>&nbsp;affinity I/O mask&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;affinity mask&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;affinity64 I/O mask&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;affinity64 mask&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allow cross db ownership chaining&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allow INSERT into a Hadoop external table&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allow recursion for server level triggers&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allow remote access&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allow the use of the REMOTE_DATA_ARCHIVE data access for databases&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allow triggers to be invoked within triggers&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allow updates to system tables&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Allows execution of external scripts&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Automatic soft-NUMA is enabled by default&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Blocked process reporting threshold&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;c2 audit mode&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;CLR strict security enabled in the server&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;CLR user code execution enabled in the server&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Common Criteria compliance mode enabled&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Configure SQL Server to connect to external Hadoop or Microsoft Azure storage blob data sources through PolyBase&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Configure SQL Server to encrypt control and data channels when using PolyBase&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;cost threshold for parallelism&nbsp;</TD>
+  <TD>&nbsp;5&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Create DTC transaction for remote procedures&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;cursor threshold&nbsp;</TD>
+  <TD>&nbsp;-1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;DB connection timeout for full-text protocol handler (s)&nbsp;</TD>
+  <TD>&nbsp;60&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Dedicated Admin Connections are allowed from remote clients&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Default fill factor percentage&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;default full-text language&nbsp;</TD>
+  <TD>&nbsp;1033&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Default hash bucket count for the access check result security cache&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;default language&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Default quota for the access check result security cache&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Disallow returning results from triggers&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable checksum of backups by default&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable compression of backups by default&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable or disable Ad Hoc Distributed Queries&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable or disable Agent XPs&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable or disable command shell&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable or disable Database Mail XPs&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable or disable EKM provider&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable or disable Ole Automation Procedures&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable or disable Replication XPs&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable or disable SMO and DMO XPs&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enable or disable the default trace&nbsp;</TD>
+  <TD>&nbsp;1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Enables contained databases and contained authentication&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Max number of full-text crawl buffers&nbsp;</TD>
+  <TD>&nbsp;100&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Max number of full-text notifications buffers&nbsp;</TD>
+  <TD>&nbsp;100&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Maximum  crawl ranges allowed in full-text indexing&nbsp;</TD>
+  <TD>&nbsp;4&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;maximum degree of parallelism&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Maximum estimated cost allowed by query governor&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Maximum recovery interval in minutes&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Maximum size of a text field in replication.&nbsp;</TD>
+  <TD>&nbsp;65536&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Maximum size of server memory (MB)&nbsp;</TD>
+  <TD>&nbsp;2147483647&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;maximum time to wait for query memory (s)&nbsp;</TD>
+  <TD>&nbsp;-1&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Maximum worker threads&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Memory for index create sorts (kBytes)&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;minimum memory per query (kBytes)&nbsp;</TD>
+  <TD>&nbsp;1024&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Minimum size of server memory (MB)&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Network packet size&nbsp;</TD>
+  <TD>&nbsp;4096&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Number of locks for all users&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Number of open database objects&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Number of reserved full-text crawl buffers&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Number of reserved full-text notifications buffers&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Number of user connections allowed&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Priority boost&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Recovery policy for DTC transactions with unknown outcome&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;remote login timeout&nbsp;</TD>
+  <TD>&nbsp;10&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;remote query timeout&nbsp;</TD>
+  <TD>&nbsp;600&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;scan for startup stored procedures&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;set working set size&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Sets the FILESTREAM access level&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;show advanced options&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Tape retention period in days&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Transform noise words for full-text query&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;two digit year cutoff&nbsp;</TD>
+  <TD>&nbsp;2049&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;Use precomputed rank for full-text query&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;User mode scheduler uses lightweight pooling&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;user options&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+<TR>
+  <TD>&nbsp;When this option is set, plan cache size is further reduced for single-use adhoc OLTP workload.&nbsp;</TD>
+  <TD>&nbsp;0&nbsp;</TD>
+</TR>
+
+            </TABLE>
+        </DIV>
+        <!--FRAGMENT_CONFIGURATION-->
+        <DIV ID="apexdoc-section-header"><H2 CLASS="apexdoc-secondary-header">
+            <SPAN onclick="ExpandCollapse('seealso')" style="cursor:default;"
+		onkeypress="ExpandCollapse_CheckKey('seealso')" tabindex="0">
+	<IMG id="seealsoToggle" class="toggle" name="toggleSwitch"
+		alt="Collapse image" src="../../ImagesMetro/collapse.gif"> 
+	</IMG>
+            See also
+            </SPAN>
+        </H2><hr class="apexdoc-secondary-header-hr" /></DIV>
+        <DIV ID="seealsoSection" CLASS="section" STYLE="display: inline;">
+	    <P></P>
+	    <P></P>
+	    <P></P>
+        <P></P>
+        <P></P>
+	    <P></P>
+  	    <P></P>
+	    <P></P>
+        </DIV>
+        <HR SIZE="1">
+<P></P>
+<BR>
+<BR>
+
+        <div class='text-output-footer'><p><font size="3">Sample footer text</font></p></div><div class='clearfix'></div><style type='text/css'>img.logo {display:block; float:left;}div.text-output-footer {display:block; float:left; width:100%;}div.text-output-footer p {font-weight:normal;text-decoration:none;font-style:normal;font-family:"Segoe UI";text-align:Center;color:#808080;}div.clearfix {clear:both;}</style>
+    </DIV>
+</BODY>
+</HTML>
